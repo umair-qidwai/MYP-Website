@@ -369,6 +369,8 @@ export function CardsBlock({ block }: { block: BlockOf<"cards"> }) {
 }
 
 // ── Programs (site-wide initiatives) ────────────────────────────────────────
+const TINTS = ["bg-mural-orange/10", "bg-mural-purple/10", "bg-mural-green/10", "bg-mural-blue/10", "bg-mural-red/10", "bg-mural-yellow/15"];
+
 export function ProgramsBlock({ block }: { block: BlockOf<"programs"> }) {
   const { settings } = useSite();
   const items = settings.programs.items;
@@ -378,25 +380,28 @@ export function ProgramsBlock({ block }: { block: BlockOf<"programs"> }) {
     <Section tone={block.tone} size="lg" labelledBy="programs-h">
       <div className="wrap">
         <SectionTitle id="programs-h" title={heading} />
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
           {items.map((p, i) => (
             <Reveal as="li" key={p.name} delay={(i % 3) * 0.06}>
               <SmartLink
                 href={p.href || "/"}
-                className="group flex h-full flex-col items-center rounded-[22px] bg-mist px-3 pb-5 pt-6 text-center transition-colors duration-300 hover:bg-[#ececf0]"
+                className="group flex h-full flex-col overflow-hidden rounded-[24px] bg-white ring-1 ring-black/[0.06] transition-[box-shadow,transform] duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgb(40_20_70/0.3)]"
               >
-                <span className="grid aspect-square w-[78%] place-items-center">
-                  {p.image ? (
+                <span className={`block aspect-[4/3] p-6 sm:p-9 ${TINTS[i % TINTS.length]}`}>
+                  {p.image && (
                     <Img
                       image={p.image}
-                      sizes="(min-width: 1024px) 18vw, 40vw"
-                      className="h-full w-full object-contain mix-blend-multiply transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.04]"
+                      sizes="(min-width: 1024px) 22rem, 45vw"
+                      className="h-full w-full object-contain mix-blend-multiply transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.05]"
                     />
-                  ) : null}
+                  )}
                 </span>
-                <span className="mt-3 text-[0.875rem] font-semibold leading-snug tracking-[-0.01em] text-ink">{p.name}</span>
-                <span className="mt-1 inline-flex items-center gap-0.5 text-[0.875rem] text-brand opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-                  Learn more <ChevronRight aria-hidden className="size-3.5" />
+                <span className="flex items-center justify-between gap-2 px-4 py-4 sm:px-5">
+                  <span className="text-[0.9375rem] font-semibold leading-snug tracking-[-0.01em] text-ink sm:text-[1.0625rem]">{p.name}</span>
+                  <ChevronRight
+                    aria-hidden
+                    className="size-4 shrink-0 text-muted transition-transform duration-300 group-hover:translate-x-0.5 group-hover:text-brand"
+                  />
                 </span>
               </SmartLink>
             </Reveal>
@@ -468,45 +473,51 @@ function CountUp({ value }: { value: string }) {
   );
 }
 
+// Same colour order as the original 11-year impact card: red, purple, green, orange, blue
+const STAT_TILES = ["bg-mural-red", "bg-mural-purple", "bg-mural-green", "bg-mural-orange", "bg-mural-blue"];
+
 export function StatsBlock({ block }: { block: BlockOf<"stats"> }) {
+  const groups: { name: string; items: typeof block.items }[] = [];
+  for (const it of block.items) {
+    const name = it.group ?? "";
+    const g = groups.find((x) => x.name === name);
+    if (g) g.items.push(it);
+    else groups.push({ name, items: [it] });
+  }
   const onDark = dark(block.tone);
-  const firstGroup = block.items[0]?.group;
-  const headline = firstGroup ? block.items.filter((i) => i.group === firstGroup) : [];
-  const rest = firstGroup ? block.items.filter((i) => i.group !== firstGroup) : block.items;
-  const label = onDark ? "text-white/60" : "text-muted";
   return (
     <Section tone={block.tone} labelledBy={block.heading ? `stats-${block.id}` : undefined}>
       <div className="wrap">
         <SectionTitle id={`stats-${block.id}`} eyebrow={block.eyebrow} title={block.heading} onDark={onDark} />
-        {headline.length > 0 && (
-          <dl className="mx-auto grid max-w-3xl gap-8 text-center sm:grid-cols-2">
-            {headline.map((s, i) => (
-              <Reveal key={i} delay={i * 0.08} className="flex flex-col">
-                <dd className="order-1 text-[clamp(2.75rem,6vw,4.5rem)] font-semibold leading-none tracking-[-0.045em]">
-                  <CountUp value={s.value} />
-                </dd>
-                <dt className={`order-2 mt-3 text-[1.0625rem] ${label}`}>{s.label}</dt>
+        <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {groups.map((g, gi) => {
+            const lead = gi === 0 && groups.length > 1;
+            return (
+              <Reveal
+                key={gi}
+                delay={(gi % 3) * 0.06}
+                className={`rounded-[24px] p-6 text-white sm:p-7 ${STAT_TILES[gi % STAT_TILES.length]} ${lead ? "md:col-span-2" : ""}`}
+              >
+                {g.name && <p className="text-[0.8125rem] font-semibold tracking-[0.02em] text-white/75">{g.name}</p>}
+                <dl className={`mt-4 grid gap-x-6 gap-y-5 ${lead ? "grid-cols-1 sm:grid-cols-2 sm:pt-6" : "grid-cols-2"}`}>
+                  {g.items.map((s, i) => (
+                    <div key={i} className="flex flex-col">
+                      <dd
+                        className={`order-1 font-semibold leading-none tracking-[-0.04em] ${lead ? "text-[clamp(3rem,7vw,5.25rem)]" : "text-[clamp(1.75rem,3vw,2.25rem)]"}`}
+                      >
+                        <CountUp value={s.value} />
+                      </dd>
+                      <dt className={`order-2 mt-2 leading-snug text-white/85 ${lead ? "text-[1.0625rem]" : "text-[0.875rem]"}`}>{s.label}</dt>
+                      {s.note && <dd className="order-3 mt-1 text-[0.75rem] leading-snug text-white/70">{s.note}</dd>}
+                    </div>
+                  ))}
+                </dl>
               </Reveal>
-            ))}
-          </dl>
-        )}
-        {rest.length > 0 && (
-          <dl
-            className={`mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-x-6 gap-y-8 border-t pt-10 md:grid-cols-3 lg:grid-cols-4 ${onDark ? "border-white/15" : "border-hairline"}`}
-          >
-            {rest.map((s, i) => (
-              <Reveal key={i} delay={(i % 4) * 0.05} className="flex flex-col">
-                <dd className="order-1 text-[clamp(1.625rem,2.8vw,2.125rem)] font-semibold leading-none tracking-[-0.035em]">
-                  <CountUp value={s.value} />
-                </dd>
-                <dt className={`order-2 mt-2 text-[0.9375rem] leading-snug ${label}`}>{s.label}</dt>
-                {s.note && <dd className={`order-3 mt-1 text-[0.8125rem] leading-snug ${onDark ? "text-white/45" : "text-muted"}`}>{s.note}</dd>}
-              </Reveal>
-            ))}
-          </dl>
-        )}
+            );
+          })}
+        </div>
         {block.source && (
-          <p className={`mt-14 text-center text-[0.8125rem] ${onDark ? "text-white/45" : "text-muted"}`}>
+          <p className={`mt-8 text-center text-[0.8125rem] ${onDark ? "text-white/55" : "text-muted"}`}>
             {block.source}{" "}
             {block.sourceLink && (
               <SmartLink href={block.sourceLink} className="underline underline-offset-4 hover:text-current">
@@ -657,7 +668,7 @@ function ClampedText({ doc, onDark }: { doc: BlockOf<"options">["items"][number]
   if (!doc?.content.length) return null;
   return (
     <div className="mt-3">
-      <div ref={ref} className={`relative ${open ? "" : "max-h-[7.5rem] overflow-hidden"}`}>
+      <div ref={ref} className={`relative ${open ? "" : "max-h-[9.5rem] overflow-hidden"}`}>
         <RichText doc={doc} className="prose-myp !text-[0.9375rem] !leading-relaxed [&_:is(h2,h3,h4)]:!mt-5 [&_:is(h2,h3,h4)]:!text-[1rem]" />
         {!open && overflows && <div aria-hidden className={`absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t ${onDark ? "from-black" : "from-mist"}`} />}
       </div>
@@ -687,12 +698,24 @@ export function OptionsBlock({ block }: { block: BlockOf<"options"> }) {
               <article className={`flex h-full flex-col overflow-hidden rounded-[24px] ${onDark ? "bg-white/[0.06]" : "bg-mist"}`}>
                 {it.image && (
                   <div className="flex justify-center px-4 pt-4 sm:px-5 sm:pt-5">
-                    <Img image={it.image} sizes="(min-width: 768px) 36rem, 100vw" className="h-auto max-h-64 w-auto rounded-2xl object-contain" />
+                    {it.imageLink ? (
+                      <SmartLink
+                        href={it.imageLink}
+                        className="block transition-opacity hover:opacity-90"
+                        aria-label={it.title ? undefined : it.buttons[0]?.label}
+                      >
+                        <Img image={it.image} sizes="(min-width: 768px) 36rem, 100vw" className="h-auto max-h-72 w-auto rounded-2xl object-contain" />
+                      </SmartLink>
+                    ) : (
+                      <Img image={it.image} sizes="(min-width: 768px) 36rem, 100vw" className="h-auto max-h-72 w-auto rounded-2xl object-contain" />
+                    )}
                   </div>
                 )}
                 <div className="flex flex-1 flex-col p-6 sm:p-7">
                   {it.eyebrow && <p className={`eyebrow mb-1.5 ${onDark ? "text-white/60" : "text-brand"}`}>{it.eyebrow}</p>}
-                  <h3 className={`text-[1.25rem] font-semibold leading-snug tracking-[-0.02em] ${onDark ? "text-white" : "text-ink"}`}>{it.title}</h3>
+                  {it.title && (
+                    <h3 className={`text-[1.25rem] font-semibold leading-snug tracking-[-0.02em] ${onDark ? "text-white" : "text-ink"}`}>{it.title}</h3>
+                  )}
                   <ClampedText doc={it.doc} onDark={onDark} />
                   {it.buttons.length > 0 && (
                     <div className={it.doc?.content.length || it.image ? "mt-auto pt-6" : "mt-3"}>

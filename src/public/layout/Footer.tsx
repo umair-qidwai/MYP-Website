@@ -2,15 +2,21 @@ import { Link } from "react-router";
 import { useSite } from "../SiteContext";
 import { SmartLink } from "../components/SmartLink";
 import { SocialIcon, SOCIAL_LABEL } from "../components/SocialIcon";
+import { MuralRibbon } from "../components/MuralRibbon";
 import { navLabel } from "./Header";
 
 export function Footer() {
   const { settings } = useSite();
   const { contact } = settings;
   const nav = settings.navigation.main.filter((n) => n.label.toUpperCase() !== "HOME");
+  // Menu items without sub-pages share one column instead of each repeating its own name
+  const groups = nav.filter((n) => n.children.length > 0);
+  const singles = nav.filter((n) => n.children.length === 0 && n.href).map((n) => ({ label: n.label, href: n.href! }));
+  const columns = [...(singles.length ? [{ label: "Explore", href: undefined, children: singles }] : []), ...groups];
 
   return (
     <footer className="bg-mist text-[0.8125rem] leading-relaxed text-muted" aria-labelledby="footer-title">
+      <MuralRibbon moving={false} height="clamp(3.5rem, 6vw, 5rem)" />
       <h2 id="footer-title" className="sr-only">
         Site footer
       </h2>
@@ -56,7 +62,7 @@ export function Footer() {
           </div>
 
           <nav aria-label="Footer" className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 md:col-span-8 lg:grid-cols-4">
-            {nav.map((n) => (
+            {columns.map((n) => (
               <div key={n.label}>
                 <p className="mb-2.5 font-semibold text-ink">{navLabel(n.label)}</p>
                 <ul className="space-y-2">
@@ -67,7 +73,7 @@ export function Footer() {
                       </SmartLink>
                     </li>
                   )}
-                  {(n.children.length ? n.children : n.href ? [{ label: n.label, href: n.href }] : []).map((c) => (
+                  {n.children.map((c) => (
                     <li key={c.label}>
                       <SmartLink href={c.href || "/"} className="hover:text-ink hover:underline">
                         {navLabel(c.label)}

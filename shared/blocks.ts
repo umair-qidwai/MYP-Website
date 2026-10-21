@@ -197,9 +197,10 @@ export const blockSchema = z.discriminatedUnion("type", [
           z
             .object({
               eyebrow: text(120).optional(),
-              title: text(300).min(1, "Each option needs a title"),
+              title: text(300).optional(),
               doc: richDocSchema.optional(),
               image: imageSchema.optional(),
+              imageLink: href.optional(),
               buttons: z.array(buttonSchema).max(4).default([]),
             })
             .strip(),

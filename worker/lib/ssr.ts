@@ -37,7 +37,10 @@ function blockHtml(b: Block, collections: Record<string, PublicEntry[]>, setting
         .join("")}</ul></section>`;
     case "options":
       return `<section>${b.heading ? `<h2>${e(b.heading)}</h2>` : ""}${b.intro ? `<p>${e(b.intro)}</p>` : ""}${b.items
-        .map((i) => `<article>${i.eyebrow ? `<p>${e(i.eyebrow)}</p>` : ""}<h3>${e(i.title)}</h3>${richToHtml(i.doc)}${buttons(i.buttons)}</article>`)
+        .map(
+          (i) =>
+            `<article>${i.eyebrow ? `<p>${e(i.eyebrow)}</p>` : ""}${i.title ? `<h3>${e(i.title)}</h3>` : ""}${richToHtml(i.doc)}${buttons(i.buttons)}</article>`,
+        )
         .join("")}</section>`;
     case "stats":
       return `<section>${b.heading ? `<h2>${e(b.heading)}</h2>` : ""}<dl>${b.items.map((i) => `<dt>${e(i.value)}</dt><dd>${e(i.label)}${i.note ? ` — ${e(i.note)}` : ""}</dd>`).join("")}</dl>${b.source ? `<p>${e(b.source)}</p>` : ""}</section>`;

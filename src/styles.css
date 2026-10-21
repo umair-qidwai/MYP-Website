@@ -18,6 +18,14 @@
   --color-brand-deep: #45206d;
   --color-brand-soft: #f3eefa;
 
+  /* Accent colours taken from the MY Project USA mural artwork. Deep enough for white text. */
+  --color-mural-red: #c3342b;
+  --color-mural-purple: #5b2d8e;
+  --color-mural-green: #2d7a3a;
+  --color-mural-orange: #b4500f;
+  --color-mural-blue: #1c5fa8;
+  --color-mural-yellow: #e9a826;
+
   /* Kept for the admin, which shares this stylesheet */
   --color-paper: #ffffff;
   --color-paper-2: #f5f5f7;
@@ -336,6 +344,22 @@ body {
   to {
     opacity: 1;
     transform: none;
+  }
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee var(--marquee-duration, 80s) linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }
 @keyframes progress {

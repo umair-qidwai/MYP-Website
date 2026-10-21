@@ -797,7 +797,7 @@ function blockText(b: Block): string {
       return [
         b.heading ?? "",
         b.intro ?? "",
-        ...b.items.map((i) => [i.eyebrow ?? "", i.title, i.doc ? docText(i.doc) : "", ...i.buttons.map((x) => x.label)].join("\n")),
+        ...b.items.map((i) => [i.eyebrow ?? "", i.title ?? "", i.doc ? docText(i.doc) : "", ...i.buttons.map((x) => x.label)].join("\n")),
       ].join("\n");
     case "collection":
     case "programs":
@@ -897,7 +897,7 @@ function gridifySplits(blocks: Block[]): Block[] {
   return out;
 }
 
-function curateDonors(blocks: Block[]): Block[] {
+function curateDonors(blocks: Block[], donorsTitle: string): Block[] {
   const [intro, give, zakatText, zakatBtn, otherWays, iftarImg, iftarBtn, venturesImg, venturesText, venturesBtn, gallery, reportsBtn, closing, closingBtn] =
     blocks as Extract<Block, { type: "richText" | "buttons" | "image" | "gallery" }>[];
   const shape = "richText buttons richText buttons richText image buttons image richText buttons gallery buttons richText buttons";
@@ -916,15 +916,28 @@ function curateDonors(blocks: Block[]): Block[] {
   const otherDoc = rt(otherWays);
   const otherTitle = plain(otherDoc[0]).replace(/:$/, "");
 
+  const [general] = btns(give);
+  const [zakat] = btns(zakatBtn);
+  const heading = (title: string): RichNode => ({ type: "heading", attrs: { level: 3 }, content: [{ type: "text", text: title }] });
   return [
-    { id: intro.id, type: "richText", layout: "lead", doc: { type: "doc", content: [lead] } },
+    {
+      id: intro.id,
+      type: "hero",
+      variant: "plain",
+      heading: donorsTitle,
+      body: { type: "doc", content: [lead] },
+      buttons: [
+        { ...general, style: "primary" },
+        { ...zakat, style: "secondary" },
+      ],
+    } as Block,
     {
       id: bid(),
       type: "options",
       columns: 2,
       items: [
-        { title: generalTitle, doc: { type: "doc", content: giveRest }, buttons: btns(give) },
-        { title: plain(zakatHead), doc: { type: "doc", content: zakatRest }, buttons: btns(zakatBtn) },
+        { title: general.label, doc: { type: "doc", content: [heading(generalTitle), ...giveRest] }, buttons: [{ ...general, label: "Donate" }] },
+        { title: zakat.label, doc: { type: "doc", content: [zakatHead, ...zakatRest] }, buttons: [{ ...zakat, label: "Give Zakat" }] },
         { title: iftarLabel.replace(/^Donate to /, ""), image: { ...img(iftarImg), alt: "MY Iftar Kitchen" }, buttons: btns(iftarBtn) },
         {
           title: "MYP Social Ventures Partnership",
@@ -1002,8 +1015,8 @@ function curateContacts(blocks: Block[]): Block[] {
   ];
 }
 
-function curate(p: string, blocks: Block[]): Block[] {
-  if (p === "/donors") return curateDonors(blocks);
+function curate(p: string, blocks: Block[], title: string): Block[] {
+  if (p === "/donors") return curateDonors(blocks, title);
   if (p === "/contacts") return curateContacts(blocks);
   return gridifySplits(blocks);
 }
@@ -1011,7 +1024,7 @@ function curate(p: string, blocks: Block[]): Block[] {
 async function buildPage(p: string, c: Crawl, lang?: "ar" | "es" | "fr" | "ht"): Promise<{ doc: PageDoc; notes: string[] }> {
   const built = await buildBlocks(c, p, { takeTitle: true });
   const { notes, title } = built;
-  const blocks = lang ? built.blocks : curate(p, built.blocks);
+  const blocks = lang ? built.blocks : curate(p, built.blocks, title || cleanTitle(c.title));
   const doc: PageDoc = { title: title || cleanTitle(c.title) || p.slice(1), seo: seoFor(c), blocks };
   // A single opening sentence reads better as the page's intro, right under the title
   const first = blocks[0];
@@ -1216,6 +1229,7 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
       type: "hero",
       variant: "image",
       heading,
+      body: { type: "doc", content: [para(p1)] },
       // Photo from the original site (Hilltop Free Clinic page): young people at the "Empower" mural
       image: (() => {
         const ref = imageRef("https://static.wixstatic.com/media/be0c83_75d302493dff4448a441e89a4f9b2a7d~mv2.jpg", null, page);
@@ -1226,7 +1240,6 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
         { label: "Volunteer", href: "/volunteer", style: "secondary" },
       ],
     },
-    { id: bid(), type: "richText", layout: "lead", doc: { type: "doc", content: [para(p1)] } },
     {
       id: bid(),
       type: "split",
@@ -1247,7 +1260,6 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
       type: "stats",
       eyebrow: "2014 - 2025",
       heading: "11 Years of Service, Growth & Excellence",
-      tone: "ink",
       source: "Figures as published in MY Project USA's 11-year impact card (2014 – 2025).",
       sourceLink: "/reports",
       items: [
@@ -1269,13 +1281,14 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
     },
     {
       id: bid(),
-      type: "split",
+      type: "options",
       heading: getInvolved,
-      doc: { type: "doc", content: [] },
-      image: imageRef(awards.src ?? "", awards.alt, page) ?? undefined,
-      imageLink: awards.href ? (mapLink(awards.href) ?? undefined) : undefined,
-      imageSide: "left",
-      buttons: [btn("Book Your Seat Now")],
+      columns: 2,
+      items: [awards, ventures].map((img, k) => ({
+        image: imageRef(img.src ?? "", img.alt, page) ?? undefined,
+        imageLink: img.href ? (mapLink(img.href) ?? undefined) : undefined,
+        buttons: [btn(k === 0 ? "Book Your Seat Now" : "Join MYP Social Ventors Partnership")],
+      })),
     },
     ...(ytId
       ? [
@@ -1290,16 +1303,7 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
         ]
       : []),
     { id: bid(), type: "cta", heading: "Help Us Sustain All Programs", buttons: [{ ...btn("Help Us Sustain All Programs"), label: "Donate" }], tone: "brand" },
-    {
-      id: bid(),
-      type: "split",
-      doc: { type: "doc", content: [] },
-      image: imageRef(ventures.src ?? "", ventures.alt, page) ?? undefined,
-      imageLink: ventures.href ? (mapLink(ventures.href) ?? undefined) : undefined,
-      imageSide: "right",
-      buttons: [btn("Join MYP Social Ventors Partnership")],
-    },
-    { id: bid(), type: "statement", text: p4, tone: "sand" },
+    { id: bid(), type: "statement", text: p4 },
     { id: bid(), type: "social", heading: stay },
   ];
   return {

@@ -75,7 +75,7 @@ export function PageView({
           {page.hideTitle && !startsWithHero && <h1 className="sr-only">{page.title}</h1>}
         </>
       )}
-      <div className="pb-16 md:pb-24">
+      <div className="pb-6 md:pb-10">
         <Blocks blocks={page.blocks} collections={collections} path={path} />
       </div>
     </article>

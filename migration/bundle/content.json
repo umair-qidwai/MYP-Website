@@ -17,6 +17,20 @@
       "type": "hero",
       "variant": "image",
       "heading": "Protect. Educate. Empower Our Youth.",
+      "body": {
+       "type": "doc",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "MY Project USA is a national initiative dedicated to protecting and empowering youth and strengthening families through education, social services, civic engagement and advocacy."
+          }
+         ]
+        }
+       ]
+      },
       "image": {
        "src": "wix-media:img_a8e3d507335f4d15",
        "alt": "Young people gathered in front of a colorful mural that reads “Empower”"
@@ -36,25 +50,6 @@
      },
      {
       "id": "b_00002",
-      "type": "richText",
-      "layout": "lead",
-      "doc": {
-       "type": "doc",
-       "content": [
-        {
-         "type": "paragraph",
-         "content": [
-          {
-           "type": "text",
-           "text": "MY Project USA is a national initiative dedicated to protecting and empowering youth and strengthening families through education, social services, civic engagement and advocacy."
-          }
-         ]
-        }
-       ]
-      }
-     },
-     {
-      "id": "b_00003",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -87,16 +82,15 @@
       "buttons": []
      },
      {
-      "id": "b_00004",
+      "id": "b_00003",
       "type": "programs",
       "heading": "Initiatives of MY Project USA"
      },
      {
-      "id": "b_00005",
+      "id": "b_00004",
       "type": "stats",
       "eyebrow": "2014 - 2025",
       "heading": "11 Years of Service, Growth & Excellence",
-      "tone": "ink",
       "source": "Figures as published in MY Project USA's 11-year impact card (2014 – 2025).",
       "sourceLink": "/reports",
       "items": [
@@ -174,29 +168,43 @@
       ]
      },
      {
-      "id": "b_00006",
-      "type": "split",
+      "id": "b_00005",
+      "type": "options",
       "heading": "Get Involved and Help Us Protect & Empower Our Youth.",
-      "doc": {
-       "type": "doc",
-       "content": []
-      },
-      "image": {
-       "src": "wix-media:img_e046bca5030a9eff",
-       "alt": ""
-      },
-      "imageLink": "/awards",
-      "imageSide": "left",
-      "buttons": [
+      "columns": 2,
+      "items": [
        {
-        "label": "Book Your Seat Now",
-        "href": "https://www.zeffy.com/en-US/ticketing/2026-my-project-usa-annual-award-ceremony",
-        "style": "primary"
+        "image": {
+         "src": "wix-media:img_e046bca5030a9eff",
+         "alt": ""
+        },
+        "imageLink": "/awards",
+        "buttons": [
+         {
+          "label": "Book Your Seat Now",
+          "href": "https://www.zeffy.com/en-US/ticketing/2026-my-project-usa-annual-award-ceremony",
+          "style": "primary"
+         }
+        ]
+       },
+       {
+        "image": {
+         "src": "wix-media:img_208a80af7b6ddebb",
+         "alt": ""
+        },
+        "imageLink": "https://www.zeffy.com/en-US/ticketing/92f5eadc-9081-45b1-8525-115344a04cbe",
+        "buttons": [
+         {
+          "label": "Join MYP Social Ventors Partnership",
+          "href": "https://www.zeffy.com/en-US/ticketing/92f5eadc-9081-45b1-8525-115344a04cbe",
+          "style": "primary"
+         }
+        ]
        }
       ]
      },
      {
-      "id": "b_00007",
+      "id": "b_00006",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/0vdD1xW9UPw",
@@ -204,7 +212,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_00008",
+      "id": "b_00007",
       "type": "cta",
       "heading": "Help Us Sustain All Programs",
       "buttons": [
@@ -217,34 +225,12 @@
       "tone": "brand"
      },
      {
-      "id": "b_00009",
-      "type": "split",
-      "doc": {
-       "type": "doc",
-       "content": []
-      },
-      "image": {
-       "src": "wix-media:img_208a80af7b6ddebb",
-       "alt": ""
-      },
-      "imageLink": "https://www.zeffy.com/en-US/ticketing/92f5eadc-9081-45b1-8525-115344a04cbe",
-      "imageSide": "right",
-      "buttons": [
-       {
-        "label": "Join MYP Social Ventors Partnership",
-        "href": "https://www.zeffy.com/en-US/ticketing/92f5eadc-9081-45b1-8525-115344a04cbe",
-        "style": "primary"
-       }
-      ]
-     },
-     {
-      "id": "b_0000a",
+      "id": "b_00008",
       "type": "statement",
-      "text": "Our community is our priority. What’s yours?",
-      "tone": "sand"
+      "text": "Our community is our priority. What’s yours?"
      },
      {
-      "id": "b_0000b",
+      "id": "b_00009",
       "type": "social",
       "heading": "Stay Connected"
      }
@@ -263,7 +249,7 @@
     },
     "blocks": [
      {
-      "id": "b_0000c",
+      "id": "b_0000a",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -608,7 +594,7 @@
       }
      },
      {
-      "id": "b_0000d",
+      "id": "b_0000b",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -634,7 +620,7 @@
     },
     "blocks": [
      {
-      "id": "b_0000e",
+      "id": "b_0000c",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -706,7 +692,7 @@
       "buttons": []
      },
      {
-      "id": "b_0000f",
+      "id": "b_0000d",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -871,7 +857,7 @@
       }
      },
      {
-      "id": "b_0000g",
+      "id": "b_0000e",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -909,7 +895,7 @@
       "buttons": []
      },
      {
-      "id": "b_0000h",
+      "id": "b_0000f",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -1470,7 +1456,7 @@
       }
      },
      {
-      "id": "b_0000i",
+      "id": "b_0000g",
       "type": "embed",
       "provider": "google-map",
       "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.5465548497505!2d-83.0858761!3d39.94283389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838910048e18a0d%3A0xa35c80270f0877af!2sHilltop%20Free%20Clinic!5e1!3m2!1sar!2sus!4v1751913393161!5m2!1sar!2sus",
@@ -1478,7 +1464,7 @@
       "aspect": "4:3"
      },
      {
-      "id": "b_0000j",
+      "id": "b_0000h",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -1569,7 +1555,7 @@
       }
      },
      {
-      "id": "b_0000k",
+      "id": "b_0000i",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -1581,7 +1567,7 @@
       ]
      },
      {
-      "id": "b_0000l",
+      "id": "b_0000j",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -1603,7 +1589,7 @@
       }
      },
      {
-      "id": "b_0000m",
+      "id": "b_0000k",
       "type": "accordion",
       "items": [
        {
@@ -1709,7 +1695,7 @@
     },
     "blocks": [
      {
-      "id": "b_0000n",
+      "id": "b_0000l",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -1754,7 +1740,7 @@
       }
      },
      {
-      "id": "b_0000o",
+      "id": "b_0000m",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -1771,7 +1757,7 @@
       ]
      },
      {
-      "id": "b_0000p",
+      "id": "b_0000n",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -1816,7 +1802,7 @@
       }
      },
      {
-      "id": "b_0000q",
+      "id": "b_0000o",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -1848,7 +1834,7 @@
     },
     "blocks": [
      {
-      "id": "b_0000r",
+      "id": "b_0000p",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -1923,7 +1909,7 @@
       }
      },
      {
-      "id": "b_0000s",
+      "id": "b_0000q",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/e/1FAIpQLSeKRXVk62VDNy87H5PRih-WY8M5E0v0G0Q3V0AuFhSdGg4hYQ/viewform?embedded=true",
@@ -1945,7 +1931,7 @@
     },
     "blocks": [
      {
-      "id": "b_0000t",
+      "id": "b_0000r",
       "type": "image",
       "image": {
        "src": "wix-media:img_e046bca5030a9eff",
@@ -1954,7 +1940,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0000u",
+      "id": "b_0000s",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -2000,7 +1986,7 @@
       }
      },
      {
-      "id": "b_0000v",
+      "id": "b_0000t",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -2017,7 +2003,7 @@
       ]
      },
      {
-      "id": "b_0000w",
+      "id": "b_0000u",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -2528,7 +2514,7 @@
       }
      },
      {
-      "id": "b_0000x",
+      "id": "b_0000v",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -2540,7 +2526,7 @@
       ]
      },
      {
-      "id": "b_0000y",
+      "id": "b_0000w",
       "type": "image",
       "image": {
        "src": "wix-media:img_f0724728dac44b20",
@@ -2550,7 +2536,7 @@
       "size": "wide"
      },
      {
-      "id": "b_0000z",
+      "id": "b_0000x",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -2626,7 +2612,7 @@
       }
      },
      {
-      "id": "b_00010",
+      "id": "b_0000y",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -2638,7 +2624,7 @@
       ]
      },
      {
-      "id": "b_00011",
+      "id": "b_0000z",
       "type": "image",
       "image": {
        "src": "wix-media:img_be3c4ffb7207563a",
@@ -2648,7 +2634,7 @@
       "size": "wide"
      },
      {
-      "id": "b_00012",
+      "id": "b_00010",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -2715,7 +2701,7 @@
       }
      },
      {
-      "id": "b_00013",
+      "id": "b_00011",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -2741,7 +2727,7 @@
     },
     "blocks": [
      {
-      "id": "b_00014",
+      "id": "b_00012",
       "type": "image",
       "image": {
        "src": "wix-media:img_69540381c9c208b9",
@@ -2751,7 +2737,7 @@
       "size": "medium"
      },
      {
-      "id": "b_00015",
+      "id": "b_00013",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -2776,7 +2762,7 @@
     },
     "blocks": [
      {
-      "id": "b_00016",
+      "id": "b_00014",
       "type": "collection",
       "collection": "articles",
       "limit": 500,
@@ -2797,7 +2783,7 @@
     },
     "blocks": [
      {
-      "id": "b_00017",
+      "id": "b_00015",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -2864,7 +2850,7 @@
       "buttons": []
      },
      {
-      "id": "b_00018",
+      "id": "b_00016",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -2931,7 +2917,7 @@
       "buttons": []
      },
      {
-      "id": "b_00019",
+      "id": "b_00017",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3016,7 +3002,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001a",
+      "id": "b_00018",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3083,7 +3069,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001b",
+      "id": "b_00019",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3159,7 +3145,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001c",
+      "id": "b_0001a",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3235,7 +3221,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001d",
+      "id": "b_0001b",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3293,7 +3279,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001e",
+      "id": "b_0001c",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3360,7 +3346,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001f",
+      "id": "b_0001d",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3418,7 +3404,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001g",
+      "id": "b_0001e",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3485,7 +3471,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001h",
+      "id": "b_0001f",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -3557,7 +3543,7 @@
     },
     "blocks": [
      {
-      "id": "b_0001i",
+      "id": "b_0001g",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -4018,7 +4004,7 @@
       }
      },
      {
-      "id": "b_0001j",
+      "id": "b_0001h",
       "type": "image",
       "image": {
        "src": "wix-media:img_7b403a41eda04c2b",
@@ -4028,7 +4014,7 @@
       "size": "wide"
      },
      {
-      "id": "b_0001k",
+      "id": "b_0001i",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -4064,7 +4050,7 @@
     },
     "blocks": [
      {
-      "id": "b_0001l",
+      "id": "b_0001j",
       "type": "image",
       "image": {
        "src": "wix-media:img_c0bc6936b039e743",
@@ -4073,7 +4059,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0001m",
+      "id": "b_0001k",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -4302,7 +4288,7 @@
       }
      },
      {
-      "id": "b_0001n",
+      "id": "b_0001l",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -4333,7 +4319,7 @@
     },
     "blocks": [
      {
-      "id": "b_0001o",
+      "id": "b_0001m",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -4378,7 +4364,7 @@
       "buttons": []
      },
      {
-      "id": "b_0001p",
+      "id": "b_0001n",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -4755,7 +4741,7 @@
     },
     "blocks": [
      {
-      "id": "b_0001q",
+      "id": "b_0001o",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -5013,7 +4999,7 @@
       }
      },
      {
-      "id": "b_0001r",
+      "id": "b_0001p",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -5049,7 +5035,7 @@
     },
     "blocks": [
      {
-      "id": "b_0001s",
+      "id": "b_0001q",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -5061,7 +5047,7 @@
       ]
      },
      {
-      "id": "b_0001t",
+      "id": "b_0001r",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -5104,7 +5090,7 @@
       ]
      },
      {
-      "id": "b_0001z",
+      "id": "b_0001x",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -5403,7 +5389,7 @@
       }
      },
      {
-      "id": "b_00020",
+      "id": "b_0001y",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -5415,7 +5401,7 @@
       ]
      },
      {
-      "id": "b_00021",
+      "id": "b_0001z",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -5437,7 +5423,7 @@
       }
      },
      {
-      "id": "b_00022",
+      "id": "b_00020",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -5479,7 +5465,7 @@
       ]
      },
      {
-      "id": "b_00027",
+      "id": "b_00025",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -5632,7 +5618,7 @@
       "buttons": []
      },
      {
-      "id": "b_00028",
+      "id": "b_00026",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -5665,7 +5651,7 @@
       ]
      },
      {
-      "id": "b_0002c",
+      "id": "b_0002a",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -5735,7 +5721,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002d",
+      "id": "b_0002b",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -5805,7 +5791,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002e",
+      "id": "b_0002c",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -5857,7 +5843,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002f",
+      "id": "b_0002d",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -5909,7 +5895,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002g",
+      "id": "b_0002e",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -5961,7 +5947,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002h",
+      "id": "b_0002f",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -5999,7 +5985,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002i",
+      "id": "b_0002g",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -6051,7 +6037,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002j",
+      "id": "b_0002h",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -6121,7 +6107,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002k",
+      "id": "b_0002i",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -6173,7 +6159,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002l",
+      "id": "b_0002j",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -6225,7 +6211,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002m",
+      "id": "b_0002k",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -6286,7 +6272,7 @@
       "buttons": []
      },
      {
-      "id": "b_0002n",
+      "id": "b_0002l",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -6321,7 +6307,7 @@
     },
     "blocks": [
      {
-      "id": "b_0002o",
+      "id": "b_0002m",
       "type": "embed",
       "provider": "bloomerang",
       "url": "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/myprojectusa/.widget-js/123557888.js",
@@ -6343,7 +6329,7 @@
     },
     "blocks": [
      {
-      "id": "b_0002s",
+      "id": "b_0002q",
       "type": "options",
       "columns": 3,
       "items": [
@@ -6415,7 +6401,7 @@
       ]
      },
      {
-      "id": "b_0002q",
+      "id": "b_0002o",
       "type": "form",
       "title": "Get in Touch",
       "fields": [
@@ -6449,7 +6435,7 @@
       "intro": "Use the contact form below for questions, comments, or to connect with our team.\n We’ll get back to you as soon as possible — thank you for being part of OUR project, MY Project USA."
      },
      {
-      "id": "b_0002r",
+      "id": "b_0002p",
       "type": "embed",
       "provider": "bloomerang",
       "url": "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/myprojectusa/.widget-js/123557888.js",
@@ -6472,7 +6458,7 @@
     },
     "blocks": [
      {
-      "id": "b_0002t",
+      "id": "b_0002r",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -8105,7 +8091,7 @@
       }
      },
      {
-      "id": "b_0002u",
+      "id": "b_0002s",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/HN1mulqwv5g",
@@ -8113,7 +8099,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0002v",
+      "id": "b_0002t",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/videoseries?list=PL_-1bIFwalpIsMb3Q6NMGxNXO0pkcFx5f",
@@ -8121,7 +8107,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0002w",
+      "id": "b_0002u",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/videoseries?list=PL_-1bIFwalpLLSakJRz_rnIvkbKAHwHnd",
@@ -8129,7 +8115,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0002x",
+      "id": "b_0002v",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/FR9QzlRno4A",
@@ -8137,7 +8123,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0002y",
+      "id": "b_0002w",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/krw_WsoF-hc",
@@ -8145,7 +8131,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0002z",
+      "id": "b_0002x",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/videoseries?list=PL_-1bIFwalpI-B19bfc0tp2uHS59chV6h",
@@ -8153,7 +8139,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_00030",
+      "id": "b_0002y",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/videoseries?list=PL_-1bIFwalpKedquqJO5fbJNl3Bd4QWaF",
@@ -8161,7 +8147,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_00031",
+      "id": "b_0002z",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/videoseries?list=PL_-1bIFwalpI40-S1_T0rbGvtvNIesvwT",
@@ -8169,7 +8155,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_00032",
+      "id": "b_00030",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/videoseries?list=PL_-1bIFwalpLMGMIWPwPQhZpH3y1P7WzC",
@@ -8177,7 +8163,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_00033",
+      "id": "b_00031",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/videoseries?list=PL_-1bIFwalpIjmhy0bG-1FpcGrXuERFGn",
@@ -8185,7 +8171,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_00034",
+      "id": "b_00032",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -8211,7 +8197,7 @@
     },
     "blocks": [
      {
-      "id": "b_00035",
+      "id": "b_00033",
       "type": "richText",
       "layout": "lead",
       "doc": {
@@ -8230,7 +8216,7 @@
       }
      },
      {
-      "id": "b_00036",
+      "id": "b_00034",
       "type": "collection",
       "collection": "news",
       "limit": 100,
@@ -8251,7 +8237,7 @@
     },
     "blocks": [
      {
-      "id": "b_0003e",
+      "id": "b_0003c",
       "type": "options",
       "columns": 3,
       "items": [
@@ -9108,7 +9094,7 @@
     },
     "blocks": [
      {
-      "id": "b_0003f",
+      "id": "b_0003d",
       "type": "image",
       "image": {
        "src": "wix-media:img_965b82268a5238ce",
@@ -9117,7 +9103,7 @@
       "size": "wide"
      },
      {
-      "id": "b_0003g",
+      "id": "b_0003e",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -9151,7 +9137,7 @@
       }
      },
      {
-      "id": "b_0003h",
+      "id": "b_0003f",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/kgWnic3fkOc",
@@ -9159,7 +9145,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0003i",
+      "id": "b_0003g",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -9471,7 +9457,7 @@
       }
      },
      {
-      "id": "b_0003j",
+      "id": "b_0003h",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -9507,7 +9493,7 @@
     },
     "blocks": [
      {
-      "id": "b_0003k",
+      "id": "b_0003i",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -9524,7 +9510,7 @@
       ]
      },
      {
-      "id": "b_0003l",
+      "id": "b_0003j",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -9576,7 +9562,7 @@
       }
      },
      {
-      "id": "b_0003m",
+      "id": "b_0003k",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -9616,7 +9602,7 @@
       ]
      },
      {
-      "id": "b_0003n",
+      "id": "b_0003l",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -9644,7 +9630,7 @@
       ]
      },
      {
-      "id": "b_0003q",
+      "id": "b_0003o",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1rihXPJf-bIPuv28x9ygqu9no8CQUTEIFc1KaJ9IUHec/viewform?embedded=true",
@@ -9652,7 +9638,7 @@
       "aspect": "form"
      },
      {
-      "id": "b_0003r",
+      "id": "b_0003p",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -9662,7 +9648,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0003s",
+      "id": "b_0003q",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -9672,7 +9658,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0003t",
+      "id": "b_0003r",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -9696,15 +9682,76 @@
     },
     "blocks": [
      {
-      "id": "b_00049",
+      "id": "b_0003s",
+      "type": "hero",
+      "variant": "plain",
+      "heading": "Build Lasting Sustainability with MY Project USA",
+      "body": {
+       "type": "doc",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "MY Project USA is a registered 501(c)(3) nonprofit, tax-exempt and "
+          },
+          {
+           "type": "text",
+           "text": "Zakat Eligible",
+           "marks": [
+            {
+             "type": "link",
+             "attrs": {
+              "href": "/zakat-eligibility",
+              "target": null
+             }
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": "."
+          }
+         ]
+        }
+       ]
+      },
+      "buttons": [
+       {
+        "label": "General Donations",
+        "href": "https://www.zeffy.com/en-US/donation-form/build-lasting-sustainability-with-my-project-usa",
+        "style": "primary"
+       },
+       {
+        "label": "Zakat for Muslim Children & Families",
+        "href": "https://www.zeffy.com/fundraising/give-zakat-for-local-muslim-youth-and-families",
+        "style": "secondary"
+       }
+      ]
+     },
+     {
+      "id": "b_00047",
       "type": "options",
       "columns": 2,
       "items": [
        {
-        "title": "Food. Medicine. Economic Mobility.",
+        "title": "General Donations",
         "doc": {
          "type": "doc",
          "content": [
+          {
+           "type": "heading",
+           "attrs": {
+            "level": 3
+           },
+           "content": [
+            {
+             "type": "text",
+             "text": "Food. Medicine. Economic Mobility."
+            }
+           ]
+          },
           {
            "type": "paragraph",
            "content": [
@@ -9882,17 +9929,29 @@
         },
         "buttons": [
          {
-          "label": "General Donations",
+          "label": "Donate",
           "href": "https://www.zeffy.com/en-US/donation-form/build-lasting-sustainability-with-my-project-usa",
           "style": "primary"
          }
         ]
        },
        {
-        "title": "Muslim Donors, Your Zakat Can Transform Lives of Local Muslim Children & Families",
+        "title": "Zakat for Muslim Children & Families",
         "doc": {
          "type": "doc",
          "content": [
+          {
+           "type": "heading",
+           "attrs": {
+            "level": 2
+           },
+           "content": [
+            {
+             "type": "text",
+             "text": "Muslim Donors, Your Zakat Can Transform Lives of Local Muslim Children & Families"
+            }
+           ]
+          },
           {
            "type": "paragraph",
            "content": [
@@ -10042,7 +10101,7 @@
         },
         "buttons": [
          {
-          "label": "Zakat for Muslim Children & Families",
+          "label": "Give Zakat",
           "href": "https://www.zeffy.com/fundraising/give-zakat-for-local-muslim-youth-and-families",
           "style": "primary"
          }
@@ -10106,7 +10165,7 @@
       ]
      },
      {
-      "id": "b_0003y",
+      "id": "b_0003w",
       "type": "richText",
       "layout": "default",
       "tone": "sand",
@@ -10204,7 +10263,7 @@
       }
      },
      {
-      "id": "b_00044",
+      "id": "b_00042",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -10224,7 +10283,7 @@
       ]
      },
      {
-      "id": "b_00047",
+      "id": "b_00045",
       "type": "cta",
       "heading": "Let's join hands now in saving thousands of lives, families, and homes!",
       "text": "MY Project USA serves diverse youth and families across Central Ohio. Donors may support the overall mission or choose designated opportunities, including Zakat-eligible services for qualifying recipients.",
@@ -10241,8 +10300,7 @@
        }
       ]
      }
-    ],
-    "intro": "MY Project USA is a registered 501(c)(3) nonprofit, tax-exempt and Zakat Eligible."
+    ]
    }
   },
   {
@@ -10257,7 +10315,7 @@
     },
     "blocks": [
      {
-      "id": "b_0004a",
+      "id": "b_00048",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -10329,7 +10387,7 @@
       "buttons": []
      },
      {
-      "id": "b_0004b",
+      "id": "b_00049",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -10494,7 +10552,7 @@
       }
      },
      {
-      "id": "b_0004c",
+      "id": "b_0004a",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -10518,7 +10576,7 @@
       "buttons": []
      },
      {
-      "id": "b_0004d",
+      "id": "b_0004b",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -10945,7 +11003,7 @@
       }
      },
      {
-      "id": "b_0004e",
+      "id": "b_0004c",
       "type": "embed",
       "provider": "google-map",
       "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.546556550774!2d-83.08845102313362!3d39.94283387151978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838910048e18a0d%3A0xa35c80270f0877af!2sHilltop%20Free%20Clinic!5e1!3m2!1ses!2sus!4v1751910208624!5m2!1ses!2sus",
@@ -10953,7 +11011,7 @@
       "aspect": "4:3"
      },
      {
-      "id": "b_0004f",
+      "id": "b_0004d",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -11044,7 +11102,7 @@
       }
      },
      {
-      "id": "b_0004g",
+      "id": "b_0004e",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11056,7 +11114,7 @@
       ]
      },
      {
-      "id": "b_0004h",
+      "id": "b_0004f",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -11078,7 +11136,7 @@
       }
      },
      {
-      "id": "b_0004i",
+      "id": "b_0004g",
       "type": "accordion",
       "items": [
        {
@@ -11197,7 +11255,7 @@
     },
     "blocks": [
      {
-      "id": "b_0004j",
+      "id": "b_0004h",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -11228,7 +11286,7 @@
       }
      },
      {
-      "id": "b_0004k",
+      "id": "b_0004i",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11245,7 +11303,7 @@
       ]
      },
      {
-      "id": "b_0004l",
+      "id": "b_0004j",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -11290,7 +11348,7 @@
       }
      },
      {
-      "id": "b_0004m",
+      "id": "b_0004k",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11322,7 +11380,7 @@
     },
     "blocks": [
      {
-      "id": "b_0004n",
+      "id": "b_0004l",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11344,7 +11402,7 @@
       ]
      },
      {
-      "id": "b_0004o",
+      "id": "b_0004m",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -11366,7 +11424,7 @@
       }
      },
      {
-      "id": "b_0004p",
+      "id": "b_0004n",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -11442,7 +11500,7 @@
       ]
      },
      {
-      "id": "b_0004z",
+      "id": "b_0004x",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11468,7 +11526,7 @@
     },
     "blocks": [
      {
-      "id": "b_00050",
+      "id": "b_0004y",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11490,7 +11548,7 @@
       ]
      },
      {
-      "id": "b_00051",
+      "id": "b_0004z",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -11531,7 +11589,7 @@
       ]
      },
      {
-      "id": "b_00056",
+      "id": "b_00054",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -11829,7 +11887,7 @@
       }
      },
      {
-      "id": "b_00057",
+      "id": "b_00055",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11841,7 +11899,7 @@
       ]
      },
      {
-      "id": "b_00058",
+      "id": "b_00056",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -11851,7 +11909,7 @@
       "size": "medium"
      },
      {
-      "id": "b_00059",
+      "id": "b_00057",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -11861,7 +11919,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0005a",
+      "id": "b_00058",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -11885,7 +11943,7 @@
     },
     "blocks": [
      {
-      "id": "b_0005b",
+      "id": "b_00059",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -11897,7 +11955,7 @@
       ]
      },
      {
-      "id": "b_0005c",
+      "id": "b_0005a",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -11925,7 +11983,7 @@
       ]
      },
      {
-      "id": "b_0005f",
+      "id": "b_0005d",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12043,7 +12101,7 @@
       }
      },
      {
-      "id": "b_0005g",
+      "id": "b_0005e",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12055,7 +12113,7 @@
       ]
      },
      {
-      "id": "b_0005h",
+      "id": "b_0005f",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12205,7 +12263,7 @@
       }
      },
      {
-      "id": "b_0005i",
+      "id": "b_0005g",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12227,7 +12285,7 @@
       ]
      },
      {
-      "id": "b_0005j",
+      "id": "b_0005h",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12249,7 +12307,7 @@
       }
      },
      {
-      "id": "b_0005k",
+      "id": "b_0005i",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -12277,7 +12335,7 @@
       ]
      },
      {
-      "id": "b_0005n",
+      "id": "b_0005l",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12347,7 +12405,7 @@
       }
      },
      {
-      "id": "b_0005o",
+      "id": "b_0005m",
       "type": "image",
       "image": {
        "src": "wix-media:img_318b06b64f09310c",
@@ -12357,7 +12415,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0005p",
+      "id": "b_0005n",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12437,7 +12495,7 @@
       }
      },
      {
-      "id": "b_0005q",
+      "id": "b_0005o",
       "type": "image",
       "image": {
        "src": "wix-media:img_7a8f6cc823b09947",
@@ -12447,7 +12505,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0005r",
+      "id": "b_0005p",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12464,7 +12522,7 @@
       ]
      },
      {
-      "id": "b_0005s",
+      "id": "b_0005q",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -12474,7 +12532,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0005t",
+      "id": "b_0005r",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -12484,7 +12542,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0005u",
+      "id": "b_0005s",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12496,7 +12554,7 @@
       ]
      },
      {
-      "id": "b_0005v",
+      "id": "b_0005t",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -12520,7 +12578,7 @@
     },
     "blocks": [
      {
-      "id": "b_0005w",
+      "id": "b_0005u",
       "type": "collection",
       "collection": "events",
       "limit": 500,
@@ -12541,7 +12599,7 @@
     },
     "blocks": [
      {
-      "id": "b_0005x",
+      "id": "b_0005v",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12560,7 +12618,7 @@
       }
      },
      {
-      "id": "b_0005y",
+      "id": "b_0005w",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -12617,7 +12675,7 @@
       "buttons": []
      },
      {
-      "id": "b_0005z",
+      "id": "b_0005x",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12629,7 +12687,7 @@
       ]
      },
      {
-      "id": "b_00060",
+      "id": "b_0005y",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12651,7 +12709,7 @@
       }
      },
      {
-      "id": "b_00061",
+      "id": "b_0005z",
       "type": "image",
       "image": {
        "src": "wix-media:img_e4645734d8e3cb51",
@@ -12660,7 +12718,7 @@
       "size": "medium"
      },
      {
-      "id": "b_00062",
+      "id": "b_00060",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12691,7 +12749,7 @@
       }
      },
      {
-      "id": "b_00063",
+      "id": "b_00061",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12703,7 +12761,7 @@
       ]
      },
      {
-      "id": "b_00064",
+      "id": "b_00062",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -12751,7 +12809,7 @@
       "buttons": []
      },
      {
-      "id": "b_00065",
+      "id": "b_00063",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12777,7 +12835,7 @@
     },
     "blocks": [
      {
-      "id": "b_00066",
+      "id": "b_00064",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -12794,7 +12852,7 @@
       ]
      },
      {
-      "id": "b_00067",
+      "id": "b_00065",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -12873,7 +12931,7 @@
       }
      },
      {
-      "id": "b_00068",
+      "id": "b_00066",
       "type": "image",
       "image": {
        "src": "wix-media:img_0f2ae0661929814f",
@@ -12883,7 +12941,7 @@
       "size": "medium"
      },
      {
-      "id": "b_00069",
+      "id": "b_00067",
       "type": "image",
       "image": {
        "src": "wix-media:img_7edaa4096cfec1e1",
@@ -12893,7 +12951,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0006a",
+      "id": "b_00068",
       "type": "image",
       "image": {
        "src": "wix-media:img_ccd82c6111111dbe",
@@ -12903,7 +12961,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0006b",
+      "id": "b_00069",
       "type": "image",
       "image": {
        "src": "wix-media:img_7a8f6cc823b09947",
@@ -12913,7 +12971,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0006c",
+      "id": "b_0006a",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -12923,7 +12981,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0006d",
+      "id": "b_0006b",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -12933,7 +12991,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0006e",
+      "id": "b_0006c",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -12957,7 +13015,7 @@
     },
     "blocks": [
      {
-      "id": "b_0006f",
+      "id": "b_0006d",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -13152,7 +13210,7 @@
       }
      },
      {
-      "id": "b_0006g",
+      "id": "b_0006e",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/HN1mulqwv5g",
@@ -13160,7 +13218,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0006h",
+      "id": "b_0006f",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -13361,7 +13419,7 @@
       }
      },
      {
-      "id": "b_0006i",
+      "id": "b_0006g",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/MAQldouaOLE",
@@ -13369,7 +13427,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0006j",
+      "id": "b_0006h",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -13823,7 +13881,7 @@
       }
      },
      {
-      "id": "b_0006k",
+      "id": "b_0006i",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/FR9QzlRno4A",
@@ -13831,7 +13889,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0006l",
+      "id": "b_0006j",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -13853,7 +13911,7 @@
       }
      },
      {
-      "id": "b_0006m",
+      "id": "b_0006k",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/krw_WsoF-hc",
@@ -13861,7 +13919,7 @@
       "aspect": "16:9"
      },
      {
-      "id": "b_0006n",
+      "id": "b_0006l",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -14297,7 +14355,7 @@
     },
     "blocks": [
      {
-      "id": "b_0006o",
+      "id": "b_0006m",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -14369,7 +14427,7 @@
       "buttons": []
      },
      {
-      "id": "b_0006p",
+      "id": "b_0006n",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -14534,7 +14592,7 @@
       }
      },
      {
-      "id": "b_0006q",
+      "id": "b_0006o",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -14572,7 +14630,7 @@
       "buttons": []
      },
      {
-      "id": "b_0006r",
+      "id": "b_0006p",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -14999,7 +15057,7 @@
       }
      },
      {
-      "id": "b_0006s",
+      "id": "b_0006q",
       "type": "embed",
       "provider": "google-map",
       "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.546556550774!2d-83.08845102313362!3d39.94283387151978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838910048e18a0d%3A0xa35c80270f0877af!2sHilltop%20Free%20Clinic!5e1!3m2!1sfr!2sus!4v1751912850371!5m2!1sfr!2sus",
@@ -15007,7 +15065,7 @@
       "aspect": "4:3"
      },
      {
-      "id": "b_0006t",
+      "id": "b_0006r",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -15098,7 +15156,7 @@
       }
      },
      {
-      "id": "b_0006u",
+      "id": "b_0006s",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -15110,7 +15168,7 @@
       ]
      },
      {
-      "id": "b_0006v",
+      "id": "b_0006t",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -15132,7 +15190,7 @@
       }
      },
      {
-      "id": "b_0006w",
+      "id": "b_0006u",
       "type": "accordion",
       "items": [
        {
@@ -15251,7 +15309,7 @@
     },
     "blocks": [
      {
-      "id": "b_0006x",
+      "id": "b_0006v",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -15296,7 +15354,7 @@
       }
      },
      {
-      "id": "b_0006y",
+      "id": "b_0006w",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -15313,7 +15371,7 @@
       ]
      },
      {
-      "id": "b_0006z",
+      "id": "b_0006x",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -15358,7 +15416,7 @@
       }
      },
      {
-      "id": "b_00070",
+      "id": "b_0006y",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -15390,7 +15448,7 @@
     },
     "blocks": [
      {
-      "id": "b_00071",
+      "id": "b_0006z",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -15462,7 +15520,7 @@
       "buttons": []
      },
      {
-      "id": "b_00072",
+      "id": "b_00070",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -15627,7 +15685,7 @@
       }
      },
      {
-      "id": "b_00073",
+      "id": "b_00071",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -15651,7 +15709,7 @@
       "buttons": []
      },
      {
-      "id": "b_00074",
+      "id": "b_00072",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -16073,7 +16131,7 @@
       }
      },
      {
-      "id": "b_00075",
+      "id": "b_00073",
       "type": "embed",
       "provider": "google-map",
       "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.9354341432754!2d-83.08845102398497!3d39.942833871519646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838910048e18a0d%3A0xa35c80270f0877af!2sHilltop%20Free%20Clinic!5e0!3m2!1sen!2sus!4v1750007677487!5m2!1sen!2sus",
@@ -16081,7 +16139,7 @@
       "aspect": "4:3"
      },
      {
-      "id": "b_00076",
+      "id": "b_00074",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -16172,7 +16230,7 @@
       }
      },
      {
-      "id": "b_00077",
+      "id": "b_00075",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -16184,7 +16242,7 @@
       ]
      },
      {
-      "id": "b_00078",
+      "id": "b_00076",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -16206,7 +16264,7 @@
       }
      },
      {
-      "id": "b_00079",
+      "id": "b_00077",
       "type": "accordion",
       "items": [
        {
@@ -16324,7 +16382,7 @@
     },
     "blocks": [
      {
-      "id": "b_0007a",
+      "id": "b_00078",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -16676,7 +16734,7 @@
       }
      },
      {
-      "id": "b_0007b",
+      "id": "b_00079",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -16693,7 +16751,7 @@
       ]
      },
      {
-      "id": "b_0007c",
+      "id": "b_0007a",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -16738,7 +16796,7 @@
       }
      },
      {
-      "id": "b_0007d",
+      "id": "b_0007b",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -16768,7 +16826,7 @@
     },
     "blocks": [
      {
-      "id": "b_0007e",
+      "id": "b_0007c",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -16814,7 +16872,7 @@
       }
      },
      {
-      "id": "b_0007f",
+      "id": "b_0007d",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -16840,7 +16898,7 @@
     },
     "blocks": [
      {
-      "id": "b_0007g",
+      "id": "b_0007e",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -16919,7 +16977,7 @@
       }
      },
      {
-      "id": "b_0007h",
+      "id": "b_0007f",
       "type": "image",
       "image": {
        "src": "wix-media:img_47d4370671db253f",
@@ -16942,7 +17000,7 @@
     },
     "blocks": [
      {
-      "id": "b_0007i",
+      "id": "b_0007g",
       "type": "image",
       "image": {
        "src": "wix-media:img_5796d1f3eba8e609",
@@ -16951,7 +17009,7 @@
       "size": "wide"
      },
      {
-      "id": "b_0007j",
+      "id": "b_0007h",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -17080,7 +17138,7 @@
       }
      },
      {
-      "id": "b_0007k",
+      "id": "b_0007i",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -17105,7 +17163,7 @@
       ]
      },
      {
-      "id": "b_0007l",
+      "id": "b_0007j",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -17166,7 +17224,7 @@
       }
      },
      {
-      "id": "b_0007m",
+      "id": "b_0007k",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -17178,7 +17236,7 @@
       ]
      },
      {
-      "id": "b_0007n",
+      "id": "b_0007l",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -17200,7 +17258,7 @@
       }
      },
      {
-      "id": "b_0007o",
+      "id": "b_0007m",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -17212,7 +17270,7 @@
       ]
      },
      {
-      "id": "b_0007p",
+      "id": "b_0007n",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -17243,7 +17301,7 @@
       }
      },
      {
-      "id": "b_0007q",
+      "id": "b_0007o",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -17269,7 +17327,7 @@
     },
     "blocks": [
      {
-      "id": "b_0007r",
+      "id": "b_0007p",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -17341,7 +17399,7 @@
       "buttons": []
      },
      {
-      "id": "b_0007s",
+      "id": "b_0007q",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -17506,7 +17564,7 @@
       }
      },
      {
-      "id": "b_0007t",
+      "id": "b_0007r",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -17530,7 +17588,7 @@
       "buttons": []
      },
      {
-      "id": "b_0007u",
+      "id": "b_0007s",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -17957,7 +18015,7 @@
       }
      },
      {
-      "id": "b_0007v",
+      "id": "b_0007t",
       "type": "embed",
       "provider": "google-map",
       "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4086.5465548497505!2d-83.0858761!3d39.94283389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838910048e18a0d%3A0xa35c80270f0877af!2sHilltop%20Free%20Clinic!5e1!3m2!1sfr!2sus!4v1751914203753!5m2!1sfr!2sus",
@@ -17965,7 +18023,7 @@
       "aspect": "4:3"
      },
      {
-      "id": "b_0007w",
+      "id": "b_0007u",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -18056,7 +18114,7 @@
       }
      },
      {
-      "id": "b_0007x",
+      "id": "b_0007v",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18068,7 +18126,7 @@
       ]
      },
      {
-      "id": "b_0007y",
+      "id": "b_0007w",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -18090,7 +18148,7 @@
       }
      },
      {
-      "id": "b_0007z",
+      "id": "b_0007x",
       "type": "accordion",
       "items": [
        {
@@ -18209,7 +18267,7 @@
     },
     "blocks": [
      {
-      "id": "b_00080",
+      "id": "b_0007y",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -18240,7 +18298,7 @@
       }
      },
      {
-      "id": "b_00081",
+      "id": "b_0007z",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18257,7 +18315,7 @@
       ]
      },
      {
-      "id": "b_00082",
+      "id": "b_00080",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -18302,7 +18360,7 @@
       }
      },
      {
-      "id": "b_00083",
+      "id": "b_00081",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18334,7 +18392,7 @@
     },
     "blocks": [
      {
-      "id": "b_00084",
+      "id": "b_00082",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18346,7 +18404,7 @@
       ]
      },
      {
-      "id": "b_00085",
+      "id": "b_00083",
       "type": "image",
       "image": {
        "src": "wix-media:img_e0375f5568bacbfc",
@@ -18355,7 +18413,7 @@
       "size": "wide"
      },
      {
-      "id": "b_00086",
+      "id": "b_00084",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18367,7 +18425,7 @@
       ]
      },
      {
-      "id": "b_00087",
+      "id": "b_00085",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -18645,7 +18703,7 @@
       ]
      },
      {
-      "id": "b_00088",
+      "id": "b_00086",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -18673,7 +18731,7 @@
       ]
      },
      {
-      "id": "b_0008b",
+      "id": "b_00089",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18685,7 +18743,7 @@
       ]
      },
      {
-      "id": "b_0008c",
+      "id": "b_0008a",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18697,7 +18755,7 @@
       ]
      },
      {
-      "id": "b_0008d",
+      "id": "b_0008b",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -18707,7 +18765,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0008e",
+      "id": "b_0008c",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -18717,7 +18775,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0008f",
+      "id": "b_0008d",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -18741,7 +18799,7 @@
     },
     "blocks": [
      {
-      "id": "b_0008g",
+      "id": "b_0008e",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18753,7 +18811,7 @@
       ]
      },
      {
-      "id": "b_0008h",
+      "id": "b_0008f",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -18832,7 +18890,7 @@
       }
      },
      {
-      "id": "b_0008i",
+      "id": "b_0008g",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18849,7 +18907,7 @@
       ]
      },
      {
-      "id": "b_0008j",
+      "id": "b_0008h",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -18889,7 +18947,7 @@
       }
      },
      {
-      "id": "b_0008k",
+      "id": "b_0008i",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18906,7 +18964,7 @@
       ]
      },
      {
-      "id": "b_0008l",
+      "id": "b_0008j",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -18955,7 +19013,7 @@
       }
      },
      {
-      "id": "b_0008m",
+      "id": "b_0008k",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -18972,7 +19030,7 @@
       ]
      },
      {
-      "id": "b_0008n",
+      "id": "b_0008l",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19038,7 +19096,7 @@
       }
      },
      {
-      "id": "b_0008o",
+      "id": "b_0008m",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19055,7 +19113,7 @@
       ]
      },
      {
-      "id": "b_0008p",
+      "id": "b_0008n",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19104,7 +19162,7 @@
       }
      },
      {
-      "id": "b_0008q",
+      "id": "b_0008o",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19121,7 +19179,7 @@
       ]
      },
      {
-      "id": "b_0008r",
+      "id": "b_0008p",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19272,7 +19330,7 @@
       }
      },
      {
-      "id": "b_0008s",
+      "id": "b_0008q",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19289,7 +19347,7 @@
       ]
      },
      {
-      "id": "b_0008t",
+      "id": "b_0008r",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19356,7 +19414,7 @@
       }
      },
      {
-      "id": "b_0008u",
+      "id": "b_0008s",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19373,7 +19431,7 @@
       ]
      },
      {
-      "id": "b_0008v",
+      "id": "b_0008t",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19413,7 +19471,7 @@
       }
      },
      {
-      "id": "b_0008w",
+      "id": "b_0008u",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19430,7 +19488,7 @@
       ]
      },
      {
-      "id": "b_0008x",
+      "id": "b_0008v",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19488,7 +19546,7 @@
       }
      },
      {
-      "id": "b_0008y",
+      "id": "b_0008w",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19505,7 +19563,7 @@
       ]
      },
      {
-      "id": "b_0008z",
+      "id": "b_0008x",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19563,7 +19621,7 @@
       }
      },
      {
-      "id": "b_00090",
+      "id": "b_0008y",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19580,7 +19638,7 @@
       ]
      },
      {
-      "id": "b_00091",
+      "id": "b_0008z",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19629,7 +19687,7 @@
       }
      },
      {
-      "id": "b_00092",
+      "id": "b_00090",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19655,7 +19713,7 @@
     },
     "blocks": [
      {
-      "id": "b_00093",
+      "id": "b_00091",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19772,7 +19830,7 @@
       }
      },
      {
-      "id": "b_00094",
+      "id": "b_00092",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -19798,7 +19856,7 @@
     },
     "blocks": [
      {
-      "id": "b_00095",
+      "id": "b_00093",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1pTKcopd1Dvf5mTV3CKrK-ozH4IXk4b8sPeg5UqLaSKY/viewform?embedded=true",
@@ -19820,7 +19878,7 @@
     },
     "blocks": [
      {
-      "id": "b_00096",
+      "id": "b_00094",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -19940,7 +19998,7 @@
       }
      },
      {
-      "id": "b_00097",
+      "id": "b_00095",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1Y5SXFLQuoaH0H7WEVRHn_HicoUYgHcqa_XJWxzW6p-Q/viewform?embedded=true",
@@ -19962,7 +20020,7 @@
     },
     "blocks": [
      {
-      "id": "b_00098",
+      "id": "b_00096",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -20027,7 +20085,7 @@
       }
      },
      {
-      "id": "b_00099",
+      "id": "b_00097",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1zveLWA7Car9HZWBunH01bm1Junwr9_4NMdgNIYePOUo/viewform?embedded=true",
@@ -20035,7 +20093,7 @@
       "aspect": "form"
      },
      {
-      "id": "b_0009a",
+      "id": "b_00098",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -20061,7 +20119,7 @@
     },
     "blocks": [
      {
-      "id": "b_0009b",
+      "id": "b_00099",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -20104,7 +20162,7 @@
       }
      },
      {
-      "id": "b_0009c",
+      "id": "b_0009a",
       "type": "image",
       "image": {
        "src": "wix-media:img_4c68139198ff965e",
@@ -20113,7 +20171,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0009d",
+      "id": "b_0009b",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -20913,7 +20971,7 @@
       }
      },
      {
-      "id": "b_0009e",
+      "id": "b_0009c",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -20939,7 +20997,7 @@
     },
     "blocks": [
      {
-      "id": "b_0009f",
+      "id": "b_0009d",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -21746,7 +21804,7 @@
     },
     "blocks": [
      {
-      "id": "b_0009g",
+      "id": "b_0009e",
       "type": "image",
       "image": {
        "src": "wix-media:img_f331a165e83fb8b0",
@@ -21755,7 +21813,7 @@
       "size": "wide"
      },
      {
-      "id": "b_0009h",
+      "id": "b_0009f",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -21824,7 +21882,7 @@
     },
     "blocks": [
      {
-      "id": "b_0009i",
+      "id": "b_0009g",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -21836,7 +21894,7 @@
       ]
      },
      {
-      "id": "b_0009j",
+      "id": "b_0009h",
       "type": "image",
       "image": {
        "src": "wix-media:img_29380096b29968b9",
@@ -21845,7 +21903,7 @@
       "size": "wide"
      },
      {
-      "id": "b_0009k",
+      "id": "b_0009i",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -21857,7 +21915,7 @@
       ]
      },
      {
-      "id": "b_0009l",
+      "id": "b_0009j",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -22204,7 +22262,7 @@
       }
      },
      {
-      "id": "b_0009m",
+      "id": "b_0009k",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -22216,7 +22274,7 @@
       ]
      },
      {
-      "id": "b_0009n",
+      "id": "b_0009l",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -22264,7 +22322,7 @@
       ]
      },
      {
-      "id": "b_0009t",
+      "id": "b_0009r",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -22274,7 +22332,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0009u",
+      "id": "b_0009s",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -22298,7 +22356,7 @@
     },
     "blocks": [
      {
-      "id": "b_0009v",
+      "id": "b_0009t",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -22315,7 +22373,7 @@
       ]
      },
      {
-      "id": "b_0009w",
+      "id": "b_0009u",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -22563,7 +22621,7 @@
       }
      },
      {
-      "id": "b_0009x",
+      "id": "b_0009v",
       "type": "image",
       "image": {
        "src": "wix-media:img_0f2ae0661929814f",
@@ -22573,7 +22631,7 @@
       "size": "medium"
      },
      {
-      "id": "b_0009y",
+      "id": "b_0009w",
       "type": "embed",
       "provider": "eventbrite",
       "url": "https://www.eventbrite.com/tickets-external?eid=17000388620&ref=etckt",
@@ -22581,7 +22639,7 @@
       "aspect": "form"
      },
      {
-      "id": "b_0009z",
+      "id": "b_0009x",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -22602,7 +22660,7 @@
       ]
      },
      {
-      "id": "b_000a1",
+      "id": "b_0009z",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -22672,7 +22730,7 @@
       }
      },
      {
-      "id": "b_000a2",
+      "id": "b_000a0",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -22684,7 +22742,7 @@
       ]
      },
      {
-      "id": "b_000a3",
+      "id": "b_000a1",
       "type": "image",
       "image": {
        "src": "wix-media:img_7a8f6cc823b09947",
@@ -22694,7 +22752,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000a4",
+      "id": "b_000a2",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -22704,7 +22762,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000a5",
+      "id": "b_000a3",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -22714,7 +22772,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000a6",
+      "id": "b_000a4",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -22738,7 +22796,7 @@
     },
     "blocks": [
      {
-      "id": "b_000a7",
+      "id": "b_000a5",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -22750,7 +22808,7 @@
       ]
      },
      {
-      "id": "b_000a8",
+      "id": "b_000a6",
       "type": "image",
       "image": {
        "src": "wix-media:img_9d12ddeca18df7a2",
@@ -22760,7 +22818,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000a9",
+      "id": "b_000a7",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -22772,7 +22830,7 @@
       ]
      },
      {
-      "id": "b_000aa",
+      "id": "b_000a8",
       "type": "form",
       "title": "Join our mailing list",
       "fields": [
@@ -22793,7 +22851,7 @@
       "successMessage": "Thank you — your submission has been received."
      },
      {
-      "id": "b_000ab",
+      "id": "b_000a9",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -23020,7 +23078,7 @@
       }
      },
      {
-      "id": "b_000ac",
+      "id": "b_000aa",
       "type": "gallery",
       "layout": "logos",
       "images": [
@@ -23041,7 +23099,7 @@
       ]
      },
      {
-      "id": "b_000ae",
+      "id": "b_000ac",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -23073,7 +23131,7 @@
       ]
      },
      {
-      "id": "b_000af",
+      "id": "b_000ad",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -23115,7 +23173,7 @@
       ]
      },
      {
-      "id": "b_000ak",
+      "id": "b_000ai",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -23213,7 +23271,7 @@
       }
      },
      {
-      "id": "b_000al",
+      "id": "b_000aj",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -23237,7 +23295,7 @@
     },
     "blocks": [
      {
-      "id": "b_000am",
+      "id": "b_000ak",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -23249,7 +23307,7 @@
       ]
      },
      {
-      "id": "b_000an",
+      "id": "b_000al",
       "type": "image",
       "image": {
        "src": "wix-media:img_414a271175eea6a5",
@@ -23259,7 +23317,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000ao",
+      "id": "b_000am",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -23286,7 +23344,7 @@
       ]
      },
      {
-      "id": "b_000ap",
+      "id": "b_000an",
       "type": "form",
       "title": "Join our mailing list",
       "fields": [
@@ -23307,7 +23365,7 @@
       "successMessage": "Thank you — your submission has been received."
      },
      {
-      "id": "b_000aq",
+      "id": "b_000ao",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -23335,7 +23393,7 @@
       ]
      },
      {
-      "id": "b_000at",
+      "id": "b_000ar",
       "type": "image",
       "image": {
        "src": "wix-media:img_7a8f6cc823b09947",
@@ -23345,7 +23403,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000au",
+      "id": "b_000as",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -23355,7 +23413,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000av",
+      "id": "b_000at",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -23365,7 +23423,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000aw",
+      "id": "b_000au",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -23389,7 +23447,7 @@
     },
     "blocks": [
      {
-      "id": "b_000ax",
+      "id": "b_000av",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -23406,7 +23464,7 @@
       ]
      },
      {
-      "id": "b_000ay",
+      "id": "b_000aw",
       "type": "form",
       "title": "Join our mailing list",
       "fields": [
@@ -23427,7 +23485,7 @@
       "successMessage": "Thank you — your submission has been received."
      },
      {
-      "id": "b_000az",
+      "id": "b_000ax",
       "type": "image",
       "image": {
        "src": "wix-media:img_9d12ddeca18df7a2",
@@ -23437,7 +23495,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000b0",
+      "id": "b_000ay",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -23783,7 +23841,7 @@
       "buttons": []
      },
      {
-      "id": "b_000b1",
+      "id": "b_000az",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -23876,7 +23934,7 @@
       ]
      },
      {
-      "id": "b_000bn",
+      "id": "b_000bl",
       "type": "options",
       "columns": 3,
       "items": [
@@ -24243,7 +24301,7 @@
       ]
      },
      {
-      "id": "b_000bm",
+      "id": "b_000bk",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -24279,7 +24337,7 @@
     },
     "blocks": [
      {
-      "id": "b_000bo",
+      "id": "b_000bm",
       "type": "image",
       "image": {
        "src": "wix-media:img_672d5d4f12f93df6",
@@ -24288,7 +24346,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000bp",
+      "id": "b_000bn",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24366,7 +24424,7 @@
       }
      },
      {
-      "id": "b_000bq",
+      "id": "b_000bo",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -24378,7 +24436,7 @@
       ]
      },
      {
-      "id": "b_000br",
+      "id": "b_000bp",
       "type": "image",
       "image": {
        "src": "wix-media:img_d5f56e6ecde1d4e7",
@@ -24387,7 +24445,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000bs",
+      "id": "b_000bq",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24439,7 +24497,7 @@
       }
      },
      {
-      "id": "b_000bt",
+      "id": "b_000br",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -24451,7 +24509,7 @@
       ]
      },
      {
-      "id": "b_000bu",
+      "id": "b_000bs",
       "type": "image",
       "image": {
        "src": "wix-media:img_b17c398ddb9d3e63",
@@ -24460,7 +24518,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000bv",
+      "id": "b_000bt",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24521,7 +24579,7 @@
       }
      },
      {
-      "id": "b_000bw",
+      "id": "b_000bu",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -24533,7 +24591,7 @@
       ]
      },
      {
-      "id": "b_000bx",
+      "id": "b_000bv",
       "type": "image",
       "image": {
        "src": "wix-media:img_7ebfb7cf848ba539",
@@ -24542,7 +24600,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000by",
+      "id": "b_000bw",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24594,7 +24652,7 @@
       }
      },
      {
-      "id": "b_000bz",
+      "id": "b_000bx",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -24606,7 +24664,7 @@
       ]
      },
      {
-      "id": "b_000c0",
+      "id": "b_000by",
       "type": "image",
       "image": {
        "src": "wix-media:img_1a0ccd1812420403",
@@ -24615,7 +24673,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000c1",
+      "id": "b_000bz",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24676,7 +24734,7 @@
       }
      },
      {
-      "id": "b_000c2",
+      "id": "b_000c0",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -24688,7 +24746,7 @@
       ]
      },
      {
-      "id": "b_000c3",
+      "id": "b_000c1",
       "type": "image",
       "image": {
        "src": "wix-media:img_929621f58e5b5489",
@@ -24698,7 +24756,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000c4",
+      "id": "b_000c2",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24777,7 +24835,7 @@
       }
      },
      {
-      "id": "b_000c5",
+      "id": "b_000c3",
       "type": "image",
       "image": {
        "src": "wix-media:img_c843c38dc0fa8def",
@@ -24787,7 +24845,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000c6",
+      "id": "b_000c4",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24875,7 +24933,7 @@
       }
      },
      {
-      "id": "b_000c7",
+      "id": "b_000c5",
       "type": "image",
       "image": {
        "src": "wix-media:img_ba0b51f3095c633c",
@@ -24885,7 +24943,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000c8",
+      "id": "b_000c6",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -24955,7 +25013,7 @@
       }
      },
      {
-      "id": "b_000c9",
+      "id": "b_000c7",
       "type": "image",
       "image": {
        "src": "wix-media:img_e876b1c11d41d39b",
@@ -24965,7 +25023,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ca",
+      "id": "b_000c8",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -25052,7 +25110,7 @@
       }
      },
      {
-      "id": "b_000cb",
+      "id": "b_000c9",
       "type": "image",
       "image": {
        "src": "wix-media:img_1fa8dca286bbd048",
@@ -25062,7 +25120,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000cc",
+      "id": "b_000ca",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -25137,7 +25195,7 @@
       }
      },
      {
-      "id": "b_000cd",
+      "id": "b_000cb",
       "type": "image",
       "image": {
        "src": "wix-media:img_d82d4181f02cf832",
@@ -25147,7 +25205,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ce",
+      "id": "b_000cc",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -25199,7 +25257,7 @@
       }
      },
      {
-      "id": "b_000cf",
+      "id": "b_000cd",
       "type": "image",
       "image": {
        "src": "wix-media:img_80be3a3790afbfd9",
@@ -25208,7 +25266,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000cg",
+      "id": "b_000ce",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -25319,7 +25377,7 @@
       }
      },
      {
-      "id": "b_000ch",
+      "id": "b_000cf",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d3c8acf04462009",
@@ -25329,7 +25387,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ci",
+      "id": "b_000cg",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -25408,7 +25466,7 @@
       }
      },
      {
-      "id": "b_000cj",
+      "id": "b_000ch",
       "type": "image",
       "image": {
        "src": "wix-media:img_2582b5caeb41e42e",
@@ -25418,7 +25476,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ck",
+      "id": "b_000ci",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -25501,7 +25559,7 @@
       }
      },
      {
-      "id": "b_000cl",
+      "id": "b_000cj",
       "type": "image",
       "image": {
        "src": "wix-media:img_eaa912593dcb8136",
@@ -25511,7 +25569,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000cm",
+      "id": "b_000ck",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -25618,7 +25676,7 @@
     },
     "blocks": [
      {
-      "id": "b_000cn",
+      "id": "b_000cl",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -34271,7 +34329,7 @@
     },
     "blocks": [
      {
-      "id": "b_000co",
+      "id": "b_000cm",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -34283,7 +34341,7 @@
       ]
      },
      {
-      "id": "b_000cp",
+      "id": "b_000cn",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -34315,7 +34373,7 @@
       }
      },
      {
-      "id": "b_000cq",
+      "id": "b_000co",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -34337,7 +34395,7 @@
       ]
      },
      {
-      "id": "b_000cr",
+      "id": "b_000cp",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -34485,7 +34543,7 @@
       }
      },
      {
-      "id": "b_000cs",
+      "id": "b_000cq",
       "type": "image",
       "image": {
        "src": "wix-media:img_180db58189262c3a",
@@ -34494,7 +34552,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ct",
+      "id": "b_000cr",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -34566,7 +34624,7 @@
       }
      },
      {
-      "id": "b_000cu",
+      "id": "b_000cs",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -34578,7 +34636,7 @@
       ]
      },
      {
-      "id": "b_000cv",
+      "id": "b_000ct",
       "type": "gallery",
       "layout": "logos",
       "images": [
@@ -34599,7 +34657,7 @@
       ]
      },
      {
-      "id": "b_000cx",
+      "id": "b_000cv",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -34653,7 +34711,7 @@
       }
      },
      {
-      "id": "b_000cy",
+      "id": "b_000cw",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -34674,7 +34732,7 @@
       ]
      },
      {
-      "id": "b_000d0",
+      "id": "b_000cy",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -34904,7 +34962,7 @@
       }
      },
      {
-      "id": "b_000d1",
+      "id": "b_000cz",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -34916,7 +34974,7 @@
       ]
      },
      {
-      "id": "b_000d2",
+      "id": "b_000d0",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -34951,7 +35009,7 @@
       ]
      },
      {
-      "id": "b_000d6",
+      "id": "b_000d4",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -34998,7 +35056,7 @@
       }
      },
      {
-      "id": "b_000d7",
+      "id": "b_000d5",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -35022,7 +35080,7 @@
     },
     "blocks": [
      {
-      "id": "b_000d8",
+      "id": "b_000d6",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -35039,7 +35097,7 @@
       ]
      },
      {
-      "id": "b_000d9",
+      "id": "b_000d7",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -35187,7 +35245,7 @@
       }
      },
      {
-      "id": "b_000da",
+      "id": "b_000d8",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -35199,7 +35257,7 @@
       ]
      },
      {
-      "id": "b_000db",
+      "id": "b_000d9",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -35221,7 +35279,7 @@
       }
      },
      {
-      "id": "b_000dc",
+      "id": "b_000da",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -35270,7 +35328,7 @@
       ]
      },
      {
-      "id": "b_000di",
+      "id": "b_000dg",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -35982,7 +36040,7 @@
       }
      },
      {
-      "id": "b_000dj",
+      "id": "b_000dh",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -36048,7 +36106,7 @@
     },
     "blocks": [
      {
-      "id": "b_000dk",
+      "id": "b_000di",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -36060,7 +36118,7 @@
       ]
      },
      {
-      "id": "b_000dl",
+      "id": "b_000dj",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -36082,7 +36140,7 @@
       }
      },
      {
-      "id": "b_000dm",
+      "id": "b_000dk",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -36094,7 +36152,7 @@
       ]
      },
      {
-      "id": "b_000dn",
+      "id": "b_000dl",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -36158,7 +36216,7 @@
       }
      },
      {
-      "id": "b_000do",
+      "id": "b_000dm",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -36246,7 +36304,7 @@
       "buttons": []
      },
      {
-      "id": "b_000dp",
+      "id": "b_000dn",
       "type": "image",
       "image": {
        "src": "wix-media:img_7edaa4096cfec1e1",
@@ -36256,7 +36314,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000dq",
+      "id": "b_000do",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -36314,7 +36372,7 @@
       "buttons": []
      },
      {
-      "id": "b_000dr",
+      "id": "b_000dp",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -36326,7 +36384,7 @@
       ]
      },
      {
-      "id": "b_000ds",
+      "id": "b_000dq",
       "type": "image",
       "image": {
        "src": "wix-media:img_7a8f6cc823b09947",
@@ -36336,7 +36394,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000dt",
+      "id": "b_000dr",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -36346,7 +36404,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000du",
+      "id": "b_000ds",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -36356,7 +36414,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000dv",
+      "id": "b_000dt",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -36380,7 +36438,7 @@
     },
     "blocks": [
      {
-      "id": "b_000dw",
+      "id": "b_000du",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -36408,7 +36466,7 @@
       }
      },
      {
-      "id": "b_000dx",
+      "id": "b_000dv",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/141OEdEy4vNSjN8KOgySXJ5U1FH3CxiRzdHl8yD2ksQ8/viewform?embedded=true",
@@ -36416,7 +36474,7 @@
       "aspect": "form"
      },
      {
-      "id": "b_000dy",
+      "id": "b_000dw",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -36449,7 +36507,7 @@
     },
     "blocks": [
      {
-      "id": "b_000dz",
+      "id": "b_000dx",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -36844,7 +36902,7 @@
     },
     "blocks": [
      {
-      "id": "b_000e0",
+      "id": "b_000dy",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -36861,7 +36919,7 @@
       ]
      },
      {
-      "id": "b_000e1",
+      "id": "b_000dz",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -36985,7 +37043,7 @@
       "buttons": []
      },
      {
-      "id": "b_000e2",
+      "id": "b_000e0",
       "type": "image",
       "image": {
        "src": "wix-media:img_7edaa4096cfec1e1",
@@ -36995,7 +37053,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000e3",
+      "id": "b_000e1",
       "type": "image",
       "image": {
        "src": "wix-media:img_ccd82c6111111dbe",
@@ -37005,7 +37063,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000e4",
+      "id": "b_000e2",
       "type": "image",
       "image": {
        "src": "wix-media:img_7a8f6cc823b09947",
@@ -37015,7 +37073,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000e5",
+      "id": "b_000e3",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -37025,7 +37083,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000e6",
+      "id": "b_000e4",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -37035,7 +37093,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000e7",
+      "id": "b_000e5",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -37059,7 +37117,7 @@
     },
     "blocks": [
      {
-      "id": "b_000e8",
+      "id": "b_000e6",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -37207,7 +37265,7 @@
       }
      },
      {
-      "id": "b_000e9",
+      "id": "b_000e7",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -37224,7 +37282,7 @@
       ]
      },
      {
-      "id": "b_000ea",
+      "id": "b_000e8",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -37257,7 +37315,7 @@
       }
      },
      {
-      "id": "b_000eb",
+      "id": "b_000e9",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -37283,7 +37341,7 @@
     },
     "blocks": [
      {
-      "id": "b_000ec",
+      "id": "b_000ea",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -37777,7 +37835,7 @@
     },
     "blocks": [
      {
-      "id": "b_000ed",
+      "id": "b_000eb",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -37909,7 +37967,7 @@
       }
      },
      {
-      "id": "b_000ee",
+      "id": "b_000ec",
       "type": "embed",
       "provider": "youtube",
       "url": "https://www.youtube-nocookie.com/embed/tNn5gVQtsLU",
@@ -37931,7 +37989,7 @@
     },
     "blocks": [
      {
-      "id": "b_000ef",
+      "id": "b_000ed",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -37948,7 +38006,7 @@
       ]
      },
      {
-      "id": "b_000eg",
+      "id": "b_000ee",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -38030,7 +38088,7 @@
       }
      },
      {
-      "id": "b_000eh",
+      "id": "b_000ef",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1LNcMGvOmwFffcq_XVd2OXz40FCUEy9xhTHwMi_JAPwY/viewform?embedded=true",
@@ -38038,7 +38096,7 @@
       "aspect": "form"
      },
      {
-      "id": "b_000ei",
+      "id": "b_000eg",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -38050,7 +38108,7 @@
       ]
      },
      {
-      "id": "b_000ej",
+      "id": "b_000eh",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -38092,7 +38150,7 @@
       ]
      },
      {
-      "id": "b_000eo",
+      "id": "b_000em",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -38102,7 +38160,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ep",
+      "id": "b_000en",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -38126,7 +38184,7 @@
     },
     "blocks": [
      {
-      "id": "b_000eq",
+      "id": "b_000eo",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -38148,7 +38206,7 @@
       ]
      },
      {
-      "id": "b_000er",
+      "id": "b_000ep",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -38170,7 +38228,7 @@
       }
      },
      {
-      "id": "b_000es",
+      "id": "b_000eq",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -38205,7 +38263,7 @@
       ]
      },
      {
-      "id": "b_000ew",
+      "id": "b_000eu",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1CeGhNK_iRa1uWq3zLvurnCQjQXRz9spDBgxECtrDaV4/viewform?embedded=true",
@@ -38213,7 +38271,7 @@
       "aspect": "form"
      },
      {
-      "id": "b_000ex",
+      "id": "b_000ev",
       "type": "image",
       "image": {
        "src": "wix-media:img_499362cc44e11763",
@@ -38223,7 +38281,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ey",
+      "id": "b_000ew",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -38233,7 +38291,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000ez",
+      "id": "b_000ex",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -38257,7 +38315,7 @@
     },
     "blocks": [
      {
-      "id": "b_000f0",
+      "id": "b_000ey",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -38274,7 +38332,7 @@
       ]
      },
      {
-      "id": "b_000f1",
+      "id": "b_000ez",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1CUQl2wqjP0mI4Gu0kg70yYDtuy4xUKMp08wZRMHxMSw/viewform?embedded=true",
@@ -38282,7 +38340,7 @@
       "aspect": "form"
      },
      {
-      "id": "b_000f2",
+      "id": "b_000f0",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -38294,7 +38352,7 @@
       ]
      },
      {
-      "id": "b_000f3",
+      "id": "b_000f1",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -38316,7 +38374,7 @@
       }
      },
      {
-      "id": "b_000f4",
+      "id": "b_000f2",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -38358,7 +38416,7 @@
       ]
      },
      {
-      "id": "b_000f9",
+      "id": "b_000f7",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -38368,7 +38426,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000fa",
+      "id": "b_000f8",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -38392,7 +38450,7 @@
     },
     "blocks": [
      {
-      "id": "b_000fb",
+      "id": "b_000f9",
       "type": "collection",
       "collection": "reports",
       "filter": "Impact Report",
@@ -38400,7 +38458,7 @@
       "display": "grid"
      },
      {
-      "id": "b_000fc",
+      "id": "b_000fa",
       "type": "image",
       "image": {
        "src": "wix-media:img_51c15af2571c952c",
@@ -38409,7 +38467,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000fd",
+      "id": "b_000fb",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -38465,7 +38523,7 @@
       }
      },
      {
-      "id": "b_000fe",
+      "id": "b_000fc",
       "type": "collection",
       "collection": "reports",
       "filter": "Financial Statement",
@@ -38473,7 +38531,7 @@
       "display": "list"
      },
      {
-      "id": "b_000ff",
+      "id": "b_000fd",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -38504,7 +38562,7 @@
       }
      },
      {
-      "id": "b_000fg",
+      "id": "b_000fe",
       "type": "collection",
       "collection": "reports",
       "filter": "Tax Return",
@@ -38512,7 +38570,7 @@
       "display": "list"
      },
      {
-      "id": "b_000fh",
+      "id": "b_000ff",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -38534,7 +38592,7 @@
       }
      },
      {
-      "id": "b_000fi",
+      "id": "b_000fg",
       "type": "collection",
       "collection": "reports",
       "filter": "Annual Report",
@@ -38556,7 +38614,7 @@
     },
     "blocks": [
      {
-      "id": "b_000fj",
+      "id": "b_000fh",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -38641,7 +38699,7 @@
     },
     "blocks": [
      {
-      "id": "b_000fk",
+      "id": "b_000fi",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -38678,7 +38736,7 @@
       }
      },
      {
-      "id": "b_000fr",
+      "id": "b_000fp",
       "type": "options",
       "columns": 3,
       "items": [
@@ -39150,7 +39208,7 @@
     },
     "blocks": [
      {
-      "id": "b_000fs",
+      "id": "b_000fq",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -39172,7 +39230,7 @@
       ]
      },
      {
-      "id": "b_000ft",
+      "id": "b_000fr",
       "type": "embed",
       "provider": "other",
       "url": "https://www.nbc4i.com/news/local-news/columbus/adoptive-ohio-family-claims-agency-blocking-effort-to-reunite-brothers/",
@@ -39180,7 +39238,7 @@
       "aspect": "tall"
      },
      {
-      "id": "b_000fu",
+      "id": "b_000fs",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -39226,7 +39284,7 @@
       }
      },
      {
-      "id": "b_000fv",
+      "id": "b_000ft",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -39238,7 +39296,7 @@
       ]
      },
      {
-      "id": "b_000fw",
+      "id": "b_000fu",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -39690,7 +39748,7 @@
       }
      },
      {
-      "id": "b_000fx",
+      "id": "b_000fv",
       "type": "image",
       "image": {
        "src": "wix-media:img_d0f2b4f16a2f0d4e",
@@ -39699,7 +39757,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000fy",
+      "id": "b_000fw",
       "type": "video",
       "videos": [
        {
@@ -39710,7 +39768,7 @@
       ]
      },
      {
-      "id": "b_000fz",
+      "id": "b_000fx",
       "type": "image",
       "image": {
        "src": "wix-media:img_b8dd8d9b14c8b165",
@@ -39719,7 +39777,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000g0",
+      "id": "b_000fy",
       "type": "video",
       "videos": [
        {
@@ -39743,7 +39801,7 @@
     },
     "blocks": [
      {
-      "id": "b_000g1",
+      "id": "b_000fz",
       "type": "form",
       "title": "I am a Muslim Religious Leader/Scholar. Female Genital Mutilation/Cutting is a Harm and Haram.",
       "fields": [
@@ -39776,7 +39834,7 @@
       "successMessage": "Thank you — your submission has been received."
      },
      {
-      "id": "b_000g2",
+      "id": "b_000g0",
       "type": "form",
       "title": "I am a Muslim. I am against Female Genital Mutilation/Cutting.",
       "fields": [
@@ -39822,7 +39880,7 @@
     },
     "blocks": [
      {
-      "id": "b_000g3",
+      "id": "b_000g1",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -39863,7 +39921,7 @@
     },
     "blocks": [
      {
-      "id": "b_000g4",
+      "id": "b_000g2",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -39905,7 +39963,7 @@
     },
     "blocks": [
      {
-      "id": "b_000g5",
+      "id": "b_000g3",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -39942,7 +40000,7 @@
       }
      },
      {
-      "id": "b_000g6",
+      "id": "b_000g4",
       "type": "image",
       "image": {
        "src": "wix-media:img_0b3c176c0bb29727",
@@ -39951,7 +40009,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000g7",
+      "id": "b_000g5",
       "type": "image",
       "image": {
        "src": "wix-media:img_5fa4fb78757d4cad",
@@ -39960,7 +40018,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000g8",
+      "id": "b_000g6",
       "type": "image",
       "image": {
        "src": "wix-media:img_e9042284ae22dd1b",
@@ -39969,7 +40027,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000g9",
+      "id": "b_000g7",
       "type": "image",
       "image": {
        "src": "wix-media:img_66e565d170fee1e4",
@@ -39978,7 +40036,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000ga",
+      "id": "b_000g8",
       "type": "image",
       "image": {
        "src": "wix-media:img_9ac0bce181185a9a",
@@ -39987,7 +40045,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000gb",
+      "id": "b_000g9",
       "type": "image",
       "image": {
        "src": "wix-media:img_3df83b404920f672",
@@ -39996,7 +40054,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000gc",
+      "id": "b_000ga",
       "type": "image",
       "image": {
        "src": "wix-media:img_4856a8da71496946",
@@ -40005,7 +40063,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000gd",
+      "id": "b_000gb",
       "type": "image",
       "image": {
        "src": "wix-media:img_2a1eca6269442886",
@@ -40014,7 +40072,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000ge",
+      "id": "b_000gc",
       "type": "image",
       "image": {
        "src": "wix-media:img_b2224b05c220c1cf",
@@ -40023,7 +40081,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000gf",
+      "id": "b_000gd",
       "type": "image",
       "image": {
        "src": "wix-media:img_2659a985a812d116",
@@ -40032,7 +40090,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000gg",
+      "id": "b_000ge",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -40058,7 +40116,7 @@
     },
     "blocks": [
      {
-      "id": "b_000gh",
+      "id": "b_000gf",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -40622,7 +40680,7 @@
     },
     "blocks": [
      {
-      "id": "b_000gi",
+      "id": "b_000gg",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -40673,7 +40731,7 @@
       }
      },
      {
-      "id": "b_000gv",
+      "id": "b_000gt",
       "type": "options",
       "columns": 3,
       "items": [
@@ -41003,7 +41061,7 @@
     },
     "blocks": [
      {
-      "id": "b_000gw",
+      "id": "b_000gu",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -41073,7 +41131,7 @@
       }
      },
      {
-      "id": "b_000gx",
+      "id": "b_000gv",
       "type": "image",
       "image": {
        "src": "wix-media:img_090e9fb5c2a54f6c",
@@ -41083,7 +41141,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000gy",
+      "id": "b_000gw",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -41130,7 +41188,7 @@
       }
      },
      {
-      "id": "b_000gz",
+      "id": "b_000gx",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -41142,7 +41200,7 @@
       ]
      },
      {
-      "id": "b_000h0",
+      "id": "b_000gy",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -41320,7 +41378,7 @@
       }
      },
      {
-      "id": "b_000h1",
+      "id": "b_000gz",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -41346,7 +41404,7 @@
     },
     "blocks": [
      {
-      "id": "b_000h2",
+      "id": "b_000h0",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -41367,7 +41425,7 @@
       ]
      },
      {
-      "id": "b_000h4",
+      "id": "b_000h2",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -42563,7 +42621,7 @@
     },
     "blocks": [
      {
-      "id": "b_000h5",
+      "id": "b_000h3",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -42600,7 +42658,7 @@
       }
      },
      {
-      "id": "b_000h6",
+      "id": "b_000h4",
       "type": "image",
       "image": {
        "src": "wix-media:img_e42c2844d6885c98",
@@ -42609,7 +42667,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000h7",
+      "id": "b_000h5",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -42626,7 +42684,7 @@
       ]
      },
      {
-      "id": "b_000he",
+      "id": "b_000hc",
       "type": "options",
       "columns": 2,
       "items": [
@@ -42773,7 +42831,7 @@
     },
     "blocks": [
      {
-      "id": "b_000hf",
+      "id": "b_000hd",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -42851,7 +42909,7 @@
       "buttons": []
      },
      {
-      "id": "b_000hg",
+      "id": "b_000he",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -42903,7 +42961,7 @@
       ]
      },
      {
-      "id": "b_000hh",
+      "id": "b_000hf",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -42968,7 +43026,7 @@
     },
     "blocks": [
      {
-      "id": "b_000hi",
+      "id": "b_000hg",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -43074,7 +43132,7 @@
       }
      },
      {
-      "id": "b_000hj",
+      "id": "b_000hh",
       "type": "embed",
       "provider": "google-form",
       "url": "https://docs.google.com/forms/d/1pLN_txdzY_h3TKvAkbwvN9PMgDhpB04_9nYk9nbfXR0/viewform?embedded=true",
@@ -43096,7 +43154,7 @@
     },
     "blocks": [
      {
-      "id": "b_000hk",
+      "id": "b_000hi",
       "type": "richText",
       "layout": "default",
       "doc": {
@@ -43141,7 +43199,7 @@
       }
      },
      {
-      "id": "b_000hq",
+      "id": "b_000ho",
       "type": "options",
       "columns": 2,
       "items": [
@@ -43292,7 +43350,7 @@
       ]
      },
      {
-      "id": "b_000hp",
+      "id": "b_000hn",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -43318,7 +43376,7 @@
     },
     "blocks": [
      {
-      "id": "b_000hr",
+      "id": "b_000hp",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -43330,7 +43388,7 @@
       ]
      },
      {
-      "id": "b_000hs",
+      "id": "b_000hq",
       "type": "image",
       "image": {
        "src": "wix-media:img_9c0c0e65b5369b2b",
@@ -43340,7 +43398,7 @@
       "size": "wide"
      },
      {
-      "id": "b_000ht",
+      "id": "b_000hr",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -43352,7 +43410,7 @@
       ]
      },
      {
-      "id": "b_000hu",
+      "id": "b_000hs",
       "type": "split",
       "doc": {
        "type": "doc",
@@ -43851,7 +43909,7 @@
       ]
      },
      {
-      "id": "b_000hv",
+      "id": "b_000ht",
       "type": "buttons",
       "align": "start",
       "buttons": [
@@ -43863,7 +43921,7 @@
       ]
      },
      {
-      "id": "b_000hw",
+      "id": "b_000hu",
       "type": "gallery",
       "layout": "grid",
       "images": [
@@ -43898,7 +43956,7 @@
       ]
      },
      {
-      "id": "b_000i0",
+      "id": "b_000hy",
       "type": "image",
       "image": {
        "src": "wix-media:img_6d043548412b0008",
@@ -43908,7 +43966,7 @@
       "size": "medium"
      },
      {
-      "id": "b_000i1",
+      "id": "b_000hz",
       "type": "image",
       "image": {
        "src": "wix-media:img_663cb5e8985309d3",
@@ -43932,7 +43990,7 @@
     },
     "blocks": [
      {
-      "id": "b_000i2",
+      "id": "b_000i0",
       "type": "richText",
       "layout": "default",
       "doc": {
