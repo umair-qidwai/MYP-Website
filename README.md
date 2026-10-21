@@ -15,21 +15,19 @@ The new www.myprojectusa.org: a public website, a simple editor for staff at `/a
 
 ## Run it locally
 
-Requires Node.js 22+ (developed on Node 24) and about 2 GB of free disk space for the migrated media.
+Requires Node.js 22+ (developed on Node 24) and about 2 GB of free disk space for the migrated media. Run the commands one per line. If npm 11 asks to approve install scripts, run `npm approve-scripts esbuild workerd`.
 
 ```sh
 npm install
-#   npm 11 may ask to approve install scripts for esbuild and workerd — they're already listed
-#   in package.json "allowScripts"; if prompted, run: npm approve-scripts esbuild workerd
-cp .dev.vars.example .dev.vars        # local-only secrets (Turnstile test keys etc.)
-npm run db:migrate:local              # create the local database
-npm run dev                           # http://localhost:5180
+cp .dev.vars.example .dev.vars
+npm run db:migrate:local
+npm run dev
 ```
 
 The site starts empty. Load the migrated Wix content (downloads ~600 MB of media from Wix the first time; leave `npm run dev` running in another terminal):
 
 ```sh
-npm run import:push                   # uses migration/bundle, which is already in the repo
+npm run import:push
 ```
 
 Create an administrator for the local editor:
@@ -44,15 +42,22 @@ Open the printed link to choose a password, then sign in at http://localhost:518
 
 ## Test it
 
+Stop `npm run dev` first (the browser tests start their own server), then:
+
 ```sh
-npm run typecheck        # TypeScript (app, Worker, scripts)
-npm run lint             # ESLint
-npm run test:worker      # 43 API/security tests inside the Workers runtime (auth, roles, CSRF, uploads, forms, import)
-npm run test:content     # 26 migration checks against the crawl (wording kept, URLs, links, duplicates, media)
-npx playwright install chromium   # first time only
-npm run test:e2e         # 39 browser tests, desktop + mobile (public site and full editor workflow)
-npm test                 # all of the above
+npx playwright install chromium
+npm test
 ```
+
+`npx playwright install chromium` is only needed the first time. `npm test` runs everything (about 3 minutes). Or run the parts separately:
+
+| Command | What it checks |
+|---|---|
+| `npm run typecheck` | TypeScript across the app, Worker and scripts |
+| `npm run lint` | ESLint |
+| `npm run test:worker` | 43 API and security tests inside the Workers runtime (sign-in, roles, CSRF, uploads, forms, import) |
+| `npm run test:content` | 26 migration checks against the Wix crawl (wording kept, URLs, links, duplicates, media) |
+| `npm run test:e2e` | 39 browser tests on desktop and mobile (public site and the full editor workflow) |
 
 The browser tests start their own server on port 5190 with a separate, freshly seeded database and fictional fixture content (`tests/e2e/fixture.ts`), so they never touch your local migrated data. Make sure port 5190 is free.
 
@@ -151,10 +156,10 @@ Remaining limitations are listed in [docs/migration-limitations.md](docs/migrati
 ## Re-running the migration
 
 ```sh
-npm run audit:crawl -- --only=pages --force --screens   # re-crawl Wix (polite, ~10 min)
+npm run audit:crawl -- --only=pages --force --screens
 npm run audit:crawl -- --only=events --discover=false
-npm run import:transform                                # crawl → migration/bundle
-npm run test:content                                    # verify parity
-npm run import:push -- --target=<site url>              # load into a running site
-npm run docs:inventory                                  # regenerate the reports
+npm run import:transform
+npm run test:content
+npm run import:push -- --target=<site url>
+npm run docs:inventory
 ```

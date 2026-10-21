@@ -43,10 +43,12 @@ Put the **site key** in `wrangler.jsonc` → `vars.TURNSTILE_SITE_KEY` (replacin
 ## 5. Secrets (never committed to Git)
 
 ```sh
-npx wrangler secret put TURNSTILE_SECRET_KEY   # from step 4
-npx wrangler secret put PASSWORD_PEPPER        # paste a long random value: openssl rand -base64 32
-npx wrangler secret put IMPORT_TOKEN           # temporary, for the content import: openssl rand -hex 32
+npx wrangler secret put TURNSTILE_SECRET_KEY
+npx wrangler secret put PASSWORD_PEPPER
+npx wrangler secret put IMPORT_TOKEN
 ```
+
+Use the Turnstile secret from step 4; for `PASSWORD_PEPPER` paste the output of `openssl rand -base64 32`; for the temporary `IMPORT_TOKEN` paste the output of `openssl rand -hex 32`.
 
 > Keep `PASSWORD_PEPPER` safe (e.g. in your password manager). If it's lost or changed, every password must be reset.
 
@@ -71,10 +73,10 @@ Set `PUBLIC_SITE_URL` in `wrangler.jsonc` to that address while testing (change 
 The importer re-reads the crawl in `migration/crawl`, downloads the media from Wix and uploads everything:
 
 ```sh
-npm run import:transform                                    # builds migration/bundle
+npm run import:transform
 IMPORT_TOKEN=<value from step 5> npm run import:push -- --target=https://myprojectusa.<your-subdomain>.workers.dev
-npm run test:content                                        # migration checks
-npm run docs:inventory                                      # refresh the parity report
+npm run test:content
+npm run docs:inventory
 ```
 
 It's safe to run again; nothing is duplicated and anything staff have edited is left alone. To pick up later changes to the Wix site, re-crawl first with `npm run audit:crawl -- --force`.
