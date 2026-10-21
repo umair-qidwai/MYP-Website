@@ -38,7 +38,7 @@
       "buttons": [
        {
         "label": "Donate",
-        "href": "/donors",
+        "href": "https://www.zeffy.com/en-US/organizations/my-project-usa",
         "style": "primary"
        },
        {
@@ -47790,7 +47790,7 @@
    "buttons": [
     {
      "label": "Donate",
-     "href": "/donors",
+     "href": "https://www.zeffy.com/en-US/organizations/my-project-usa",
      "style": "primary"
     },
     {

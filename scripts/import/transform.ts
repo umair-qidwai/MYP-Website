@@ -833,6 +833,8 @@ const sourceText = (c: Crawl) =>
     .filter((l) => !CHROME.test(l.trim()))
     .join("\n");
 
+const DONATE_URL = "https://www.zeffy.com/en-US/organizations/my-project-usa";
+
 // ── Builders ────────────────────────────────────────────────────────────────
 function cleanTitle(t?: string) {
   return (t ?? "").replace(/\s*\|\s*(myprojectusa|MY Project USA)\s*$/i, "").trim();
@@ -1236,7 +1238,7 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
         return ref ? { ...ref, alt: "Young people gathered in front of a colorful mural that reads “Empower”" } : undefined;
       })(),
       buttons: [
-        { label: "Donate", href: "/donors", style: "primary" },
+        { label: "Donate", href: DONATE_URL, style: "primary" },
         { label: "Volunteer", href: "/volunteer", style: "secondary" },
       ],
     },
@@ -1337,7 +1339,9 @@ function buildSettings(home: Crawl) {
   const quick = ["Donate", "Volunteer", "Events", "Ventures", "Subscribe"]
     .map((label) => site.find((i) => i.kind === "button" && (i.text ?? "").trim() === label))
     .filter((b): b is Item => !!b && !!b.href)
-    .map((b) => ({ label: (b.text ?? "").trim(), href: mapLink(b.href!)!, style: "primary" as const }));
+    .map((b) => ({ label: (b.text ?? "").trim(), href: mapLink(b.href!)!, style: "primary" as const }))
+    // Requested by MY Project USA: "Donate" goes straight to their Zeffy giving page; the Donors menu item keeps the full page
+    .map((b) => (b.label === "Donate" ? { ...b, href: DONATE_URL } : b));
   const programNames: Record<string, string> = {
     youth: "MY Leaders Lab",
     wellnesswarriors: "MY Wellness Warriors",
