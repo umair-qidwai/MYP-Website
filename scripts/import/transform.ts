@@ -272,7 +272,7 @@ function makeLinkMapper(from: string) {
       return null;
     }
     if (!/^https?:$/.test(u.protocol)) return null;
-    if (u.hostname.endsWith(".usrfiles.com") && u.pathname.startsWith("/ugd/")) return docMedia(u.href, label);
+    if (/\.(usrfiles|filesusr)\.com$/.test(u.hostname) && u.pathname.startsWith("/ugd/")) return docMedia(u.href, label);
     // Wix document links, including locale-prefixed ones on translated pages (/es/_files/ugd/…)
     if (/^(www\.)?myprojectusa\.org$/.test(u.hostname) && /^\/(?:(?:ar|es|fr|ht|so)\/)?_files\/ugd\//.test(u.pathname)) return docMedia(u.href, label);
     if (/^(www\.)?myprojectusa\.org$/.test(u.hostname)) return mapInternal(u.pathname, u.hash, from);
