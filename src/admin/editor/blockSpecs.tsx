@@ -237,6 +237,43 @@ export const BLOCK_SPECS: BlockSpec[] = [
     summary: (b) => (b.type === "cards" ? `${b.heading ? b.heading + " · " : ""}${b.items.length} cards` : ""),
   },
   {
+    type: "options",
+    label: "Options with buttons",
+    description: "Cards people choose from — ways to give, volunteer roles, contacts. Each has its own buttons.",
+    icon: LayoutGrid,
+    fields: [
+      { key: "heading", label: "Heading", kind: "text", optional: true },
+      { key: "intro", label: "Introduction", kind: "textarea", optional: true, rows: 2 },
+      {
+        key: "columns",
+        label: "Cards per row",
+        kind: "select",
+        options: [
+          { value: "2", label: "2" },
+          { value: "3", label: "3" },
+        ],
+      },
+      {
+        key: "items",
+        label: "Options",
+        kind: "list",
+        itemLabel: "Option",
+        newItem: () => ({ title: "", buttons: [] }),
+        summary: (i) => text(i.title),
+        fields: [
+          { key: "eyebrow", label: "Small label above the title", kind: "text", optional: true },
+          { key: "title", label: "Title", kind: "text" },
+          { key: "doc", label: "Description", kind: "rich", optional: true },
+          { key: "image", label: "Image", kind: "image", optional: true },
+          { key: "buttons", label: "Buttons", kind: "buttons", max: 4 },
+        ],
+      },
+      TONES,
+    ],
+    create: () => ({ id: newBlockId(), type: "options", columns: 2, items: [] }),
+    summary: (b) => (b.type === "options" ? `${b.heading ? b.heading + " · " : ""}${b.items.length} options` : ""),
+  },
+  {
     type: "stats",
     label: "Impact numbers",
     description: "Big numbers with labels. Only use real, sourced figures.",
@@ -577,7 +614,7 @@ export const specFor = (t: BlockType) => BLOCK_SPECS.find((s) => s.type === t)!;
 export function toEditable(b: Block): Record<string, unknown> {
   const v = structuredClone(b) as Record<string, unknown>;
   if (b.type === "form") v.fields = b.fields.map((f) => ({ ...f, optionsText: (f.options ?? []).join("\n") }));
-  if (b.type === "cards") v.columns = String(b.columns);
+  if (b.type === "cards" || b.type === "options") v.columns = String(b.columns);
   return v;
 }
 export function fromEditable(v: Record<string, unknown>): Block {
@@ -600,7 +637,7 @@ export function fromEditable(v: Record<string, unknown>): Block {
         : {}),
     }));
   }
-  if (b.type === "cards" && typeof b.columns === "string") b.columns = Number(b.columns);
+  if ((b.type === "cards" || b.type === "options") && typeof b.columns === "string") b.columns = Number(b.columns);
   delete b.note;
   return b as Block;
 }

@@ -106,13 +106,13 @@ body {
 /* ── Layout ─────────────────────────────────────────────────────────────── */
 @utility wrap {
   width: 100%;
-  max-width: 80rem;
+  max-width: 72rem;
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
 @utility wrap-text {
   width: 100%;
-  max-width: 46rem;
+  max-width: 44rem;
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
@@ -267,7 +267,7 @@ body {
 
 /* ── Server-rendered snapshot (crawlers / before the app starts) ─────────── */
 .ssr {
-  max-width: 46rem;
+  max-width: 44rem;
   margin: 0 auto;
   padding: 2rem var(--gutter) 4rem;
 }

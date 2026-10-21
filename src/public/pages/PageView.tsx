@@ -57,10 +57,10 @@ export function PageView({
   return (
     <article lang={page.lang} dir={LANGUAGES[lang]?.dir}>
       {showTitle ? (
-        <header className="pb-6 pt-36 text-center sm:pt-40 md:pb-10" style={{ animation: "fade-up .9s var(--ease-out-expo) both" }}>
+        <header className="pb-4 pt-32 text-center sm:pt-36 md:pb-8" style={{ animation: "fade-up .9s var(--ease-out-expo) both" }}>
           <div className="wrap">
             {section && section.toLowerCase() !== page.title.toLowerCase() && <p className="eyebrow mb-4 text-muted">{section}</p>}
-            <h1 className="display mx-auto max-w-4xl text-[clamp(2.5rem,6vw,4.5rem)] text-ink">{page.title}</h1>
+            <h1 className="display mx-auto max-w-3xl text-[clamp(2.125rem,4.6vw,3.5rem)] text-ink">{page.title}</h1>
             {page.intro && <p className="lede mx-auto mt-6 max-w-2xl">{page.intro}</p>}
             {translations && (
               <div className="mt-8">
@@ -75,7 +75,7 @@ export function PageView({
           {page.hideTitle && !startsWithHero && <h1 className="sr-only">{page.title}</h1>}
         </>
       )}
-      <div className="pb-20 md:pb-28">
+      <div className="pb-16 md:pb-24">
         <Blocks blocks={page.blocks} collections={collections} path={path} />
       </div>
     </article>

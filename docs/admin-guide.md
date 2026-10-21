@@ -29,6 +29,8 @@ Always use **Sign out** (bottom of the left menu) on shared computers.
 
 Useful section controls: ↑ ↓ move, 👁 hide/show, ⧉ duplicate, 🗑 delete. **+ Add a section** adds new content anywhere.
 
+**Options with buttons** shows choices side by side as cards: ways to give on Donors, roles on Volunteer, departments on Contacts. Each card has a title, an optional picture, a short description (long text folds behind "Read more") and its own buttons. Use it whenever a page offers several things to pick from.
+
 ## Update an image
 
 1. Open the section containing the picture → **Replace** → choose from the library or upload a new photo.

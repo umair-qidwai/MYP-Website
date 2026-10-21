@@ -5,12 +5,12 @@ import { SmartLink, isExternal } from "./SmartLink";
 type Variant = ButtonRef["style"];
 
 const base =
-  "group/btn inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full px-5 text-[0.9375rem] font-medium tracking-[-0.01em] transition-colors duration-200";
+  "group/btn inline-flex items-center justify-center gap-1.5 rounded-full text-[0.9375rem] font-medium tracking-[-0.01em] transition-colors duration-200";
 
 const styles: Record<Variant, { light: string; dark: string }> = {
-  primary: { light: "bg-brand text-white hover:bg-brand-deep", dark: "bg-white text-ink hover:bg-white/90" },
-  secondary: { light: "bg-mist text-ink hover:bg-[#e8e8ed]", dark: "bg-white/12 text-white hover:bg-white/20" },
-  link: { light: "min-h-0 px-0 text-brand hover:underline underline-offset-4", dark: "min-h-0 px-0 text-white hover:underline underline-offset-4" },
+  primary: { light: "min-h-11 px-5 bg-brand text-white hover:bg-brand-deep", dark: "min-h-11 px-5 bg-white text-ink hover:bg-white/90" },
+  secondary: { light: "min-h-11 px-5 bg-mist text-ink hover:bg-[#e8e8ed]", dark: "min-h-11 px-5 bg-white/12 text-white hover:bg-white/20" },
+  link: { light: "min-h-6 text-brand hover:underline underline-offset-4", dark: "min-h-6 text-white hover:underline underline-offset-4" },
 };
 
 export function Button({

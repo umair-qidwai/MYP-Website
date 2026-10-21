@@ -29,7 +29,7 @@ export function Section({
   size?: "sm" | "md" | "lg";
 }) {
   const banded = tone && tone !== "paper";
-  const pad = banded ? "py-20 md:py-28" : size === "lg" ? "py-20 md:py-28" : size === "sm" ? "py-6 md:py-8" : "py-12 md:py-16";
+  const pad = banded ? "py-16 md:py-24" : size === "lg" ? "py-14 md:py-20" : size === "sm" ? "py-4 md:py-6" : "py-10 md:py-12";
   return (
     <section id={id} aria-labelledby={labelledBy} className={`tone-${tone ?? "paper"} ${pad} ${className}`}>
       {children}
@@ -41,10 +41,10 @@ export function Section({
 function SectionTitle({ id, eyebrow, title, intro, onDark }: { id?: string; eyebrow?: string; title?: string; intro?: string; onDark?: boolean }) {
   if (!title && !eyebrow) return null;
   return (
-    <Reveal className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+    <Reveal className="mx-auto mb-10 max-w-2xl text-center md:mb-12">
       {eyebrow && <p className={`eyebrow mb-3 ${onDark ? "text-white/60" : "text-muted"}`}>{eyebrow}</p>}
       {title && (
-        <h2 id={id} className="headline text-[clamp(2rem,4.5vw,3.5rem)]">
+        <h2 id={id} className="headline text-[clamp(1.75rem,3.4vw,2.625rem)]">
           {title}
         </h2>
       )}
@@ -61,7 +61,7 @@ export function RichTextBlock({ block }: { block: BlockOf<"richText"> }) {
         <Reveal className="mx-auto w-full max-w-3xl px-[var(--gutter)]">
           <RichText
             doc={block.doc}
-            className={`text-[clamp(1.25rem,1rem+0.9vw,1.625rem)] font-medium leading-[1.5] tracking-[-0.02em] text-pretty [&_p+p]:mt-6 ${dark(block.tone) ? "text-white" : "text-ink"}`}
+            className={`text-center text-[clamp(1.1875rem,1rem+0.7vw,1.5rem)] font-medium leading-[1.5] tracking-[-0.02em] text-balance [&_p+p]:mt-5 ${dark(block.tone) ? "text-white" : "text-ink"}`}
           />
         </Reveal>
       </Section>
@@ -93,7 +93,7 @@ export function RichTextBlock({ block }: { block: BlockOf<"richText"> }) {
   }
   return (
     <Section tone={block.tone}>
-      <div className={block.layout === "wide" ? "wrap" : "wrap-text"}>
+      <div className={block.layout === "wide" || block.layout === "columns" ? "wrap" : "wrap-text"}>
         <RichText doc={block.doc} className={`prose-myp ${block.layout === "columns" ? "md:columns-2 md:gap-12 [&>*]:break-inside-avoid" : ""}`} />
       </div>
     </Section>
@@ -105,7 +105,9 @@ export function StatementBlock({ block }: { block: BlockOf<"statement"> }) {
   return (
     <Section tone={block.tone === "paper" ? "sand" : (block.tone ?? "sand")}>
       <Reveal className="wrap">
-        <p className={`headline mx-auto max-w-4xl text-center text-[clamp(2rem,5vw,4rem)] ${dark(block.tone) ? "text-white" : "text-ink"}`}>{block.text}</p>
+        <p className={`headline mx-auto max-w-3xl text-center text-[clamp(1.75rem,3.6vw,2.75rem)] ${dark(block.tone) ? "text-white" : "text-ink"}`}>
+          {block.text}
+        </p>
       </Reveal>
     </Section>
   );
@@ -128,7 +130,7 @@ export function QuoteBlock({ block }: { block: BlockOf<"quote"> }) {
 // ── Image ───────────────────────────────────────────────────────────────────
 export function ImageBlock({ block }: { block: BlockOf<"image"> }) {
   const portrait = (block.image.height ?? 1) > (block.image.width ?? 1) * 1.1;
-  const width = block.size === "full" ? "max-w-[90rem] px-3 sm:px-4" : block.size === "wide" && !portrait ? "wrap" : "wrap-text";
+  const width = block.size === "full" ? "wrap" : block.size === "wide" && !portrait ? "wrap max-w-4xl" : "wrap-text max-w-xl";
   const img = <Img image={block.image} sizes={block.size === "full" ? "100vw" : "(min-width: 1024px) 80vw, 100vw"} className="w-full rounded-[28px]" />;
   return (
     <Section>
@@ -170,40 +172,38 @@ export function GalleryBlock({ block }: { block: BlockOf<"gallery"> }) {
       </Section>
     );
   }
-  const cols =
-    block.images.length === 1 ? "" : block.images.length === 2 ? "sm:grid-cols-2" : block.images.length === 3 ? "sm:grid-cols-3" : "grid-cols-2 lg:grid-cols-3";
+  const cols = block.images.length === 1 ? "columns-1 max-w-3xl mx-auto" : block.images.length === 2 ? "columns-1 sm:columns-2" : "columns-2 lg:columns-3";
   return (
     <Section>
       <div className="wrap">
         <SectionTitle title={block.heading} />
-        <ul className={`grid gap-3 sm:gap-4 ${cols}`}>
+        {/* Masonry columns keep every photo's real proportions — nothing is cropped */}
+        <ul className={`gap-3 sm:gap-4 ${cols}`}>
           {block.images.map((im, i) => (
-            <Reveal as="li" key={i} delay={(i % 3) * 0.06}>
+            <Reveal as="li" key={i} delay={(i % 3) * 0.05} className="mb-3 break-inside-avoid sm:mb-4">
               {im.link ? (
-                <SmartLink href={im.link} className="group block overflow-hidden rounded-[20px] bg-mist">
+                <SmartLink href={im.link} className="group block overflow-hidden rounded-[18px] bg-mist">
                   <Img
                     image={im.image}
-                    sizes="(min-width: 1024px) 33vw, 50vw"
-                    fit="cover"
-                    className="aspect-[4/3] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+                    sizes="(min-width: 1024px) 24rem, 50vw"
+                    className="w-full transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.02]"
                   />
                 </SmartLink>
               ) : (
                 <button
                   type="button"
                   onClick={() => setOpen(i)}
-                  className="group block w-full overflow-hidden rounded-[20px] bg-mist"
+                  className="group block w-full overflow-hidden rounded-[18px] bg-mist"
                   aria-label={`Open image ${i + 1} of ${block.images.length}${im.image.alt ? `: ${im.image.alt}` : ""}`}
                 >
                   <Img
                     image={im.image}
-                    sizes="(min-width: 1024px) 33vw, 50vw"
-                    fit="cover"
-                    className="aspect-[4/3] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+                    sizes="(min-width: 1024px) 24rem, 50vw"
+                    className="w-full transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.02]"
                   />
                 </button>
               )}
-              {im.caption && <p className="mt-2.5 text-[0.875rem] leading-snug text-muted">{im.caption}</p>}
+              {im.caption && <p className="mt-2 text-[0.8125rem] leading-snug text-muted">{im.caption}</p>}
             </Reveal>
           ))}
         </ul>
@@ -297,7 +297,7 @@ export function SplitBlock({ block }: { block: BlockOf<"split">; index: number }
     // Image + buttons only: centred showcase
     return (
       <Section tone={block.tone}>
-        <Reveal className="wrap max-w-5xl text-center">
+        <Reveal className="wrap max-w-3xl text-center">
           {imageEl}
           <ButtonRow buttons={block.buttons} tone={onDark ? "dark" : undefined} align="center" className="mt-8" />
         </Reveal>
@@ -306,10 +306,10 @@ export function SplitBlock({ block }: { block: BlockOf<"split">; index: number }
   }
   return (
     <Section tone={block.tone}>
-      <div className={`wrap grid items-center gap-10 md:gap-16 ${small ? "md:grid-cols-[14rem_1fr] lg:grid-cols-[16rem_1fr]" : "md:grid-cols-2"}`}>
+      <div className={`wrap grid items-center gap-8 md:gap-14 ${small ? "md:grid-cols-[12rem_1fr] lg:grid-cols-[14rem_1fr]" : "md:grid-cols-2"}`}>
         {imageEl && <Reveal className={imageLeft ? "" : "md:order-2"}>{imageEl}</Reveal>}
         <Reveal delay={0.08} className={imageLeft ? "" : "md:order-1"}>
-          {block.heading && <h2 className={`headline mb-5 text-[clamp(1.75rem,3.5vw,2.75rem)] ${onDark ? "text-white" : "text-ink"}`}>{block.heading}</h2>}
+          {block.heading && <h2 className={`headline mb-4 text-[clamp(1.5rem,2.8vw,2.25rem)] ${onDark ? "text-white" : "text-ink"}`}>{block.heading}</h2>}
           <RichText doc={block.doc} />
           <ButtonRow buttons={block.buttons} className="mt-8" tone={onDark ? "dark" : undefined} />
         </Reveal>
@@ -378,14 +378,14 @@ export function ProgramsBlock({ block }: { block: BlockOf<"programs"> }) {
     <Section tone={block.tone} size="lg" labelledBy="programs-h">
       <div className="wrap">
         <SectionTitle id="programs-h" title={heading} />
-        <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {items.map((p, i) => (
             <Reveal as="li" key={p.name} delay={(i % 3) * 0.06}>
               <SmartLink
                 href={p.href || "/"}
-                className="group flex h-full flex-col items-center rounded-[28px] bg-mist px-4 pb-6 pt-8 text-center transition-colors duration-300 hover:bg-[#ececf0] sm:pt-10"
+                className="group flex h-full flex-col items-center rounded-[22px] bg-mist px-3 pb-5 pt-6 text-center transition-colors duration-300 hover:bg-[#ececf0]"
               >
-                <span className="grid aspect-square w-[62%] place-items-center">
+                <span className="grid aspect-square w-[78%] place-items-center">
                   {p.image ? (
                     <Img
                       image={p.image}
@@ -394,7 +394,7 @@ export function ProgramsBlock({ block }: { block: BlockOf<"programs"> }) {
                     />
                   ) : null}
                 </span>
-                <span className="mt-5 text-[0.9375rem] font-semibold tracking-[-0.015em] text-ink sm:text-[1.0625rem]">{p.name}</span>
+                <span className="mt-3 text-[0.875rem] font-semibold leading-snug tracking-[-0.01em] text-ink">{p.name}</span>
                 <span className="mt-1 inline-flex items-center gap-0.5 text-[0.875rem] text-brand opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
                   Learn more <ChevronRight aria-hidden className="size-3.5" />
                 </span>
@@ -413,8 +413,8 @@ export function SocialBlock({ block }: { block: BlockOf<"social"> }) {
   return (
     <Section size="lg">
       <Reveal className="wrap text-center">
-        {block.heading && <h2 className="headline text-[clamp(1.75rem,3.5vw,2.5rem)]">{block.heading}</h2>}
-        <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
+        {block.heading && <h2 className="headline text-[clamp(1.5rem,2.8vw,2rem)]">{block.heading}</h2>}
+        <ul className="mt-6 flex flex-wrap justify-center gap-2">
           {settings.social.links.map((s) => (
             <li key={s.url}>
               <a
@@ -479,10 +479,10 @@ export function StatsBlock({ block }: { block: BlockOf<"stats"> }) {
       <div className="wrap">
         <SectionTitle id={`stats-${block.id}`} eyebrow={block.eyebrow} title={block.heading} onDark={onDark} />
         {headline.length > 0 && (
-          <dl className="mx-auto grid max-w-4xl gap-10 text-center sm:grid-cols-2">
+          <dl className="mx-auto grid max-w-3xl gap-8 text-center sm:grid-cols-2">
             {headline.map((s, i) => (
               <Reveal key={i} delay={i * 0.08} className="flex flex-col">
-                <dd className="order-1 text-[clamp(3.5rem,9vw,6.5rem)] font-semibold leading-none tracking-[-0.05em]">
+                <dd className="order-1 text-[clamp(2.75rem,6vw,4.5rem)] font-semibold leading-none tracking-[-0.045em]">
                   <CountUp value={s.value} />
                 </dd>
                 <dt className={`order-2 mt-3 text-[1.0625rem] ${label}`}>{s.label}</dt>
@@ -492,11 +492,11 @@ export function StatsBlock({ block }: { block: BlockOf<"stats"> }) {
         )}
         {rest.length > 0 && (
           <dl
-            className={`mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 border-t pt-12 md:grid-cols-3 lg:grid-cols-4 ${onDark ? "border-white/15" : "border-hairline"}`}
+            className={`mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-x-6 gap-y-8 border-t pt-10 md:grid-cols-3 lg:grid-cols-4 ${onDark ? "border-white/15" : "border-hairline"}`}
           >
             {rest.map((s, i) => (
               <Reveal key={i} delay={(i % 4) * 0.05} className="flex flex-col">
-                <dd className="order-1 text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-none tracking-[-0.04em]">
+                <dd className="order-1 text-[clamp(1.625rem,2.8vw,2.125rem)] font-semibold leading-none tracking-[-0.035em]">
                   <CountUp value={s.value} />
                 </dd>
                 <dt className={`order-2 mt-2 text-[0.9375rem] leading-snug ${label}`}>{s.label}</dt>
@@ -550,8 +550,8 @@ export function CtaBlock({ block }: { block: BlockOf<"cta"> }) {
   const onDark = dark(tone);
   return (
     <section className="px-3 py-6 sm:px-4">
-      <Reveal className={`tone-${tone === "paper" ? "sand" : tone} mx-auto max-w-[90rem] rounded-[32px] px-6 py-20 text-center md:py-28`}>
-        <h2 className={`headline mx-auto max-w-3xl text-[clamp(2rem,5vw,3.75rem)] ${onDark ? "text-white" : "text-ink"}`}>{block.heading}</h2>
+      <Reveal className={`tone-${tone === "paper" ? "sand" : tone} mx-auto max-w-6xl rounded-[28px] px-6 py-14 text-center md:py-20`}>
+        <h2 className={`headline mx-auto max-w-2xl text-[clamp(1.75rem,3.6vw,2.75rem)] ${onDark ? "text-white" : "text-ink"}`}>{block.heading}</h2>
         {block.text && <p className={`lede mx-auto mt-5 max-w-xl ${onDark ? "!text-white/75" : ""}`}>{block.text}</p>}
         <ButtonRow
           buttons={block.buttons.map((b, i) => (i === 0 ? { ...b, style: "primary" } : b))}
@@ -632,7 +632,7 @@ export function VideoBlock({ block }: { block: BlockOf<"video"> }) {
     <Section>
       <div className="wrap">
         <SectionTitle title={block.heading} />
-        <div className={`mx-auto grid max-w-5xl gap-4 ${block.videos.length > 1 ? "sm:grid-cols-2" : ""}`}>
+        <div className={`mx-auto grid max-w-4xl gap-4 ${block.videos.length > 1 ? "sm:grid-cols-2" : ""}`}>
           {block.videos.map((v, i) => (
             <figure key={i}>
               <video controls preload="metadata" playsInline src={v.file.url} className="w-full rounded-[24px] bg-black" />
@@ -640,6 +640,73 @@ export function VideoBlock({ block }: { block: BlockOf<"video"> }) {
             </figure>
           ))}
         </div>
+      </div>
+    </Section>
+  );
+}
+
+// ── Options (ways to give, volunteer roles, departments…) ──────────────────
+function ClampedText({ doc, onDark }: { doc: BlockOf<"options">["items"][number]["doc"]; onDark?: boolean }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false);
+  const [overflows, setOverflows] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (el) setOverflows(el.scrollHeight > el.clientHeight + 4);
+  }, [doc]);
+  if (!doc?.content.length) return null;
+  return (
+    <div className="mt-3">
+      <div ref={ref} className={`relative ${open ? "" : "max-h-[7.5rem] overflow-hidden"}`}>
+        <RichText doc={doc} className="prose-myp !text-[0.9375rem] !leading-relaxed [&_:is(h2,h3,h4)]:!mt-5 [&_:is(h2,h3,h4)]:!text-[1rem]" />
+        {!open && overflows && <div aria-hidden className={`absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t ${onDark ? "from-black" : "from-mist"}`} />}
+      </div>
+      {overflows && (
+        <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="mt-2 text-[0.875rem] font-medium text-brand hover:underline">
+          {open ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+}
+
+export function OptionsBlock({ block }: { block: BlockOf<"options"> }) {
+  const onDark = dark(block.tone);
+  return (
+    <Section tone={block.tone}>
+      <div className="wrap">
+        <SectionTitle title={block.heading} intro={block.intro} onDark={onDark} />
+        <ul className="flex flex-wrap justify-center gap-4">
+          {block.items.map((it, i) => (
+            <Reveal
+              as="li"
+              key={i}
+              delay={(i % block.columns) * 0.06}
+              className={`w-full ${block.columns === 3 ? "sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]" : "md:w-[calc(50%-0.5rem)]"}`}
+            >
+              <article className={`flex h-full flex-col overflow-hidden rounded-[24px] ${onDark ? "bg-white/[0.06]" : "bg-mist"}`}>
+                {it.image && (
+                  <div className="flex justify-center px-4 pt-4 sm:px-5 sm:pt-5">
+                    <Img image={it.image} sizes="(min-width: 768px) 36rem, 100vw" className="h-auto max-h-64 w-auto rounded-2xl object-contain" />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-6 sm:p-7">
+                  {it.eyebrow && <p className={`eyebrow mb-1.5 ${onDark ? "text-white/60" : "text-brand"}`}>{it.eyebrow}</p>}
+                  <h3 className={`text-[1.25rem] font-semibold leading-snug tracking-[-0.02em] ${onDark ? "text-white" : "text-ink"}`}>{it.title}</h3>
+                  <ClampedText doc={it.doc} onDark={onDark} />
+                  {it.buttons.length > 0 && (
+                    <div className={it.doc?.content.length || it.image ? "mt-auto pt-6" : "mt-3"}>
+                      <ButtonRow
+                        buttons={it.buttons.map((b, k) => ({ ...b, style: b.style === "link" || k > 0 ? "link" : "primary" }))}
+                        tone={onDark ? "dark" : undefined}
+                      />
+                    </div>
+                  )}
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </ul>
       </div>
     </Section>
   );

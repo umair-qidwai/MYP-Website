@@ -76,8 +76,8 @@ function EventsGrid({ items }: { items: PublicEntry[] }) {
                   <Img
                     image={img(e.data.image)!}
                     sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-                    fit="cover"
-                    className="object-top transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+                    fit="contain"
+                    className="transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.02]"
                   />
                 )}
               </div>
@@ -109,11 +109,11 @@ function ArticleList({ items }: { items: PublicEntry[] }) {
         <Reveal as="li" key={e.id} delay={(i % 2) * 0.06}>
           <Link to={`/blog/${e.slug}`} className="group flex h-full flex-col overflow-hidden rounded-[24px] bg-mist">
             {img(e.data.image) && (
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden bg-white">
                 <Img
                   image={img(e.data.image)!}
                   sizes="(min-width: 640px) 45vw, 100vw"
-                  fit="cover"
+                  fit="contain"
                   className="transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
                 />
               </div>
@@ -141,8 +141,8 @@ function NewsList({ items }: { items: PublicEntry[] }) {
           <Reveal as="li" key={e.id} delay={(i % 2) * 0.06}>
             <article className="flex h-full flex-col overflow-hidden rounded-[24px] bg-mist">
               {img(e.data.image) && (
-                <div className="aspect-[16/9] overflow-hidden">
-                  <Img image={img(e.data.image)!} sizes="(min-width: 640px) 45vw, 100vw" fit="cover" />
+                <div className="aspect-[16/9] overflow-hidden bg-white">
+                  <Img image={img(e.data.image)!} sizes="(min-width: 640px) 45vw, 100vw" fit="contain" />
                 </div>
               )}
               <div className="flex flex-1 flex-col p-6">

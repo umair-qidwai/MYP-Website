@@ -26,18 +26,18 @@ export function EntryView({ collection, entry, related }: { collection: string; 
 
   return (
     <article>
-      <header className="pt-36 text-center sm:pt-40" style={{ animation: "fade-up .9s var(--ease-out-expo) both" }}>
+      <header className="pt-32 text-center sm:pt-36" style={{ animation: "fade-up .9s var(--ease-out-expo) both" }}>
         <div className="wrap">
           <Link to={back} className="inline-flex items-center gap-0.5 text-[0.875rem] text-brand hover:underline">
             <ChevronLeft className="size-4" aria-hidden /> {isEvent ? "All events" : (def?.label ?? "Back")}
           </Link>
-          <h1 className="display mx-auto mt-5 max-w-4xl text-[clamp(2.25rem,5.5vw,4rem)] text-ink">{entry.title}</h1>
+          <h1 className="display mx-auto mt-4 max-w-3xl text-[clamp(2rem,4.4vw,3.25rem)] text-ink">{entry.title}</h1>
           {meta.length > 0 && <p className="mt-5 text-[1.0625rem] text-muted">{meta.join(" · ")}</p>}
         </div>
       </header>
 
       {image && (
-        <Reveal className="mx-auto mt-12 max-w-5xl px-[var(--gutter)] md:mt-16">
+        <Reveal className="mx-auto mt-10 max-w-3xl px-[var(--gutter)] md:mt-12">
           <Img image={image} priority sizes="(min-width: 1024px) 64rem, 100vw" className="w-full rounded-[28px]" />
         </Reveal>
       )}
@@ -68,7 +68,7 @@ export function EntryView({ collection, entry, related }: { collection: string; 
                   <li key={r.id}>
                     <Link to={`/${def.publicPath}/${r.slug}`} className="group block">
                       <div className="aspect-[4/3] overflow-hidden rounded-[20px] bg-white">
-                        {im && <Img image={im} sizes="30vw" fit="cover" className="object-top transition-transform duration-700 group-hover:scale-[1.03]" />}
+                        {im && <Img image={im} sizes="30vw" fit="contain" className="transition-transform duration-700 group-hover:scale-[1.02]" />}
                       </div>
                       <h3 className="mt-4 text-[1.0625rem] font-semibold leading-snug tracking-[-0.015em] group-hover:text-brand">{r.title}</h3>
                     </Link>

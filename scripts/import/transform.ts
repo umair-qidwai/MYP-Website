@@ -793,6 +793,12 @@ function blockText(b: Block): string {
       return [b.heading ?? "", ...b.items.map((i) => `${i.title}\n${i.text ?? ""}`)].join("\n");
     case "accordion":
       return b.items.map((i) => `${i.title}\n${docText(i.doc)}`).join("\n");
+    case "options":
+      return [
+        b.heading ?? "",
+        b.intro ?? "",
+        ...b.items.map((i) => [i.eyebrow ?? "", i.title, i.doc ? docText(i.doc) : "", ...i.buttons.map((x) => x.label)].join("\n")),
+      ].join("\n");
     case "collection":
     case "programs":
     case "social":
@@ -835,9 +841,184 @@ function seoFor(c: Crawl) {
   return { title: c.title?.trim() || undefined, description: c.meta?.description?.trim() || undefined };
 }
 
+// ── Curation: same words, clearer layout ────────────────────────────────────
+type OptionItem = Extract<Block, { type: "options" }>["items"][number];
+type Btn = { label: string; href: string; style: "primary" | "secondary" | "link" };
+const plain = (n: RichNode) => docText({ type: "doc", content: [n] }).trim();
+const isShortLine = (n?: RichNode) => !!n && n.type === "paragraph" && plain(n).length > 0 && plain(n).length <= 60;
+
+/** Wix stacked "label / heading / text / photo / button" sections; read one as a card. */
+function splitToOption(b: Extract<Block, { type: "split" }>, extra: Btn[]): OptionItem | null {
+  const content = [...b.doc.content];
+  let eyebrow: string | undefined;
+  if (isShortLine(content[0]) && content[1]?.type === "heading") eyebrow = plain(content.shift()!);
+  const head = content[0]?.type === "heading" ? plain(content.shift()!) : b.heading;
+  if (!head) return null;
+  return {
+    eyebrow,
+    title: head,
+    doc: content.length ? { type: "doc", content } : undefined,
+    image: b.image,
+    buttons: [...b.buttons, ...extra].slice(0, 4),
+  };
+}
+
+/** Runs of three or more photo-and-text sections become one grid of cards. */
+function gridifySplits(blocks: Block[]): Block[] {
+  const collect = (i: number, attachButtons: boolean) => {
+    const run: OptionItem[] = [];
+    let j = i;
+    let attached = 0;
+    while (blocks[j]?.type === "split") {
+      const b = blocks[j] as Extract<Block, { type: "split" }>;
+      const next = blocks[j + 1];
+      const extra = attachButtons && next?.type === "buttons" ? (next.buttons as Btn[]) : [];
+      const item = splitToOption(b, extra);
+      if (!item) break;
+      run.push(item);
+      if (extra.length) attached++;
+      j += extra.length ? 2 : 1;
+    }
+    return { run, j, attached };
+  };
+  const out: Block[] = [];
+  for (let i = 0; i < blocks.length;) {
+    const first = collect(i, true);
+    // A lone button after the last card belongs to the page (e.g. "Apply to join"), not to that card
+    const { run, j } = first.attached * 2 < first.run.length ? collect(i, false) : first;
+    if (run.length >= 3) {
+      out.push({ id: bid(), type: "options", columns: run.length >= 5 ? 3 : 2, items: run } as Block);
+      i = j;
+    } else {
+      out.push(blocks[i]);
+      i++;
+    }
+  }
+  return out;
+}
+
+function curateDonors(blocks: Block[]): Block[] {
+  const [intro, give, zakatText, zakatBtn, otherWays, iftarImg, iftarBtn, venturesImg, venturesText, venturesBtn, gallery, reportsBtn, closing, closingBtn] =
+    blocks as Extract<Block, { type: "richText" | "buttons" | "image" | "gallery" }>[];
+  const shape = "richText buttons richText buttons richText image buttons image richText buttons gallery buttons richText buttons";
+  if (blocks.map((b) => b.type).join(" ") !== shape) throw new Error("Donate page layout changed; update curateDonors");
+  const rt = (b: Block) => (b as Extract<Block, { type: "richText" }>).doc.content;
+  const btns = (b: Block) => (b as Extract<Block, { type: "buttons" }>).buttons as Btn[];
+  const img = (b: Block) => (b as Extract<Block, { type: "image" }>).image;
+
+  const [lead, ...giveRest] = rt(intro);
+  const giveHead = giveRest.findIndex((n) => n.type === "heading");
+  const generalTitle = plain(giveRest[giveHead]);
+  giveRest.splice(giveHead, 1);
+  const [zakatHead, ...zakatRest] = rt(zakatText);
+  const iftarLabel = btns(iftarBtn)[0].label;
+  const [closingHead, ...closingRest] = rt(closing);
+  const otherDoc = rt(otherWays);
+  const otherTitle = plain(otherDoc[0]).replace(/:$/, "");
+
+  return [
+    { id: intro.id, type: "richText", layout: "lead", doc: { type: "doc", content: [lead] } },
+    {
+      id: bid(),
+      type: "options",
+      columns: 2,
+      items: [
+        { title: generalTitle, doc: { type: "doc", content: giveRest }, buttons: btns(give) },
+        { title: plain(zakatHead), doc: { type: "doc", content: zakatRest }, buttons: btns(zakatBtn) },
+        { title: iftarLabel.replace(/^Donate to /, ""), image: { ...img(iftarImg), alt: "MY Iftar Kitchen" }, buttons: btns(iftarBtn) },
+        {
+          title: "MYP Social Ventures Partnership",
+          doc: { type: "doc", content: rt(venturesText) },
+          image: { ...img(venturesImg), alt: "MY Project USA Social Ventures Partnerships" },
+          buttons: btns(venturesBtn),
+        },
+      ],
+    } as Block,
+    {
+      id: otherWays.id,
+      type: "richText",
+      layout: "default",
+      tone: "sand",
+      doc: { type: "doc", content: [{ type: "heading", attrs: { level: 2 }, content: [{ type: "text", text: otherTitle }] }, ...otherDoc.slice(1)] },
+    } as Block,
+    gallery,
+    {
+      id: closing.id,
+      type: "cta",
+      heading: plain(closingHead),
+      text: closingRest.map(plain).join("\n\n"),
+      buttons: [...btns(closingBtn), ...btns(reportsBtn)],
+    } as Block,
+  ];
+}
+
+function curateContacts(blocks: Block[]): Block[] {
+  const [text, form, ...rest] = blocks;
+  if (text?.type !== "richText" || form?.type !== "form") throw new Error("Contact page layout changed; update curateContacts");
+  const nodes = text.doc.content;
+  const at = (label: string) => nodes.findIndex((n) => n.type === "heading" && plain(n).startsWith(label));
+  const office = nodes[at("Main Office") + 1];
+  const depts = nodes[at("Department Contacts") + 1];
+  const touch = at("Get in Touch");
+  // "Label: email" lines separated by line breaks
+  const lines = plain(depts)
+    .split(/\n/)
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const deptItems: OptionItem[] = lines.map((l) => {
+    const [, label, email] = /^(.*?):\s*(\S+@\S+)$/.exec(l) ?? [];
+    if (!label) throw new Error(`Unexpected contact line: ${l}`);
+    return { title: label, buttons: [{ label: email, href: `mailto:${email}`, style: "link" }] };
+  });
+  const officeLines = plain(office)
+    .split(/\n/)
+    .map((l) => l.trim());
+  const phone = /Phone:\s*(.+)$/.exec(officeLines.at(-1) ?? "")?.[1];
+  return [
+    { id: text.id, type: "richText", layout: "lead", doc: { type: "doc", content: [nodes[0]] } },
+    {
+      id: bid(),
+      type: "options",
+      columns: 3,
+      items: [
+        {
+          eyebrow: "Main Office",
+          title: officeLines[0],
+          doc: { type: "doc", content: [{ type: "paragraph", content: [{ type: "text", text: officeLines[1] }] }] },
+          buttons: phone ? [{ label: phone, href: `tel:+1${phone.replace(/\D/g, "")}`, style: "link" }] : [],
+        },
+        ...deptItems,
+      ],
+    } as Block,
+    {
+      ...form,
+      title: plain(nodes[touch]),
+      intro: nodes
+        .slice(touch + 1)
+        .map(plain)
+        .join("\n"),
+    },
+    ...rest,
+  ];
+}
+
+function curate(p: string, blocks: Block[]): Block[] {
+  if (p === "/donors") return curateDonors(blocks);
+  if (p === "/contacts") return curateContacts(blocks);
+  return gridifySplits(blocks);
+}
+
 async function buildPage(p: string, c: Crawl, lang?: "ar" | "es" | "fr" | "ht"): Promise<{ doc: PageDoc; notes: string[] }> {
-  const { blocks, notes, title } = await buildBlocks(c, p, { takeTitle: true });
+  const built = await buildBlocks(c, p, { takeTitle: true });
+  const { notes, title } = built;
+  const blocks = lang ? built.blocks : curate(p, built.blocks);
   const doc: PageDoc = { title: title || cleanTitle(c.title) || p.slice(1), seo: seoFor(c), blocks };
+  // A single opening sentence reads better as the page's intro, right under the title
+  const first = blocks[0];
+  if (!lang && first?.type === "richText" && first.layout === "lead" && first.doc.content.length === 1 && first.doc.content[0].type === "paragraph") {
+    doc.intro = plain(first.doc.content[0]);
+    blocks.shift();
+  }
   if (lang) doc.lang = lang;
   if (!title) notes.push("Page had no visible heading; title taken from the browser tab title");
   return { doc, notes };
@@ -1040,13 +1221,24 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
         const ref = imageRef("https://static.wixstatic.com/media/be0c83_75d302493dff4448a441e89a4f9b2a7d~mv2.jpg", null, page);
         return ref ? { ...ref, alt: "Young people gathered in front of a colorful mural that reads “Empower”" } : undefined;
       })(),
-      body: { type: "doc", content: [para(p1)] },
       buttons: [
         { label: "Donate", href: "/donors", style: "primary" },
         { label: "Volunteer", href: "/volunteer", style: "secondary" },
       ],
     },
-    { id: bid(), type: "richText", layout: "lead", doc: { type: "doc", content: [para(p2), para(p3)] } },
+    { id: bid(), type: "richText", layout: "lead", doc: { type: "doc", content: [para(p1)] } },
+    {
+      id: bid(),
+      type: "split",
+      doc: { type: "doc", content: [para(p2), para(p3)] },
+      // Photo from the original site (MY Family Pantry's first anniversary event)
+      image: (() => {
+        const ref = imageRef("https://static.wixstatic.com/media/be0c83_7aefe2718baf4eebbeb97ab947ea192a~mv2_d_4608_3456_s_4_2.jpg", null, page);
+        return ref ? { ...ref, alt: "MY Project USA volunteers in purple shirts at MY Family Pantry's first anniversary celebration" } : undefined;
+      })(),
+      imageSide: "left",
+      buttons: [],
+    },
     { id: bid(), type: "programs", heading: "Initiatives of MY Project USA" },
     // Figures transcribed exactly from the "11 Years of Service, Growth & Excellence 2014 - 2025" impact
     // card image published on the original /reports page (so they're readable by everyone, not only in an image).
@@ -1307,7 +1499,7 @@ async function main() {
       pages.push({ path: p.slice(1), sourceUrl: c.url, publish: true, doc });
       row.notes.push(...notes);
       row.title = doc.title;
-      migratedText = [doc.title, ...doc.blocks.map(blockText)].join("\n");
+      migratedText = [doc.title, doc.intro ?? "", ...doc.blocks.map(blockText)].join("\n");
     }
     const m = measure(src, migratedText);
     row.coverage = m.coverage;

@@ -188,6 +188,29 @@ export const blockSchema = z.discriminatedUnion("type", [
   z
     .object({
       ...base,
+      type: z.literal("options"), // a grid of choices with actions: ways to give, volunteer roles, departments…
+      heading: text(200).optional(),
+      intro: text(1000).optional(),
+      columns: z.union([z.literal(2), z.literal(3)]).default(2),
+      items: z
+        .array(
+          z
+            .object({
+              eyebrow: text(120).optional(),
+              title: text(300).min(1, "Each option needs a title"),
+              doc: richDocSchema.optional(),
+              image: imageSchema.optional(),
+              buttons: z.array(buttonSchema).max(4).default([]),
+            })
+            .strip(),
+        )
+        .max(60),
+      tone: toneSchema.optional(),
+    })
+    .strip(),
+  z
+    .object({
+      ...base,
       type: z.literal("stats"),
       eyebrow: text(120).optional(),
       heading: text(200).optional(),

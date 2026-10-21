@@ -20,7 +20,7 @@ export function Brand() {
   const { settings } = useSite();
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label={`${settings.site.name} — home`}>
-      {settings.site.logo && <img src={settings.site.logo.src} alt="" width={32} height={32} className="size-8 rounded-lg object-cover" />}
+      {settings.site.logo && <img src={settings.site.logo.src} alt="" width={32} height={32} className="size-8 object-contain mix-blend-multiply" />}
       <span className="text-[0.9375rem] font-semibold tracking-[-0.015em] text-ink">{settings.site.name}</span>
     </Link>
   );

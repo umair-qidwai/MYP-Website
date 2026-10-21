@@ -9,6 +9,7 @@ import {
   DownloadsBlock,
   GalleryBlock,
   ImageBlock,
+  OptionsBlock,
   ProgramsBlock,
   QuoteBlock,
   RichTextBlock,
@@ -44,6 +45,8 @@ export function Blocks({ blocks, collections, path }: { blocks: Block[]; collect
             return <SplitBlock key={b.id} block={b} index={splitIndex++} />;
           case "cards":
             return <CardsBlock key={b.id} block={b} />;
+          case "options":
+            return <OptionsBlock key={b.id} block={b} />;
           case "stats":
             return <StatsBlock key={b.id} block={b} />;
           case "accordion":

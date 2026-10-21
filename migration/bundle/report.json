@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T16:33:36.509Z",
+ "generatedAt": "2026-10-21T17:08:43.133Z",
  "rows": [
   {
    "source": "https://www.myprojectusa.org",
@@ -501,8 +501,12 @@
     "Wix form “Contact” rebuilt as a CMS form (submissions are stored securely and listed under Admin › Form submissions)"
    ],
    "title": "Contact Us",
-   "coverage": 1,
-   "missingSample": [],
+   "coverage": 0.9736842105263158,
+   "missingSample": [
+    "phone",
+    "department",
+    "contacts"
+   ],
    "sourceChars": 763
   },
   {
@@ -3405,6 +3409,11 @@
   {
    "page": "/",
    "key": "img_a8e3d507335f4d15",
+   "alt": ""
+  },
+  {
+   "page": "/",
+   "key": "img_47a16436620ecba8",
    "alt": ""
   },
   {
