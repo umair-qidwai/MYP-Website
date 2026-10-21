@@ -2,13 +2,14 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useInView, useReducedMotion } from "motion/react";
 import { ChevronDown, ChevronLeft, ChevronRight, FileText, X } from "lucide-react";
 import type { BlockOf, ImageRef, Tone } from "@shared/blocks";
-import { RichText, headingsOf } from "../components/RichText";
+import { RichText } from "../components/RichText";
 import { Button, ButtonRow } from "../components/Button";
 import { Img } from "../components/Img";
 import { Reveal } from "../components/Reveal";
 import { SmartLink } from "../components/SmartLink";
 import { SocialIcon, SOCIAL_LABEL } from "../components/SocialIcon";
 import { useSite } from "../SiteContext";
+import { optionAnchor } from "../components/OnThisPage";
 
 const dark = (t?: Tone) => t === "ink" || t === "brand";
 
@@ -64,30 +65,6 @@ export function RichTextBlock({ block }: { block: BlockOf<"richText"> }) {
             className={`text-center text-[clamp(1.1875rem,1rem+0.7vw,1.5rem)] font-medium leading-[1.5] tracking-[-0.02em] text-balance [&_p+p]:mt-5 ${dark(block.tone) ? "text-white" : "text-ink"}`}
           />
         </Reveal>
-      </Section>
-    );
-  }
-  const toc = block.layout === "default" ? headingsOf(block.doc).filter((h) => h.level <= 3) : [];
-  if (toc.length >= 5) {
-    return (
-      <Section tone={block.tone}>
-        <div className="wrap grid gap-12 lg:grid-cols-[14rem_minmax(0,46rem)] lg:justify-center lg:gap-16">
-          <aside className="hidden lg:block" aria-label="On this page">
-            <nav className="sticky top-28">
-              <p className="mb-3 text-[0.8125rem] font-semibold text-ink">On this page</p>
-              <ol className="space-y-2 text-[0.875rem]">
-                {toc.map((h, i) => (
-                  <li key={`${h.id}-${i}`} className={h.level === 3 ? "pl-3" : ""}>
-                    <a href={`#${h.id}`} className="text-muted transition-colors hover:text-ink">
-                      {h.text}
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-          </aside>
-          <RichText doc={block.doc} />
-        </div>
       </Section>
     );
   }
@@ -695,7 +672,10 @@ export function OptionsBlock({ block }: { block: BlockOf<"options"> }) {
               delay={(i % block.columns) * 0.06}
               className={`w-full ${block.columns === 3 ? "sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]" : "md:w-[calc(50%-0.5rem)]"}`}
             >
-              <article className={`flex h-full flex-col overflow-hidden rounded-[24px] ${onDark ? "bg-white/[0.06]" : "bg-mist"}`}>
+              <article
+                id={optionAnchor(block.id, i)}
+                className={`flex h-full flex-col overflow-hidden rounded-[24px] ${onDark ? "bg-white/[0.06]" : "bg-mist"}`}
+              >
                 {it.image && (
                   <div className="flex justify-center px-4 pt-4 sm:px-5 sm:pt-5">
                     {it.imageLink ? (

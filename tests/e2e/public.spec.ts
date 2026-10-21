@@ -54,6 +54,29 @@ test.describe("public website", () => {
     await expect(page.getByText("Fixture answer.")).toBeVisible();
   });
 
+  test("on-this-page menu glides to a section and marks it", async ({ page }, info) => {
+    test.skip(info.project.name === "mobile", "The menu is shown on wide screens");
+    await page.setViewportSize({ width: 1440, height: 600 });
+    await page.goto("/about");
+    const menu = page.getByRole("navigation", { name: "On this page" });
+    await expect(menu.getByRole("link")).toHaveCount(5);
+    await menu.getByRole("link", { name: "Questions" }).click();
+    const early = await page.evaluate(() => window.scrollY);
+    await expect(page).toHaveURL(/#section-a3$/);
+    await expect(page.getByRole("heading", { name: "Questions" })).toBeInViewport();
+    let last = -1;
+    await expect
+      .poll(async () => {
+        const y = await page.evaluate(() => window.scrollY);
+        const settled = y === last;
+        last = y;
+        return settled;
+      })
+      .toBe(true);
+    expect(last).toBeGreaterThan(early); // it travelled there rather than jumping
+    await expect(menu.getByRole("link", { name: "Questions" })).toHaveAttribute("aria-current", "location");
+  });
+
   test("language switcher links to the Spanish version", async ({ page }) => {
     await page.goto("/about");
     await page.getByRole("link", { name: "Español" }).click();

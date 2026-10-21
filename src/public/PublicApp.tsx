@@ -11,6 +11,7 @@ import { Footer } from "./layout/Footer";
 import { PageView } from "./pages/PageView";
 import { EntryView } from "./pages/EntryView";
 import { SmartLink } from "./components/SmartLink";
+import { scrollToId } from "./components/OnThisPage";
 
 const loadMotionFeatures = () => import("../lib/motionFeatures").then((r) => r.default);
 
@@ -22,7 +23,24 @@ const pathKey = (pathname: string) =>
 
 if (boot && !location.pathname.startsWith("/preview")) primePage(boot.data.path, boot.data);
 
+/** Links to a spot on the same page ("#…") glide there instead of jumping. */
+function useSmoothInPageLinks() {
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const a = (e.target as Element | null)?.closest?.("a[href^='#']");
+      const id = a?.getAttribute("href")?.slice(1);
+      if (!id) return;
+      const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (scrollToId(decodeURIComponent(id), smooth)) e.preventDefault();
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
+}
+
 export function PublicApp() {
+  useSmoothInPageLinks();
   const location = useLocation();
   const isPreview = location.pathname.startsWith("/preview");
   const key = isPreview ? (boot?.data.path ?? "") : pathKey(location.pathname);

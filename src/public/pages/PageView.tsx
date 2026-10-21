@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link } from "react-router";
 import type { PageDoc } from "@shared/blocks";
 import { LANGUAGES, type Lang } from "@shared/constants";
@@ -5,6 +6,7 @@ import type { PublicEntry } from "@shared/types";
 import { Blocks } from "../blocks/BlockRenderer";
 import { useSite } from "../SiteContext";
 import { navLabel } from "../layout/Header";
+import { OnThisPage, pageOutline } from "../components/OnThisPage";
 
 /** The menu section a page belongs to (shown above its title). */
 function useSection(path: string): string | null {
@@ -54,6 +56,10 @@ export function PageView({
   const startsWithHero = page.blocks[0]?.type === "hero";
   const lang = (page.lang ?? "en") as Lang;
   const showTitle = !startsWithHero && !page.hideTitle;
+  // Pages with several sections get an "On this page" menu beside them (not the homepage, a landing page)
+  const body = useMemo(() => (startsWithHero ? page.blocks.slice(1) : page.blocks), [page.blocks, startsWithHero]);
+  const outline = useMemo(() => (path ? pageOutline(body) : []), [path, body]);
+  const withRail = outline.length >= 3;
   return (
     <article lang={page.lang} dir={LANGUAGES[lang]?.dir}>
       {showTitle ? (
@@ -76,7 +82,21 @@ export function PageView({
         </>
       )}
       <div className="pb-6 md:pb-10">
-        <Blocks blocks={page.blocks} collections={collections} path={path} />
+        {withRail ? (
+          <>
+            {startsWithHero && <Blocks blocks={page.blocks.slice(0, 1)} collections={collections} path={path} />}
+            <div className="mx-auto max-w-[82rem] xl:grid xl:grid-cols-[12rem_minmax(0,1fr)] xl:px-8">
+              <aside className="hidden pt-14 xl:block">
+                <OnThisPage items={outline} />
+              </aside>
+              <div className="min-w-0">
+                <Blocks blocks={body} collections={collections} path={path} />
+              </div>
+            </div>
+          </>
+        ) : (
+          <Blocks blocks={page.blocks} collections={collections} path={path} />
+        )}
       </div>
     </article>
   );
