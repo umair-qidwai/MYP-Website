@@ -18,7 +18,11 @@ const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/
 const TARGET = (args.target ?? "http://localhost:5180").replace(/\/$/, "");
 const TOKEN =
   process.env.IMPORT_TOKEN ??
-  (existsSync(".dev.vars") ? readFileSync(".dev.vars", "utf8").match(/^IMPORT_TOKEN=(.+)$/m)?.[1]?.trim() : undefined);
+  (existsSync(".dev.vars")
+    ? readFileSync(".dev.vars", "utf8")
+        .match(/^IMPORT_TOKEN=(.+)$/m)?.[1]
+        ?.trim()
+    : undefined);
 if (!TOKEN) throw new Error("Set IMPORT_TOKEN (or add it to .dev.vars)");
 
 const BUNDLE = "migration/bundle";
@@ -26,8 +30,24 @@ const CACHE = "migration/media-cache";
 const UA = "Mozilla/5.0 (Macintosh) MYP-migration-import";
 mkdirSync(CACHE, { recursive: true });
 
-type MediaEntry = { key: string; kind: "image" | "file" | "video"; sourceUrl: string; download: string; variants: { w: number; url: string }[]; alt: string; filename: string };
-type Uploaded = { id: string; url: string; width: number | null; height: number | null; size: number; filename: string; variants: { w: number; url: string }[] };
+type MediaEntry = {
+  key: string;
+  kind: "image" | "file" | "video";
+  sourceUrl: string;
+  download: string;
+  variants: { w: number; url: string }[];
+  alt: string;
+  filename: string;
+};
+type Uploaded = {
+  id: string;
+  url: string;
+  width: number | null;
+  height: number | null;
+  size: number;
+  filename: string;
+  variants: { w: number; url: string }[];
+};
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -51,11 +71,22 @@ async function download(url: string, file: string): Promise<Buffer> {
 
 const extOf = (url: string, fallback: string) => url.match(/\.([a-z0-9]{2,4})(?:$|\?)/i)?.[1]?.toLowerCase() ?? fallback;
 const mimeFor = (ext: string) =>
-  ({ jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png", gif: "image/gif", webp: "image/webp", avif: "image/avif", pdf: "application/pdf", mp4: "video/mp4" })[ext] ?? "application/octet-stream";
+  ({
+    jpg: "image/jpeg",
+    jpeg: "image/jpeg",
+    png: "image/png",
+    gif: "image/gif",
+    webp: "image/webp",
+    avif: "image/avif",
+    pdf: "application/pdf",
+    mp4: "video/mp4",
+  })[ext] ?? "application/octet-stream";
 
 async function uploadOne(m: MediaEntry): Promise<Uploaded> {
   // Skip the download entirely when this file was already imported
-  const existing = await fetch(`${TARGET}/api/import/media/by-source?url=${encodeURIComponent(m.sourceUrl)}`, { headers: { authorization: `Bearer ${TOKEN}` } });
+  const existing = await fetch(`${TARGET}/api/import/media/by-source?url=${encodeURIComponent(m.sourceUrl)}`, {
+    headers: { authorization: `Bearer ${TOKEN}` },
+  });
   if (existing.ok) return ((await existing.json()) as { item: Uploaded }).item;
   const ext = m.kind === "file" ? "pdf" : m.kind === "video" ? "mp4" : extOf(m.download, "jpg");
   const main = await download(m.download, path.join(CACHE, `${m.key}.${ext}`));
@@ -219,7 +250,9 @@ async function main() {
   const pages = content.pages.map((p) => {
     const r = resolve(p, map, missing) as typeof p;
     // drop blocks that lost their essential media
-    r.doc.blocks = r.doc.blocks.filter((b) => !(b.type === "image" && !b.image) && !(b.type === "gallery" && !b.images?.length) && !(b.type === "video" && !b.videos?.length));
+    r.doc.blocks = r.doc.blocks.filter(
+      (b) => !(b.type === "image" && !b.image) && !(b.type === "gallery" && !b.images?.length) && !(b.type === "video" && !b.videos?.length),
+    );
     return r;
   });
   const entries = resolve(content.entries, map, missing) as unknown[];
@@ -242,7 +275,9 @@ async function main() {
     redirects: results[0].redirects,
   };
   writeFileSync(path.join(BUNDLE, "push-report.json"), JSON.stringify(summary, null, 1));
-  console.log(`Content: ${summary.created} created, ${summary.updated} updated, ${summary.skipped.length} skipped (staff-edited), ${summary.errors.length} errors, ${summary.redirects} redirects`);
+  console.log(
+    `Content: ${summary.created} created, ${summary.updated} updated, ${summary.skipped.length} skipped (staff-edited), ${summary.errors.length} errors, ${summary.redirects} redirects`,
+  );
   for (const e of summary.errors.slice(0, 20)) console.log("  ERROR", e);
   for (const f of failed.slice(0, 20)) console.log("  MEDIA FAILED", f.key, f.url, f.error);
 }

@@ -28,9 +28,14 @@ export function EntryView({ collection, entry, related }: { collection: string; 
       <header className="grain pb-10 pt-10 md:pt-16">
         <div className="wrap">
           <Link to={back} className="inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-ink">
-            <ArrowLeft className="size-4" aria-hidden /> {isEvent ? "All events" : def?.label ?? "Back"}
+            <ArrowLeft className="size-4" aria-hidden /> {isEvent ? "All events" : (def?.label ?? "Back")}
           </Link>
-          {!isEvent && d.date ? <p className="eyebrow mt-10 text-plum">{fmtDate(d.date)}{d.author ? ` · ${d.author}` : ""}</p> : null}
+          {!isEvent && d.date ? (
+            <p className="eyebrow mt-10 text-plum">
+              {fmtDate(d.date)}
+              {d.author ? ` · ${d.author}` : ""}
+            </p>
+          ) : null}
           <h1 className={`display max-w-[20ch] text-[clamp(2.4rem,6.5vw,6rem)] ${isEvent ? "mt-10" : "mt-5"}`}>
             <MaskLines lines={[entry.title]} />
           </h1>
@@ -77,7 +82,9 @@ export function EntryView({ collection, entry, related }: { collection: string; 
                 return (
                   <li key={r.id}>
                     <Link to={`/${def.publicPath}/${r.slug}`} className="group block">
-                      <div className="aspect-[4/3] overflow-hidden rounded-[20px] bg-paper">{im && <Img image={im} sizes="30vw" fit="cover" className="transition-transform duration-700 group-hover:scale-[1.04]" />}</div>
+                      <div className="aspect-[4/3] overflow-hidden rounded-[20px] bg-paper">
+                        {im && <Img image={im} sizes="30vw" fit="cover" className="transition-transform duration-700 group-hover:scale-[1.04]" />}
+                      </div>
                       <h3 className="mt-4 text-lg font-semibold leading-snug group-hover:text-plum">{r.title}</h3>
                     </Link>
                   </li>

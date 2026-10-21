@@ -72,6 +72,24 @@
   "filename": "be0c83-75d302493dff4448a441e89a4f9b2a7d.jpg"
  },
  {
+  "key": "doc_be0c83_3d83f0cf21854f12926e92a7cf4ea416",
+  "kind": "file",
+  "sourceUrl": "wix-doc:be0c83_3d83f0cf21854f12926e92a7cf4ea416.pdf",
+  "download": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_3d83f0cf21854f12926e92a7cf4ea416.pdf",
+  "variants": [],
+  "alt": "",
+  "filename": "review-hfc-role-descriptions.pdf"
+ },
+ {
+  "key": "doc_be0c83_49214d7af6bd41988f7f7ec2f3166748",
+  "kind": "file",
+  "sourceUrl": "wix-doc:be0c83_49214d7af6bd41988f7f7ec2f3166748.pdf",
+  "download": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_49214d7af6bd41988f7f7ec2f3166748.pdf",
+  "variants": [],
+  "alt": "",
+  "filename": "review-student-mou.pdf"
+ },
+ {
   "key": "img_f0724728dac44b20",
   "kind": "image",
   "sourceUrl": "https://static.wixstatic.com/media/be0c83_a90aa6f1fc154528a76ce26bcd5ede16~mv2.png",
@@ -3952,24 +3970,6 @@
   ],
   "alt": "",
   "filename": "be0c83-91681a2af87545dbb8a36fa3bff73821.jpg"
- },
- {
-  "key": "doc_be0c83_3d83f0cf21854f12926e92a7cf4ea416",
-  "kind": "file",
-  "sourceUrl": "wix-doc:be0c83_3d83f0cf21854f12926e92a7cf4ea416.pdf",
-  "download": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_3d83f0cf21854f12926e92a7cf4ea416.pdf",
-  "variants": [],
-  "alt": "",
-  "filename": "review-hfc-role-descriptions.pdf"
- },
- {
-  "key": "doc_be0c83_49214d7af6bd41988f7f7ec2f3166748",
-  "kind": "file",
-  "sourceUrl": "wix-doc:be0c83_49214d7af6bd41988f7f7ec2f3166748.pdf",
-  "download": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_49214d7af6bd41988f7f7ec2f3166748.pdf",
-  "variants": [],
-  "alt": "",
-  "filename": "review-student-mou.pdf"
  },
  {
   "key": "img_47d4370671db253f",

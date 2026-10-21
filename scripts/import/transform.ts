@@ -15,7 +15,8 @@ import { createHash } from "node:crypto";
 import { parseDocument } from "htmlparser2";
 import type { Element } from "domhandler";
 import { blockSchema, pageDocSchema, type Block, type PageDoc } from "../../shared/blocks";
-import { entryDocSchema, getCollection } from "../../shared/collections";
+import { getCollection } from "../../shared/collections";
+import { entryDocSchema } from "../../shared/collections-schema";
 import type { RichDoc, RichNode } from "../../shared/richtext";
 import { SETTINGS_SCHEMAS } from "../../shared/settings";
 import { normalizePath, slugify } from "../../shared/slug";
@@ -52,7 +53,20 @@ type Item = {
   descs?: string[];
   links?: (string | null)[];
 };
-type CrawlForm = { text: string; rect: Rect; fields: { tag: string; type: string; name: string | null; placeholder: string | null; required: boolean; label: string | null; ariaLabel: string | null; options?: string[] }[] };
+type CrawlForm = {
+  text: string;
+  rect: Rect;
+  fields: {
+    tag: string;
+    type: string;
+    name: string | null;
+    placeholder: string | null;
+    required: boolean;
+    label: string | null;
+    ariaLabel: string | null;
+    options?: string[];
+  }[];
+};
 type Crawl = {
   url: string;
   group: string;
@@ -68,7 +82,15 @@ type Crawl = {
 };
 
 // ── Output types ────────────────────────────────────────────────────────────
-type MediaEntry = { key: string; kind: "image" | "file" | "video"; sourceUrl: string; download: string; variants: { w: number; url: string }[]; alt: string; filename: string };
+type MediaEntry = {
+  key: string;
+  kind: "image" | "file" | "video";
+  sourceUrl: string;
+  download: string;
+  variants: { w: number; url: string }[];
+  alt: string;
+  filename: string;
+};
 type PageOut = { path: string; sourceUrl: string; publish: boolean; doc: PageDoc };
 type EntryOut = { collection: string; slug: string; sourceUrl: string; sortOrder: number; publish: boolean; doc: unknown };
 type ReportRow = {
@@ -148,8 +170,14 @@ function classify(p: string, c: Crawl): { kind: Kind; to?: string; note?: string
   const final = c.finalUrl ? normalizePath(new URL(c.finalUrl).pathname) : p;
   if (final !== p) return { kind: "redirect", to: final, note: "Wix already redirected this URL" };
   if (p === "/") return { kind: "home" };
-  if (p === "/shop" || p.startsWith("/product-page/")) return { kind: "redirect", to: "/", note: "Wix Stores template placeholder (“I'm a product”) — no organisational content" };
-  if (p === "/contact-8") return { kind: "redirect", to: "/contacts", note: "Unedited Wix template contact page (placeholder phone/email, Wix's own social links) — menu item now points to the real contact page" };
+  if (p === "/shop" || p.startsWith("/product-page/"))
+    return { kind: "redirect", to: "/", note: "Wix Stores template placeholder (“I'm a product”) — no organisational content" };
+  if (p === "/contact-8")
+    return {
+      kind: "redirect",
+      to: "/contacts",
+      note: "Unedited Wix template contact page (placeholder phone/email, Wix's own social links) — menu item now points to the real contact page",
+    };
   if (p.startsWith("/blog/tags/") || p.startsWith("/blog/archive/")) return { kind: "redirect", to: "/blog", note: "Wix blog tag/archive listing" };
   if (p === "/events-1") return { kind: "redirect", to: "/events", note: "Wix dynamic events listing → events archive" };
   if (p.startsWith("/events-1/")) return { kind: "event" };
@@ -159,7 +187,8 @@ function classify(p: string, c: Crawl): { kind: Kind; to?: string; note?: string
   if (p === "/events") return { kind: "eventsPage" };
   if (p === "/blog") return { kind: "blogPage" };
   if (TRANSLATED.test(p)) return { kind: "translation" };
-  if (/^\/(ar|es|fr|ht|so)\//.test(p)) return { kind: "skip", note: "Locale copy of an English page (Wix served English content); handled by language fallback" };
+  if (/^\/(ar|es|fr|ht|so)\//.test(p))
+    return { kind: "skip", note: "Locale copy of an English page (Wix served English content); handled by language fallback" };
   return { kind: "page" };
 }
 
@@ -180,7 +209,9 @@ const eventSlug = new Map<string, string>(); // normalised wix path tail → new
 }
 const articleSlug = (p: string) => slugify(p.split("/").pop() ?? "post");
 
-const pagePaths = new Set(classified.filter((x) => ["home", "page", "translation", "reports", "newsPage", "eventsPage", "blogPage"].includes(x.kind)).map((x) => x.p));
+const pagePaths = new Set(
+  classified.filter((x) => ["home", "page", "translation", "reports", "newsPage", "eventsPage", "blogPage"].includes(x.kind)).map((x) => x.p),
+);
 
 // Redirect map: legacy URL → new URL
 for (const { p, kind, to } of classified) {
@@ -213,7 +244,15 @@ function docMedia(url: string, label?: string): string {
   const existing = media.get(key);
   const nice = label ? slugify(label.replace(/^download\s+/i, "")) : "";
   if (!existing) {
-    media.set(key, { key, kind: "file", sourceUrl: `wix-doc:${file}`, download: `https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/${file}`, variants: [], alt: "", filename: `${nice || file.replace(/\.[a-z0-9]+$/i, "")}.${ext}` });
+    media.set(key, {
+      key,
+      kind: "file",
+      sourceUrl: `wix-doc:${file}`,
+      download: `https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/${file}`,
+      variants: [],
+      alt: "",
+      filename: `${nice || file.replace(/\.[a-z0-9]+$/i, "")}.${ext}`,
+    });
   } else if (nice && existing.filename.startsWith(file.replace(/\.[a-z0-9]+$/i, ""))) {
     existing.filename = `${nice}.${ext}`;
   }
@@ -234,13 +273,17 @@ function makeLinkMapper(from: string) {
     }
     if (!/^https?:$/.test(u.protocol)) return null;
     if (u.hostname.endsWith(".usrfiles.com") && u.pathname.startsWith("/ugd/")) return docMedia(u.href, label);
-    if (/^(www\.)?myprojectusa\.org$/.test(u.hostname) && u.pathname.startsWith("/_files/ugd/")) return docMedia(u.href, label);
+    // Wix document links, including locale-prefixed ones on translated pages (/es/_files/ugd/…)
+    if (/^(www\.)?myprojectusa\.org$/.test(u.hostname) && /^\/(?:(?:ar|es|fr|ht|so)\/)?_files\/ugd\//.test(u.pathname)) return docMedia(u.href, label);
     if (/^(www\.)?myprojectusa\.org$/.test(u.hostname)) return mapInternal(u.pathname, u.hash, from);
     return u.href;
   };
 }
 
-const looksLikeFilename = (alt: string) => /\.(jpe?g|png|webp|gif|heic)$/i.test(alt.trim()) || /^(img|image|dsc|screen ?shot|whatsapp image|photo)[\s_-]?\d/i.test(alt.trim()) || /^[a-f0-9_]{16,}/i.test(alt.trim());
+const looksLikeFilename = (alt: string) =>
+  /\.(jpe?g|png|webp|gif|heic)$/i.test(alt.trim()) ||
+  /^(img|image|dsc|screen ?shot|whatsapp image|photo)[\s_-]?\d/i.test(alt.trim()) ||
+  /^[a-f0-9_]{16,}/i.test(alt.trim());
 
 /** Register a Wix image; returns an image ref with a placeholder src. */
 function imageRef(src: string, alt: string | null | undefined, page: string): { src: string; alt: string } | null {
@@ -252,7 +295,12 @@ function imageRef(src: string, alt: string | null | undefined, page: string): { 
   const crop = transform.match(/crop\/(x_\d+,y_\d+,w_(\d+),h_(\d+))/);
   const base = `https://static.wixstatic.com/media/${id}`;
   const ext = (id.match(/\.([a-z0-9]+)$/i)?.[1] ?? "jpg").toLowerCase();
-  const key = "img_" + createHash("sha1").update(id + (crop ? crop[1] : "")).digest("hex").slice(0, 16);
+  const key =
+    "img_" +
+    createHash("sha1")
+      .update(id + (crop ? crop[1] : ""))
+      .digest("hex")
+      .slice(0, 16);
   if (!media.has(key)) {
     let download: string;
     const variants: { w: number; url: string }[] = [];
@@ -270,7 +318,15 @@ function imageRef(src: string, alt: string | null | undefined, page: string): { 
       for (const vw of [640, 1280]) variants.push({ w: vw, url: `${base}/v1/fit/w_${vw},h_${vw * 3},q_82,enc_webp/file.webp` });
     }
     const cleanAlt = alt && !looksLikeFilename(alt) ? alt.trim() : "";
-    media.set(key, { key, kind: "image", sourceUrl: base + (crop ? `#crop=${crop[1]}` : ""), download, variants, alt: cleanAlt, filename: slugify(id.replace(/~mv2.*$/, "").replace(/\.[a-z]+$/, "")) + "." + ext });
+    media.set(key, {
+      key,
+      kind: "image",
+      sourceUrl: base + (crop ? `#crop=${crop[1]}` : ""),
+      download,
+      variants,
+      alt: cleanAlt,
+      filename: slugify(id.replace(/~mv2.*$/, "").replace(/\.[a-z]+$/, "")) + "." + ext,
+    });
     if (!cleanAlt) altNeeded.push({ page, key, alt: alt ?? "" });
   }
   return { src: `wix-media:${key}`, alt: media.get(key)!.alt };
@@ -279,14 +335,21 @@ function imageRef(src: string, alt: string | null | undefined, page: string): { 
 function videoRef(src: string): string {
   const id = src.match(/video\/([^/]+)\//)?.[1] ?? createHash("sha1").update(src).digest("hex").slice(0, 12);
   const key = "vid_" + id;
-  if (!media.has(key)) media.set(key, { key, kind: "video", sourceUrl: src, download: src.replace(/\/\d+p\/mp4\//, "/720p/mp4/"), variants: [], alt: "", filename: `${id}.mp4` });
+  if (!media.has(key))
+    media.set(key, { key, kind: "video", sourceUrl: src, download: src.replace(/\/\d+p\/mp4\//, "/720p/mp4/"), variants: [], alt: "", filename: `${id}.mp4` });
   return `wix-media:${key}`;
 }
 
 // ── Embeds ──────────────────────────────────────────────────────────────────
 mkdirSync(EMBED_CACHE, { recursive: true });
 async function fetchEmbed(url: string): Promise<string> {
-  const file = path.join(EMBED_CACHE, url.split("/").pop()!.replace(/[^a-z0-9_.-]/gi, "_"));
+  const file = path.join(
+    EMBED_CACHE,
+    url
+      .split("/")
+      .pop()!
+      .replace(/[^a-z0-9_.-]/gi, "_"),
+  );
   if (existsSync(file)) return readFileSync(file, "utf8");
   const res = await fetch(url, { headers: { "user-agent": UA } });
   const text = await res.text();
@@ -307,7 +370,8 @@ async function embedFor(src: string, title: string | null | undefined, page: str
     return { blocks: [], note: `Unparseable embed ${src}` };
   }
   if (u.hostname === "platform.twitter.com") return { blocks: [], note: "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)" };
-  if (u.hostname === "app.socialstream.io") return { blocks: [], note: "Dropped Wix Social Stream app widget (Wix-only); social profiles are linked site-wide" };
+  if (u.hostname === "app.socialstream.io")
+    return { blocks: [], note: "Dropped Wix Social Stream app widget (Wix-only); social profiles are linked site-wide" };
   if (u.hostname === "dev-wix-languages.appspot.com") return { blocks: [], note: "Dropped Wix language-menu widget" };
   if (u.hostname === "wix.mailchimpapp.com") {
     return {
@@ -342,16 +406,26 @@ async function embedFor(src: string, title: string | null | undefined, page: str
         })
         .filter((b): b is NonNullable<typeof b> => !!b)
         .filter((b, i, arr) => arr.findIndex((x) => x.href.split("?")[0] === b.href.split("?")[0]) === i);
-      if (buttons.length) return { blocks: [{ id: id(), type: "buttons", align: "start", buttons }], note: "Custom-HTML embed (Eventbrite button) converted to a link button" };
+      if (buttons.length)
+        return { blocks: [{ id: id(), type: "buttons", align: "start", buttons }], note: "Custom-HTML embed (Eventbrite button) converted to a link button" };
     }
     return { blocks: [], note: `Empty custom-HTML embed ${u.href}` };
   }
   if (/youtube(-nocookie)?\.com$/.test(u.hostname)) {
     const vid = u.pathname.match(/\/embed\/([^/?]+)/)?.[1];
     const list = u.searchParams.get("list");
-    const url = vid === "videoseries" && list ? `https://www.youtube-nocookie.com/embed/videoseries?list=${list}` : vid ? `https://www.youtube-nocookie.com/embed/${vid}` : null;
+    const url =
+      vid === "videoseries" && list
+        ? `https://www.youtube-nocookie.com/embed/videoseries?list=${list}`
+        : vid
+          ? `https://www.youtube-nocookie.com/embed/${vid}`
+          : null;
     if (!url) return { blocks: [], note: `Unrecognised YouTube embed ${src}` };
-    return { blocks: [{ id: id(), type: "embed", provider: "youtube", url, title: title || (vid === "videoseries" ? "YouTube playlist" : "YouTube video"), aspect: "16:9" }] };
+    return {
+      blocks: [
+        { id: id(), type: "embed", provider: "youtube", url, title: title || (vid === "videoseries" ? "YouTube playlist" : "YouTube video"), aspect: "16:9" },
+      ],
+    };
   }
   if (u.hostname === "docs.google.com" && u.pathname.includes("/forms/")) {
     return { blocks: [{ id: id(), type: "embed", provider: "google-form", url: u.href, title: title || "Google Form", aspect: "form" }] };
@@ -360,12 +434,26 @@ async function embedFor(src: string, title: string | null | undefined, page: str
     return { blocks: [{ id: id(), type: "embed", provider: "google-map", url: u.href, title: title || "Map", aspect: "4:3" }] };
   }
   if (/eventbrite\.com$/.test(u.hostname)) {
-    return { blocks: [{ id: id(), type: "embed", provider: "eventbrite", url: `https://www.eventbrite.com${u.pathname}${u.search}`, title: title || "Eventbrite tickets", aspect: "form" }] };
+    return {
+      blocks: [
+        {
+          id: id(),
+          type: "embed",
+          provider: "eventbrite",
+          url: `https://www.eventbrite.com${u.pathname}${u.search}`,
+          title: title || "Eventbrite tickets",
+          aspect: "form",
+        },
+      ],
+    };
   }
   if (u.hostname === "www.nbc4i.com") {
     return { blocks: [{ id: id(), type: "embed", provider: "other", url: u.href, title: title || "NBC4 news story", aspect: "tall" }] };
   }
-  return { blocks: [{ id: id(), type: "buttons", align: "start", buttons: [{ label: title || u.hostname, href: u.href, style: "secondary" }] }], note: `Unknown embed host ${u.hostname} kept as a link` };
+  return {
+    blocks: [{ id: id(), type: "buttons", align: "start", buttons: [{ label: title || u.hostname, href: u.href, style: "secondary" }] }],
+    note: `Unknown embed host ${u.hostname} kept as a link`,
+  };
 }
 
 function textContent(n: Element): string {
@@ -386,7 +474,8 @@ const bid = () => `b_${(++bidCounter).toString(36).padStart(5, "0")}`;
 function isPageItem(i: Item) {
   return i.section.endsWith("@page");
 }
-const contains = (outer: Rect, inner: Rect, pad = 6) => inner.x >= outer.x - pad && inner.y >= outer.y - pad && inner.x + inner.w <= outer.x + outer.w + pad && inner.y + inner.h <= outer.y + outer.h + pad;
+const contains = (outer: Rect, inner: Rect, pad = 6) =>
+  inner.x >= outer.x - pad && inner.y >= outer.y - pad && inner.x + inner.w <= outer.x + outer.w + pad && inner.y + inner.h <= outer.y + outer.h + pad;
 const sameRect = (a: Rect, b: Rect) => Math.abs(a.x - b.x) < 6 && Math.abs(a.y - b.y) < 6 && Math.abs(a.w - b.w) < 8 && Math.abs(a.h - b.h) < 8;
 const hOverlap = (a: Rect, b: Rect) => Math.min(a.x + a.w, b.x + b.w) - Math.max(a.x, b.x) > 10;
 
@@ -515,7 +604,15 @@ async function buildBlocks(c: Crawl, page: string, opts: { takeTitle?: boolean; 
     if (!b || b.type !== "image") return;
     const prev = blocks[blocks.length - 1];
     if (sameRow && prev?.type === "image") {
-      blocks[blocks.length - 1] = { id: prev.id, type: "gallery", layout: "grid", images: [{ image: prev.image, link: prev.link }, { image: b.image, link: b.link }] };
+      blocks[blocks.length - 1] = {
+        id: prev.id,
+        type: "gallery",
+        layout: "grid",
+        images: [
+          { image: prev.image, link: prev.link },
+          { image: b.image, link: b.link },
+        ],
+      };
     } else if (sameRow && prev?.type === "gallery") {
       prev.images.push({ image: b.image, link: b.link });
     } else blocks.push(b);
@@ -620,7 +717,9 @@ async function buildBlocks(c: Crawl, page: string, opts: { takeTitle?: boolean; 
 
   if (removedAll.length) notes.push(`Removed Wix template placeholder text: ${removedAll.map((r) => `“${r.slice(0, 60)}…”`).join("; ")}`);
 
-  normaliseHeadingLevels(blocks.flatMap((b) => (b.type === "richText" || b.type === "split" ? [b.doc] : b.type === "accordion" ? b.items.map((i) => i.doc) : [])));
+  normaliseHeadingLevels(
+    blocks.flatMap((b) => (b.type === "richText" || b.type === "split" ? [b.doc] : b.type === "accordion" ? b.items.map((i) => i.doc) : [])),
+  );
 
   // Galleries of small transparent images read better as logo walls
   for (const b of blocks) {
@@ -635,10 +734,19 @@ function formBlock(f: CrawlForm, c: Crawl, page: string, notes: string[]): Block
     .filter((x) => !["submit", "button", "hidden"].includes(x.type))
     .map((x, idx) => {
       const label = (x.label || x.placeholder || x.ariaLabel || x.name || `Field ${idx + 1}`).replace(/\s*\*$/, "").trim();
-      const type = x.tag === "textarea" ? "textarea" : x.tag === "select" ? "select" : (["email", "tel", "checkbox"].includes(x.type) ? x.type : "text");
-      return { id: slugify(label) || `field-${idx + 1}`, label, type: type as "text", required: !!x.required || /\*$/.test(x.placeholder ?? ""), options: x.options };
+      const type = x.tag === "textarea" ? "textarea" : x.tag === "select" ? "select" : ["email", "tel", "checkbox"].includes(x.type) ? x.type : "text";
+      return {
+        id: slugify(label) || `field-${idx + 1}`,
+        label,
+        type: type as "text",
+        required: !!x.required || /\*$/.test(x.placeholder ?? ""),
+        options: x.options,
+      };
     });
-  const lines = f.text.split("\n").map((l) => l.trim()).filter(Boolean);
+  const lines = f.text
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
   const labels = new Set(fields.map((x) => x.label.toLowerCase()));
   const submit = lines[lines.length - 1] && lines[lines.length - 1].length < 30 ? lines[lines.length - 1] : "Submit";
   const titleLine = lines.find((l) => !labels.has(l.toLowerCase()) && l !== submit);
@@ -657,7 +765,7 @@ function formBlock(f: CrawlForm, c: Crawl, page: string, notes: string[]): Block
 const words = (s: string) =>
   s
     .toLowerCase()
-    .replace(/[\u200b﻿]/g, "")
+    .replace(/[\u200b\ufeff]/g, "")
     .replace(/[’‘]/g, "'")
     .replace(/[“”]/g, '"')
     .split(/[^\p{L}\p{N}'$%]+/u)
@@ -714,7 +822,7 @@ function measure(source: string, migrated: string): { coverage: number; missing:
 // Words that are Wix widget chrome rather than page content
 const CHROME = /^(more|quick view|share|top of page|bottom of page|use tab to navigate through the menu items\.)$/i;
 const sourceText = (c: Crawl) =>
-  (c.mainText ?? "")
+  decodeEntities(c.mainText ?? "")
     .split("\n")
     .filter((l) => !CHROME.test(l.trim()))
     .join("\n");
@@ -770,11 +878,23 @@ async function buildArticle(p: string, c: Crawl): Promise<{ entry: EntryOut; not
   const h1 = (c as Crawl & { headings?: { level: number; text: string }[] }).headings?.find((h) => h.level === 1)?.text;
   const title = h1 || cleanTitle(c.title);
   const m = p.match(/\/single-post\/(\d{4})\/(\d{2})\/(\d{2})\//);
-  const img = c.items.filter((i) => isPageItem(i) && i.kind === "image" && Math.max(i.rect.w, i.rect.h) >= 150 && !i.alt).sort((a, b) => a.rect.y - b.rect.y)[0];
+  const img = c.items
+    .filter((i) => isPageItem(i) && i.kind === "image" && Math.max(i.rect.w, i.rect.h) >= 150 && !i.alt)
+    .sort((a, b) => a.rect.y - b.rect.y)[0];
   const image = img ? imageRef(img.src ?? "", title, p) : null;
   const data: Record<string, unknown> = { body: doc, date: m ? `${m[1]}-${m[2]}-${m[3]}` : "" };
   if (image) data.image = { ...image, alt: image.alt || title };
-  return { entry: { collection: "articles", slug: articleSlug(p), sourceUrl: c.url, sortOrder: 0, publish: true, doc: { title, data, seo: { description: c.meta?.description ?? undefined } } }, notes };
+  return {
+    entry: {
+      collection: "articles",
+      slug: articleSlug(p),
+      sourceUrl: c.url,
+      sortOrder: 0,
+      publish: true,
+      doc: { title, data, seo: { description: c.meta?.description ?? undefined } },
+    },
+    notes,
+  };
 }
 
 async function buildReports(p: string, c: Crawl): Promise<{ doc: PageDoc; entries: EntryOut[]; notes: string[] }> {
@@ -802,7 +922,14 @@ async function buildReports(p: string, c: Crawl): Promise<{ doc: PageDoc; entrie
     else if (href) data.url = href;
     if (cover) data.cover = { ...cover, alt: cover.alt || `${title} cover` };
     if (!href) notes.push(`“${label}” has no document on the original site — imported as an unpublished draft so staff can upload the file`);
-    entries.push({ collection: "reports", slug: slugify(title), sourceUrl: `${c.url}#item-${order}`, sortOrder: order++, publish: !!href, doc: { title, data, seo: {} } });
+    entries.push({
+      collection: "reports",
+      slug: slugify(title),
+      sourceUrl: `${c.url}#item-${order}`,
+      sortOrder: order++,
+      publish: !!href,
+      doc: { title, data, seo: {} },
+    });
   }
   // Page: original text blocks, with each group of downloads shown by a collection block
   const blocks: Block[] = [];
@@ -836,7 +963,10 @@ async function buildNews(p: string, c: Crawl): Promise<{ doc: PageDoc; entries: 
   const [titleItem, introItem, ...stories] = texts;
   const entries: EntryOut[] = [];
   stories.forEach((s, idx) => {
-    const lines = (s.text ?? "").split("\n").map((l) => l.replace(/[\u200b]/g, "").trim()).filter(Boolean);
+    const lines = (s.text ?? "")
+      .split("\n")
+      .map((l) => l.replace(/[\u200b]/g, "").trim())
+      .filter(Boolean);
     const [title, dateLine, outlet, ...summary] = lines;
     const d = new Date(dateLine);
     const date = isNaN(d.getTime()) ? "" : `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -866,7 +996,11 @@ async function buildNews(p: string, c: Crawl): Promise<{ doc: PageDoc; entries: 
 // ── Homepage (curated composition from the original homepage's exact text) ──
 function exactParagraph(html: string, starts: string): string {
   const { doc } = wixHtmlToDoc(html, () => null);
-  const para = doc.content.find((n) => docText({ type: "doc", content: [n] }).trim().startsWith(starts));
+  const para = doc.content.find((n) =>
+    docText({ type: "doc", content: [n] })
+      .trim()
+      .startsWith(starts),
+  );
   if (!para) throw new Error(`Homepage text not found: ${starts}`);
   return docText({ type: "doc", content: [para] }).trim();
 }
@@ -947,7 +1081,18 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
       buttons: [btn("Book Your Seat Now")],
       tone: "ink",
     },
-    ...(ytId ? [{ id: bid(), type: "embed" as const, provider: "youtube" as const, url: `https://www.youtube-nocookie.com/embed/${ytId}`, title: "MY Project USA video", aspect: "16:9" as const }] : []),
+    ...(ytId
+      ? [
+          {
+            id: bid(),
+            type: "embed" as const,
+            provider: "youtube" as const,
+            url: `https://www.youtube-nocookie.com/embed/${ytId}`,
+            title: "MY Project USA video",
+            aspect: "16:9" as const,
+          },
+        ]
+      : []),
     { id: bid(), type: "cta", heading: "Help Us Sustain All Programs", buttons: [{ ...btn("Help Us Sustain All Programs"), label: "Donate" }], tone: "brand" },
     {
       id: bid(),
@@ -985,10 +1130,10 @@ function buildSettings(home: Crawl) {
   const nav = (home.nav ?? [])
     .filter((n) => n.text.trim() && !(n.text.trim() === "More" && !n.href && !n.children.length)) // Wix overflow-menu placeholder
     .map((n) => ({
-    label: n.text.trim(),
-    href: n.href ? (mapLink(n.href) ?? "") : "",
-    children: n.children.map((ch) => ({ label: ch.text.trim(), href: ch.href ? (mapLink(ch.href) ?? "") : "" })),
-  }));
+      label: n.text.trim(),
+      href: n.href ? (mapLink(n.href) ?? "") : "",
+      children: n.children.map((ch) => ({ label: ch.text.trim(), href: ch.href ? (mapLink(ch.href) ?? "") : "" })),
+    }));
   const quick = ["Donate", "Volunteer", "Events", "Ventures", "Subscribe"]
     .map((label) => site.find((i) => i.kind === "button" && (i.text ?? "").trim() === label))
     .filter((b): b is Item => !!b && !!b.href)
@@ -1009,7 +1154,14 @@ function buildSettings(home: Crawl) {
     if (image) media.get(image.src.slice(10))!.alt = `${name} logo`;
     return { name, href, image: image ?? undefined };
   });
-  const socialMap: Record<string, "linkedin" | "youtube" | "facebook" | "x" | "instagram"> = { linkedin: "linkedin", youtube: "youtube", facebook: "facebook", x: "x", twitter: "x", instagram: "instagram" };
+  const socialMap: Record<string, "linkedin" | "youtube" | "facebook" | "x" | "instagram"> = {
+    linkedin: "linkedin",
+    youtube: "youtube",
+    facebook: "facebook",
+    x: "x",
+    twitter: "x",
+    instagram: "instagram",
+  };
   const social = site
     .filter((i) => i.kind === "image" && i.href && i.rect.w < 60)
     .map((i) => ({ platform: socialMap[(i.alt ?? "").trim().toLowerCase()] ?? null, url: i.href! }))
@@ -1053,7 +1205,7 @@ async function main() {
   for (const { p, c, kind, to, note } of classified.sort((a, b) => a.p.localeCompare(b.p))) {
     const row: ReportRow = { source: c.url, outcome: "page", target: p, notes: [] };
     const src = sourceText(c);
-    let migratedText = "";
+    let migratedText: string;
     if (kind === "redirect" || kind === "skip") {
       row.outcome = kind === "redirect" ? "redirect" : "skipped";
       row.target = to ?? "(locale fallback)";
@@ -1099,27 +1251,50 @@ async function main() {
       entries.push(...r.entries);
       row.notes.push(...r.notes);
       row.title = r.doc.title;
-      migratedText = [r.doc.title, ...r.doc.blocks.map(blockText), ...r.entries.map((e) => `${(e.doc as { title: string }).title}`)].join("\n") + "\nDownload".repeat(10);
+      migratedText =
+        [r.doc.title, ...r.doc.blocks.map(blockText), ...r.entries.map((e) => `${(e.doc as { title: string }).title}`)].join("\n") + "\nDownload".repeat(10);
     } else if (kind === "newsPage") {
       const r = await buildNews(p, c);
       pages.push({ path: "copy-of-news-coverage", sourceUrl: c.url, publish: true, doc: r.doc });
       entries.push(...r.entries);
       row.notes.push(...r.notes);
       row.title = r.doc.title;
-      migratedText = [r.doc.title, ...r.doc.blocks.map(blockText), ...r.entries.map((e) => {
-        const d = e.doc as { title: string; data: { outlet: string; summary: string } };
-        return `${d.title}\n${d.data.outlet}\n${d.data.summary}\nFull Story Here`;
-      })].join("\n") + "\nJune 19 2025 June 19 2025 November 19 2024 November 16 2024 June 21 2024";
+      migratedText =
+        [
+          r.doc.title,
+          ...r.doc.blocks.map(blockText),
+          ...r.entries.map((e) => {
+            const d = e.doc as { title: string; data: { outlet: string; summary: string } };
+            return `${d.title}\n${d.data.outlet}\n${d.data.summary}\nFull Story Here`;
+          }),
+        ].join("\n") + "\nJune 19 2025 June 19 2025 November 19 2024 November 16 2024 June 21 2024";
     } else if (kind === "eventsPage" || kind === "blogPage") {
-      const built = await buildBlocks(c, p, { takeTitle: true, skip: (i) => kind === "blogPage" && (i.kind === "gallery" || i.kind === "image" || (i.kind === "richtext" && !/MY Project USA Blog/.test(i.text ?? ""))) });
+      const built = await buildBlocks(c, p, {
+        takeTitle: true,
+        skip: (i) =>
+          kind === "blogPage" && (i.kind === "gallery" || i.kind === "image" || (i.kind === "richtext" && !/MY Project USA Blog/.test(i.text ?? ""))),
+      });
       const collection = kind === "eventsPage" ? "events" : "articles";
-      const doc: PageDoc = { title: built.title || cleanTitle(c.title), seo: seoFor(c), blocks: [...built.blocks, { id: bid(), type: "collection", collection, limit: 500, display: "grid" }] };
+      const doc: PageDoc = {
+        title: built.title || cleanTitle(c.title),
+        seo: seoFor(c),
+        blocks: [...built.blocks, { id: bid(), type: "collection", collection, limit: 500, display: "grid" }],
+      };
       pages.push({ path: p.slice(1), sourceUrl: c.url, publish: true, doc });
-      row.notes.push(...built.notes, kind === "eventsPage" ? "Lists all migrated Wix events (Events collection)" : "Lists all migrated blog posts (Articles collection); Wix blog sidebar replaced");
+      row.notes.push(
+        ...built.notes,
+        kind === "eventsPage"
+          ? "Lists all migrated Wix events (Events collection)"
+          : "Lists all migrated blog posts (Articles collection); Wix blog sidebar replaced",
+      );
       row.title = doc.title;
       migratedText = [doc.title, ...doc.blocks.map(blockText)].join("\n");
       if (kind === "blogPage") {
-        report.push({ ...row, coverage: undefined, notes: [...row.notes, "Source text on /blog is post excerpts + sidebar, now generated from the Articles collection"] });
+        report.push({
+          ...row,
+          coverage: undefined,
+          notes: [...row.notes, "Source text on /blog is post excerpts + sidebar, now generated from the Articles collection"],
+        });
         continue;
       }
     } else {
@@ -1142,12 +1317,24 @@ async function main() {
   const problems: string[] = [];
   for (const pg of pages) {
     const r = pageDocSchema.safeParse(fakeUrls(pg.doc));
-    if (!r.success) problems.push(`/${pg.path}: ${r.error.issues.slice(0, 3).map((i) => `${i.path.join(".")} ${i.message}`).join("; ")}`);
+    if (!r.success)
+      problems.push(
+        `/${pg.path}: ${r.error.issues
+          .slice(0, 3)
+          .map((i) => `${i.path.join(".")} ${i.message}`)
+          .join("; ")}`,
+      );
     for (const b of pg.doc.blocks) if (!blockSchema.safeParse(fakeUrls(b)).success) problems.push(`/${pg.path} block ${b.type}`);
   }
   for (const e of entries) {
     const r = entryDocSchema(getCollection(e.collection)!).safeParse(fakeUrls(e.doc));
-    if (!r.success) problems.push(`${e.collection}/${e.slug}: ${r.error.issues.slice(0, 3).map((i) => `${i.path.join(".")} ${i.message}`).join("; ")}`);
+    if (!r.success)
+      problems.push(
+        `${e.collection}/${e.slug}: ${r.error.issues
+          .slice(0, 3)
+          .map((i) => `${i.path.join(".")} ${i.message}`)
+          .join("; ")}`,
+      );
   }
   const settings = buildSettings(crawlOf("/"));
   for (const [k, v] of Object.entries(settings)) {
@@ -1162,7 +1349,17 @@ async function main() {
   writeFileSync(path.join(OUT, "media.json"), JSON.stringify([...media.values()], null, 1));
   writeFileSync(
     path.join(OUT, "report.json"),
-    JSON.stringify({ generatedAt: new Date().toISOString(), rows: report, brokenLinks: [...new Map(brokenLinks.map((b) => [b.page + b.href, b])).values()], altNeeded, problems }, null, 1),
+    JSON.stringify(
+      {
+        generatedAt: new Date().toISOString(),
+        rows: report,
+        brokenLinks: [...new Map(brokenLinks.map((b) => [b.page + b.href, b])).values()],
+        altNeeded,
+        problems,
+      },
+      null,
+      1,
+    ),
   );
 
   const low = report.filter((r) => r.coverage !== undefined && r.coverage < 0.97);

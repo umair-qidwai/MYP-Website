@@ -39,7 +39,12 @@ export async function body<T extends z.ZodTypeAny>(req: Request, schema: T, maxB
     throw new HttpError(400, "Invalid request.");
   }
   const r = schema.safeParse(raw);
-  if (!r.success) throw new HttpError(422, friendlyIssue(r.error.issues[0]), r.error.issues.slice(0, 20).map((i) => ({ path: i.path.join("."), message: i.message })));
+  if (!r.success)
+    throw new HttpError(
+      422,
+      friendlyIssue(r.error.issues[0]),
+      r.error.issues.slice(0, 20).map((i) => ({ path: i.path.join("."), message: i.message })),
+    );
   return r.data;
 }
 

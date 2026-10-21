@@ -29,7 +29,10 @@ export function CssSculpture({ className = "" }: { className?: string }) {
             />
           );
         })}
-        <span className="absolute bottom-[6%] left-[16%] right-[16%] h-[13%] rounded-b-[50%] border-b-[0.9vw] border-ink" style={{ borderBottomWidth: "clamp(5px,0.8vw,12px)" }} />
+        <span
+          className="absolute bottom-[6%] left-[16%] right-[16%] h-[13%] rounded-b-[50%] border-b-[0.9vw] border-ink"
+          style={{ borderBottomWidth: "clamp(5px,0.8vw,12px)" }}
+        />
         <span className="absolute -bottom-[2%] left-[18%] right-[18%] h-[6%] rounded-[50%] bg-[#3b2a1a]/15 blur-xl" />
       </div>
     </div>

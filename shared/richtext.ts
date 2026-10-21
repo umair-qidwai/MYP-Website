@@ -2,19 +2,23 @@
  * Rich text is stored as a small, whitelisted subset of the Tiptap/ProseMirror JSON format —
  * never as raw HTML. Rendering walks this tree, so arbitrary markup or scripts can't be injected.
  */
-import { z } from "zod";
 
-export type Mark =
-  | { type: "bold" | "italic" | "underline" | "strike" }
-  | { type: "link"; attrs: { href: string; target?: "_blank" | null } };
+export type Mark = { type: "bold" | "italic" | "underline" | "strike" } | { type: "link"; attrs: { href: string; target?: "_blank" | null } };
 
 export type RichNode =
   | { type: "text"; text: string; marks?: Mark[] }
   | { type: "hardBreak" }
   | { type: "horizontalRule" }
   | { type: "paragraph"; attrs?: { textAlign?: Align }; content?: RichNode[] }
-  | { type: "heading"; attrs: { level: 2 | 3 | 4; textAlign?: Align }; content?: RichNode[] }
-  | { type: "bulletList" | "orderedList" | "listItem" | "blockquote"; content?: RichNode[] };
+  | {
+      type: "heading";
+      attrs: { level: 2 | 3 | 4; textAlign?: Align };
+      content?: RichNode[];
+    }
+  | {
+      type: "bulletList" | "orderedList" | "listItem" | "blockquote";
+      content?: RichNode[];
+    };
 
 export type Align = "left" | "center" | "right" | null;
 export type RichDoc = { type: "doc"; content: RichNode[] };
@@ -29,49 +33,6 @@ export function isSafeHref(href: string): boolean {
   if (h.startsWith("#")) return true;
   return /^(https?:|mailto:|tel:)/i.test(h);
 }
-
-const href = z.string().max(2048).refine(isSafeHref, "Links must start with https://, mailto:, tel: or /");
-const align = z.enum(["left", "center", "right"]).nullable().optional();
-
-const markSchema = z.union([
-  z.object({ type: z.enum(["bold", "italic", "underline", "strike"]) }).strip(),
-  z
-    .object({
-      type: z.literal("link"),
-      attrs: z.object({ href, target: z.enum(["_blank"]).nullable().optional() }).strip(),
-    })
-    .strip(),
-]);
-
-const nodeSchema: z.ZodType<RichNode> = z.lazy(() =>
-  z.discriminatedUnion("type", [
-    z.object({ type: z.literal("text"), text: z.string().max(20000), marks: z.array(markSchema).max(6).optional() }).strip(),
-    z.object({ type: z.literal("hardBreak") }).strip(),
-    z.object({ type: z.literal("horizontalRule") }).strip(),
-    z
-      .object({
-        type: z.literal("paragraph"),
-        attrs: z.object({ textAlign: align }).strip().optional(),
-        content: z.array(nodeSchema).max(2000).optional(),
-      })
-      .strip(),
-    z
-      .object({
-        type: z.literal("heading"),
-        attrs: z.object({ level: z.union([z.literal(2), z.literal(3), z.literal(4)]), textAlign: align }).strip(),
-        content: z.array(nodeSchema).max(2000).optional(),
-      })
-      .strip(),
-    z
-      .object({
-        type: z.enum(["bulletList", "orderedList", "listItem", "blockquote"]),
-        content: z.array(nodeSchema).max(2000).optional(),
-      })
-      .strip(),
-  ]),
-) as z.ZodType<RichNode>;
-
-export const richDocSchema = z.object({ type: z.literal("doc"), content: z.array(nodeSchema).max(5000) }).strip();
 
 // ── Rendering to HTML (used server-side for SEO snapshots and RSS-like outputs) ─
 
@@ -146,10 +107,20 @@ export function richToText(doc: RichDoc | RichNode[] | undefined | null): string
     const inner = (n.content ?? []).map(walk).join("");
     return ["paragraph", "heading", "listItem", "blockquote"].includes(n.type) ? inner + "\n" : inner;
   };
-  return nodes.map(walk).join("").replace(/\n{3,}/g, "\n\n").trim();
+  return nodes
+    .map(walk)
+    .join("")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 /** Convenience for building docs in code (seed data, tests). */
 export function docFromParagraphs(...paras: string[]): RichDoc {
-  return { type: "doc", content: paras.map((t) => ({ type: "paragraph", content: t ? [{ type: "text", text: t }] : [] })) };
+  return {
+    type: "doc",
+    content: paras.map((t) => ({
+      type: "paragraph",
+      content: t ? [{ type: "text", text: t }] : [],
+    })),
+  };
 }

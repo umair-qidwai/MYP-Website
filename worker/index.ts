@@ -144,9 +144,10 @@ app.get("/media/*", async (c) => {
 // ── robots.txt & sitemap.xml ────────────────────────────────────────────────
 app.get("/robots.txt", (c) => {
   const site = c.env.PUBLIC_SITE_URL.replace(/\/$/, "");
-  const body = isDev(c.env) || new URL(c.req.url).hostname.endsWith(".workers.dev")
-    ? "User-agent: *\nDisallow: /\n" // never index preview deployments
-    : `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /preview\n\nSitemap: ${site}/sitemap.xml\n`;
+  const body =
+    isDev(c.env) || new URL(c.req.url).hostname.endsWith(".workers.dev")
+      ? "User-agent: *\nDisallow: /\n" // never index preview deployments
+      : `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /preview\n\nSitemap: ${site}/sitemap.xml\n`;
   return c.text(body, 200, { "Cache-Control": "public, max-age=3600" });
 });
 
@@ -159,7 +160,9 @@ app.get("/sitemap.xml", async (c) => {
   const urls: string[] = [];
   for (const p of pages.results as { path: string; published_at: string | null; published_json: string }[]) {
     if (p.published_json.includes('"noindex":true')) continue;
-    urls.push(`<url><loc>${escapeHtml(`${site}/${p.path}`.replace(/\/$/, ""))}</loc>${p.published_at ? `<lastmod>${p.published_at.slice(0, 10)}</lastmod>` : ""}</url>`);
+    urls.push(
+      `<url><loc>${escapeHtml(`${site}/${p.path}`.replace(/\/$/, ""))}</loc>${p.published_at ? `<lastmod>${p.published_at.slice(0, 10)}</lastmod>` : ""}</url>`,
+    );
   }
   for (const e of entries.results as { collection: string; slug: string; published_at: string | null }[]) {
     const def = COLLECTIONS.find((d) => d.key === e.collection);
@@ -240,7 +243,10 @@ async function renderPage(env: Env, ctx: WaitUntil, reqUrl: string, payload: Pub
 app.get("/admin", (c) => c.redirect("/admin/", 302));
 app.get("/admin/*", async (c) => {
   const html = await shell(c.env, c.req.url);
-  return htmlResponse(html.replace("<head>", '<head><meta name="robots" content="noindex, nofollow">'), 200, { "Cache-Control": "no-store", "X-Frame-Options": "DENY" });
+  return htmlResponse(html.replace("<head>", '<head><meta name="robots" content="noindex, nofollow">'), 200, {
+    "Cache-Control": "no-store",
+    "X-Frame-Options": "DENY",
+  });
 });
 
 // ── Private draft preview: /preview/<path> (signed-in staff only) ───────────
@@ -277,7 +283,9 @@ app.get("*", async (c) => {
   }
 
   // Exact redirect (imported Wix URLs and staff-managed redirects)
-  const r = await c.env.DB.prepare("SELECT to_path, status_code FROM redirects WHERE from_path = ?").bind(norm).first<{ to_path: string; status_code: number }>();
+  const r = await c.env.DB.prepare("SELECT to_path, status_code FROM redirects WHERE from_path = ?")
+    .bind(norm)
+    .first<{ to_path: string; status_code: number }>();
   if (r) return c.redirect(r.to_path, r.status_code as 301 | 302);
 
   // Untranslated Wix language URLs (/es/..., /ar/...) → the English page

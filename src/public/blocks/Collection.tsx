@@ -72,11 +72,23 @@ function EventsGrid({ items }: { items: PublicEntry[] }) {
           <Reveal as="li" key={e.id} delay={(i % 3) * 0.05}>
             <Link to={`/events/${e.slug}`} className="group block">
               <div className="aspect-[4/3] overflow-hidden rounded-[20px] bg-paper-2">
-                {img(e.data.image) ? <Img image={img(e.data.image)!} sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw" fit="cover" className="transition-transform duration-700 group-hover:scale-[1.04]" /> : <Placeholder title={e.title} />}
+                {img(e.data.image) ? (
+                  <Img
+                    image={img(e.data.image)!}
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                    fit="cover"
+                    className="transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                ) : (
+                  <Placeholder title={e.title} />
+                )}
               </div>
               <div className="mt-4 flex items-start justify-between gap-4">
                 <h3 className="text-[1.15rem] font-semibold leading-snug transition-colors group-hover:text-plum">{e.title}</h3>
-                <ArrowUpRight aria-hidden className="mt-1 size-5 shrink-0 opacity-40 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
+                <ArrowUpRight
+                  aria-hidden
+                  className="mt-1 size-5 shrink-0 opacity-40 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
+                />
               </div>
               <p className="mt-1 text-sm text-muted">{[fmtDate(e.data.date), e.data.price].filter(Boolean).join(" · ")}</p>
             </Link>
@@ -85,7 +97,11 @@ function EventsGrid({ items }: { items: PublicEntry[] }) {
       </ul>
       {filtered.length > shown && (
         <div className="mt-14 flex justify-center">
-          <button type="button" onClick={() => setShown((s) => s + 24)} className="rounded-full px-7 py-3.5 font-semibold ring-1 ring-ink/20 transition-colors hover:bg-ink hover:text-paper">
+          <button
+            type="button"
+            onClick={() => setShown((s) => s + 24)}
+            className="rounded-full px-7 py-3.5 font-semibold ring-1 ring-ink/20 transition-colors hover:bg-ink hover:text-paper"
+          >
             Show more events ({filtered.length - shown} more)
           </button>
         </div>
@@ -112,7 +128,11 @@ function ArticleList({ items }: { items: PublicEntry[] }) {
           <Link to={`/blog/${e.slug}`} className="group grid gap-5 py-8 md:grid-cols-12 md:items-center">
             <p className="eyebrow text-muted md:col-span-2">{fmtDate(e.data.date)}</p>
             <h3 className="display text-[clamp(1.6rem,3vw,2.4rem)] transition-colors group-hover:text-plum md:col-span-7">{e.title}</h3>
-            <div className="hidden overflow-hidden rounded-2xl md:col-span-3 md:block">{img(e.data.image) && <Img image={img(e.data.image)!} sizes="25vw" fit="cover" className="aspect-[3/2] transition-transform duration-700 group-hover:scale-[1.04]" />}</div>
+            <div className="hidden overflow-hidden rounded-2xl md:col-span-3 md:block">
+              {img(e.data.image) && (
+                <Img image={img(e.data.image)!} sizes="25vw" fit="cover" className="aspect-[3/2] transition-transform duration-700 group-hover:scale-[1.04]" />
+              )}
+            </div>
           </Link>
         </li>
       ))}
@@ -149,7 +169,10 @@ function NewsList({ items }: { items: PublicEntry[] }) {
                   </div>
                 ) : null}
                 {url && (
-                  <SmartLink href={url} className="mt-6 inline-flex items-center gap-2 font-semibold text-ink underline decoration-ink/30 underline-offset-[0.3em] hover:decoration-ink">
+                  <SmartLink
+                    href={url}
+                    className="mt-6 inline-flex items-center gap-2 font-semibold text-ink underline decoration-ink/30 underline-offset-[0.3em] hover:decoration-ink"
+                  >
                     Full Story Here <ArrowUpRight className="size-4" aria-hidden />
                   </SmartLink>
                 )}
@@ -173,7 +196,10 @@ function Reports({ items, display }: { items: PublicEntry[]; display: "grid" | "
           return (
             <li key={e.id}>
               {href ? (
-                <SmartLink href={href} className="group flex items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 ring-1 ring-ink/5 transition-colors hover:bg-ink hover:text-paper">
+                <SmartLink
+                  href={href}
+                  className="group flex items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 ring-1 ring-ink/5 transition-colors hover:bg-ink hover:text-paper"
+                >
                   <span className="flex items-center gap-3">
                     <FileText aria-hidden className="size-5 text-plum group-hover:text-saffron" />
                     <span className="font-semibold">{e.title}</span>
@@ -205,7 +231,13 @@ function Reports({ items, display }: { items: PublicEntry[]; display: "grid" | "
           <Reveal as="li" key={e.id}>
             <SmartLink href={href || "#"} className="group block">
               <div className="overflow-hidden rounded-[14px] bg-paper-2 shadow-[0_20px_40px_-24px_rgb(25_22_19/0.5)] transition-transform duration-500 group-hover:-translate-y-1.5 group-hover:-rotate-1">
-                {cover ? <Img image={cover} sizes="(min-width: 1024px) 22vw, 45vw" className="w-full" /> : <div className="grid aspect-[3/4] place-items-center"><FileText className="size-10 text-muted" /></div>}
+                {cover ? (
+                  <Img image={cover} sizes="(min-width: 1024px) 22vw, 45vw" className="w-full" />
+                ) : (
+                  <div className="grid aspect-[3/4] place-items-center">
+                    <FileText className="size-10 text-muted" />
+                  </div>
+                )}
               </div>
               <h3 className="mt-4 font-semibold leading-snug group-hover:text-plum">{e.title}</h3>
               <p className="mt-1 flex items-center gap-1.5 text-sm text-muted">

@@ -41,6 +41,7 @@ export function cleanFilename(name: string): string {
   return (
     name
       .replace(/[\\/]/g, "_")
+      // eslint-disable-next-line no-control-regex -- strip control characters from uploaded file names
       .replace(/[\u0000-\u001f\u007f"<>]/g, "")
       .trim()
       .slice(0, 200) || "file"
@@ -92,17 +93,22 @@ export async function readUpload(file: File, maxBytes: number, allow: "image" | 
 
 /** Find pages/entries/settings that reference a media item (blocks deletion of in-use files). */
 export async function findMediaUsage(db: D1Database, id: string, key: string) {
-  const needleId = `%"mediaId":"${id}"%`;
-  const needleKey = `%/media/${key}%`;
+  // instr() instead of LIKE: D1 caps LIKE pattern length, and these needles are long paths
+  const needleId = `"mediaId":"${id}"`;
+  const needleKey = `/media/${key}`;
   const pages = await db
-    .prepare("SELECT id, title, path FROM pages WHERE deleted_at IS NULL AND (draft_json LIKE ?1 OR published_json LIKE ?1 OR draft_json LIKE ?2 OR published_json LIKE ?2) LIMIT 20")
+    .prepare(
+      "SELECT id, title, path FROM pages WHERE deleted_at IS NULL AND (instr(draft_json, ?1) > 0 OR instr(published_json, ?1) > 0 OR instr(draft_json, ?2) > 0 OR instr(published_json, ?2) > 0) LIMIT 20",
+    )
     .bind(needleId, needleKey)
     .all<{ id: string; title: string; path: string }>();
   const entries = await db
-    .prepare("SELECT id, title, collection FROM entries WHERE deleted_at IS NULL AND (draft_json LIKE ?1 OR published_json LIKE ?1 OR draft_json LIKE ?2 OR published_json LIKE ?2) LIMIT 20")
+    .prepare(
+      "SELECT id, title, collection FROM entries WHERE deleted_at IS NULL AND (instr(draft_json, ?1) > 0 OR instr(published_json, ?1) > 0 OR instr(draft_json, ?2) > 0 OR instr(published_json, ?2) > 0) LIMIT 20",
+    )
     .bind(needleId, needleKey)
     .all<{ id: string; title: string; collection: string }>();
-  const settings = await db.prepare("SELECT key FROM settings WHERE value_json LIKE ?1 OR value_json LIKE ?2").bind(needleId, needleKey).all<{ key: string }>();
+  const settings = await db.prepare("SELECT key FROM settings WHERE instr(value_json, ?1) > 0 OR instr(value_json, ?2) > 0").bind(needleId, needleKey).all<{ key: string }>();
   return {
     pages: pages.results,
     entries: entries.results,

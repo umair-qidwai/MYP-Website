@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T15:13:23.327Z",
+ "generatedAt": "2026-10-21T16:05:50.944Z",
  "rows": [
   {
    "source": "https://www.myprojectusa.org",
@@ -691,11 +691,9 @@
     "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
    ],
    "title": "\"Thanks is Giving\" Kick-off Event",
-   "coverage": 0.75,
-   "missingSample": [
-    "quot"
-   ],
-   "sourceChars": 46
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 36
   },
   {
    "source": "https://www.myprojectusa.org/events-1/%23myprojectisusa%C2%A02016---my-first-community-leadership-conference",
@@ -1773,11 +1771,9 @@
     "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
    ],
    "title": "MY Family Pantry Days 25 & 26",
-   "coverage": 0.8571428571428571,
-   "missingSample": [
-    "amp"
-   ],
-   "sourceChars": 36
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
   },
   {
    "source": "https://www.myprojectusa.org/events-1/my-family-pantry-days-27-%26-28",
@@ -2003,11 +1999,9 @@
     "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
    ],
    "title": "MY Project USA Annual Dinner & Awards 2019",
-   "coverage": 0.875,
-   "missingSample": [
-    "amp"
-   ],
-   "sourceChars": 49
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 45
   },
   {
    "source": "https://www.myprojectusa.org/events-1/my-project-usa-annual-dinner-2017",
@@ -2413,12 +2407,9 @@
     "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
    ],
    "title": "Wedgewood Parents' Dinner",
-   "coverage": 0.5,
-   "missingSample": [
-    "parents",
-    "39"
-   ],
-   "sourceChars": 32
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 28
   },
   {
    "source": "https://www.myprojectusa.org/events-1/wedgewood-readers-warriors-",

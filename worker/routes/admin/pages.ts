@@ -53,7 +53,10 @@ async function getRow(db: D1Database, id: string): Promise<PageRow> {
 async function assertPathFree(db: D1Database, path: string, exceptId?: string) {
   const clash = await db.prepare("SELECT id, deleted_at FROM pages WHERE path = ?").bind(path).first<{ id: string; deleted_at: string | null }>();
   if (clash && clash.id !== exceptId) {
-    throw new HttpError(409, clash.deleted_at ? "A deleted page still uses that address. Restore it or choose another address." : "Another page already uses that address.");
+    throw new HttpError(
+      409,
+      clash.deleted_at ? "A deleted page still uses that address. Restore it or choose another address." : "Another page already uses that address.",
+    );
   }
 }
 
@@ -112,7 +115,9 @@ pageRoutes.put("/:id", async (c) => {
     .run();
   if (newPath !== row.path && row.status === "published") {
     // Keep old links working
-    await c.env.DB.prepare("INSERT INTO redirects (from_path, to_path, status_code, source, created_at) VALUES (?, ?, 301, 'manual', ?) ON CONFLICT(from_path) DO UPDATE SET to_path = excluded.to_path")
+    await c.env.DB.prepare(
+      "INSERT INTO redirects (from_path, to_path, status_code, source, created_at) VALUES (?, ?, 301, 'manual', ?) ON CONFLICT(from_path) DO UPDATE SET to_path = excluded.to_path",
+    )
       .bind(`/${row.path}`, `/${newPath}`, nowIso())
       .run();
     await audit(c.env.DB, user, "page.move", "page", row.id, `/${row.path} → /${newPath}`);
@@ -127,7 +132,9 @@ pageRoutes.post("/:id/publish", async (c) => {
   const doc = pageDocSchema.parse(JSON.parse(row.draft_json)); // re-validate before going live
   const user = c.get("user");
   const now = nowIso();
-  await c.env.DB.prepare("UPDATE pages SET published_json = ?, status = 'published', has_changes = 0, published_at = ?, updated_by = ?, updated_at = ? WHERE id = ?")
+  await c.env.DB.prepare(
+    "UPDATE pages SET published_json = ?, status = 'published', has_changes = 0, published_at = ?, updated_by = ?, updated_at = ? WHERE id = ?",
+  )
     .bind(JSON.stringify(doc), now, user.id, now, row.id)
     .run();
   await addRevision(c.env.DB, "page", row.id, "publish", doc, doc.title, user.id);
@@ -140,7 +147,9 @@ pageRoutes.post("/:id/unpublish", async (c) => {
   assertCanPublish(c);
   const row = await getRow(c.env.DB, c.req.param("id"));
   if (row.path === "") throw new HttpError(400, "The homepage can't be unpublished.");
-  await c.env.DB.prepare("UPDATE pages SET status = 'draft', has_changes = 1, updated_by = ?, updated_at = ? WHERE id = ?").bind(c.get("user").id, nowIso(), row.id).run();
+  await c.env.DB.prepare("UPDATE pages SET status = 'draft', has_changes = 1, updated_by = ?, updated_at = ? WHERE id = ?")
+    .bind(c.get("user").id, nowIso(), row.id)
+    .run();
   await audit(c.env.DB, c.get("user"), "page.unpublish", "page", row.id, `/${row.path}`);
   c.executionCtx.waitUntil(purge([row.path]));
   return c.json({ ok: true });
@@ -150,7 +159,9 @@ pageRoutes.post("/:id/unpublish", async (c) => {
 pageRoutes.post("/:id/discard", async (c) => {
   const row = await getRow(c.env.DB, c.req.param("id"));
   if (!row.published_json) throw new HttpError(400, "This page has never been published, so there's no live version to go back to.");
-  await c.env.DB.prepare("UPDATE pages SET draft_json = published_json, has_changes = 0, updated_by = ?, updated_at = ? WHERE id = ?").bind(c.get("user").id, nowIso(), row.id).run();
+  await c.env.DB.prepare("UPDATE pages SET draft_json = published_json, has_changes = 0, updated_by = ?, updated_at = ? WHERE id = ?")
+    .bind(c.get("user").id, nowIso(), row.id)
+    .run();
   return c.json({ ok: true });
 });
 
@@ -159,14 +170,18 @@ pageRoutes.delete("/:id", async (c) => {
   if (c.get("user").role !== "admin") throw new HttpError(403, "Only administrators can delete pages.");
   const row = await getRow(c.env.DB, c.req.param("id"));
   if (row.path === "") throw new HttpError(400, "The homepage can't be deleted.");
-  await c.env.DB.prepare("UPDATE pages SET deleted_at = ?, status = 'archived', updated_by = ?, updated_at = ? WHERE id = ?").bind(nowIso(), c.get("user").id, nowIso(), row.id).run();
+  await c.env.DB.prepare("UPDATE pages SET deleted_at = ?, status = 'archived', updated_by = ?, updated_at = ? WHERE id = ?")
+    .bind(nowIso(), c.get("user").id, nowIso(), row.id)
+    .run();
   await audit(c.env.DB, c.get("user"), "page.delete", "page", row.id, `/${row.path}`);
   c.executionCtx.waitUntil(purge([row.path]));
   return c.json({ ok: true });
 });
 
 pageRoutes.get("/trash/list", async (c) => {
-  const { results } = await c.env.DB.prepare("SELECT id, path, title, status, has_changes, published_at, updated_at, created_at FROM pages WHERE deleted_at IS NOT NULL ORDER BY deleted_at DESC").all<PageRow>();
+  const { results } = await c.env.DB.prepare(
+    "SELECT id, path, title, status, has_changes, published_at, updated_at, created_at FROM pages WHERE deleted_at IS NOT NULL ORDER BY deleted_at DESC",
+  ).all<PageRow>();
   return c.json({ pages: results.map(toSummary) });
 });
 

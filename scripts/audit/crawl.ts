@@ -55,7 +55,10 @@ async function fetchText(url: string) {
 async function sitemapUrls(name: string): Promise<string[]> {
   const xml = await fetchText(`${ORIGIN}/${name}`);
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) =>
-    m[1].replace(/&apos;/g, "'").replace(/&amp;/g, "&").replace(/&quot;/g, '"'),
+    m[1]
+      .replace(/&apos;/g, "'")
+      .replace(/&amp;/g, "&")
+      .replace(/&quot;/g, '"'),
   );
 }
 
@@ -86,8 +89,7 @@ function extractInPage() {
   const footer = document.querySelector("#SITE_FOOTER");
 
   // region: where the element lives. "site" = Wix master-page components shown on every page.
-  const regionOf = (el: Element) =>
-    header?.contains(el) ? "header" : footer?.contains(el) ? "footer" : pageRoot.contains(el) ? "page" : "site";
+  const regionOf = (el: Element) => (header?.contains(el) ? "header" : footer?.contains(el) ? "footer" : pageRoot.contains(el) ? "page" : "site");
   const sectionOf = (el: Element) => {
     const s = el.closest("section");
     return (s ? s.id || "" : "") + "@" + regionOf(el);
@@ -152,15 +154,32 @@ function extractInPage() {
 
   // Iframes / embeds
   root.querySelectorAll("iframe").forEach((f) => {
-    items.push({ kind: "iframe", src: abs(f.getAttribute("src")), title: f.getAttribute("title"), rect: rectOf(f), section: sectionOf(f), visible: visible(f) });
+    items.push({
+      kind: "iframe",
+      src: abs(f.getAttribute("src")),
+      title: f.getAttribute("title"),
+      rect: rectOf(f),
+      section: sectionOf(f),
+      visible: visible(f),
+    });
   });
   root.querySelectorAll("video").forEach((v) => {
-    items.push({ kind: "video", src: abs((v as HTMLVideoElement).currentSrc || v.getAttribute("src")), poster: v.getAttribute("poster"), rect: rectOf(v), section: sectionOf(v), visible: visible(v) });
+    items.push({
+      kind: "video",
+      src: abs((v as HTMLVideoElement).currentSrc || v.getAttribute("src")),
+      poster: v.getAttribute("poster"),
+      rect: rectOf(v),
+      section: sectionOf(v),
+      visible: visible(v),
+    });
   });
 
   // Galleries
   root.querySelectorAll('[data-testid="gallery"], .pro-gallery, [data-testid="slideshow"], [data-testid="matrix-gallery"]').forEach((g) => {
-    const imgs = [...g.querySelectorAll("img")].map((i) => ({ src: (i as HTMLImageElement).currentSrc || (i as HTMLImageElement).src, alt: (i as HTMLImageElement).alt || null }));
+    const imgs = [...g.querySelectorAll("img")].map((i) => ({
+      src: (i as HTMLImageElement).currentSrc || (i as HTMLImageElement).src,
+      alt: (i as HTMLImageElement).alt || null,
+    }));
     const titles = [...g.querySelectorAll('[data-hook="item-title"], [data-hook="title"]')].map((t) => (t as HTMLElement).innerText.trim());
     const descs = [...g.querySelectorAll('[data-hook="item-description"], [data-hook="description"]')].map((t) => (t as HTMLElement).innerText.trim());
     const links = [...g.querySelectorAll("a")].map((a) => abs(a.getAttribute("href")));
@@ -180,7 +199,15 @@ function extractInPage() {
     const clone = item.cloneNode(true) as HTMLElement;
     clone.querySelectorAll("button").forEach((b) => b.remove());
     seen.add(item);
-    items.push({ kind: "accordion", question, answerHtml: clone.innerHTML, answerText: clone.innerText?.trim() ?? clone.textContent?.trim(), rect: rectOf(item), section: sectionOf(item), visible: true });
+    items.push({
+      kind: "accordion",
+      question,
+      answerHtml: clone.innerHTML,
+      answerText: clone.innerText?.trim() ?? clone.textContent?.trim(),
+      rect: rectOf(item),
+      section: sectionOf(item),
+      visible: true,
+    });
   });
 
   // Forms
@@ -190,7 +217,16 @@ function extractInPage() {
       const id = el.id;
       const label = (id && document.querySelector(`label[for="${CSS.escape(id)}"]`)?.textContent?.trim()) || el.closest("label")?.textContent?.trim() || null;
       const options = el.tagName === "SELECT" ? [...(el as unknown as HTMLSelectElement).options].map((o) => o.text) : undefined;
-      return { tag: el.tagName.toLowerCase(), type: el.type, name: el.name || null, placeholder: el.placeholder || null, required: el.required, ariaLabel: el.getAttribute("aria-label"), label, options };
+      return {
+        tag: el.tagName.toLowerCase(),
+        type: el.type,
+        name: el.name || null,
+        placeholder: el.placeholder || null,
+        required: el.required,
+        ariaLabel: el.getAttribute("aria-label"),
+        label,
+        options,
+      };
     });
     return { action: f.getAttribute("action"), text: (f as HTMLElement).innerText.trim().slice(0, 3000), fields, rect: rectOf(f) };
   });
@@ -212,7 +248,10 @@ function extractInPage() {
     for (const li of topLis) {
       const a = li.querySelector("a");
       const label = (li.querySelector("p, span") as HTMLElement | null)?.textContent?.trim() || (a?.textContent ?? "").trim();
-      const children = [...li.querySelectorAll("li")].map((c) => ({ text: (c.textContent ?? "").trim(), href: abs(c.querySelector("a")?.getAttribute("href") ?? null) }));
+      const children = [...li.querySelectorAll("li")].map((c) => ({
+        text: (c.textContent ?? "").trim(),
+        href: abs(c.querySelector("a")?.getAttribute("href") ?? null),
+      }));
       nav.push({ text: label, href: abs(a?.getAttribute("href") ?? null), children });
     }
   }
@@ -221,7 +260,8 @@ function extractInPage() {
   const covered = (n: Node) => {
     for (let el = n.parentElement; el; el = el.parentElement) {
       if (seen.has(el)) return true;
-      if (el.matches('a, button, form, [data-testid="gallery"], .pro-gallery, [data-testid="slideshow"], iframe, nav, [data-testid="languages-container"]')) return true;
+      if (el.matches('a, button, form, [data-testid="gallery"], .pro-gallery, [data-testid="slideshow"], iframe, nav, [data-testid="languages-container"]'))
+        return true;
       if (el === pageRoot) return false;
     }
     return false;
@@ -239,10 +279,20 @@ function extractInPage() {
   const orphans = [...orphanParents].filter((el) => ![...orphanParents].some((o) => o !== el && o.contains(el)));
   for (const el of orphans) {
     seen.add(el);
-    items.push({ kind: "orphan", html: el.innerHTML, text: el.innerText.trim(), tag: el.tagName.toLowerCase(), rect: rectOf(el), section: sectionOf(el), visible: true });
+    items.push({
+      kind: "orphan",
+      html: el.innerHTML,
+      text: el.innerText.trim(),
+      tag: el.tagName.toLowerCase(),
+      rect: rectOf(el),
+      section: sectionOf(el),
+      visible: true,
+    });
   }
 
-  const headings = [...pageRoot.querySelectorAll("h1,h2,h3,h4,h5,h6")].map((h) => ({ level: Number(h.tagName[1]), text: (h as HTMLElement).innerText.trim() })).filter((h) => h.text);
+  const headings = [...pageRoot.querySelectorAll("h1,h2,h3,h4,h5,h6")]
+    .map((h) => ({ level: Number(h.tagName[1]), text: (h as HTMLElement).innerText.trim() }))
+    .filter((h) => h.text);
 
   return {
     finalUrl: location.href,
@@ -255,7 +305,10 @@ function extractInPage() {
       ogImage: meta('meta[property="og:image"]'),
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute("href") ?? null,
       robots: meta('meta[name="robots"]'),
-      alternates: [...document.querySelectorAll('link[rel="alternate"][hreflang]')].map((l) => ({ hreflang: l.getAttribute("hreflang"), href: l.getAttribute("href") })),
+      alternates: [...document.querySelectorAll('link[rel="alternate"][hreflang]')].map((l) => ({
+        hreflang: l.getAttribute("hreflang"),
+        href: l.getAttribute("href"),
+      })),
     },
     headings,
     items,
@@ -264,7 +317,9 @@ function extractInPage() {
     nav,
     headerText: header ? (header as HTMLElement).innerText.trim() : null,
     footerText: footer ? (footer as HTMLElement).innerText.trim() : null,
-    footerLinks: footer ? [...footer.querySelectorAll("a[href]")].map((a) => ({ href: abs(a.getAttribute("href")), text: (a as HTMLElement).innerText.trim() })) : [],
+    footerLinks: footer
+      ? [...footer.querySelectorAll("a[href]")].map((a) => ({ href: abs(a.getAttribute("href")), text: (a as HTMLElement).innerText.trim() }))
+      : [],
     mainText: (pageRoot as HTMLElement).innerText.trim(),
     docHeight: document.documentElement.scrollHeight,
   };
@@ -322,8 +377,7 @@ async function main() {
   if (args.url) groups.adhoc = [args.url];
   else {
     if (!args.only || args.only === "pages") groups.pages = await sitemapUrls("pages-sitemap.xml");
-    if (!args.only || args.only === "events")
-      groups.events = await sitemapUrls("dynamic-events-1_p_cd561e2a_e3d0_4b05_b1f9_50925c7e53ee_0_5000-sitemap.xml");
+    if (!args.only || args.only === "events") groups.events = await sitemapUrls("dynamic-events-1_p_cd561e2a_e3d0_4b05_b1f9_50925c7e53ee_0_5000-sitemap.xml");
     if (!args.only || args.only === "products") groups.products = await sitemapUrls("store-products-sitemap.xml");
   }
 

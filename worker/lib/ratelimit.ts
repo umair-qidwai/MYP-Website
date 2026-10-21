@@ -23,5 +23,8 @@ export async function hit(db: D1Database, key: string, limit: number, windowSec:
 
 /** Occasionally prune expired rows (called from low-traffic admin paths). */
 export async function pruneRateLimits(db: D1Database, olderThanSec = 86400): Promise<void> {
-  await db.prepare("DELETE FROM rate_limits WHERE window_start < ?").bind(Math.floor(Date.now() / 1000) - olderThanSec).run();
+  await db
+    .prepare("DELETE FROM rate_limits WHERE window_start < ?")
+    .bind(Math.floor(Date.now() / 1000) - olderThanSec)
+    .run();
 }

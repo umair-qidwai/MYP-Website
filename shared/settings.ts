@@ -4,13 +4,20 @@ import { buttonSchema, imageSchema } from "./blocks";
 import { isSafeHref } from "./richtext";
 
 const text = (max = 500) => z.string().trim().max(max);
-const href = z.string().trim().max(2048).refine((v) => v === "" || isSafeHref(v), "Enter a full link (https://…) or a site path (/page)");
+const href = z
+  .string()
+  .trim()
+  .max(2048)
+  .refine((v) => v === "" || isSafeHref(v), "Enter a full link (https://…) or a site path (/page)");
 
 export const navItemSchema = z
   .object({
     label: text(80).min(1, "Menu items need a label"),
     href: href,
-    children: z.array(z.object({ label: text(80).min(1), href }).strip()).max(20).default([]),
+    children: z
+      .array(z.object({ label: text(80).min(1), href }).strip())
+      .max(20)
+      .default([]),
   })
   .strip();
 export type NavItem = z.infer<typeof navItemSchema>;
@@ -36,33 +43,52 @@ export const SETTINGS_SCHEMAS = {
       copyright: text(200).default(""),
     })
     .strip(),
-  social: z.object({ links: z.array(z.object({ platform: z.enum(["linkedin", "youtube", "facebook", "x", "instagram", "tiktok"]), url: href }).strip()).max(12) }).strip(),
+  social: z
+    .object({
+      links: z
+        .array(
+          z
+            .object({
+              platform: z.enum(["linkedin", "youtube", "facebook", "x", "instagram", "tiktok"]),
+              url: href,
+            })
+            .strip(),
+        )
+        .max(12),
+    })
+    .strip(),
   navigation: z.object({ main: z.array(navItemSchema).max(16) }).strip(),
   quickLinks: z.object({ buttons: z.array(buttonSchema).max(8) }).strip(),
   programs: z
     .object({
       heading: text(120).default(""),
-      items: z.array(z.object({ name: text(120).min(1), image: imageSchema.optional(), href }).strip()).max(24),
+      items: z
+        .array(
+          z
+            .object({
+              name: text(120).min(1),
+              image: imageSchema.optional(),
+              href,
+            })
+            .strip(),
+        )
+        .max(24),
     })
     .strip(),
   announcement: z
-    .object({ enabled: z.boolean().default(false), text: text(300).default(""), href: href.default(""), linkLabel: text(60).default("") })
+    .object({
+      enabled: z.boolean().default(false),
+      text: text(300).default(""),
+      href: href.default(""),
+      linkLabel: text(60).default(""),
+    })
     .strip(),
 } as const;
 
 export type SettingsKey = keyof typeof SETTINGS_SCHEMAS;
-export type Settings = { [K in SettingsKey]: z.infer<(typeof SETTINGS_SCHEMAS)[K]> };
+export type Settings = {
+  [K in SettingsKey]: z.infer<(typeof SETTINGS_SCHEMAS)[K]>;
+};
 export const SETTINGS_KEYS = Object.keys(SETTINGS_SCHEMAS) as SettingsKey[];
 
-/** Settings only administrators may change (they affect the whole site's structure). */
-export const ADMIN_ONLY_SETTINGS: SettingsKey[] = ["site", "navigation"];
-
-export const DEFAULT_SETTINGS: Settings = {
-  site: { name: "MY Project USA", tagline: "", description: "" },
-  contact: { phone: "", email: "", visitAddress: "", mailAddress: "", taxId: "", copyright: "" },
-  social: { links: [] },
-  navigation: { main: [] },
-  quickLinks: { buttons: [] },
-  programs: { heading: "", items: [] },
-  announcement: { enabled: false, text: "", href: "", linkLabel: "" },
-};
+export * from "./settings-defaults";

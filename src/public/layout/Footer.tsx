@@ -10,7 +10,13 @@ export function Footer() {
   const { settings } = useSite();
   const { contact, programs } = settings;
   const nav = settings.navigation.main.filter((n) => n.label.toUpperCase() !== "HOME");
-  const nice = (l: string) => (l === l.toUpperCase() ? l.split(" ").map((w) => (["MY", "USA"].includes(w) ? w : w[0] + w.slice(1).toLowerCase())).join(" ") : l);
+  const nice = (l: string) =>
+    l === l.toUpperCase()
+      ? l
+          .split(" ")
+          .map((w) => (["MY", "USA"].includes(w) ? w : w[0] + w.slice(1).toLowerCase()))
+          .join(" ")
+      : l;
 
   return (
     <footer className="on-dark relative mt-0 bg-ink text-paper" aria-labelledby="footer-title">
@@ -29,8 +35,16 @@ export function Footer() {
           <ul className="grid grid-cols-3 gap-3 sm:grid-cols-6">
             {programs.items.map((p) => (
               <li key={p.name}>
-                <SmartLink href={p.href || "/"} className="group block rounded-xl bg-white p-2 transition-transform duration-500 hover:-translate-y-1" aria-label={p.name}>
-                  {p.image ? <Img image={p.image} sizes="160px" className="aspect-square w-full object-contain" /> : <span className="block p-3 text-sm text-ink">{p.name}</span>}
+                <SmartLink
+                  href={p.href || "/"}
+                  className="group block rounded-xl bg-white p-2 transition-transform duration-500 hover:-translate-y-1"
+                  aria-label={p.name}
+                >
+                  {p.image ? (
+                    <Img image={p.image} sizes="160px" className="aspect-square w-full object-contain" />
+                  ) : (
+                    <span className="block p-3 text-sm text-ink">{p.name}</span>
+                  )}
                 </SmartLink>
               </li>
             ))}
@@ -48,7 +62,10 @@ export function Footer() {
                 <Phone aria-hidden className="mt-1 size-4 shrink-0 text-saffron" />
                 <span>
                   Call Us:{" "}
-                  <a className="text-paper underline decoration-paper/30 underline-offset-4 hover:decoration-paper" href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}>
+                  <a
+                    className="text-paper underline decoration-paper/30 underline-offset-4 hover:decoration-paper"
+                    href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}
+                  >
                     {contact.phone}
                   </a>
                 </span>
@@ -109,7 +126,11 @@ export function Footer() {
       <div className="wrap flex flex-col gap-6 border-t border-paper/10 py-8 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-wrap gap-2">
           {settings.quickLinks.buttons.map((b) => (
-            <SmartLink key={b.label} href={b.href} className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold ring-1 ring-paper/20 transition-colors hover:bg-paper hover:text-ink">
+            <SmartLink
+              key={b.label}
+              href={b.href}
+              className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold ring-1 ring-paper/20 transition-colors hover:bg-paper hover:text-ink"
+            >
               {b.label}
               <ArrowUpRight aria-hidden className="size-3.5" />
             </SmartLink>
@@ -118,7 +139,13 @@ export function Footer() {
         <ul className="flex gap-2">
           {settings.social.links.map((s) => (
             <li key={s.url}>
-              <a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={`${SOCIAL_LABEL[s.platform]} (opens in a new tab)`} className="grid size-10 place-items-center rounded-full ring-1 ring-paper/20 transition-colors hover:bg-paper hover:text-ink">
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${SOCIAL_LABEL[s.platform]} (opens in a new tab)`}
+                className="grid size-10 place-items-center rounded-full ring-1 ring-paper/20 transition-colors hover:bg-paper hover:text-ink"
+              >
                 <SocialIcon platform={s.platform} className="size-4" />
               </a>
             </li>

@@ -10,7 +10,8 @@ import type { Mark, RichDoc, RichNode } from "../../shared/richtext";
 export type LinkMapper = (href: string) => string | null;
 
 const BLOCK_TAGS = new Set(["p", "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "blockquote", "div", "section"]);
-const ZW = /[\u200b\u200c\u200d\ufeff]/g;
+// Zero-width characters Wix leaves in text
+const ZW = /\u200b|\u200c|\u200d|\ufeff/g;
 
 /** Known Wix template placeholder copy — not organisational content. */
 export const WIX_PLACEHOLDERS = [
@@ -60,7 +61,10 @@ function inline(nodes: ChildNode[], marks: Mark[], mapLink: LinkMapper): RichNod
   const out: RichNode[] = [];
   for (const n of nodes) {
     if (n.type === "text") {
-      const text = n.data.replace(ZW, "").replace(/ /g, " ").replace(/[ \t\r\n]+/g, " ");
+      const text = n.data
+        .replace(ZW, "")
+        .replace(/\u00a0/g, " ")
+        .replace(/[ \t\r\n]+/g, " ");
       if (!text) continue;
       out.push(marks.length ? { type: "text", text, marks: dedupeMarks(marks) } : { type: "text", text });
     } else if (isEl(n)) {
@@ -88,7 +92,11 @@ function tidy(nodes: RichNode[]): RichNode[] {
   }
   // trim leading/trailing whitespace and breaks
   while (out.length && (out[0].type === "hardBreak" || (out[0].type === "text" && !out[0].text.trim()))) out.shift();
-  while (out.length && (out[out.length - 1].type === "hardBreak" || (out[out.length - 1].type === "text" && !(out[out.length - 1] as { text: string }).text.trim()))) out.pop();
+  while (
+    out.length &&
+    (out[out.length - 1].type === "hardBreak" || (out[out.length - 1].type === "text" && !(out[out.length - 1] as { text: string }).text.trim()))
+  )
+    out.pop();
   if (out[0]?.type === "text") out[0].text = out[0].text.replace(/^\s+/, "");
   const last = out[out.length - 1];
   if (last?.type === "text") last.text = last.text.replace(/\s+$/, "");
@@ -155,7 +163,9 @@ function blocks(nodes: ChildNode[], mapLink: LinkMapper, removed: string[]): Ric
       case "h4":
       case "h5":
       case "h6": {
-        const content = tidy(inline(n.children, [], mapLink)).map((x) => (x.type === "text" && x.marks ? { ...x, marks: x.marks.filter((m) => m.type !== "bold") } : x));
+        const content = tidy(inline(n.children, [], mapLink)).map((x) =>
+          x.type === "text" && x.marks ? { ...x, marks: x.marks.filter((m) => m.type !== "bold") } : x,
+        );
         const t = textOf(content).trim();
         if (!t) break;
         if (WIX_PLACEHOLDERS.some((re) => re.test(t))) {
@@ -164,7 +174,11 @@ function blocks(nodes: ChildNode[], mapLink: LinkMapper, removed: string[]): Ric
         }
         // Provisional rank (normalised per page by normaliseHeadingLevels): h1/h2=2, h3=3, h4=4, h5=5, h6=6
         const level = n.name === "h1" || n.name === "h2" ? 2 : Number(n.name[1]);
-        out.push({ type: "heading", attrs: { level: level as 2 | 3 | 4 }, content: content.map((x) => (x.type === "text" && x.marks?.length === 0 ? { type: "text", text: x.text } : x)) });
+        out.push({
+          type: "heading",
+          attrs: { level: level as 2 | 3 | 4 },
+          content: content.map((x) => (x.type === "text" && x.marks?.length === 0 ? { type: "text", text: x.text } : x)),
+        });
         break;
       }
       case "ul":
@@ -254,6 +268,12 @@ export function normaliseHeadingLevels(docs: RichDoc[]): void {
 
 export function docText(doc: RichDoc): string {
   const walk = (n: RichNode): string =>
-    n.type === "text" ? n.text : n.type === "hardBreak" ? "\n" : "content" in n && n.content ? n.content.map(walk).join("") + (["paragraph", "heading", "listItem"].includes(n.type) ? "\n" : "") : "";
+    n.type === "text"
+      ? n.text
+      : n.type === "hardBreak"
+        ? "\n"
+        : "content" in n && n.content
+          ? n.content.map(walk).join("") + (["paragraph", "heading", "listItem"].includes(n.type) ? "\n" : "")
+          : "";
   return doc.content.map(walk).join("");
 }

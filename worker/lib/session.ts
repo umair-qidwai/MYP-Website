@@ -24,10 +24,16 @@ export async function createSession(c: Context<AppEnv>, userId: string): Promise
   const csrfToken = randomToken(24);
   const now = new Date();
   const expires = new Date(now.getTime() + IDLE_HOURS * 3600_000);
-  await c.env.DB.prepare(
-    "INSERT INTO sessions (id, user_id, csrf_token, created_at, expires_at, last_seen_at, user_agent) VALUES (?, ?, ?, ?, ?, ?, ?)",
-  )
-    .bind(await sha256Hex(token), userId, csrfToken, now.toISOString(), expires.toISOString(), now.toISOString(), (c.req.header("user-agent") ?? "").slice(0, 300))
+  await c.env.DB.prepare("INSERT INTO sessions (id, user_id, csrf_token, created_at, expires_at, last_seen_at, user_agent) VALUES (?, ?, ?, ?, ?, ?, ?)")
+    .bind(
+      await sha256Hex(token),
+      userId,
+      csrfToken,
+      now.toISOString(),
+      expires.toISOString(),
+      now.toISOString(),
+      (c.req.header("user-agent") ?? "").slice(0, 300),
+    )
     .run();
   setCookie(c, cookieName(c.env), token, {
     httpOnly: true,
@@ -41,7 +47,10 @@ export async function createSession(c: Context<AppEnv>, userId: string): Promise
 
 export async function destroySession(c: Context<AppEnv>): Promise<void> {
   const token = getCookie(c, cookieName(c.env));
-  if (token) await c.env.DB.prepare("DELETE FROM sessions WHERE id = ?").bind(await sha256Hex(token)).run();
+  if (token)
+    await c.env.DB.prepare("DELETE FROM sessions WHERE id = ?")
+      .bind(await sha256Hex(token))
+      .run();
   deleteCookie(c, cookieName(c.env), { path: "/", secure: !isDev(c.env) });
 }
 
@@ -67,9 +76,7 @@ export async function loadSession(c: Context<AppEnv>): Promise<{ user: SessionUs
   // Slide the idle window at most every 5 minutes to keep D1 writes low.
   if (now - new Date(row.last_seen_at).getTime() > 5 * 60_000) {
     const newExpiry = new Date(Math.min(now + IDLE_HOURS * 3600_000, hardLimit)).toISOString();
-    c.executionCtx.waitUntil(
-      c.env.DB.prepare("UPDATE sessions SET last_seen_at = ?, expires_at = ? WHERE id = ?").bind(nowIso(), newExpiry, id).run(),
-    );
+    c.executionCtx.waitUntil(c.env.DB.prepare("UPDATE sessions SET last_seen_at = ?, expires_at = ? WHERE id = ?").bind(nowIso(), newExpiry, id).run());
   }
   return {
     user: { id: row.user_id, email: row.email, name: row.name, role: row.role, canPublish: row.role === "admin" || row.can_publish === 1 },

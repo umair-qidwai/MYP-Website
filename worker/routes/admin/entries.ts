@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { COLLECTIONS, entryDocSchema, getCollection, type CollectionDef, type EntryDoc } from "@shared/collections";
+import { COLLECTIONS, getCollection, type CollectionDef, type EntryDoc } from "@shared/collections";
+import { entryDocSchema } from "@shared/collections-schema";
 import { SLUG_RE, slugify } from "@shared/slug";
 import { createApp, HttpError } from "../../app";
 import { audit } from "../../lib/audit";
@@ -10,7 +11,14 @@ import { newId, nowIso, parseJson } from "../../lib/util";
 
 export const entryRoutes = createApp();
 
-type Row = EntryRow & { has_changes: number; published_at: string | null; updated_at: string; created_at: string; deleted_at: string | null; updated_by_name?: string | null };
+type Row = EntryRow & {
+  has_changes: number;
+  published_at: string | null;
+  updated_at: string;
+  created_at: string;
+  deleted_at: string | null;
+  updated_by_name?: string | null;
+};
 
 function def(key: string): CollectionDef {
   const d = getCollection(key);
@@ -46,9 +54,11 @@ async function getRow(db: D1Database, id: string): Promise<Row> {
 const pathsFor = (d: CollectionDef, slug: string) => (d.publicPath ? [`${d.publicPath}/${slug}`, d.publicPath] : []);
 
 entryRoutes.get("/collections", async (c) => {
-  const { results } = await c.env.DB.prepare(
-    "SELECT collection, status, COUNT(*) AS n FROM entries WHERE deleted_at IS NULL GROUP BY collection, status",
-  ).all<{ collection: string; status: string; n: number }>();
+  const { results } = await c.env.DB.prepare("SELECT collection, status, COUNT(*) AS n FROM entries WHERE deleted_at IS NULL GROUP BY collection, status").all<{
+    collection: string;
+    status: string;
+    n: number;
+  }>();
   return c.json({
     collections: COLLECTIONS.map((d) => ({
       ...d,
@@ -68,8 +78,8 @@ entryRoutes.get("/", async (c) => {
     binds.push(status);
   }
   if (q) {
-    where.push("e.title LIKE ? ESCAPE '\\'");
-    binds.push(`%${q.replace(/[%_\\]/g, (m) => "\\" + m)}%`);
+    where.push("instr(lower(e.title), lower(?)) > 0");
+    binds.push(q);
   }
   const order = d.sortBy === "manual" ? "e.sort_order ASC, e.sort_date DESC" : "e.sort_date IS NULL, e.sort_date DESC, e.sort_order ASC";
   const { results } = await c.env.DB.prepare(
@@ -135,7 +145,9 @@ entryRoutes.put("/:id", async (c) => {
     if (clash) throw new HttpError(409, "Another item already uses that web address.");
     slug = input.slug;
     if (row.status === "published" && d.publicPath) {
-      await c.env.DB.prepare("INSERT INTO redirects (from_path, to_path, status_code, source, created_at) VALUES (?, ?, 301, 'manual', ?) ON CONFLICT(from_path) DO UPDATE SET to_path = excluded.to_path")
+      await c.env.DB.prepare(
+        "INSERT INTO redirects (from_path, to_path, status_code, source, created_at) VALUES (?, ?, 301, 'manual', ?) ON CONFLICT(from_path) DO UPDATE SET to_path = excluded.to_path",
+      )
         .bind(`/${d.publicPath}/${row.slug}`, `/${d.publicPath}/${slug}`, nowIso())
         .run();
     }
@@ -154,7 +166,9 @@ entryRoutes.post("/:id/publish", async (c) => {
   const d = def(row.collection);
   const doc = entryDocSchema(d).parse(JSON.parse(row.draft_json));
   const now = nowIso();
-  await c.env.DB.prepare("UPDATE entries SET published_json = ?, status = 'published', has_changes = 0, sort_date = ?, published_at = ?, updated_by = ?, updated_at = ? WHERE id = ?")
+  await c.env.DB.prepare(
+    "UPDATE entries SET published_json = ?, status = 'published', has_changes = 0, sort_date = ?, published_at = ?, updated_by = ?, updated_at = ? WHERE id = ?",
+  )
     .bind(JSON.stringify(doc), sortDate(d, doc), now, c.get("user").id, now, row.id)
     .run();
   await addRevision(c.env.DB, "entry", row.id, "publish", { ...doc, slug: row.slug }, doc.title, c.get("user").id);
@@ -166,7 +180,9 @@ entryRoutes.post("/:id/publish", async (c) => {
 entryRoutes.post("/:id/unpublish", async (c) => {
   assertCanPublish(c);
   const row = await getRow(c.env.DB, c.req.param("id"));
-  await c.env.DB.prepare("UPDATE entries SET status = 'draft', has_changes = 1, updated_by = ?, updated_at = ? WHERE id = ?").bind(c.get("user").id, nowIso(), row.id).run();
+  await c.env.DB.prepare("UPDATE entries SET status = 'draft', has_changes = 1, updated_by = ?, updated_at = ? WHERE id = ?")
+    .bind(c.get("user").id, nowIso(), row.id)
+    .run();
   await audit(c.env.DB, c.get("user"), "entry.unpublish", row.collection, row.id, row.title);
   c.executionCtx.waitUntil(purge(pathsFor(def(row.collection), row.slug)));
   return c.json({ ok: true });
@@ -185,7 +201,9 @@ entryRoutes.post("/:id/discard", async (c) => {
   const row = await getRow(c.env.DB, c.req.param("id"));
   if (!row.published_json) throw new HttpError(400, "This item has never been published.");
   const doc = parseJson<EntryDoc>(row.published_json, { title: row.title, data: {} });
-  await c.env.DB.prepare("UPDATE entries SET draft_json = published_json, title = ?, has_changes = 0, updated_at = ? WHERE id = ?").bind(doc.title, nowIso(), row.id).run();
+  await c.env.DB.prepare("UPDATE entries SET draft_json = published_json, title = ?, has_changes = 0, updated_at = ? WHERE id = ?")
+    .bind(doc.title, nowIso(), row.id)
+    .run();
   return c.json({ ok: true });
 });
 
@@ -194,7 +212,9 @@ entryRoutes.delete("/:id", async (c) => {
   assertCanPublish(c);
   const row = await getRow(c.env.DB, c.req.param("id"));
   // Free the slug so a new item can reuse the address
-  await c.env.DB.prepare("UPDATE entries SET deleted_at = ?, status = 'archived', slug = slug || '--deleted-' || ?, updated_by = ?, updated_at = ? WHERE id = ?")
+  await c.env.DB.prepare(
+    "UPDATE entries SET deleted_at = ?, status = 'archived', slug = slug || '--deleted-' || ?, updated_by = ?, updated_at = ? WHERE id = ?",
+  )
     .bind(nowIso(), Date.now().toString(36), c.get("user").id, nowIso(), row.id)
     .run();
   await audit(c.env.DB, c.get("user"), "entry.delete", row.collection, row.id, row.title);

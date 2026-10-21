@@ -102,7 +102,14 @@ export async function resolvePath(db: D1Database, rawPath: string, opts: { previ
   const page = parseJson<PageDoc | null>(opts.preview ? row.draft_json : row.published_json, null);
   if (!page) return { kind: "notFound", path };
   page.blocks = page.blocks.filter((b) => !b.hidden);
-  return { kind: "page", path, page, collections: await collectionsForPage(db, page), translations: await translationsFor(db, path), preview: opts.preview || undefined };
+  return {
+    kind: "page",
+    path,
+    page,
+    collections: await collectionsForPage(db, page),
+    translations: await translationsFor(db, path),
+    preview: opts.preview || undefined,
+  };
 }
 
 /** Find language versions of a page: "free-clinic" ↔ "es/free-clinic", "ar/free-clinic", ... */
@@ -131,7 +138,9 @@ async function cached<T>(env: Env, ctx: WaitUntil, key: string, load: () => Prom
   const hit = await cache.match(req);
   if (hit) return (await hit.json()) as T;
   const value = await load();
-  ctx.waitUntil(cache.put(req, new Response(JSON.stringify(value), { headers: { "content-type": "application/json", "cache-control": `max-age=${PUBLIC_TTL}` } })));
+  ctx.waitUntil(
+    cache.put(req, new Response(JSON.stringify(value), { headers: { "content-type": "application/json", "cache-control": `max-age=${PUBLIC_TTL}` } })),
+  );
   return value;
 }
 

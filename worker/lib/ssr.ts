@@ -30,7 +30,10 @@ function blockHtml(b: Block, collections: Record<string, PublicEntry[]>, setting
       return `<section>${b.heading ? `<h2>${e(b.heading)}</h2>` : ""}${b.image ? img(b.image.src, b.image.alt) : ""}${richToHtml(b.doc)}${buttons(b.buttons)}</section>`;
     case "cards":
       return `<section>${b.heading ? `<h2>${e(b.heading)}</h2>` : ""}${b.intro ? `<p>${e(b.intro)}</p>` : ""}<ul>${b.items
-        .map((i) => `<li>${i.image ? img(i.image.src, i.image.alt) : ""}${i.title ? `<h3>${link(i.link, e(i.title))}</h3>` : ""}${i.text ? `<p>${e(i.text)}</p>` : ""}</li>`)
+        .map(
+          (i) =>
+            `<li>${i.image ? img(i.image.src, i.image.alt) : ""}${i.title ? `<h3>${link(i.link, e(i.title))}</h3>` : ""}${i.text ? `<p>${e(i.text)}</p>` : ""}</li>`,
+        )
         .join("")}</ul></section>`;
     case "stats":
       return `<section>${b.heading ? `<h2>${e(b.heading)}</h2>` : ""}<dl>${b.items.map((i) => `<dt>${e(i.value)}</dt><dd>${e(i.label)}${i.note ? ` — ${e(i.note)}` : ""}</dd>`).join("")}</dl>${b.source ? `<p>${e(b.source)}</p>` : ""}</section>`;
@@ -58,7 +61,10 @@ function blockHtml(b: Block, collections: Record<string, PublicEntry[]>, setting
       const def = getCollection(b.collection);
       const items = (collections[b.collection] ?? []).slice(0, b.limit);
       return `<section>${b.heading ? `<h2>${e(b.heading)}</h2>` : ""}<ul>${items
-        .map((it) => `<li>${def?.publicPath ? `<a href="/${def.publicPath}/${attr(it.slug)}">${e(it.title)}</a>` : link(String(it.data.url ?? ""), e(it.title))}</li>`)
+        .map(
+          (it) =>
+            `<li>${def?.publicPath ? `<a href="/${def.publicPath}/${attr(it.slug)}">${e(it.title)}</a>` : link(String(it.data.url ?? ""), e(it.title))}</li>`,
+        )
         .join("")}</ul></section>`;
     }
     case "form":
@@ -68,24 +74,33 @@ function blockHtml(b: Block, collections: Record<string, PublicEntry[]>, setting
 
 const img = (src: string, alt: string) => `<img src="${attr(src)}" alt="${attr(alt)}" loading="lazy">`;
 const link = (href: string | undefined, inner: string) => (href ? `<a href="${attr(href)}">${inner}</a>` : inner);
-const buttons = (bs: { label: string; href: string }[]) => (bs.length ? `<p>${bs.map((b) => `<a href="${attr(b.href)}">${e(b.label)}</a>`).join(" · ")}</p>` : "");
+const buttons = (bs: { label: string; href: string }[]) =>
+  bs.length ? `<p>${bs.map((b) => `<a href="${attr(b.href)}">${e(b.label)}</a>`).join(" · ")}</p>` : "";
 
 function navHtml(settings: Settings): string {
   return `<nav aria-label="Main"><ul>${settings.navigation.main
-    .map((n) => `<li>${link(n.href, e(n.label))}${n.children.length ? `<ul>${n.children.map((c) => `<li>${link(c.href, e(c.label))}</li>`).join("")}</ul>` : ""}</li>`)
+    .map(
+      (n) =>
+        `<li>${link(n.href, e(n.label))}${n.children.length ? `<ul>${n.children.map((c) => `<li>${link(c.href, e(c.label))}</li>`).join("")}</ul>` : ""}</li>`,
+    )
     .join("")}</ul></nav>`;
 }
 
 function footerHtml(s: Settings): string {
   const c = s.contact;
-  return `<footer><p>${e(s.site.name)}</p><p>${[c.phone && `Call Us: ${c.phone}`, c.visitAddress && `Visit Us: ${c.visitAddress}`, c.email && `Email Us: ${c.email}`, c.taxId && `Tax Exempt ID: ${c.taxId}`]
+  return `<footer><p>${e(s.site.name)}</p><p>${[
+    c.phone && `Call Us: ${c.phone}`,
+    c.visitAddress && `Visit Us: ${c.visitAddress}`,
+    c.email && `Email Us: ${c.email}`,
+    c.taxId && `Tax Exempt ID: ${c.taxId}`,
+  ]
     .filter(Boolean)
     .map((x) => e(x as string))
     .join("<br>")}</p></footer>`;
 }
 
 export function renderSnapshot(payload: PublicPagePayload, settings: Settings): string {
-  let main = "";
+  let main: string;
   if (payload.kind === "page") {
     const p = payload.page;
     const hasHero = p.blocks[0]?.type === "hero";
@@ -129,7 +144,8 @@ export function buildHead(payload: PublicPagePayload, settings: Settings, siteUr
   };
   if (payload.kind === "page") {
     const p = payload.page;
-    const firstText = p.blocks.map((b) => (b.type === "richText" ? richToText(b.doc) : b.type === "hero" ? richToText(b.body) : "")).find((t) => t.length > 40) ?? "";
+    const firstText =
+      p.blocks.map((b) => (b.type === "richText" ? richToText(b.doc) : b.type === "hero" ? richToText(b.body) : "")).find((t) => t.length > 40) ?? "";
     const title = p.seo.title || (payload.path === "" ? siteName : `${p.title} | ${siteName}`);
     return {
       title,
@@ -158,9 +174,24 @@ export function buildHead(payload: PublicPagePayload, settings: Settings, siteUr
         organizer: { "@type": "Organization", name: siteName, url: base },
       });
     } else if (payload.collection === "articles") {
-      ld.push({ "@context": "https://schema.org", "@type": "Article", headline: en.title, datePublished: en.data.date || undefined, image: abs(base, img), author: en.data.author ? { "@type": "Person", name: en.data.author } : undefined });
+      ld.push({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: en.title,
+        datePublished: en.data.date || undefined,
+        image: abs(base, img),
+        author: en.data.author ? { "@type": "Person", name: en.data.author } : undefined,
+      });
     }
-    return { title: `${en.title} | ${def?.label ?? ""} | ${siteName}`, description: excerpt(desc), canonical, image: abs(base, img ?? settings.site.ogImage?.src), type: "article", noindex: !!payload.preview, jsonLd: ld };
+    return {
+      title: `${en.title} | ${def?.label ?? ""} | ${siteName}`,
+      description: excerpt(desc),
+      canonical,
+      image: abs(base, img ?? settings.site.ogImage?.src),
+      type: "article",
+      noindex: !!payload.preview,
+      jsonLd: ld,
+    };
   }
   return { title: `Page not found | ${siteName}`, description: settings.site.description, canonical, type: "website", noindex: true, jsonLd: [] };
 }

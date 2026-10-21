@@ -117,7 +117,16 @@ export default function HeroSculpture({ progress, reduced, lowPower, onReady }: 
             <Cradle maxAngle={bars[bars.length - 1].angle} />
           </group>
         </Rig>
-        <ContactShadows position={[0, -2.45, 0]} opacity={0.32} scale={13} blur={2.6} far={5} resolution={lowPower ? 256 : 512} frames={reduced || lowPower ? 1 : Infinity} color="#3b2a1a" />
+        <ContactShadows
+          position={[0, -2.45, 0]}
+          opacity={0.32}
+          scale={13}
+          blur={2.6}
+          far={5}
+          resolution={lowPower ? 256 : 512}
+          frames={reduced || lowPower ? 1 : Infinity}
+          color="#3b2a1a"
+        />
         <Environment resolution={lowPower ? 64 : 128} frames={1}>
           <Lightformer form="rect" intensity={2.4} position={[0, 5, -6]} scale={[10, 4, 1]} color="#fff3e2" />
           <Lightformer form="rect" intensity={1.2} position={[-6, 1, 2]} rotation-y={Math.PI / 2} scale={[6, 3, 1]} color="#e9e1f3" />

@@ -1,7 +1,8 @@
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 import { Link } from "react-router";
 
-const isInternal = (href: string) => href.startsWith("/") && !href.startsWith("//") && !href.startsWith("/media/") && !href.startsWith("/admin") && !href.startsWith("/api/");
+const isInternal = (href: string) =>
+  href.startsWith("/") && !href.startsWith("//") && !href.startsWith("/media/") && !href.startsWith("/admin") && !href.startsWith("/api/");
 
 export const isExternal = (href: string) => /^https?:\/\//i.test(href);
 

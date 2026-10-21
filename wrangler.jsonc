@@ -26,8 +26,8 @@
       "!/@*",
       "!/src/*",
       "!/shared/*",
-      "!/node_modules/*"
-    ]
+      "!/node_modules/*",
+    ],
   },
 
   "d1_databases": [
@@ -36,8 +36,8 @@
       "database_name": "myprojectusa",
       // Replace with the id printed by `npx wrangler d1 create myprojectusa` (see docs/deployment.md)
       "database_id": "00000000-0000-4000-8000-000000000000",
-      "migrations_dir": "migrations"
-    }
+      "migrations_dir": "migrations",
+    },
   ],
 
   "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "myprojectusa-media" }],
@@ -50,6 +50,6 @@
     "MEDIA_PUBLIC_BASE": "",
     // Cloudflare Turnstile site key (public). The secret goes in TURNSTILE_SECRET_KEY via `wrangler secret put`.
     "TURNSTILE_SITE_KEY": "1x00000000000000000000AA",
-    "PBKDF2_ITERATIONS": "100000"
-  }
+    "PBKDF2_ITERATIONS": "100000",
+  },
 }

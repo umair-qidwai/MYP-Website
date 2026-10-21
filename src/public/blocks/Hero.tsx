@@ -1,6 +1,4 @@
-import { Suspense, lazy, useEffect, useLayoutEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import type { BlockOf } from "@shared/blocks";
 import { RichText } from "../components/RichText";
 import { ButtonRow } from "../components/Button";
@@ -8,10 +6,9 @@ import { Img } from "../components/Img";
 import { MaskLines, MosaicBars } from "../components/Reveal";
 import { CssSculpture } from "../hero/CssSculpture";
 import { hasWebGL, isLowPowerDevice, usePrefersReducedMotion } from "../../lib/motion";
+import { useSite } from "../SiteContext";
 
 const HeroSculpture = lazy(() => import("../hero/HeroSculpture"));
-
-gsap.registerPlugin(ScrollTrigger);
 
 /** Split a heading into sentence lines; the tail of the last line is set in the serif accent. */
 function headingLines(text: string) {
@@ -63,55 +60,99 @@ function SculptureHero({ block }: { block: BlockOf<"hero"> }) {
   const [use3d, setUse3d] = useState(false);
   const [ready3d, setReady3d] = useState(false);
   const [lowPower] = useState(() => isLowPowerDevice() || (typeof window !== "undefined" && window.innerWidth < 768));
+  const { embedded } = useSite();
 
   // Load the 3D scene after the page is idle so it never competes with first paint.
+  // (The admin editor's live preview uses the lightweight CSS version instead.)
   useEffect(() => {
-    if (!hasWebGL()) return;
+    if (!hasWebGL() || embedded) return;
     const start = () => setUse3d(true);
-    const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number; cancelIdleCallback?: (id: number) => void };
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number;
+      cancelIdleCallback?: (id: number) => void;
+    };
     if (w.requestIdleCallback) {
       const id = w.requestIdleCallback(start, { timeout: 1800 });
       return () => w.cancelIdleCallback?.(id);
     }
     const t = window.setTimeout(start, 600);
     return () => window.clearTimeout(t);
-  }, []);
+  }, [embedded]);
 
-  useLayoutEffect(() => {
-    if (reduced || !section.current) return;
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: section.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-        onUpdate: (self) => {
-          progress.current = self.progress;
-        },
-      });
-      gsap.to(textCol.current, { yPercent: -14, opacity: 0.35, ease: "none", scrollTrigger: { trigger: section.current, start: "top top", end: "bottom top", scrub: true } });
-      gsap.to(stage.current, { yPercent: 10, ease: "none", scrollTrigger: { trigger: section.current, start: "top top", end: "bottom top", scrub: true } });
-    }, section);
-    return () => ctx.revert();
-  }, [reduced]);
+  // GSAP drives the scroll-linked parallax; it's loaded only when this hero is on the page.
+  useEffect(() => {
+    if (reduced || embedded || !section.current) return;
+    let ctx: { revert: () => void } | undefined;
+    let cancelled = false;
+    void Promise.all([import("gsap"), import("gsap/ScrollTrigger")]).then(([{ gsap }, { ScrollTrigger }]) => {
+      if (cancelled) return;
+      gsap.registerPlugin(ScrollTrigger);
+      ctx = gsap.context(() => {
+        ScrollTrigger.create({
+          trigger: section.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          onUpdate: (self) => {
+            progress.current = self.progress;
+          },
+        });
+        gsap.to(textCol.current, {
+          yPercent: -14,
+          opacity: 0.35,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+        gsap.to(stage.current, {
+          yPercent: 10,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }, section);
+    });
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
+  }, [reduced, embedded]);
 
   return (
     <section ref={section} className="grain relative overflow-hidden" style={{ minHeight: "calc(100svh - var(--header-h))" }} aria-labelledby="hero-title">
       {/* soft warm light behind the sculpture */}
-      <div aria-hidden className="pointer-events-none absolute -right-[10%] top-[8%] size-[70vmin] rounded-full bg-[radial-gradient(closest-side,#fff8ec,transparent)] opacity-90" />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-[10%] top-[8%] size-[70vmin] rounded-full bg-[radial-gradient(closest-side,#fff8ec,transparent)] opacity-90"
+      />
       <div className="wrap relative grid min-h-[inherit] grid-rows-[auto_1fr] gap-4 pb-10 pt-8 lg:grid-cols-12 lg:grid-rows-1 lg:items-center lg:pb-14 lg:pt-6">
         <div ref={textCol} className="relative z-10 lg:col-span-8 xl:col-span-7">
           <h1 id="hero-title" className="display text-[clamp(3.4rem,8.6vw,8.6rem)] text-ink">
             <MaskLines lines={headingLines(block.heading)} delay={0.1} />
           </h1>
           <div className="mt-8 grid gap-8 md:mt-10 md:grid-cols-[minmax(0,34rem)] lg:mt-12">
-            <div style={{ animation: reduced ? undefined : "fade-up 1s var(--ease-out-expo) .55s both" }}>
+            <div
+              style={{
+                animation: reduced ? undefined : "fade-up 1s var(--ease-out-expo) .55s both",
+              }}
+            >
               <RichText doc={block.body} className="prose-myp text-[clamp(1.05rem,0.95rem+0.35vw,1.25rem)] leading-relaxed text-ink-2" />
               <ButtonRow buttons={block.buttons} className="mt-8" />
             </div>
           </div>
         </div>
-        <div ref={stage} className="relative -mx-[var(--gutter)] h-[min(58vh,28rem)] sm:h-[34rem] lg:absolute lg:bottom-0 lg:right-0 lg:top-[4%] lg:mx-0 lg:h-auto lg:w-[56%]">
+        <div
+          ref={stage}
+          className="relative -mx-[var(--gutter)] h-[min(58vh,28rem)] sm:h-[34rem] lg:absolute lg:bottom-0 lg:right-0 lg:top-[4%] lg:mx-0 lg:h-auto lg:w-[56%]"
+        >
           <CssSculpture className={`transition-opacity duration-1000 ${ready3d ? "opacity-0" : "opacity-100"}`} />
           {use3d && (
             <Suspense fallback={null}>
@@ -127,7 +168,12 @@ function SculptureHero({ block }: { block: BlockOf<"hero"> }) {
         <span className="hidden items-center gap-3 sm:flex" aria-hidden>
           Scroll
           <span className="relative block h-9 w-px overflow-hidden bg-ink/15">
-            <span className="absolute inset-x-0 top-0 h-1/2 bg-ink" style={{ animation: reduced ? undefined : "scroll-cue 2.2s var(--ease-in-out-quint) infinite" }} />
+            <span
+              className="absolute inset-x-0 top-0 h-1/2 bg-ink"
+              style={{
+                animation: reduced ? undefined : "scroll-cue 2.2s var(--ease-in-out-quint) infinite",
+              }}
+            />
           </span>
         </span>
       </div>

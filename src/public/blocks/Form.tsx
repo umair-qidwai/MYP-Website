@@ -31,7 +31,13 @@ export function FormBlock({ block, path }: { block: BlockOf<"form">; path: strin
     setState("sending");
     setFieldErrors({});
     try {
-      const r = await postJson<{ ok: boolean; message: string }>("/api/public/forms/submit", { path, formId: block.id, values, turnstileToken: token ?? undefined, website: honeypot });
+      const r = await postJson<{ ok: boolean; message: string }>("/api/public/forms/submit", {
+        path,
+        formId: block.id,
+        values,
+        turnstileToken: token ?? undefined,
+        website: honeypot,
+      });
       setState("done");
       setMessage(r.message || block.successMessage);
     } catch (err) {
@@ -67,15 +73,27 @@ export function FormBlock({ block, path }: { block: BlockOf<"form">; path: strin
                     required: f.required,
                     "aria-invalid": err ? true : undefined,
                     "aria-describedby": err ? `${id}-err` : undefined,
-                    className: "w-full rounded-xl border border-ink/20 bg-paper/40 px-4 py-3 text-base outline-none transition focus:border-plum focus:bg-white focus:ring-4 focus:ring-plum/15",
+                    className:
+                      "w-full rounded-xl border border-ink/20 bg-paper/40 px-4 py-3 text-base outline-none transition focus:border-plum focus:bg-white focus:ring-4 focus:ring-plum/15",
                   };
                   if (f.type === "checkbox") {
                     return (
                       <label key={f.id} htmlFor={id} className="flex items-start gap-3 text-[0.98rem]">
-                        <input type="checkbox" {...common} className="mt-1 size-5 accent-plum" checked={!!values[f.id]} onChange={(e) => setValues((v) => ({ ...v, [f.id]: e.target.checked }))} />
+                        <input
+                          type="checkbox"
+                          {...common}
+                          className="mt-1 size-5 accent-plum"
+                          checked={!!values[f.id]}
+                          onChange={(e) => setValues((v) => ({ ...v, [f.id]: e.target.checked }))}
+                        />
                         <span>
                           {f.label}
-                          {f.required && <span aria-hidden className="text-terracotta"> *</span>}
+                          {f.required && (
+                            <span aria-hidden className="text-terracotta">
+                              {" "}
+                              *
+                            </span>
+                          )}
                         </span>
                       </label>
                     );
@@ -87,7 +105,13 @@ export function FormBlock({ block, path }: { block: BlockOf<"form">; path: strin
                         {f.required ? <span className="text-terracotta"> *</span> : <span className="font-normal text-muted"> (optional)</span>}
                       </label>
                       {f.type === "textarea" ? (
-                        <textarea {...common} rows={5} placeholder={f.placeholder} value={String(values[f.id] ?? "")} onChange={(e) => setValues((v) => ({ ...v, [f.id]: e.target.value }))} />
+                        <textarea
+                          {...common}
+                          rows={5}
+                          placeholder={f.placeholder}
+                          value={String(values[f.id] ?? "")}
+                          onChange={(e) => setValues((v) => ({ ...v, [f.id]: e.target.value }))}
+                        />
                       ) : f.type === "select" ? (
                         <select {...common} value={String(values[f.id] ?? "")} onChange={(e) => setValues((v) => ({ ...v, [f.id]: e.target.value }))}>
                           <option value="">Choose…</option>

@@ -6,7 +6,13 @@ import type { Settings } from "./settings";
 export type Role = "admin" | "editor";
 export type Status = "draft" | "published" | "archived";
 
-export type SessionUser = { id: string; email: string; name: string; role: Role; canPublish: boolean };
+export type SessionUser = {
+  id: string;
+  email: string;
+  name: string;
+  role: Role;
+  canPublish: boolean;
+};
 
 /** Entry as embedded in public pages (published data only). */
 export type PublicEntry = {
@@ -28,11 +34,27 @@ export type PublicPagePayload =
       translations?: Record<string, string>;
       preview?: boolean;
     }
-  | { kind: "entry"; path: string; collection: string; entry: PublicEntry & { seo?: EntryDoc["seo"] }; related: PublicEntry[]; preview?: boolean }
-  | { kind: "collection"; path: string; collection: string; entries: PublicEntry[] }
+  | {
+      kind: "entry";
+      path: string;
+      collection: string;
+      entry: PublicEntry & { seo?: EntryDoc["seo"] };
+      related: PublicEntry[];
+      preview?: boolean;
+    }
+  | {
+      kind: "collection";
+      path: string;
+      collection: string;
+      entries: PublicEntry[];
+    }
   | { kind: "notFound"; path: string };
 
-export type PublicBootstrap = { settings: Settings; turnstileSiteKey: string; data: PublicPagePayload };
+export type PublicBootstrap = {
+  settings: Settings;
+  turnstileSiteKey: string;
+  data: PublicPagePayload;
+};
 
 export type MediaItem = {
   id: string;

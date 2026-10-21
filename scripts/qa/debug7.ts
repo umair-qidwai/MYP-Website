@@ -1,0 +1,14 @@
+import { chromium } from "playwright";
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+await p.goto("http://localhost:5180/admin/login", { waitUntil: "load" });
+await p.waitForTimeout(1500);
+await p.getByLabel("Email").fill("qa-admin@example.org");
+await p.getByLabel("Password").fill("Correct-Horse-Battery-42");
+await p.waitForTimeout(2500);
+await p.getByRole("button", { name: "Sign in" }).click();
+await p.waitForTimeout(2500);
+await p.goto("http://localhost:5180/admin/pages", { waitUntil: "networkidle" });
+await p.getByRole("link", { name: /Homepage/ }).click();
+await p.waitForTimeout(3000);
+console.log(await p.evaluate(() => { const el = document.querySelector('[style*="1280"]') as HTMLElement | null; return el ? { style: el.getAttribute("style"), zoom: getComputedStyle(el).zoom, w: el.getBoundingClientRect().width, h1: getComputedStyle(el.querySelector("h1")!).fontSize, parentW: el.parentElement!.getBoundingClientRect().width } : "none"; }));
+await b.close();

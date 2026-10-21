@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { AnimatePresence, m, useReducedMotion } from "motion/react";
 import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import type { NavItem } from "@shared/settings";
 import { useSite } from "../SiteContext";
@@ -63,7 +63,7 @@ function DesktopItem({ item, open, onOpen, onClose }: { item: NavItem; open: boo
       </button>
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             id={id}
             initial={{ opacity: 0, y: 8, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -77,7 +77,11 @@ function DesktopItem({ item, open, onOpen, onClose }: { item: NavItem; open: boo
               <ul className="p-2">
                 {item.href && (
                   <li>
-                    <SmartLink href={item.href} className="flex items-center justify-between rounded-xl px-4 py-3 text-[0.95rem] font-semibold hover:bg-ink/[0.05]" onClick={onClose}>
+                    <SmartLink
+                      href={item.href}
+                      className="flex items-center justify-between rounded-xl px-4 py-3 text-[0.95rem] font-semibold hover:bg-ink/[0.05]"
+                      onClick={onClose}
+                    >
                       {titleCase(item.label)} overview
                     </SmartLink>
                   </li>
@@ -97,7 +101,7 @@ function DesktopItem({ item, open, onOpen, onClose }: { item: NavItem; open: boo
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>
@@ -220,7 +224,7 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
   return (
     <AnimatePresence>
       {open && (
-        <motion.div
+        <m.div
           id="mobile-menu"
           ref={panel}
           role="dialog"
@@ -235,14 +239,19 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
           <MosaicBars />
           <div className="wrap flex items-center justify-between" style={{ height: "var(--header-h)" }}>
             <Brand onDark />
-            <button type="button" onClick={onClose} className="inline-flex size-11 items-center justify-center rounded-full ring-1 ring-paper/25 hover:bg-white/10" aria-label="Close menu">
+            <button
+              type="button"
+              onClick={onClose}
+              className="inline-flex size-11 items-center justify-center rounded-full ring-1 ring-paper/25 hover:bg-white/10"
+              aria-label="Close menu"
+            >
               <X className="size-5" aria-hidden />
             </button>
           </div>
           <nav aria-label="Mobile" className="wrap flex-1 pb-8 pt-4">
             <ul className="divide-y divide-paper/10 border-y border-paper/10">
               {[{ label: "Home", href: "/", children: [] } as NavItem, ...nav].map((item, i) => (
-                <motion.li
+                <m.li
                   key={item.label}
                   initial={reduce ? false : { opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -283,25 +292,37 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
                       <span className="display text-[2rem] font-semibold">{titleCase(item.label)}</span>
                     </SmartLink>
                   )}
-                </motion.li>
+                </m.li>
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap gap-2">
               {settings.quickLinks.buttons.map((b) => (
-                <SmartLink key={b.label} href={b.href} onClick={onClose} className="rounded-full px-5 py-3 text-sm font-semibold ring-1 ring-paper/25 hover:bg-paper hover:text-ink">
+                <SmartLink
+                  key={b.label}
+                  href={b.href}
+                  onClick={onClose}
+                  className="rounded-full px-5 py-3 text-sm font-semibold ring-1 ring-paper/25 hover:bg-paper hover:text-ink"
+                >
                   {b.label}
                 </SmartLink>
               ))}
             </div>
             <div className="mt-8 flex gap-3">
               {settings.social.links.map((s) => (
-                <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="grid size-11 place-items-center rounded-full ring-1 ring-paper/20 hover:bg-paper hover:text-ink" aria-label={SOCIAL_LABEL[s.platform]}>
+                <a
+                  key={s.url}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid size-11 place-items-center rounded-full ring-1 ring-paper/20 hover:bg-paper hover:text-ink"
+                  aria-label={SOCIAL_LABEL[s.platform]}
+                >
                   <SocialIcon platform={s.platform} className="size-[1.1rem]" />
                 </a>
               ))}
             </div>
           </nav>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

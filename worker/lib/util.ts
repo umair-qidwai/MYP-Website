@@ -58,7 +58,10 @@ export function parseJson<T>(s: string | null | undefined, fallback: T): T {
 
 /** JSON for embedding inside an HTML <script> tag. */
 export function jsonForScript(value: unknown): string {
-  return JSON.stringify(value).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
+  return JSON.stringify(value)
+    .replace(/</g, "\\u003c")
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
 }
 
 export function clientIp(req: Request): string {

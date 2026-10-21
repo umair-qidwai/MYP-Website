@@ -16,7 +16,10 @@ export function multipartRoutes(prefix: "uploads" | "imported") {
   const r = new Hono<AppEnv>();
 
   r.post("/create", async (c) => {
-    const input = await body(c.req.raw, z.object({ filename: z.string().max(300), size: z.number().int().positive().max(MAX_MULTIPART_BYTES), sourceUrl: z.string().max(2048).optional() }));
+    const input = await body(
+      c.req.raw,
+      z.object({ filename: z.string().max(300), size: z.number().int().positive().max(MAX_MULTIPART_BYTES), sourceUrl: z.string().max(2048).optional() }),
+    );
     const ext = (input.filename.match(/\.([a-z0-9]{2,4})$/i)?.[1] ?? "").toLowerCase();
     const mime = { pdf: "application/pdf", mp4: "video/mp4" }[ext];
     if (!mime) throw new HttpError(415, "Large uploads must be PDF documents or MP4 videos.");
@@ -24,7 +27,11 @@ export function multipartRoutes(prefix: "uploads" | "imported") {
     const filename = cleanFilename(input.filename);
     const key = makeKey(id, filename, ext, prefix);
     const upload = await c.env.MEDIA.createMultipartUpload(key, {
-      httpMetadata: { contentType: mime, contentDisposition: `inline; filename="${filename.replace(/[^\x20-\x7e]/g, "_")}"`, cacheControl: "public, max-age=31536000, immutable" },
+      httpMetadata: {
+        contentType: mime,
+        contentDisposition: `inline; filename="${filename.replace(/[^\x20-\x7e]/g, "_")}"`,
+        cacheControl: "public, max-age=31536000, immutable",
+      },
     });
     return c.json({ id, key, uploadId: upload.uploadId });
   });
@@ -33,7 +40,8 @@ export function multipartRoutes(prefix: "uploads" | "imported") {
     const key = c.req.query("key") ?? "";
     const uploadId = c.req.query("uploadId") ?? "";
     const part = Number(c.req.query("part"));
-    if (!/^(uploads|imported)\/\d{4}\/\d{2}\/m_[a-z0-9]+-[a-z0-9-]+\.(pdf|mp4)$/.test(key) || !uploadId || !(part >= 1 && part <= 10000)) throw new HttpError(400, "Invalid upload part.");
+    if (!/^(uploads|imported)\/\d{4}\/\d{2}\/m_[a-z0-9]+-[a-z0-9-]+\.(pdf|mp4)$/.test(key) || !uploadId || !(part >= 1 && part <= 10000))
+      throw new HttpError(400, "Invalid upload part.");
     if (!c.req.raw.body) throw new HttpError(400, "Empty part.");
     const up = c.env.MEDIA.resumeMultipartUpload(key, uploadId);
     const res = await up.uploadPart(part, c.req.raw.body);
@@ -50,7 +58,10 @@ export function multipartRoutes(prefix: "uploads" | "imported") {
         filename: z.string().max(300),
         alt: z.string().max(400).optional(),
         sourceUrl: z.string().max(2048).optional(),
-        parts: z.array(z.object({ partNumber: z.number().int(), etag: z.string().max(200) })).min(1).max(10000),
+        parts: z
+          .array(z.object({ partNumber: z.number().int(), etag: z.string().max(200) }))
+          .min(1)
+          .max(10000),
       }),
     );
     const up = c.env.MEDIA.resumeMultipartUpload(input.key, input.uploadId);
@@ -63,13 +74,13 @@ export function multipartRoutes(prefix: "uploads" | "imported") {
       throw new HttpError(415, "That file isn't a valid PDF or MP4.");
     }
     const user = c.get("user");
-    await c.env.DB.prepare(
-      "INSERT INTO media (id, r2_key, filename, mime, size, alt, source_url, uploaded_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-    )
+    await c.env.DB.prepare("INSERT INTO media (id, r2_key, filename, mime, size, alt, source_url, uploaded_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
       .bind(input.id, input.key, cleanFilename(input.filename), type.mime, obj.size, input.alt ?? "", input.sourceUrl ?? null, user?.id ?? null, nowIso())
       .run();
     if (user) await audit(c.env.DB, user, "media.upload", "media", input.id, input.filename);
-    const row = await c.env.DB.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE id = ?").bind(input.id).first<MediaRow>();
+    const row = await c.env.DB.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE id = ?")
+      .bind(input.id)
+      .first<MediaRow>();
     return c.json({ item: toMediaItem(row!) }, 201);
   });
 

@@ -59,14 +59,19 @@ authRoutes.post("/login", async (c) => {
     throw invalid();
   }
   if (user.locked_until && new Date(user.locked_until).getTime() > Date.now()) {
-    throw new HttpError(429, `This account is temporarily locked after several failed attempts. Try again in ${LOCK_MINUTES} minutes, or ask an administrator.`);
+    throw new HttpError(
+      429,
+      `This account is temporarily locked after several failed attempts. Try again in ${LOCK_MINUTES} minutes, or ask an administrator.`,
+    );
   }
 
   const { ok, iterations } = await verifyPassword(password, user.password_hash, c.env.PASSWORD_PEPPER ?? "");
   if (!ok) {
     const failed = user.failed_logins + 1;
     const lock = failed >= MAX_FAILED ? new Date(Date.now() + LOCK_MINUTES * 60_000).toISOString() : null;
-    await c.env.DB.prepare("UPDATE users SET failed_logins = ?, locked_until = ? WHERE id = ?").bind(lock ? 0 : failed, lock, user.id).run();
+    await c.env.DB.prepare("UPDATE users SET failed_logins = ?, locked_until = ? WHERE id = ?")
+      .bind(lock ? 0 : failed, lock, user.id)
+      .run();
     if (lock) await audit(c.env.DB, { id: user.id, email: user.email }, "account.locked");
     throw invalid();
   }
@@ -85,6 +90,9 @@ authRoutes.post("/login", async (c) => {
     csrfToken,
   });
 });
+
+/** Public, non-secret configuration for the sign-in screen. */
+authRoutes.get("/config", (c) => c.json({ turnstileSiteKey: c.env.TURNSTILE_SITE_KEY }, 200, { "Cache-Control": "public, max-age=300" }));
 
 authRoutes.get("/me", async (c) => {
   c.header("Cache-Control", "no-store");

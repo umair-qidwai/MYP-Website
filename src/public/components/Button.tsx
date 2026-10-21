@@ -15,26 +15,52 @@ const variants: Record<Variant, string> = {
   saffron: "bg-saffron text-ink hover:bg-[#f2b85c]",
 };
 
-export function Button({ href, label, style = "primary", className = "", tone }: { href: string; label: string; style?: Variant; className?: string; tone?: "dark" }) {
+export function Button({
+  href,
+  label,
+  style = "primary",
+  className = "",
+  tone,
+}: {
+  href: string;
+  label: string;
+  style?: Variant;
+  className?: string;
+  tone?: "dark";
+}) {
   const isFile = href.startsWith("/media/") && /\.pdf$/i.test(href);
   const Icon = isFile ? Download : isExternal(href) ? ArrowUpRight : ArrowRight;
   let v = variants[style];
   if (tone === "dark" && style === "primary") v = variants.saffron;
   if (tone === "dark" && style === "secondary") v = "bg-transparent text-current ring-1 ring-current/40 ring-inset hover:ring-current hover:bg-white/5";
-  if (tone === "dark" && style === "link") v = variants.link.replace(/text-ink|decoration-ink\/30|hover:decoration-ink/g, "") + " text-current decoration-current/40";
+  if (tone === "dark" && style === "link")
+    v = variants.link.replace(/text-ink|decoration-ink\/30|hover:decoration-ink/g, "") + " text-current decoration-current/40";
   return (
     <SmartLink href={href} className={`${base} ${v} ${className}`}>
       <span>{label}</span>
       {style !== "link" && (
         <span aria-hidden className="relative grid size-5 place-items-center overflow-hidden">
-          <Icon className="size-[1.05rem] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-px" strokeWidth={2.2} />
+          <Icon
+            className="size-[1.05rem] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-px"
+            strokeWidth={2.2}
+          />
         </span>
       )}
     </SmartLink>
   );
 }
 
-export function ButtonRow({ buttons, tone, align = "start", className = "" }: { buttons: ButtonRef[]; tone?: "dark"; align?: "start" | "center"; className?: string }) {
+export function ButtonRow({
+  buttons,
+  tone,
+  align = "start",
+  className = "",
+}: {
+  buttons: ButtonRef[];
+  tone?: "dark";
+  align?: "start" | "center";
+  className?: string;
+}) {
   if (!buttons.length) return null;
   return (
     <div className={`flex flex-wrap gap-3 ${align === "center" ? "justify-center" : ""} ${className}`}>

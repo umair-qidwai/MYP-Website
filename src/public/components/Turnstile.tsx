@@ -30,7 +30,17 @@ function loadScript(): Promise<void> {
 }
 
 /** Cloudflare Turnstile (privacy-friendly bot check). Calls onToken with a fresh token. */
-export function Turnstile({ siteKey, onToken, resetKey = 0, action }: { siteKey: string; onToken: (token: string | null) => void; resetKey?: number; action?: string }) {
+export function Turnstile({
+  siteKey,
+  onToken,
+  resetKey = 0,
+  action,
+}: {
+  siteKey: string;
+  onToken: (token: string | null) => void;
+  resetKey?: number;
+  action?: string;
+}) {
   const el = useRef<HTMLDivElement>(null);
   const widget = useRef<string | null>(null);
   const cb = useRef(onToken);

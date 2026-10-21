@@ -7,7 +7,8 @@
  */
 import { z } from "zod";
 import { pageDocSchema } from "@shared/blocks";
-import { entryDocSchema, getCollection } from "@shared/collections";
+import { getCollection } from "@shared/collections";
+import { entryDocSchema } from "@shared/collections-schema";
 import { SETTINGS_KEYS, SETTINGS_SCHEMAS, type SettingsKey } from "@shared/settings";
 import { normalizePath, PAGE_PATH_RE, SLUG_RE } from "@shared/slug";
 import { createApp, HttpError } from "../app";
@@ -42,7 +43,9 @@ importRoutes.post("/media", async (c) => {
   const form = await c.req.formData();
   const sourceUrl = String(form.get("sourceUrl") ?? "").slice(0, 2048);
   if (!sourceUrl) throw new HttpError(400, "sourceUrl is required");
-  const existing = await c.env.DB.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE source_url = ?")
+  const existing = await c.env.DB.prepare(
+    "SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE source_url = ?",
+  )
     .bind(sourceUrl)
     .first<MediaRow>();
   if (existing) return c.json({ item: toMediaItem(existing), existed: true });
@@ -54,7 +57,11 @@ importRoutes.post("/media", async (c) => {
   const filename = cleanFilename(String(form.get("filename") ?? file.name));
   const key = makeKey(id, filename, ext, "imported");
   await c.env.MEDIA.put(key, bytes, {
-    httpMetadata: { contentType: mime, contentDisposition: `inline; filename="${filename.replace(/[^\x20-\x7e]/g, "_")}"`, cacheControl: "public, max-age=31536000, immutable" },
+    httpMetadata: {
+      contentType: mime,
+      contentDisposition: `inline; filename="${filename.replace(/[^\x20-\x7e]/g, "_")}"`,
+      cacheControl: "public, max-age=31536000, immutable",
+    },
   });
   const variants: { w: number; key: string }[] = [];
   for (const [name, value] of form.entries()) {
@@ -70,16 +77,39 @@ importRoutes.post("/media", async (c) => {
   await c.env.DB.prepare(
     "INSERT INTO media (id, r2_key, filename, mime, size, width, height, alt, variants_json, source_url, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
   )
-    .bind(id, key, filename, mime, bytes.byteLength, width, height, String(form.get("alt") ?? "").slice(0, 400), variants.length ? JSON.stringify(variants.sort((a, b) => a.w - b.w)) : null, sourceUrl, nowIso())
+    .bind(
+      id,
+      key,
+      filename,
+      mime,
+      bytes.byteLength,
+      width,
+      height,
+      String(form.get("alt") ?? "").slice(0, 400),
+      variants.length ? JSON.stringify(variants.sort((a, b) => a.w - b.w)) : null,
+      sourceUrl,
+      nowIso(),
+    )
     .run();
-  const row = await c.env.DB.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE id = ?").bind(id).first<MediaRow>();
+  const row = await c.env.DB.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE id = ?")
+    .bind(id)
+    .first<MediaRow>();
   return c.json({ item: toMediaItem(row!), existed: false }, 201);
 });
 
 const contentSchema = z.object({
   pages: z.array(z.object({ path: z.string(), sourceUrl: z.string().optional(), publish: z.boolean().default(true), doc: z.unknown() })).default([]),
   entries: z
-    .array(z.object({ collection: z.string(), slug: z.string(), sourceUrl: z.string().optional(), sortOrder: z.number().int().default(0), publish: z.boolean().default(true), doc: z.unknown() }))
+    .array(
+      z.object({
+        collection: z.string(),
+        slug: z.string(),
+        sourceUrl: z.string().optional(),
+        sortOrder: z.number().int().default(0),
+        publish: z.boolean().default(true),
+        doc: z.unknown(),
+      }),
+    )
     .default([]),
   settings: z.record(z.string(), z.unknown()).default({}),
   redirects: z.array(z.object({ from: z.string(), to: z.string() })).default([]),
@@ -94,7 +124,16 @@ importRoutes.post("/content", async (c) => {
   for (const p of input.pages) {
     const parsed = pageDocSchema.safeParse(p.doc);
     if (!parsed.success || !PAGE_PATH_RE.test(p.path)) {
-      report.errors.push(`page /${p.path}: ${parsed.success ? "invalid path" : parsed.error.issues.slice(0, 3).map((i) => `${i.path.join(".")}: ${i.message}`).join("; ")}`);
+      report.errors.push(
+        `page /${p.path}: ${
+          parsed.success
+            ? "invalid path"
+            : parsed.error.issues
+                .slice(0, 3)
+                .map((i) => `${i.path.join(".")}: ${i.message}`)
+                .join("; ")
+        }`,
+      );
       continue;
     }
     const json = JSON.stringify(parsed.data);
@@ -115,7 +154,8 @@ importRoutes.post("/content", async (c) => {
       .bind(id, p.path, parsed.data.title, p.publish ? "published" : "draft", json, p.publish ? json : null, p.sourceUrl ?? null, p.publish ? now : null, now)
       .run();
     await addRevision(db, "page", id, "import", parsed.data, parsed.data.title, null);
-    existing ? report.updated++ : report.created++;
+    if (existing) report.updated++;
+    else report.created++;
   }
 
   for (const e of input.entries) {
@@ -126,7 +166,12 @@ importRoutes.post("/content", async (c) => {
     }
     const parsed = entryDocSchema(def).safeParse(e.doc);
     if (!parsed.success) {
-      report.errors.push(`entry ${e.collection}/${e.slug}: ${parsed.error.issues.slice(0, 3).map((i) => `${i.path.join(".")}: ${i.message}`).join("; ")}`);
+      report.errors.push(
+        `entry ${e.collection}/${e.slug}: ${parsed.error.issues
+          .slice(0, 3)
+          .map((i) => `${i.path.join(".")}: ${i.message}`)
+          .join("; ")}`,
+      );
       continue;
     }
     const json = JSON.stringify(parsed.data);
@@ -134,9 +179,17 @@ importRoutes.post("/content", async (c) => {
     const sortDate = typeof dateVal === "string" && dateVal ? dateVal : null;
     // Match by original source first (stable even if a title/slug changes), then by slug
     const bySource = e.sourceUrl
-      ? await db.prepare("SELECT id, slug, updated_by FROM entries WHERE collection = ? AND source_url = ? AND deleted_at IS NULL").bind(def.key, e.sourceUrl).first<{ id: string; slug: string; updated_by: string | null }>()
+      ? await db
+          .prepare("SELECT id, slug, updated_by FROM entries WHERE collection = ? AND source_url = ? AND deleted_at IS NULL")
+          .bind(def.key, e.sourceUrl)
+          .first<{ id: string; slug: string; updated_by: string | null }>()
       : null;
-    const existing = bySource ?? (await db.prepare("SELECT id, slug, updated_by FROM entries WHERE collection = ? AND slug = ?").bind(def.key, e.slug).first<{ id: string; slug: string; updated_by: string | null }>());
+    const existing =
+      bySource ??
+      (await db
+        .prepare("SELECT id, slug, updated_by FROM entries WHERE collection = ? AND slug = ?")
+        .bind(def.key, e.slug)
+        .first<{ id: string; slug: string; updated_by: string | null }>());
     if (existing?.updated_by) {
       report.skipped.push(`${def.key}/${existing.slug} (edited by staff)`);
       continue;
@@ -147,7 +200,9 @@ importRoutes.post("/content", async (c) => {
       if (clash) slug = existing.slug;
       else if (def.publicPath) {
         await db
-          .prepare("INSERT INTO redirects (from_path, to_path, status_code, source, created_at) VALUES (?, ?, 301, 'import', ?) ON CONFLICT(from_path) DO UPDATE SET to_path = excluded.to_path")
+          .prepare(
+            "INSERT INTO redirects (from_path, to_path, status_code, source, created_at) VALUES (?, ?, 301, 'import', ?) ON CONFLICT(from_path) DO UPDATE SET to_path = excluded.to_path",
+          )
           .bind(`/${def.publicPath}/${existing.slug}`, `/${def.publicPath}/${slug}`, now)
           .run();
       }
@@ -159,7 +214,19 @@ importRoutes.post("/content", async (c) => {
           `UPDATE entries SET slug = ?, title = ?, status = ?, sort_order = ?, sort_date = ?, draft_json = ?, published_json = ?, has_changes = 0,
              source_url = ?, published_at = ?, updated_at = ?, deleted_at = NULL WHERE id = ?`,
         )
-        .bind(slug, parsed.data.title, e.publish ? "published" : "draft", e.sortOrder, sortDate, json, e.publish ? json : null, e.sourceUrl ?? null, e.publish ? now : null, now, id)
+        .bind(
+          slug,
+          parsed.data.title,
+          e.publish ? "published" : "draft",
+          e.sortOrder,
+          sortDate,
+          json,
+          e.publish ? json : null,
+          e.sourceUrl ?? null,
+          e.publish ? now : null,
+          now,
+          id,
+        )
         .run();
     } else {
       await db
@@ -167,10 +234,25 @@ importRoutes.post("/content", async (c) => {
           `INSERT INTO entries (id, collection, slug, title, status, sort_order, sort_date, draft_json, published_json, has_changes, source_url, published_at, created_at, updated_at)
            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?, ?, ?, ?)`,
         )
-        .bind(id, def.key, slug, parsed.data.title, e.publish ? "published" : "draft", e.sortOrder, sortDate, json, e.publish ? json : null, e.sourceUrl ?? null, e.publish ? now : null, now, now)
+        .bind(
+          id,
+          def.key,
+          slug,
+          parsed.data.title,
+          e.publish ? "published" : "draft",
+          e.sortOrder,
+          sortDate,
+          json,
+          e.publish ? json : null,
+          e.sourceUrl ?? null,
+          e.publish ? now : null,
+          now,
+          now,
+        )
         .run();
     }
-    existing ? report.updated++ : report.created++;
+    if (existing) report.updated++;
+    else report.created++;
   }
 
   for (const [key, value] of Object.entries(input.settings)) {

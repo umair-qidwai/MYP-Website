@@ -3,21 +3,42 @@
  * Server-side validation uses these schemas on every save, so stored content is always well-formed.
  */
 import { z } from "zod";
-import { isSafeHref, richDocSchema, type RichDoc } from "./richtext";
+import { isSafeHref, type RichDoc } from "./richtext";
+import { richDocSchema } from "./richtext-schema";
+import { BLOOMERANG_RE, EMBED_PROVIDERS, isEmbeddable } from "./constants";
+
+export * from "./constants";
 
 const text = (max = 500) => z.string().trim().max(max);
-const href = z.string().trim().max(2048).refine((v) => v === "" || isSafeHref(v), "Enter a full link (https://…), an email (mailto:…) or a site path (/page)");
+const href = z
+  .string()
+  .trim()
+  .max(2048)
+  .refine((v) => v === "" || isSafeHref(v), "Enter a full link (https://…), an email (mailto:…) or a site path (/page)");
 
 export const imageSchema = z
   .object({
     mediaId: z.string().max(64).optional(),
-    src: z.string().max(2048).refine((v) => v.startsWith("/media/") || /^https:\/\//.test(v), "Invalid image URL"),
+    src: z
+      .string()
+      .max(2048)
+      .refine((v) => v.startsWith("/media/") || /^https:\/\//.test(v), "Invalid image URL"),
     alt: text(400).default(""),
     width: z.number().int().positive().max(20000).optional(),
     height: z.number().int().positive().max(20000).optional(),
     /** Smaller copies for responsive loading (srcset) */
     variants: z
-      .array(z.object({ w: z.number().int().positive().max(5000), src: z.string().max(2048).refine((v) => v.startsWith("/media/") || /^https:\/\//.test(v)) }).strip())
+      .array(
+        z
+          .object({
+            w: z.number().int().positive().max(5000),
+            src: z
+              .string()
+              .max(2048)
+              .refine((v) => v.startsWith("/media/") || /^https:\/\//.test(v)),
+          })
+          .strip(),
+      )
       .max(6)
       .optional(),
   })
@@ -27,7 +48,10 @@ export type ImageRef = z.infer<typeof imageSchema>;
 export const fileSchema = z
   .object({
     mediaId: z.string().max(64).optional(),
-    url: z.string().max(2048).refine((v) => v.startsWith("/media/") || /^https:\/\//.test(v), "Invalid file URL"),
+    url: z
+      .string()
+      .max(2048)
+      .refine((v) => v.startsWith("/media/") || /^https:\/\//.test(v), "Invalid file URL"),
     filename: text(300).optional(),
     size: z.number().int().nonnegative().optional(),
   })
@@ -48,40 +72,13 @@ export type Tone = z.infer<typeof toneSchema>;
 
 const base = { id: z.string().min(1).max(64), hidden: z.boolean().optional() };
 
-export const EMBED_PROVIDERS = ["youtube", "google-form", "google-map", "eventbrite", "zeffy", "bloomerang", "facebook-video", "other"] as const;
-
-/** Hosts that may be embedded in an iframe. Anything else is shown as a link instead. */
-export const EMBED_HOSTS = [
-  "www.youtube.com",
-  "www.youtube-nocookie.com",
-  "youtube.com",
-  "docs.google.com",
-  "www.google.com",
-  "maps.google.com",
-  "calendar.google.com",
-  "www.eventbrite.com",
-  "eventbrite.com",
-  "www.zeffy.com",
-  "zeffy.com",
-  "www.facebook.com",
-  "player.vimeo.com",
-  "www.nbc4i.com",
-];
-
-export function isEmbeddable(url: string): boolean {
-  try {
-    const u = new URL(url);
-    return u.protocol === "https:" && EMBED_HOSTS.includes(u.hostname);
-  } catch {
-    return false;
-  }
-}
-
-export const BLOOMERANG_RE = /^https:\/\/s3-us-west-2\.amazonaws\.com\/bloomerang-public-cdn\/myprojectusa\/\.widget-js\/\d+\.js$/;
-
 const formFieldSchema = z
   .object({
-    id: z.string().min(1).max(64).regex(/^[a-z0-9_-]+$/i),
+    id: z
+      .string()
+      .min(1)
+      .max(64)
+      .regex(/^[a-z0-9_-]+$/i),
     label: text(200).min(1),
     type: z.enum(["text", "email", "tel", "textarea", "select", "checkbox"]),
     required: z.boolean().default(false),
@@ -138,7 +135,15 @@ export const blockSchema = z.discriminatedUnion("type", [
       heading: text(200).optional(),
       layout: z.enum(["grid", "mosaic", "logos"]).default("grid"),
       images: z
-        .array(z.object({ image: imageSchema, caption: text(500).optional(), link: href.optional() }).strip())
+        .array(
+          z
+            .object({
+              image: imageSchema,
+              caption: text(500).optional(),
+              link: href.optional(),
+            })
+            .strip(),
+        )
         .max(200),
     })
     .strip(),
@@ -185,7 +190,18 @@ export const blockSchema = z.discriminatedUnion("type", [
       type: z.literal("stats"),
       eyebrow: text(120).optional(),
       heading: text(200).optional(),
-      items: z.array(z.object({ value: text(40).min(1), label: text(200).min(1), note: text(300).optional(), group: text(80).optional() }).strip()).max(24),
+      items: z
+        .array(
+          z
+            .object({
+              value: text(40).min(1),
+              label: text(200).min(1),
+              note: text(300).optional(),
+              group: text(80).optional(),
+            })
+            .strip(),
+        )
+        .max(24),
       /** Where the figures come from (shown under the numbers) */
       source: text(300).optional(),
       sourceLink: href.optional(),
@@ -223,7 +239,17 @@ export const blockSchema = z.discriminatedUnion("type", [
       ...base,
       type: z.literal("timeline"),
       heading: text(200).optional(),
-      items: z.array(z.object({ date: text(80), title: text(200).min(1), text: text(2000).optional() }).strip()).max(100),
+      items: z
+        .array(
+          z
+            .object({
+              date: text(80),
+              title: text(200).min(1),
+              text: text(2000).optional(),
+            })
+            .strip(),
+        )
+        .max(100),
     })
     .strip(),
   z
@@ -251,7 +277,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       ...base,
       type: z.literal("embed"),
       provider: z.enum(EMBED_PROVIDERS).default("other"),
-      url: z.string().trim().max(2048).refine((v) => isEmbeddable(v) || BLOOMERANG_RE.test(v), "This website can't be embedded. Use a button link instead."),
+      url: z
+        .string()
+        .trim()
+        .max(2048)
+        .refine((v) => isEmbeddable(v) || BLOOMERANG_RE.test(v), "This website can't be embedded. Use a button link instead."),
       title: text(200).min(1, "Describe the embedded content"),
       aspect: z.enum(["16:9", "4:3", "1:1", "tall", "form"]).default("16:9"),
     })
@@ -276,7 +306,10 @@ export const blockSchema = z.discriminatedUnion("type", [
       ...base,
       type: z.literal("video"),
       heading: text(200).optional(),
-      videos: z.array(z.object({ file: fileSchema, caption: text(300).optional() }).strip()).min(1).max(12),
+      videos: z
+        .array(z.object({ file: fileSchema, caption: text(300).optional() }).strip())
+        .min(1)
+        .max(12),
     })
     .strip(),
   z
@@ -325,17 +358,6 @@ export const seoSchema = z
   })
   .strip();
 
-export const LANGUAGES = {
-  en: { label: "English", dir: "ltr" },
-  ar: { label: "العربية", dir: "rtl" },
-  es: { label: "Español", dir: "ltr" },
-  fr: { label: "Français", dir: "ltr" },
-  ht: { label: "Kreyòl ayisyen", dir: "ltr" },
-  so: { label: "Soomaali", dir: "ltr" },
-} as const;
-export type Lang = keyof typeof LANGUAGES;
-export const TRANSLATION_LANGS = ["ar", "es", "fr", "ht", "so"] as const;
-
 export const pageDocSchema = z
   .object({
     title: text(200).min(1, "Every page needs a title"),
@@ -347,11 +369,5 @@ export const pageDocSchema = z
   })
   .strip();
 export type PageDoc = z.infer<typeof pageDocSchema>;
-
-export function newBlockId(): string {
-  const a = new Uint8Array(6);
-  crypto.getRandomValues(a);
-  return "b_" + [...a].map((x) => x.toString(16).padStart(2, "0")).join("");
-}
 
 export type { RichDoc };

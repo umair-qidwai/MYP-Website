@@ -21,8 +21,12 @@ siteRoutes.get("/dashboard", async (c) => {
     db.prepare("SELECT collection, status, COUNT(*) AS n FROM entries WHERE deleted_at IS NULL GROUP BY collection, status"),
     db.prepare("SELECT COUNT(*) AS n FROM media WHERE deleted_at IS NULL"),
     db.prepare("SELECT COUNT(*) AS n FROM form_submissions WHERE status = 'new'"),
-    db.prepare("SELECT action, entity_type, entity_id, detail, user_email, created_at FROM audit_log WHERE action NOT IN ('login','logout') ORDER BY id DESC LIMIT 12"),
-    db.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE deleted_at IS NULL ORDER BY created_at DESC LIMIT 8"),
+    db.prepare(
+      "SELECT action, entity_type, entity_id, detail, user_email, created_at FROM audit_log WHERE action NOT IN ('login','logout') ORDER BY id DESC LIMIT 12",
+    ),
+    db.prepare(
+      "SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE deleted_at IS NULL ORDER BY created_at DESC LIMIT 8",
+    ),
   ]);
   const pageStats = { published: 0, draft: 0, archived: 0, unpublishedChanges: 0 };
   for (const r of pages.results as { status: keyof typeof pageStats; n: number; changed: number }[]) {
@@ -67,9 +71,29 @@ users.use("*", requireAdmin);
 users.get("/", async (c) => {
   const { results } = await c.env.DB.prepare(
     "SELECT id, email, name, role, can_publish, status, last_login_at, created_at, (password_hash IS NOT NULL) AS has_password FROM users ORDER BY name COLLATE NOCASE",
-  ).all<{ id: string; email: string; name: string; role: string; can_publish: number; status: string; last_login_at: string | null; created_at: string; has_password: number }>();
+  ).all<{
+    id: string;
+    email: string;
+    name: string;
+    role: string;
+    can_publish: number;
+    status: string;
+    last_login_at: string | null;
+    created_at: string;
+    has_password: number;
+  }>();
   return c.json({
-    users: results.map((u) => ({ id: u.id, email: u.email, name: u.name, role: u.role, canPublish: u.role === "admin" || u.can_publish === 1, status: u.status, lastLoginAt: u.last_login_at, createdAt: u.created_at, invited: u.has_password === 0 })),
+    users: results.map((u) => ({
+      id: u.id,
+      email: u.email,
+      name: u.name,
+      role: u.role,
+      canPublish: u.role === "admin" || u.can_publish === 1,
+      status: u.status,
+      lastLoginAt: u.last_login_at,
+      createdAt: u.created_at,
+      invited: u.has_password === 0,
+    })),
   });
 });
 
@@ -117,12 +141,16 @@ async function adminCount(db: D1Database) {
 
 users.put("/:id", async (c) => {
   const id = c.req.param("id");
-  const input = await body(c.req.raw, z.object({ name: z.string().trim().min(1).max(120), role: z.enum(["admin", "editor"]), canPublish: z.boolean(), status: z.enum(["active", "disabled"]) }));
+  const input = await body(
+    c.req.raw,
+    z.object({ name: z.string().trim().min(1).max(120), role: z.enum(["admin", "editor"]), canPublish: z.boolean(), status: z.enum(["active", "disabled"]) }),
+  );
   const target = await c.env.DB.prepare("SELECT role, status FROM users WHERE id = ?").bind(id).first<{ role: string; status: string }>();
   if (!target) throw new HttpError(404, "User not found.");
   const losingAdmin = target.role === "admin" && target.status === "active" && (input.role !== "admin" || input.status !== "active");
   if (losingAdmin && (await adminCount(c.env.DB)) <= 1) throw new HttpError(400, "There must always be at least one active administrator.");
-  if (id === c.get("user").id && (input.role !== "admin" || input.status !== "active")) throw new HttpError(400, "You can't remove your own administrator access.");
+  if (id === c.get("user").id && (input.role !== "admin" || input.status !== "active"))
+    throw new HttpError(400, "You can't remove your own administrator access.");
   await c.env.DB.prepare("UPDATE users SET name = ?, role = ?, can_publish = ?, status = ?, updated_at = ? WHERE id = ?")
     .bind(input.name, input.role, input.canPublish ? 1 : 0, input.status, nowIso(), id)
     .run();
@@ -153,13 +181,25 @@ const redirects = createApp();
 redirects.use("*", requireAdmin);
 
 redirects.get("/", async (c) => {
-  const { results } = await c.env.DB.prepare("SELECT id, from_path, to_path, status_code, source, created_at FROM redirects ORDER BY source DESC, from_path LIMIT 2000").all();
+  const { results } = await c.env.DB.prepare(
+    "SELECT id, from_path, to_path, status_code, source, created_at FROM redirects ORDER BY source DESC, from_path LIMIT 2000",
+  ).all();
   return c.json({ redirects: results });
 });
 
 const redirectSchema = z.object({
-  from: z.string().trim().min(2).max(500).refine((v) => v.startsWith("/") && !v.startsWith("//"), "Old address must start with /"),
-  to: z.string().trim().min(1).max(2048).refine((v) => (v.startsWith("/") && !v.startsWith("//")) || /^https:\/\//.test(v), "New address must start with / or https://"),
+  from: z
+    .string()
+    .trim()
+    .min(2)
+    .max(500)
+    .refine((v) => v.startsWith("/") && !v.startsWith("//"), "Old address must start with /"),
+  to: z
+    .string()
+    .trim()
+    .min(1)
+    .max(2048)
+    .refine((v) => (v.startsWith("/") && !v.startsWith("//")) || /^https:\/\//.test(v), "New address must start with / or https://"),
   permanent: z.boolean().default(true),
 });
 
@@ -177,7 +217,9 @@ redirects.post("/", async (c) => {
 });
 
 redirects.delete("/:id", async (c) => {
-  await c.env.DB.prepare("DELETE FROM redirects WHERE id = ?").bind(Number(c.req.param("id"))).run();
+  await c.env.DB.prepare("DELETE FROM redirects WHERE id = ?")
+    .bind(Number(c.req.param("id")))
+    .run();
   await audit(c.env.DB, c.get("user"), "redirect.delete", "redirect", c.req.param("id"));
   return c.json({ ok: true });
 });
@@ -191,7 +233,9 @@ submissions.use("*", requireAdmin);
 submissions.get("/", async (c) => {
   const status = c.req.query("status") ?? "inbox";
   const where = status === "archived" ? "status = 'archived'" : "status != 'archived'";
-  const { results } = await c.env.DB.prepare(`SELECT id, form_id, form_title, page_path, data_json, status, created_at FROM form_submissions WHERE ${where} ORDER BY created_at DESC LIMIT 500`).all<{
+  const { results } = await c.env.DB.prepare(
+    `SELECT id, form_id, form_title, page_path, data_json, status, created_at FROM form_submissions WHERE ${where} ORDER BY created_at DESC LIMIT 500`,
+  ).all<{
     id: string;
     form_id: string;
     form_title: string;
@@ -200,7 +244,16 @@ submissions.get("/", async (c) => {
     status: string;
     created_at: string;
   }>();
-  return c.json({ submissions: results.map((r) => ({ id: r.id, formTitle: r.form_title, pagePath: r.page_path, status: r.status, createdAt: r.created_at, data: parseJson(r.data_json, []) })) });
+  return c.json({
+    submissions: results.map((r) => ({
+      id: r.id,
+      formTitle: r.form_title,
+      pagePath: r.page_path,
+      status: r.status,
+      createdAt: r.created_at,
+      data: parseJson(r.data_json, []),
+    })),
+  });
 });
 
 submissions.put("/:id", async (c) => {
@@ -219,6 +272,8 @@ siteRoutes.route("/submissions", submissions);
 
 // ── Activity log (administrators only) ───────────────────────────────────────
 siteRoutes.get("/activity", requireAdmin, async (c) => {
-  const { results } = await c.env.DB.prepare("SELECT id, user_email, action, entity_type, entity_id, detail, created_at FROM audit_log ORDER BY id DESC LIMIT 300").all();
+  const { results } = await c.env.DB.prepare(
+    "SELECT id, user_email, action, entity_type, entity_id, detail, created_at FROM audit_log ORDER BY id DESC LIMIT 300",
+  ).all();
   return c.json({ activity: results });
 });

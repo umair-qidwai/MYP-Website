@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Globe } from "lucide-react";
-import { LANGUAGES, type Lang, type PageDoc } from "@shared/blocks";
+import type { PageDoc } from "@shared/blocks";
+import { LANGUAGES, type Lang } from "@shared/constants";
 import type { PublicEntry } from "@shared/types";
 import { Blocks } from "../blocks/BlockRenderer";
 import { MaskLines, MosaicBars } from "../components/Reveal";
@@ -13,7 +14,12 @@ function useSection(path: string): string | null {
   if (settings.navigation.main.some((n) => n.href === href)) return null;
   for (const n of settings.navigation.main) {
     if (n.children.some((c) => c.href === href) && n.label.toUpperCase() !== "HOME") {
-      return n.label === n.label.toUpperCase() ? n.label.split(" ").map((w) => (w === "MY" || w === "USA" ? w : w[0] + w.slice(1).toLowerCase())).join(" ") : n.label;
+      return n.label === n.label.toUpperCase()
+        ? n.label
+            .split(" ")
+            .map((w) => (w === "MY" || w === "USA" ? w : w[0] + w.slice(1).toLowerCase()))
+            .join(" ")
+        : n.label;
     }
   }
   return null;
@@ -42,7 +48,17 @@ export function LanguageSwitcher({ translations, current }: { translations: Reco
   );
 }
 
-export function PageView({ path, page, collections, translations }: { path: string; page: PageDoc; collections: Record<string, PublicEntry[]>; translations?: Record<string, string> }) {
+export function PageView({
+  path,
+  page,
+  collections,
+  translations,
+}: {
+  path: string;
+  page: PageDoc;
+  collections: Record<string, PublicEntry[]>;
+  translations?: Record<string, string>;
+}) {
   const section = useSection(path);
   const startsWithHero = page.blocks[0]?.type === "hero";
   const lang = (page.lang ?? "en") as Lang;
@@ -63,7 +79,8 @@ export function PageView({ path, page, collections, translations }: { path: stri
           </div>
         </header>
       )}
-      {(startsWithHero || page.hideTitle) && <h1 className="sr-only">{page.title}</h1>}
+      {/* The hero block provides the page's single <h1>; other hidden titles stay available to screen readers */}
+      {page.hideTitle && !startsWithHero && <h1 className="sr-only">{page.title}</h1>}
       <div className="pb-16 md:pb-24">
         <Blocks blocks={page.blocks} collections={collections} path={path} />
       </div>

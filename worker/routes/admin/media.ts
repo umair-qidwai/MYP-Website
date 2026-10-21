@@ -18,8 +18,8 @@ mediaRoutes.get("/", async (c) => {
   const where = ["deleted_at IS NULL"];
   const binds: unknown[] = [];
   if (q) {
-    where.push("(filename LIKE ?1 ESCAPE '\\' OR alt LIKE ?1 ESCAPE '\\')");
-    binds.push(`%${q.replace(/[%_\\]/g, (m) => "\\" + m)}%`);
+    where.push("(instr(lower(filename), lower(?1)) > 0 OR instr(lower(alt), lower(?1)) > 0)");
+    binds.push(q);
   }
   if (type === "image") where.push("mime LIKE 'image/%'");
   if (type === "document") where.push("mime NOT LIKE 'image/%'");
@@ -46,7 +46,9 @@ mediaRoutes.post("/", async (c) => {
   const file = form.get("file");
   if (!(file instanceof File)) throw new HttpError(400, "No file was received.");
   const { bytes, mime, ext } = await readUpload(file, MAX_VIDEO_BYTES, "any");
-  const alt = String(form.get("alt") ?? "").trim().slice(0, 400);
+  const alt = String(form.get("alt") ?? "")
+    .trim()
+    .slice(0, 400);
   const width = isImage(mime) ? Math.min(20000, Math.max(0, Number(form.get("width")) || 0)) || null : null;
   const height = isImage(mime) ? Math.min(20000, Math.max(0, Number(form.get("height")) || 0)) || null : null;
 
@@ -54,7 +56,9 @@ mediaRoutes.post("/", async (c) => {
   const filename = cleanFilename(file.name);
   const key = makeKey(id, filename, ext);
   const disposition = `inline; filename="${filename.replace(/[^\x20-\x7e]/g, "_")}"`;
-  await c.env.MEDIA.put(key, bytes, { httpMetadata: { contentType: mime, contentDisposition: disposition, cacheControl: "public, max-age=31536000, immutable" } });
+  await c.env.MEDIA.put(key, bytes, {
+    httpMetadata: { contentType: mime, contentDisposition: disposition, cacheControl: "public, max-age=31536000, immutable" },
+  });
 
   const variants: { w: number; key: string }[] = [];
   if (isImage(mime)) {
@@ -73,10 +77,24 @@ mediaRoutes.post("/", async (c) => {
   await c.env.DB.prepare(
     "INSERT INTO media (id, r2_key, filename, mime, size, width, height, alt, variants_json, uploaded_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
   )
-    .bind(id, key, filename, mime, bytes.byteLength, width, height, alt, variants.length ? JSON.stringify(variants.sort((a, b) => a.w - b.w)) : null, user.id, nowIso())
+    .bind(
+      id,
+      key,
+      filename,
+      mime,
+      bytes.byteLength,
+      width,
+      height,
+      alt,
+      variants.length ? JSON.stringify(variants.sort((a, b) => a.w - b.w)) : null,
+      user.id,
+      nowIso(),
+    )
     .run();
   await audit(c.env.DB, user, "media.upload", "media", id, filename);
-  const row = await c.env.DB.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE id = ?").bind(id).first<MediaRow>();
+  const row = await c.env.DB.prepare("SELECT id, r2_key, filename, mime, size, width, height, alt, variants_json, created_at FROM media WHERE id = ?")
+    .bind(id)
+    .first<MediaRow>();
   return c.json({ item: toMediaItem(row!) }, 201);
 });
 
