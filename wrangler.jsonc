@@ -1,0 +1,55 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "myprojectusa",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-10-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "upload_source_maps": true,
+  "observability": { "enabled": true, "head_sampling_rate": 1 },
+
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // HTML pages and APIs go through the Worker (for SEO metadata, redirects, auth, data).
+    // Fingerprinted build output, fonts and static files are served directly by Cloudflare
+    // without invoking the Worker — those requests are free and unlimited.
+    // The "!/@*", "!/src/*", "!/shared/*" and "!/node_modules/*" entries only matter in local development
+    // (Vite's module URLs); those paths don't exist in production builds.
+    "run_worker_first": [
+      "/*",
+      "!/assets/*",
+      "!/static/*",
+      "!/favicon.svg",
+      "!/favicon.ico",
+      "!/apple-touch-icon.png",
+      "!/@*",
+      "!/src/*",
+      "!/shared/*",
+      "!/node_modules/*"
+    ]
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "myprojectusa",
+      // Replace with the id printed by `npx wrangler d1 create myprojectusa` (see docs/deployment.md)
+      "database_id": "00000000-0000-4000-8000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "myprojectusa-media" }],
+
+  "vars": {
+    "ENVIRONMENT": "production",
+    "PUBLIC_SITE_URL": "https://www.myprojectusa.org",
+    // Optional: public custom domain attached to the R2 bucket (e.g. https://media.myprojectusa.org).
+    // When empty, media is streamed by this Worker from /media/*.
+    "MEDIA_PUBLIC_BASE": "",
+    // Cloudflare Turnstile site key (public). The secret goes in TURNSTILE_SECRET_KEY via `wrangler secret put`.
+    "TURNSTILE_SITE_KEY": "1x00000000000000000000AA",
+    "PBKDF2_ITERATIONS": "100000"
+  }
+}

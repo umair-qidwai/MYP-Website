@@ -1,0 +1,3417 @@
+{
+ "en_pages": 80,
+ "results": [
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/events",
+   "en": "https://www.myprojectusa.org/events",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/conference-speakers",
+   "en": "https://www.myprojectusa.org/conference-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/climatejustice",
+   "en": "https://www.myprojectusa.org/climatejustice",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/wellness-parents",
+   "en": "https://www.myprojectusa.org/wellness-parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/my-leaders-camp-registraion",
+   "en": "https://www.myprojectusa.org/my-leaders-camp-registraion",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/event-flyers",
+   "en": "https://www.myprojectusa.org/event-flyers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/copy-of-muslims-against-female-geni",
+   "en": "https://www.myprojectusa.org/copy-of-muslims-against-female-geni",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/cjl-dropoff-locations",
+   "en": "https://www.myprojectusa.org/cjl-dropoff-locations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/youth-board-application",
+   "en": "https://www.myprojectusa.org/youth-board-application",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/collaborators",
+   "en": "https://www.myprojectusa.org/collaborators",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/blog",
+   "en": "https://www.myprojectusa.org/blog",
+   "status": 200,
+   "differs": 4,
+   "sample": [
+    "لم يتم نشر أي منشورات بهذه اللغة حتى الآن",
+    "بمجرد نشر المنشورات، ستراها هنا.",
+    "لا توجد منشورات حتى الآن.",
+    "لا توجد علامات حتى الآن."
+   ]
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/stopfgm",
+   "en": "https://www.myprojectusa.org/stopfgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/news-coverage",
+   "en": "https://www.myprojectusa.org/news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/old-donors-2",
+   "en": "https://www.myprojectusa.org/old-donors-2",
+   "status": 200,
+   "differs": 125,
+   "sample": [
+    "-->",
+    "MY Project USA Donors",
+    "top of page",
+    "HOME",
+    "Subscribe",
+    "ABOUT US",
+    "VISION",
+    "TEAM",
+    "SERVICES",
+    "REPORTS",
+    "AWARDS",
+    "2026 Honorees",
+    "JOB OPPORTUNITIES",
+    "COLLABORATORS",
+    "ISSUES"
+   ]
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/awards/2026honorees",
+   "en": "https://www.myprojectusa.org/awards/2026honorees",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/newsletter",
+   "en": "https://www.myprojectusa.org/newsletter",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/register-national-earth-day",
+   "en": "https://www.myprojectusa.org/register-national-earth-day",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/freeclinicteam",
+   "en": "https://www.myprojectusa.org/freeclinicteam",
+   "status": 200,
+   "differs": 4,
+   "sample": [
+    "حول عيادتنا",
+    "تقدم عيادة هيلتوب المجانية، بالشراكة مع MY Project USA، فحوصات وقائية مجانية ورعاية أولية للمرضى المؤهلين.",
+    "نحن نقدم رعاية صحية عالية الجودة، يسهل الوصول إليها، وتراعي الحساسيات الثقافية، للأفراد والعائلات المحرومين في مجتمع هيلتوب.",
+    "مهمتنا هي تعزيز العدالة الصحية من خلال دعم استمرارية الرعاية، وتمكين المرضى من خلال دعم شخصي، وتعزيز الصحة العامة من خلال التعليم الطبي المستمر."
+   ]
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/contacts",
+   "en": "https://www.myprojectusa.org/contacts",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/events-2",
+   "en": "https://www.myprojectusa.org/events-2",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/my-community-cafe",
+   "en": "https://www.myprojectusa.org/my-community-cafe",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/issues",
+   "en": "https://www.myprojectusa.org/issues",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/join-helpers-network",
+   "en": "https://www.myprojectusa.org/join-helpers-network",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/shop",
+   "en": "https://www.myprojectusa.org/shop",
+   "status": 200,
+   "differs": 42,
+   "sample": [
+    "العرض السريع",
+    "السعر",
+    "‏20.00 US$",
+    "العرض السريع",
+    "السعر",
+    "‏25.00 US$",
+    "العرض السريع",
+    "السعر",
+    "‏7.50 US$",
+    "العرض السريع",
+    "السعر",
+    "‏15.00 US$",
+    "العرض السريع",
+    "السعر",
+    "‏85.00 US$"
+   ]
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/professional-development",
+   "en": "https://www.myprojectusa.org/professional-development",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/award-nominations",
+   "en": "https://www.myprojectusa.org/award-nominations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/fgm",
+   "en": "https://www.myprojectusa.org/fgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/about-youth-bod",
+   "en": "https://www.myprojectusa.org/about-youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/events-registration",
+   "en": "https://www.myprojectusa.org/events-registration",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/helpers-1",
+   "en": "https://www.myprojectusa.org/helpers-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/youth-conference-16",
+   "en": "https://www.myprojectusa.org/youth-conference-16",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/donors",
+   "en": "https://www.myprojectusa.org/donors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/register-social-media-campaign",
+   "en": "https://www.myprojectusa.org/register-social-media-campaign",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/join-us-myleaders",
+   "en": "https://www.myprojectusa.org/join-us-myleaders",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/siblings",
+   "en": "https://www.myprojectusa.org/siblings",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/ventures",
+   "en": "https://www.myprojectusa.org/ventures",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/team",
+   "en": "https://www.myprojectusa.org/team",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/parents",
+   "en": "https://www.myprojectusa.org/parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/youth-bod",
+   "en": "https://www.myprojectusa.org/youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/parent-sign-up",
+   "en": "https://www.myprojectusa.org/parent-sign-up",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/press-release",
+   "en": "https://www.myprojectusa.org/press-release",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/summer",
+   "en": "https://www.myprojectusa.org/summer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/community-table",
+   "en": "https://www.myprojectusa.org/community-table",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/wellnessresources",
+   "en": "https://www.myprojectusa.org/wellnessresources",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/free-clinic",
+   "en": "https://www.myprojectusa.org/free-clinic",
+   "status": 200,
+   "differs": 57,
+   "sample": [
+    "حول عيادتنا",
+    "تقدم عيادة هيلتوب المجانية، بالشراكة مع MY Project USA، فحوصات وقائية مجانية ورعاية أولية للمرضى المؤهلين.",
+    "نحن نقدم رعاية صحية عالية الجودة، يسهل الوصول إليها، وتراعي الحساسيات الثقافية، للأفراد والعائلات المحرومين في مجتمع هيلتوب.",
+    "مهمتنا هي تعزيز العدالة الصحية من خلال دعم استمرارية الرعاية، وتمكين المرضى من خلال دعم شخصي، وتعزيز الصحة العامة من خلال التعليم الطبي المستمر.",
+    "خدماتنا",
+    "١. الفحوصات الوقائية",
+    "اكتشف المشاكل الصحية مبكرًا قبل أن تصبح خطيرة!",
+    "نقدم اختبارات صحية وقائية مجانية تشمل:",
+    "ضغط الدم",
+    "سكر الدم",
+    "الكوليسترول",
+    "…والمزيد!",
+    "٢. إدارة الحالات المزمنة",
+    "قدم خدمات المختبر في الموقع أثناء زيارتك للعيادة، والتي تشمل اختبارات لـ:",
+    "الهيموغلوبين A1c"
+   ]
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/events-1",
+   "en": "https://www.myprojectusa.org/events-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/event-my-leaders-summer-camp-2015",
+   "en": "https://www.myprojectusa.org/event-my-leaders-summer-camp-2015",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/old-donors-page",
+   "en": "https://www.myprojectusa.org/old-donors-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/partners",
+   "en": "https://www.myprojectusa.org/partners",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/reports",
+   "en": "https://www.myprojectusa.org/reports",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/covid-19-response-center",
+   "en": "https://www.myprojectusa.org/covid-19-response-center",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/copy-of-youth",
+   "en": "https://www.myprojectusa.org/copy-of-youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/join-us",
+   "en": "https://www.myprojectusa.org/join-us",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/contact-8-1",
+   "en": "https://www.myprojectusa.org/contact-8-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/boa",
+   "en": "https://www.myprojectusa.org/boa",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/zakat-eligibility",
+   "en": "https://www.myprojectusa.org/zakat-eligibility",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/iftaar-fundraiser",
+   "en": "https://www.myprojectusa.org/iftaar-fundraiser",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar",
+   "en": "https://www.myprojectusa.org",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/muslims-against-human-trafficking",
+   "en": "https://www.myprojectusa.org/muslims-against-human-trafficking",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/my-earth-action-day-3",
+   "en": "https://www.myprojectusa.org/my-earth-action-day-3",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/awards",
+   "en": "https://www.myprojectusa.org/awards",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/myp-cscc-conference2017",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/wellnesswarriors",
+   "en": "https://www.myprojectusa.org/wellnesswarriors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/volunteer",
+   "en": "https://www.myprojectusa.org/volunteer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/services",
+   "en": "https://www.myprojectusa.org/services",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/research",
+   "en": "https://www.myprojectusa.org/research",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/youth",
+   "en": "https://www.myprojectusa.org/youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/helpline",
+   "en": "https://www.myprojectusa.org/helpline",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/register-homosexuality-forum",
+   "en": "https://www.myprojectusa.org/register-homosexuality-forum",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/myp-cscc-conference2017-program",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-program",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/donate-online",
+   "en": "https://www.myprojectusa.org/donate-online",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/local-chapters-1",
+   "en": "https://www.myprojectusa.org/local-chapters-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/hilltopsustainability",
+   "en": "https://www.myprojectusa.org/hilltopsustainability",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/vision-mission-goals",
+   "en": "https://www.myprojectusa.org/vision-mission-goals",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/copy-of-news-coverage",
+   "en": "https://www.myprojectusa.org/copy-of-news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/job-opportunities",
+   "en": "https://www.myprojectusa.org/job-opportunities",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/contact-8",
+   "en": "https://www.myprojectusa.org/contact-8",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/old-youth-page",
+   "en": "https://www.myprojectusa.org/old-youth-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/myp-cscc-conference2017-speakers",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ar",
+   "url": "https://www.myprojectusa.org/ar/event-ramadan-2015-food-toys-drive",
+   "en": "https://www.myprojectusa.org/event-ramadan-2015-food-toys-drive",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/zakat-eligibility",
+   "en": "https://www.myprojectusa.org/zakat-eligibility",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/join-us-myleaders",
+   "en": "https://www.myprojectusa.org/join-us-myleaders",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/conference-speakers",
+   "en": "https://www.myprojectusa.org/conference-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/hilltopsustainability",
+   "en": "https://www.myprojectusa.org/hilltopsustainability",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/cjl-dropoff-locations",
+   "en": "https://www.myprojectusa.org/cjl-dropoff-locations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/copy-of-muslims-against-female-geni",
+   "en": "https://www.myprojectusa.org/copy-of-muslims-against-female-geni",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/job-opportunities",
+   "en": "https://www.myprojectusa.org/job-opportunities",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/volunteer",
+   "en": "https://www.myprojectusa.org/volunteer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/collaborators",
+   "en": "https://www.myprojectusa.org/collaborators",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/contact-8-1",
+   "en": "https://www.myprojectusa.org/contact-8-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/awards/2026honorees",
+   "en": "https://www.myprojectusa.org/awards/2026honorees",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/helpline",
+   "en": "https://www.myprojectusa.org/helpline",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/event-ramadan-2015-food-toys-drive",
+   "en": "https://www.myprojectusa.org/event-ramadan-2015-food-toys-drive",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/contact-8",
+   "en": "https://www.myprojectusa.org/contact-8",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/siblings",
+   "en": "https://www.myprojectusa.org/siblings",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/shop",
+   "en": "https://www.myprojectusa.org/shop",
+   "status": 200,
+   "differs": 42,
+   "sample": [
+    "Vista rápida",
+    "Precio",
+    "20,00 US$",
+    "Vista rápida",
+    "Precio",
+    "25,00 US$",
+    "Vista rápida",
+    "Precio",
+    "7,50 US$",
+    "Vista rápida",
+    "Precio",
+    "15,00 US$",
+    "Vista rápida",
+    "Precio",
+    "85,00 US$"
+   ]
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/register-homosexuality-forum",
+   "en": "https://www.myprojectusa.org/register-homosexuality-forum",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/reports",
+   "en": "https://www.myprojectusa.org/reports",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/old-donors-2",
+   "en": "https://www.myprojectusa.org/old-donors-2",
+   "status": 200,
+   "differs": 125,
+   "sample": [
+    "-->",
+    "MY Project USA Donors",
+    "top of page",
+    "HOME",
+    "Subscribe",
+    "ABOUT US",
+    "VISION",
+    "TEAM",
+    "SERVICES",
+    "REPORTS",
+    "AWARDS",
+    "2026 Honorees",
+    "JOB OPPORTUNITIES",
+    "COLLABORATORS",
+    "ISSUES"
+   ]
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/register-social-media-campaign",
+   "en": "https://www.myprojectusa.org/register-social-media-campaign",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/youth-board-application",
+   "en": "https://www.myprojectusa.org/youth-board-application",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/press-release",
+   "en": "https://www.myprojectusa.org/press-release",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/donors",
+   "en": "https://www.myprojectusa.org/donors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/community-table",
+   "en": "https://www.myprojectusa.org/community-table",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/myp-cscc-conference2017-program",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-program",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/parents",
+   "en": "https://www.myprojectusa.org/parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/events-registration",
+   "en": "https://www.myprojectusa.org/events-registration",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/stopfgm",
+   "en": "https://www.myprojectusa.org/stopfgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/contacts",
+   "en": "https://www.myprojectusa.org/contacts",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/youth",
+   "en": "https://www.myprojectusa.org/youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/wellness-parents",
+   "en": "https://www.myprojectusa.org/wellness-parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/parent-sign-up",
+   "en": "https://www.myprojectusa.org/parent-sign-up",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/old-donors-page",
+   "en": "https://www.myprojectusa.org/old-donors-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/my-leaders-camp-registraion",
+   "en": "https://www.myprojectusa.org/my-leaders-camp-registraion",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/free-clinic",
+   "en": "https://www.myprojectusa.org/free-clinic",
+   "status": 200,
+   "differs": 21,
+   "sample": [
+    "Sobre Nuestra Clínica",
+    "La Clínica Gratuita Hilltop, en asociación con MY Project USA, ofrece exámenes preventivos y atención primaria gratuitos para los pacientes que cumplen los requisitos. Brindamos atención médica de alta calidad, accesible y culturalmente sensible a personas y familias desatendidas en la comunidad de Hilltop. Nuestra misión es promover la equidad en salud fomentando la continuidad de la atención, empoderando a los pacientes con apoyo personalizado y promoviendo el bienestar a través de la educación médica continua.",
+    "Solo los pacientes mayores de 18 años y sin seguro médico son elegibles para las visitas de atención primaria.",
+    "Nuestra Ubicación",
+    "Estamos ubicados en 3725 Sullivant Avenue, Columbus, OH, 43204, en el Centro de MY Project USA. Al ingresar por las puertas principales, gire a la derecha hacia nuestra mesa de registro y nuestro equipo le asistirá desde allí.",
+    "Horas",
+    "Sábados selectos",
+    "Contacto",
+    "Horas",
+    "Sábados selectos",
+    "¿Cuánto tiempo durará mi cita?",
+    "La hora de la cita puede variar según la hora de llegada y el número de pacientes atendidos. La mayoría de las visitas duran entre 30 minutos y más de una hora.",
+    "¿Tendré acceso a un intérprete?",
+    "¡Sí! Ofrecemos servicios de interpretación a través de Martti, que ofrece interpretación de audio a demanda en varios idiomas en todo momento.",
+    "¿Hay estacionamiento disponible y se puede acceder a la clínica en transporte público?"
+   ]
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/events-2",
+   "en": "https://www.myprojectusa.org/events-2",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/event-my-leaders-summer-camp-2015",
+   "en": "https://www.myprojectusa.org/event-my-leaders-summer-camp-2015",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/ventures",
+   "en": "https://www.myprojectusa.org/ventures",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/partners",
+   "en": "https://www.myprojectusa.org/partners",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/wellnesswarriors",
+   "en": "https://www.myprojectusa.org/wellnesswarriors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/research",
+   "en": "https://www.myprojectusa.org/research",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/local-chapters-1",
+   "en": "https://www.myprojectusa.org/local-chapters-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/about-youth-bod",
+   "en": "https://www.myprojectusa.org/about-youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/my-earth-action-day-3",
+   "en": "https://www.myprojectusa.org/my-earth-action-day-3",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/blog",
+   "en": "https://www.myprojectusa.org/blog",
+   "status": 200,
+   "differs": 4,
+   "sample": [
+    "Aún no hay ninguna entrada publicada en este idioma",
+    "Una vez que se publiquen entradas, las verás aquí.",
+    "No hay entradas todavía.",
+    "No hay etiquetas aún."
+   ]
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/newsletter",
+   "en": "https://www.myprojectusa.org/newsletter",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/join-us",
+   "en": "https://www.myprojectusa.org/join-us",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/covid-19-response-center",
+   "en": "https://www.myprojectusa.org/covid-19-response-center",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/iftaar-fundraiser",
+   "en": "https://www.myprojectusa.org/iftaar-fundraiser",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/award-nominations",
+   "en": "https://www.myprojectusa.org/award-nominations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/freeclinicteam",
+   "en": "https://www.myprojectusa.org/freeclinicteam",
+   "status": 200,
+   "differs": 2,
+   "sample": [
+    "Sobre Nuestra Clínica",
+    "La Clínica Gratuita Hilltop, en asociación con MY Project USA, ofrece exámenes preventivos y atención primaria gratuitos para los pacientes que cumplen los requisitos. Brindamos atención médica de alta calidad, accesible y culturalmente sensible a personas y familias desatendidas en la comunidad de Hilltop. Nuestra misión es promover la equidad en salud fomentando la continuidad de la atención, empoderando a los pacientes con apoyo personalizado y promoviendo el bienestar a través de la educación médica continua."
+   ]
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/summer",
+   "en": "https://www.myprojectusa.org/summer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/climatejustice",
+   "en": "https://www.myprojectusa.org/climatejustice",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/vision-mission-goals",
+   "en": "https://www.myprojectusa.org/vision-mission-goals",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es",
+   "en": "https://www.myprojectusa.org",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/news-coverage",
+   "en": "https://www.myprojectusa.org/news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/copy-of-news-coverage",
+   "en": "https://www.myprojectusa.org/copy-of-news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/events-1",
+   "en": "https://www.myprojectusa.org/events-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/register-national-earth-day",
+   "en": "https://www.myprojectusa.org/register-national-earth-day",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/myp-cscc-conference2017",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/my-community-cafe",
+   "en": "https://www.myprojectusa.org/my-community-cafe",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/services",
+   "en": "https://www.myprojectusa.org/services",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/youth-bod",
+   "en": "https://www.myprojectusa.org/youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/old-youth-page",
+   "en": "https://www.myprojectusa.org/old-youth-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/donate-online",
+   "en": "https://www.myprojectusa.org/donate-online",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/join-helpers-network",
+   "en": "https://www.myprojectusa.org/join-helpers-network",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/muslims-against-human-trafficking",
+   "en": "https://www.myprojectusa.org/muslims-against-human-trafficking",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/copy-of-youth",
+   "en": "https://www.myprojectusa.org/copy-of-youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/myp-cscc-conference2017-speakers",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/awards",
+   "en": "https://www.myprojectusa.org/awards",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/event-flyers",
+   "en": "https://www.myprojectusa.org/event-flyers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/fgm",
+   "en": "https://www.myprojectusa.org/fgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/youth-conference-16",
+   "en": "https://www.myprojectusa.org/youth-conference-16",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/events",
+   "en": "https://www.myprojectusa.org/events",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/wellnessresources",
+   "en": "https://www.myprojectusa.org/wellnessresources",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/team",
+   "en": "https://www.myprojectusa.org/team",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/boa",
+   "en": "https://www.myprojectusa.org/boa",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/issues",
+   "en": "https://www.myprojectusa.org/issues",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/helpers-1",
+   "en": "https://www.myprojectusa.org/helpers-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "es",
+   "url": "https://www.myprojectusa.org/es/professional-development",
+   "en": "https://www.myprojectusa.org/professional-development",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/parent-sign-up",
+   "en": "https://www.myprojectusa.org/parent-sign-up",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/join-us-myleaders",
+   "en": "https://www.myprojectusa.org/join-us-myleaders",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/event-ramadan-2015-food-toys-drive",
+   "en": "https://www.myprojectusa.org/event-ramadan-2015-food-toys-drive",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/zakat-eligibility",
+   "en": "https://www.myprojectusa.org/zakat-eligibility",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/stopfgm",
+   "en": "https://www.myprojectusa.org/stopfgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/ventures",
+   "en": "https://www.myprojectusa.org/ventures",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/register-homosexuality-forum",
+   "en": "https://www.myprojectusa.org/register-homosexuality-forum",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/volunteer",
+   "en": "https://www.myprojectusa.org/volunteer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/climatejustice",
+   "en": "https://www.myprojectusa.org/climatejustice",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/my-community-cafe",
+   "en": "https://www.myprojectusa.org/my-community-cafe",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/youth",
+   "en": "https://www.myprojectusa.org/youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/covid-19-response-center",
+   "en": "https://www.myprojectusa.org/covid-19-response-center",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/event-my-leaders-summer-camp-2015",
+   "en": "https://www.myprojectusa.org/event-my-leaders-summer-camp-2015",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/conference-speakers",
+   "en": "https://www.myprojectusa.org/conference-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/community-table",
+   "en": "https://www.myprojectusa.org/community-table",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/hilltopsustainability",
+   "en": "https://www.myprojectusa.org/hilltopsustainability",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/copy-of-youth",
+   "en": "https://www.myprojectusa.org/copy-of-youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/copy-of-muslims-against-female-geni",
+   "en": "https://www.myprojectusa.org/copy-of-muslims-against-female-geni",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/news-coverage",
+   "en": "https://www.myprojectusa.org/news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/iftaar-fundraiser",
+   "en": "https://www.myprojectusa.org/iftaar-fundraiser",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/old-youth-page",
+   "en": "https://www.myprojectusa.org/old-youth-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/wellness-parents",
+   "en": "https://www.myprojectusa.org/wellness-parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/donors",
+   "en": "https://www.myprojectusa.org/donors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/wellnesswarriors",
+   "en": "https://www.myprojectusa.org/wellnesswarriors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/helpers-1",
+   "en": "https://www.myprojectusa.org/helpers-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/issues",
+   "en": "https://www.myprojectusa.org/issues",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/register-national-earth-day",
+   "en": "https://www.myprojectusa.org/register-national-earth-day",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/professional-development",
+   "en": "https://www.myprojectusa.org/professional-development",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/join-helpers-network",
+   "en": "https://www.myprojectusa.org/join-helpers-network",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/awards",
+   "en": "https://www.myprojectusa.org/awards",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/old-donors-page",
+   "en": "https://www.myprojectusa.org/old-donors-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/donate-online",
+   "en": "https://www.myprojectusa.org/donate-online",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/vision-mission-goals",
+   "en": "https://www.myprojectusa.org/vision-mission-goals",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/reports",
+   "en": "https://www.myprojectusa.org/reports",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/my-earth-action-day-3",
+   "en": "https://www.myprojectusa.org/my-earth-action-day-3",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/join-us",
+   "en": "https://www.myprojectusa.org/join-us",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/myp-cscc-conference2017",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/about-youth-bod",
+   "en": "https://www.myprojectusa.org/about-youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/cjl-dropoff-locations",
+   "en": "https://www.myprojectusa.org/cjl-dropoff-locations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/collaborators",
+   "en": "https://www.myprojectusa.org/collaborators",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/shop",
+   "en": "https://www.myprojectusa.org/shop",
+   "status": 200,
+   "differs": 42,
+   "sample": [
+    "Aperçu rapide",
+    "Prix",
+    "20,00 $US",
+    "Aperçu rapide",
+    "Prix",
+    "25,00 $US",
+    "Aperçu rapide",
+    "Prix",
+    "7,50 $US",
+    "Aperçu rapide",
+    "Prix",
+    "15,00 $US",
+    "Aperçu rapide",
+    "Prix",
+    "85,00 $US"
+   ]
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/summer",
+   "en": "https://www.myprojectusa.org/summer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/muslims-against-human-trafficking",
+   "en": "https://www.myprojectusa.org/muslims-against-human-trafficking",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/event-flyers",
+   "en": "https://www.myprojectusa.org/event-flyers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/events-registration",
+   "en": "https://www.myprojectusa.org/events-registration",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/my-leaders-camp-registraion",
+   "en": "https://www.myprojectusa.org/my-leaders-camp-registraion",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/services",
+   "en": "https://www.myprojectusa.org/services",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/youth-conference-16",
+   "en": "https://www.myprojectusa.org/youth-conference-16",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/copy-of-news-coverage",
+   "en": "https://www.myprojectusa.org/copy-of-news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/youth-bod",
+   "en": "https://www.myprojectusa.org/youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/siblings",
+   "en": "https://www.myprojectusa.org/siblings",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/blog",
+   "en": "https://www.myprojectusa.org/blog",
+   "status": 200,
+   "differs": 4,
+   "sample": [
+    "Aucun post publié dans cette langue actuellement",
+    "Dès que de nouveaux posts seront publiés, vous les verrez ici.",
+    "Aucun post pour le moment.",
+    "Pas encore de mots-clés."
+   ]
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/parents",
+   "en": "https://www.myprojectusa.org/parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/youth-board-application",
+   "en": "https://www.myprojectusa.org/youth-board-application",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/events",
+   "en": "https://www.myprojectusa.org/events",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/partners",
+   "en": "https://www.myprojectusa.org/partners",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/team",
+   "en": "https://www.myprojectusa.org/team",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/job-opportunities",
+   "en": "https://www.myprojectusa.org/job-opportunities",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/register-social-media-campaign",
+   "en": "https://www.myprojectusa.org/register-social-media-campaign",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/contact-8-1",
+   "en": "https://www.myprojectusa.org/contact-8-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/myp-cscc-conference2017-speakers",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/research",
+   "en": "https://www.myprojectusa.org/research",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/awards/2026honorees",
+   "en": "https://www.myprojectusa.org/awards/2026honorees",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/boa",
+   "en": "https://www.myprojectusa.org/boa",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/contacts",
+   "en": "https://www.myprojectusa.org/contacts",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/events-1",
+   "en": "https://www.myprojectusa.org/events-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/old-donors-2",
+   "en": "https://www.myprojectusa.org/old-donors-2",
+   "status": 200,
+   "differs": 125,
+   "sample": [
+    "-->",
+    "MY Project USA Donors",
+    "top of page",
+    "HOME",
+    "Subscribe",
+    "ABOUT US",
+    "VISION",
+    "TEAM",
+    "SERVICES",
+    "REPORTS",
+    "AWARDS",
+    "2026 Honorees",
+    "JOB OPPORTUNITIES",
+    "COLLABORATORS",
+    "ISSUES"
+   ]
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/award-nominations",
+   "en": "https://www.myprojectusa.org/award-nominations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/press-release",
+   "en": "https://www.myprojectusa.org/press-release",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/fgm",
+   "en": "https://www.myprojectusa.org/fgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr",
+   "en": "https://www.myprojectusa.org",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/freeclinicteam",
+   "en": "https://www.myprojectusa.org/freeclinicteam",
+   "status": 200,
+   "differs": 4,
+   "sample": [
+    "À propos de notre clinique",
+    "La Hilltop Free Clinic, en partenariat avec MY Project USA, offre des dépistages préventifs gratuits et des soins primaires aux patients admissibles.",
+    "Nous fournissons des soins de santé de haute qualité, accessibles et culturellement sensibles aux personnes et familles mal desservies de la communauté de Hilltop.",
+    "Notre mission est de promouvoir l'équité en santé en assurant la continuité des soins, en autonomisant les patients grâce à un accompagnement personnalisé, et en encourageant le bien-être par l'éducation médicale continue."
+   ]
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/myp-cscc-conference2017-program",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-program",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/newsletter",
+   "en": "https://www.myprojectusa.org/newsletter",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/local-chapters-1",
+   "en": "https://www.myprojectusa.org/local-chapters-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/events-2",
+   "en": "https://www.myprojectusa.org/events-2",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/free-clinic",
+   "en": "https://www.myprojectusa.org/free-clinic",
+   "status": 200,
+   "differs": 20,
+   "sample": [
+    "À propos de notre clinique",
+    "La Hilltop Free Clinic, en partenariat avec MY Project USA, offre des dépistages préventifs gratuits et des soins primaires aux patients admissibles.",
+    "Nous fournissons des soins de santé de haute qualité, accessibles et culturellement sensibles aux personnes et familles mal desservies de la communauté de Hilltop.",
+    "Notre mission est de promouvoir l'équité en santé en assurant la continuité des soins, en autonomisant les patients grâce à un accompagnement personnalisé, et en encourageant le bien-être par l'éducation médicale continue.",
+    "Nos services",
+    "*Seuls les patients âgés de plus de 18 ans ET sans assurance maladie sont éligibles aux visites de soins primaires.",
+    "Notre emplacement",
+    "Nous sommes situés au 3725 Sullivant Avenue, Columbus, OH, 43204, dans le centre MY Project USA. En entrant par les portes principales, tournez à droite vers notre bureau d’enregistrement, et notre équipe vous assistera à partir de là.",
+    "Combien de temps durera mon rendez-vous ?",
+    "Les horaires des rendez-vous varient en fonction de votre heure d'arrivée et du nombre de patients reçus. La plupart des consultations durent entre 30 minutes et plus d'une heure.",
+    "Aurai-je accès à un interprète ?",
+    "Oui ! Nous proposons des services d'interprétation par l'intermédiaire de Martti, qui fournit une interprétation audio à la demande en plusieurs langues, à tout moment.",
+    "Y a-t-il un stationnement disponible et la clinique est-elle accessible par les transports en commun ?",
+    "Oui, nous disposons d'un parking sur place. La clinique est également idéalement située le long d'une ligne de bus COTA. Si vous avez besoin d'aide pour votre transport, n'hésitez pas à nous contacter ; nous pourrons peut-être vous aider.",
+    "Offrez-vous des rendez-vous chez le dentiste ou la vue ?"
+   ]
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/helpline",
+   "en": "https://www.myprojectusa.org/helpline",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/wellnessresources",
+   "en": "https://www.myprojectusa.org/wellnessresources",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "fr",
+   "url": "https://www.myprojectusa.org/fr/contact-8",
+   "en": "https://www.myprojectusa.org/contact-8",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/summer",
+   "en": "https://www.myprojectusa.org/summer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/team",
+   "en": "https://www.myprojectusa.org/team",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/award-nominations",
+   "en": "https://www.myprojectusa.org/award-nominations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht",
+   "en": "https://www.myprojectusa.org",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/job-opportunities",
+   "en": "https://www.myprojectusa.org/job-opportunities",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/wellness-parents",
+   "en": "https://www.myprojectusa.org/wellness-parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/blog",
+   "en": "https://www.myprojectusa.org/blog",
+   "status": 200,
+   "differs": 4,
+   "sample": [
+    "No posts published in this language yet",
+    "Once posts are published, you’ll see them here.",
+    "No posts yet.",
+    "No tags yet."
+   ]
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/event-ramadan-2015-food-toys-drive",
+   "en": "https://www.myprojectusa.org/event-ramadan-2015-food-toys-drive",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/myp-cscc-conference2017",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/join-us",
+   "en": "https://www.myprojectusa.org/join-us",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/copy-of-muslims-against-female-geni",
+   "en": "https://www.myprojectusa.org/copy-of-muslims-against-female-geni",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/my-leaders-camp-registraion",
+   "en": "https://www.myprojectusa.org/my-leaders-camp-registraion",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/my-community-cafe",
+   "en": "https://www.myprojectusa.org/my-community-cafe",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/collaborators",
+   "en": "https://www.myprojectusa.org/collaborators",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/event-my-leaders-summer-camp-2015",
+   "en": "https://www.myprojectusa.org/event-my-leaders-summer-camp-2015",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/join-helpers-network",
+   "en": "https://www.myprojectusa.org/join-helpers-network",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/copy-of-news-coverage",
+   "en": "https://www.myprojectusa.org/copy-of-news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/siblings",
+   "en": "https://www.myprojectusa.org/siblings",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/register-national-earth-day",
+   "en": "https://www.myprojectusa.org/register-national-earth-day",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/donors",
+   "en": "https://www.myprojectusa.org/donors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/register-social-media-campaign",
+   "en": "https://www.myprojectusa.org/register-social-media-campaign",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/climatejustice",
+   "en": "https://www.myprojectusa.org/climatejustice",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/boa",
+   "en": "https://www.myprojectusa.org/boa",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/muslims-against-human-trafficking",
+   "en": "https://www.myprojectusa.org/muslims-against-human-trafficking",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/reports",
+   "en": "https://www.myprojectusa.org/reports",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/myp-cscc-conference2017-speakers",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/donate-online",
+   "en": "https://www.myprojectusa.org/donate-online",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/youth-conference-16",
+   "en": "https://www.myprojectusa.org/youth-conference-16",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/local-chapters-1",
+   "en": "https://www.myprojectusa.org/local-chapters-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/youth",
+   "en": "https://www.myprojectusa.org/youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/issues",
+   "en": "https://www.myprojectusa.org/issues",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/awards",
+   "en": "https://www.myprojectusa.org/awards",
+   "status": 0,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/events-1",
+   "en": "https://www.myprojectusa.org/events-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/parents",
+   "en": "https://www.myprojectusa.org/parents",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/services",
+   "en": "https://www.myprojectusa.org/services",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/newsletter",
+   "en": "https://www.myprojectusa.org/newsletter",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/press-release",
+   "en": "https://www.myprojectusa.org/press-release",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/cjl-dropoff-locations",
+   "en": "https://www.myprojectusa.org/cjl-dropoff-locations",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/wellnesswarriors",
+   "en": "https://www.myprojectusa.org/wellnesswarriors",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/events",
+   "en": "https://www.myprojectusa.org/events",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/covid-19-response-center",
+   "en": "https://www.myprojectusa.org/covid-19-response-center",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/my-earth-action-day-3",
+   "en": "https://www.myprojectusa.org/my-earth-action-day-3",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/vision-mission-goals",
+   "en": "https://www.myprojectusa.org/vision-mission-goals",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/about-youth-bod",
+   "en": "https://www.myprojectusa.org/about-youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/shop",
+   "en": "https://www.myprojectusa.org/shop",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/old-donors-2",
+   "en": "https://www.myprojectusa.org/old-donors-2",
+   "status": 200,
+   "differs": 125,
+   "sample": [
+    "-->",
+    "MY Project USA Donors",
+    "top of page",
+    "HOME",
+    "Subscribe",
+    "ABOUT US",
+    "VISION",
+    "TEAM",
+    "SERVICES",
+    "REPORTS",
+    "AWARDS",
+    "2026 Honorees",
+    "JOB OPPORTUNITIES",
+    "COLLABORATORS",
+    "ISSUES"
+   ]
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/helpers-1",
+   "en": "https://www.myprojectusa.org/helpers-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/youth-bod",
+   "en": "https://www.myprojectusa.org/youth-bod",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/free-clinic",
+   "en": "https://www.myprojectusa.org/free-clinic",
+   "status": 200,
+   "differs": 17,
+   "sample": [
+    "Konsènan Klinik Nou an",
+    "Klinik Gratis Hilltop, an patenarya ak MY Project USA, bay egzamen prevantif ak swen prensipal gratis pou pasyan ki elijib. Nou ofri swen sante ki wo kalite, aksesib, epi ki respekte kilti moun yo pou moun ak fanmi ki pa gen ase sèvis nan kominote Hilltop la. Misyon nou se amelyore ekite nan swen sante pa bay swen kontinyèl, sipò pèsonalize pou pasyan yo, epi ankouraje byennèt atravè edikasyon medikal kontinyèl.",
+    "Sèvis Nou Yo",
+    "*Sèlman pasyan ki gen plis pase 18 an epi ki pa gen asirans sante ki ka resevwa swen prensipal.",
+    "Kote Nou Ye",
+    "Nou chita nan 3725 Sullivant Avenue, Columbus, OH, 43204, nan sant MY Project USA. Lè ou antre pa pòt prensipal yo, vire adwat pou ale nan biwo enskripsyon nou an, epi ekip nou an ap ede ou depi la.",
+    "Konbyen tan randevou mwen an ap pran?",
+    "Orè randevou yo ka varye selon lè ou rive ak kantite pasyan w ap wè. Pifò vizit yo dire ant 30 minit ak plis pase inèdtan.",
+    "Èske m ap gen aksè a yon entèprèt?",
+    "Wi! Nou ofri sèvis entèprèt atravè Martti, ki bay entèpretasyon odyo sou demann nan plizyè lang tout tan.",
+    "Èske gen pakin disponib epi èske klinik la aksesib pa transpò piblik?",
+    "Wi, nou gen pakin disponib sou plas. Klinik la sitiye tou nan yon bon pozisyon sou yon wout otobis COTA. Si ou bezwen asistans ak transpò, tanpri fè nou konnen — nou ka ede w.",
+    "Èske ou ofri randevou pou dantis oswa pou vizyon?",
+    "Kounye a, nou",
+    "ofri sèvis dantè. Pafwa nou ofri randevou pou vizyon, men disponiblite a limite epi se pa yon orè regilye. Tanpri tcheke sit entènèt nou an oswa medya sosyal nou yo pou jwenn enfòmasyon ki pi ajou yo."
+   ]
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/research",
+   "en": "https://www.myprojectusa.org/research",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/professional-development",
+   "en": "https://www.myprojectusa.org/professional-development",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/ventures",
+   "en": "https://www.myprojectusa.org/ventures",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/myp-cscc-conference2017-program",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-program",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/register-homosexuality-forum",
+   "en": "https://www.myprojectusa.org/register-homosexuality-forum",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/contact-8",
+   "en": "https://www.myprojectusa.org/contact-8",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/freeclinicteam",
+   "en": "https://www.myprojectusa.org/freeclinicteam",
+   "status": 200,
+   "differs": 2,
+   "sample": [
+    "Konsènan Klinik Nou an",
+    "Klinik Gratis Hilltop, an patenarya ak MY Project USA, bay egzamen prevantif ak swen prensipal gratis pou pasyan ki elijib. Nou ofri swen sante ki wo kalite, aksesib, epi ki respekte kilti moun yo pou moun ak fanmi ki pa gen ase sèvis nan kominote Hilltop la. Misyon nou se amelyore ekite nan swen sante pa bay swen kontinyèl, sipò pèsonalize pou pasyan yo, epi ankouraje byennèt atravè edikasyon medikal kontinyèl."
+   ]
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/old-donors-page",
+   "en": "https://www.myprojectusa.org/old-donors-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/helpline",
+   "en": "https://www.myprojectusa.org/helpline",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/stopfgm",
+   "en": "https://www.myprojectusa.org/stopfgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/news-coverage",
+   "en": "https://www.myprojectusa.org/news-coverage",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/wellnessresources",
+   "en": "https://www.myprojectusa.org/wellnessresources",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/parent-sign-up",
+   "en": "https://www.myprojectusa.org/parent-sign-up",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/events-2",
+   "en": "https://www.myprojectusa.org/events-2",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/hilltopsustainability",
+   "en": "https://www.myprojectusa.org/hilltopsustainability",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/awards/2026honorees",
+   "en": "https://www.myprojectusa.org/awards/2026honorees",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/community-table",
+   "en": "https://www.myprojectusa.org/community-table",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/conference-speakers",
+   "en": "https://www.myprojectusa.org/conference-speakers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/iftaar-fundraiser",
+   "en": "https://www.myprojectusa.org/iftaar-fundraiser",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/partners",
+   "en": "https://www.myprojectusa.org/partners",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/youth-board-application",
+   "en": "https://www.myprojectusa.org/youth-board-application",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/zakat-eligibility",
+   "en": "https://www.myprojectusa.org/zakat-eligibility",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/contact-8-1",
+   "en": "https://www.myprojectusa.org/contact-8-1",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/volunteer",
+   "en": "https://www.myprojectusa.org/volunteer",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/copy-of-youth",
+   "en": "https://www.myprojectusa.org/copy-of-youth",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/events-registration",
+   "en": "https://www.myprojectusa.org/events-registration",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/old-youth-page",
+   "en": "https://www.myprojectusa.org/old-youth-page",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/event-flyers",
+   "en": "https://www.myprojectusa.org/event-flyers",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/fgm",
+   "en": "https://www.myprojectusa.org/fgm",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/join-us-myleaders",
+   "en": "https://www.myprojectusa.org/join-us-myleaders",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "ht",
+   "url": "https://www.myprojectusa.org/ht/contacts",
+   "en": "https://www.myprojectusa.org/contacts",
+   "status": 200,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/partners",
+   "en": "https://www.myprojectusa.org/partners",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/join-helpers-network",
+   "en": "https://www.myprojectusa.org/join-helpers-network",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/register-social-media-campaign",
+   "en": "https://www.myprojectusa.org/register-social-media-campaign",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/free-clinic",
+   "en": "https://www.myprojectusa.org/free-clinic",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/youth-board-application",
+   "en": "https://www.myprojectusa.org/youth-board-application",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/press-release",
+   "en": "https://www.myprojectusa.org/press-release",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/summer",
+   "en": "https://www.myprojectusa.org/summer",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/boa",
+   "en": "https://www.myprojectusa.org/boa",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/news-coverage",
+   "en": "https://www.myprojectusa.org/news-coverage",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/fgm",
+   "en": "https://www.myprojectusa.org/fgm",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/event-flyers",
+   "en": "https://www.myprojectusa.org/event-flyers",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/awards/2026honorees",
+   "en": "https://www.myprojectusa.org/awards/2026honorees",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/event-ramadan-2015-food-toys-drive",
+   "en": "https://www.myprojectusa.org/event-ramadan-2015-food-toys-drive",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/old-youth-page",
+   "en": "https://www.myprojectusa.org/old-youth-page",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/youth-bod",
+   "en": "https://www.myprojectusa.org/youth-bod",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/climatejustice",
+   "en": "https://www.myprojectusa.org/climatejustice",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/volunteer",
+   "en": "https://www.myprojectusa.org/volunteer",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/about-youth-bod",
+   "en": "https://www.myprojectusa.org/about-youth-bod",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/local-chapters-1",
+   "en": "https://www.myprojectusa.org/local-chapters-1",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/donors",
+   "en": "https://www.myprojectusa.org/donors",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/my-community-cafe",
+   "en": "https://www.myprojectusa.org/my-community-cafe",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/wellnessresources",
+   "en": "https://www.myprojectusa.org/wellnessresources",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/vision-mission-goals",
+   "en": "https://www.myprojectusa.org/vision-mission-goals",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/blog",
+   "en": "https://www.myprojectusa.org/blog",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/events",
+   "en": "https://www.myprojectusa.org/events",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/wellness-parents",
+   "en": "https://www.myprojectusa.org/wellness-parents",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/contacts",
+   "en": "https://www.myprojectusa.org/contacts",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/shop",
+   "en": "https://www.myprojectusa.org/shop",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/register-homosexuality-forum",
+   "en": "https://www.myprojectusa.org/register-homosexuality-forum",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/cjl-dropoff-locations",
+   "en": "https://www.myprojectusa.org/cjl-dropoff-locations",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/freeclinicteam",
+   "en": "https://www.myprojectusa.org/freeclinicteam",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/donate-online",
+   "en": "https://www.myprojectusa.org/donate-online",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/siblings",
+   "en": "https://www.myprojectusa.org/siblings",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/ventures",
+   "en": "https://www.myprojectusa.org/ventures",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/team",
+   "en": "https://www.myprojectusa.org/team",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/stopfgm",
+   "en": "https://www.myprojectusa.org/stopfgm",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/myp-cscc-conference2017-speakers",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-speakers",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/helpline",
+   "en": "https://www.myprojectusa.org/helpline",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/conference-speakers",
+   "en": "https://www.myprojectusa.org/conference-speakers",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/community-table",
+   "en": "https://www.myprojectusa.org/community-table",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/awards",
+   "en": "https://www.myprojectusa.org/awards",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/contact-8",
+   "en": "https://www.myprojectusa.org/contact-8",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/copy-of-muslims-against-female-geni",
+   "en": "https://www.myprojectusa.org/copy-of-muslims-against-female-geni",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/reports",
+   "en": "https://www.myprojectusa.org/reports",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/muslims-against-human-trafficking",
+   "en": "https://www.myprojectusa.org/muslims-against-human-trafficking",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/issues",
+   "en": "https://www.myprojectusa.org/issues",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/my-earth-action-day-3",
+   "en": "https://www.myprojectusa.org/my-earth-action-day-3",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/professional-development",
+   "en": "https://www.myprojectusa.org/professional-development",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/wellnesswarriors",
+   "en": "https://www.myprojectusa.org/wellnesswarriors",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/covid-19-response-center",
+   "en": "https://www.myprojectusa.org/covid-19-response-center",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/my-leaders-camp-registraion",
+   "en": "https://www.myprojectusa.org/my-leaders-camp-registraion",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/zakat-eligibility",
+   "en": "https://www.myprojectusa.org/zakat-eligibility",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/copy-of-youth",
+   "en": "https://www.myprojectusa.org/copy-of-youth",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/contact-8-1",
+   "en": "https://www.myprojectusa.org/contact-8-1",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/services",
+   "en": "https://www.myprojectusa.org/services",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/award-nominations",
+   "en": "https://www.myprojectusa.org/award-nominations",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/myp-cscc-conference2017",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/old-donors-page",
+   "en": "https://www.myprojectusa.org/old-donors-page",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/old-donors-2",
+   "en": "https://www.myprojectusa.org/old-donors-2",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/iftaar-fundraiser",
+   "en": "https://www.myprojectusa.org/iftaar-fundraiser",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/join-us-myleaders",
+   "en": "https://www.myprojectusa.org/join-us-myleaders",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/events-2",
+   "en": "https://www.myprojectusa.org/events-2",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so",
+   "en": "https://www.myprojectusa.org",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/parent-sign-up",
+   "en": "https://www.myprojectusa.org/parent-sign-up",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/youth",
+   "en": "https://www.myprojectusa.org/youth",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/myp-cscc-conference2017-program",
+   "en": "https://www.myprojectusa.org/myp-cscc-conference2017-program",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/youth-conference-16",
+   "en": "https://www.myprojectusa.org/youth-conference-16",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/events-registration",
+   "en": "https://www.myprojectusa.org/events-registration",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/newsletter",
+   "en": "https://www.myprojectusa.org/newsletter",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/collaborators",
+   "en": "https://www.myprojectusa.org/collaborators",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/parents",
+   "en": "https://www.myprojectusa.org/parents",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/register-national-earth-day",
+   "en": "https://www.myprojectusa.org/register-national-earth-day",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/hilltopsustainability",
+   "en": "https://www.myprojectusa.org/hilltopsustainability",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/research",
+   "en": "https://www.myprojectusa.org/research",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/event-my-leaders-summer-camp-2015",
+   "en": "https://www.myprojectusa.org/event-my-leaders-summer-camp-2015",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/copy-of-news-coverage",
+   "en": "https://www.myprojectusa.org/copy-of-news-coverage",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/join-us",
+   "en": "https://www.myprojectusa.org/join-us",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/job-opportunities",
+   "en": "https://www.myprojectusa.org/job-opportunities",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/helpers-1",
+   "en": "https://www.myprojectusa.org/helpers-1",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  },
+  {
+   "locale": "so",
+   "url": "https://www.myprojectusa.org/so/events-1",
+   "en": "https://www.myprojectusa.org/events-1",
+   "status": 404,
+   "differs": 0,
+   "sample": []
+  }
+ ]
+}

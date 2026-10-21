@@ -1,0 +1,4071 @@
+{
+ "generatedAt": "2026-10-21T15:13:23.327Z",
+ "rows": [
+  {
+   "source": "https://www.myprojectusa.org",
+   "outcome": "page",
+   "target": "/",
+   "notes": [
+    "Homepage recomposed for the new design using the original text verbatim (hero, introduction, initiatives, awards, video, sustain-programs CTA, Social Ventures, closing statement, Stay Connected)",
+    "“Help Us Sustain All Programs” button: same Zeffy donation destination; label shown as heading with a “Donate” button",
+    "Button text “Join MYP Social Ventors Partnership” kept exactly as on the original site (possible typo: “Ventures”) — staff can correct it in the editor",
+    "Social Stream widget (Wix app) replaced by the site's social links"
+   ],
+   "title": "Home",
+   "coverage": 0.9935483870967742,
+   "missingSample": [
+    "subscribe"
+   ],
+   "sourceChars": 1123
+  },
+  {
+   "source": "https://www.myprojectusa.org/about-youth-bod",
+   "outcome": "page",
+   "target": "/about-youth-bod",
+   "notes": [],
+   "title": "About Our Youth Board of Directors",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1991
+  },
+  {
+   "source": "https://www.myprojectusa.org/ar/free-clinic",
+   "outcome": "page",
+   "target": "/ar/free-clinic",
+   "notes": [],
+   "title": "Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow",
+   "coverage": 0.9981981981981982,
+   "missingSample": [
+    "ar"
+   ],
+   "sourceChars": 3766
+  },
+  {
+   "source": "https://www.myprojectusa.org/ar/freeclinicteam",
+   "outcome": "page",
+   "target": "/ar/freeclinicteam",
+   "notes": [],
+   "title": "حول عيادتنا",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 966
+  },
+  {
+   "source": "https://www.myprojectusa.org/award-nominations",
+   "outcome": "page",
+   "target": "/award-nominations",
+   "notes": [],
+   "title": "MYP Youth Excellence Awards 2026",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 693
+  },
+  {
+   "source": "https://www.myprojectusa.org/awards",
+   "outcome": "page",
+   "target": "/awards",
+   "notes": [],
+   "title": "MYP Youth Excellence Awards 2026",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 7360
+  },
+  {
+   "source": "https://www.myprojectusa.org/awards/2026honorees",
+   "outcome": "page",
+   "target": "/awards/2026honorees",
+   "notes": [],
+   "title": "MYP Youth Excellence Awards 2026 Honoree Book",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 78
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog",
+   "outcome": "page",
+   "target": "/blog",
+   "notes": [
+    "Lists all migrated blog posts (Articles collection); Wix blog sidebar replaced",
+    "Source text on /blog is post excerpts + sidebar, now generated from the Articles collection"
+   ],
+   "title": "MY Project USA Blog"
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/archive/2015/02",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/archive/2015/03",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/archive/2015/05",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/archive/2015/07",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/archive/2015/09",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/archive/2015/10",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/abdifatah-mohamud",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/abdullah-saleem",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/chicago",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/child-abuse",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/child-molestation",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/ciogc",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/community-development",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/domestic-abuse",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/drugs",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/family-violence",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/gangs",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/heart-for-women-girls",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/human-trafficking",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/institute-of-islamic-education",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/justicenotsilence",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/kaiseruddin",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/khalil-wimes",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/mother-s-day",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/muslim-community",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/muslim-domestic-violence",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/muslim-families",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/muslim-mother-in-law",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/muslim-mothers",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/muslim-refugees",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/my-parents-network",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/my-project-usa",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/nadia-mohajir",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/parenting",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/poverty",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/sex-trafficking",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/sexual-abuse",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/soup-kitchen",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/winter-clothes-drive",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/blog/tags/youth-empowerment",
+   "outcome": "redirect",
+   "target": "/blog",
+   "notes": [
+    "Wix blog tag/archive listing"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/boa",
+   "outcome": "page",
+   "target": "/boa",
+   "notes": [],
+   "title": "Board of Advisors",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 12182
+  },
+  {
+   "source": "https://www.myprojectusa.org/cjl-dropoff-locations",
+   "outcome": "page",
+   "target": "/cjl-dropoff-locations",
+   "notes": [
+    "Dropped Wix Social Stream app widget (Wix-only); social profiles are linked site-wide"
+   ],
+   "title": "Climate Justice Lab Donations & Drop-off Locations",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2501
+  },
+  {
+   "source": "https://www.myprojectusa.org/climatejustice",
+   "outcome": "page",
+   "target": "/climatejustice",
+   "notes": [],
+   "title": "Climate Justice Lab",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2062
+  },
+  {
+   "source": "https://www.myprojectusa.org/collaborators",
+   "outcome": "page",
+   "target": "/collaborators",
+   "notes": [],
+   "title": "Collaborators",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1251
+  },
+  {
+   "source": "https://www.myprojectusa.org/community-table",
+   "outcome": "page",
+   "target": "/community-table",
+   "notes": [],
+   "title": "The Community Table by MY Project USA",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2640
+  },
+  {
+   "source": "https://www.myprojectusa.org/conference-speakers",
+   "outcome": "page",
+   "target": "/conference-speakers",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "#MYProjectUSA 2016 Conference Speakers",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 22806
+  },
+  {
+   "source": "https://www.myprojectusa.org/contact-8",
+   "outcome": "redirect",
+   "target": "/contacts",
+   "notes": [
+    "Unedited Wix template contact page (placeholder phone/email, Wix's own social links) — menu item now points to the real contact page"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/contact-8-1",
+   "outcome": "page",
+   "target": "/contact-8-1",
+   "notes": [],
+   "title": "Subscribe to Our Newsletter",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 27
+  },
+  {
+   "source": "https://www.myprojectusa.org/contacts",
+   "outcome": "page",
+   "target": "/contacts",
+   "notes": [
+    "Wix form “Contact” rebuilt as a CMS form (submissions are stored securely and listed under Admin › Form submissions)"
+   ],
+   "title": "Contact Us",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 763
+  },
+  {
+   "source": "https://www.myprojectusa.org/copy-of-muslims-against-female-geni",
+   "outcome": "page",
+   "target": "/copy-of-muslims-against-female-geni",
+   "notes": [],
+   "title": "Muslims Against Female Genital Cutting/Mutilation",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 9916
+  },
+  {
+   "source": "https://www.myprojectusa.org/copy-of-news-coverage",
+   "outcome": "page",
+   "target": "/copy-of-news-coverage",
+   "notes": [
+    "News stories converted to the News Coverage collection (outlet, date, summary, link and image kept verbatim)"
+   ],
+   "title": "MY Project USA in the News",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2185
+  },
+  {
+   "source": "https://www.myprojectusa.org/copy-of-youth",
+   "outcome": "page",
+   "target": "/copy-of-youth",
+   "notes": [],
+   "title": "Youth Programs",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 6335
+  },
+  {
+   "source": "https://www.myprojectusa.org/covid-19-response-center",
+   "outcome": "page",
+   "target": "/covid-19-response-center",
+   "notes": [],
+   "title": "Our Response To COVID 19:",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2115
+  },
+  {
+   "source": "https://www.myprojectusa.org/donate-online",
+   "outcome": "page",
+   "target": "/donate-online",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Donate Online",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 482
+  },
+  {
+   "source": "https://www.myprojectusa.org/donors",
+   "outcome": "page",
+   "target": "/donors",
+   "notes": [],
+   "title": "Build Lasting Sustainability with MY Project USA",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2779
+  },
+  {
+   "source": "https://www.myprojectusa.org/es/free-clinic",
+   "outcome": "page",
+   "target": "/es/free-clinic",
+   "notes": [],
+   "title": "Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow",
+   "coverage": 0.9982300884955753,
+   "missingSample": [
+    "es"
+   ],
+   "sourceChars": 4085
+  },
+  {
+   "source": "https://www.myprojectusa.org/es/freeclinicteam",
+   "outcome": "page",
+   "target": "/es/freeclinicteam",
+   "notes": [],
+   "title": "Sobre Nuestra Clínica",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1117
+  },
+  {
+   "source": "https://www.myprojectusa.org/event---my-leaders-summer-camp-2015",
+   "outcome": "redirect",
+   "target": "/event-my-leaders-summer-camp-2015",
+   "notes": [
+    "Wix already redirected this URL"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/event-flyers",
+   "outcome": "page",
+   "target": "/event-flyers",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Events Flyers",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 107
+  },
+  {
+   "source": "https://www.myprojectusa.org/event-my-leaders-summer-camp-2015",
+   "outcome": "page",
+   "target": "/event-my-leaders-summer-camp-2015",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Subscribe For Updates",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1793
+  },
+  {
+   "source": "https://www.myprojectusa.org/event-ramadan-2015-food-toys-drive",
+   "outcome": "page",
+   "target": "/event-ramadan-2015-food-toys-drive",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "This Ramadan: Share Your Blessings",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2271
+  },
+  {
+   "source": "https://www.myprojectusa.org/events",
+   "outcome": "page",
+   "target": "/events",
+   "notes": [
+    "Lists all migrated Wix events (Events collection)"
+   ],
+   "title": "Past Events",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 11
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1",
+   "outcome": "redirect",
+   "target": "/events",
+   "notes": [
+    "Wix dynamic events listing → events archive"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/-columbus-interfaith-ramadan-iftar",
+   "outcome": "entry",
+   "target": "/events/columbus-interfaith-ramadan-iftar",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Interfaith Ramadan Iftar",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 36
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/%22the-narratives-of-resilience%22",
+   "outcome": "entry",
+   "target": "/events/the-narratives-of-resilience",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "\"THE NARRATIVES OF RESILIENCE\"",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 33
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/%26quot%3Bthanks-is-giving%26quot%3B-kick-off-event",
+   "outcome": "entry",
+   "target": "/events/thanks-is-giving-kick-off-event",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "\"Thanks is Giving\" Kick-off Event",
+   "coverage": 0.75,
+   "missingSample": [
+    "quot"
+   ],
+   "sourceChars": 46
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/%23myprojectisusa%C2%A02016---my-first-community-leadership-conference",
+   "outcome": "entry",
+   "target": "/events/myprojectisusa-2016-my-first-community-leadership-conference",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "#MYProjectisUSA 2016 - MY First Community Leadership Conference",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 66
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/2017-eid-open-house-for-refugees-families",
+   "outcome": "entry",
+   "target": "/events/2017-eid-open-house-for-refugees-families",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "2017 Eid Open House For Refugees Families",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 44
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/2nd-annual-youth-conference%3A-uplifting-our-neighborhoods---organizing-our-communities",
+   "outcome": "entry",
+   "target": "/events/2nd-annual-youth-conference-uplifting-our-neighborhoods-organizing-our-communiti",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "2nd Annual Youth Conference: UPLIFTING OUR NEIGHBORHOODS - Organizing Our Communities",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 88
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/2nd-columbus-unity-meeting---immigrants-in-trumpland",
+   "outcome": "entry",
+   "target": "/events/2nd-columbus-unity-meeting-immigrants-in-trumpland",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "2nd Columbus Unity Meeting - Immigrants in Trumpland",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 55
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/7-secrets-of-the-world's-most-successful-professional-muslims",
+   "outcome": "entry",
+   "target": "/events/7-secrets-of-the-worlds-most-successful-professional-muslims",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "7 Secrets of the World's Most Successful Professional Muslims",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 67
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/7th-annual-neighborhood-best-practices-conference",
+   "outcome": "entry",
+   "target": "/events/7th-annual-neighborhood-best-practices-conference",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "7TH ANNUAL NEIGHBORHOOD BEST PRACTICES CONFERENCE",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 52
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/a-benefit-dinner-to-protect-%26-empower-columbus-youth-%26-parents-",
+   "outcome": "entry",
+   "target": "/events/a-benefit-dinner-to-protect-and-empower-columbus-youth-and-parents",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "A Benefit Dinner To Protect & Empower Columbus Youth & Parents",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 67
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/bake-sale-at-my-family-pantry",
+   "outcome": "entry",
+   "target": "/events/bake-sale-at-my-family-pantry",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Bake Sale at MY Family Pantry",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/clothes-swap-for-eid-toys",
+   "outcome": "entry",
+   "target": "/events/clothes-swap-for-eid-toys",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Clothes Swap for Eid Toys",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 28
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-city-council-passes-a-resolution-against-islamophobia",
+   "outcome": "entry",
+   "target": "/events/columbus-city-council-passes-a-resolution-against-islamophobia",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "COLUMBUS CITY COUNCIL PASSES A RESOLUTION AGAINST ISLAMOPHOBIA",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 65
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-dads-meeting-for-wedgewood-kids",
+   "outcome": "entry",
+   "target": "/events/columbus-dads-meeting-for-wedgewood-kids",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Dads Meeting for Wedgewood Kids",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 43
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-earth-action-day-two",
+   "outcome": "entry",
+   "target": "/events/columbus-earth-action-day-two",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Earth Action Day Two",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-fasting-5k-2018-to-support-wedgewood-youth-%26-families",
+   "outcome": "entry",
+   "target": "/events/columbus-fasting-5k-2018-to-support-wedgewood-youth-and-families",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Fasting 5k 2018 To Support Wedgewood Youth & Families",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 65
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-interfaith-ramadan-iftar-dinner-2019",
+   "outcome": "entry",
+   "target": "/events/columbus-interfaith-ramadan-iftar-dinner-2019",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Interfaith Ramadan Iftar Dinner 2019",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 68
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-moms-meeting-for-wedgewood-kids",
+   "outcome": "entry",
+   "target": "/events/columbus-moms-meeting-for-wedgewood-kids",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Moms Meeting for Wedgewood Kids",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 43
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-muslim-youth-retreat-2017",
+   "outcome": "entry",
+   "target": "/events/columbus-muslim-youth-retreat-2017",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Muslim Youth Retreat 2017",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 37
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/columbus-rally-for-expanded-sanctuary",
+   "outcome": "entry",
+   "target": "/events/columbus-rally-for-expanded-sanctuary",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Columbus Rally for Expanded Sanctuary",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 40
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/dare-to-care-volunteer-training",
+   "outcome": "entry",
+   "target": "/events/dare-to-care-volunteer-training",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Dare to Care volunteer training",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 37
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/dayton-benefit-dinner-with-mayor-nan-whaley-",
+   "outcome": "entry",
+   "target": "/events/dayton-benefit-dinner-with-mayor-nan-whaley",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Dayton Benefit Dinner With Mayor Nan Whaley",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 46
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/dayton-muslim-domestic-violence-advocates-training",
+   "outcome": "entry",
+   "target": "/events/dayton-muslim-domestic-violence-advocates-training",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Dayton Muslim Domestic Violence Advocates Training",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 53
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/dayton-muslim-youth-summit---discover-yourself%3A-create-your-footprints-",
+   "outcome": "entry",
+   "target": "/events/dayton-muslim-youth-summit-discover-yourself-create-your-footprints",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Dayton Muslim Youth Summit - Discover Yourself: Create Your Footprints",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 73
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/dayton-muslims-mlk-event%3A-i-am-a-keeper",
+   "outcome": "entry",
+   "target": "/events/dayton-muslims-mlk-event-i-am-a-keeper",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Dayton Muslims MLK Event: I AM A Keeper",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 42
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/drugs%2C-gangs%2C-human-trafficking-%26-muslim-youth---isna-roundtable",
+   "outcome": "entry",
+   "target": "/events/drugs-gangs-human-trafficking-and-muslim-youth-isna-roundtable",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Drugs, Gangs, Human Trafficking & Muslim Youth - ISNA Roundtable",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 67
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/eakin-elementary-end-of-year-celebrations",
+   "outcome": "entry",
+   "target": "/events/eakin-elementary-end-of-year-celebrations",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Eakin Elementary End of Year Celebrations",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 44
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/earth-action-days%3A-neighborhood-spruce-up-and-celebrations",
+   "outcome": "entry",
+   "target": "/events/earth-action-days-neighborhood-spruce-up-and-celebrations",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Earth Action Days: Neighborhood Spruce Up and Celebrations",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 61
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/eid-al-adha-food-basket-drive-2016",
+   "outcome": "entry",
+   "target": "/events/eid-al-adha-food-basket-drive-2016",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Eid al-Adha Food Basket Drive 2016",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 37
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/eid-al-adha-mubarak",
+   "outcome": "entry",
+   "target": "/events/eid-al-adha-mubarak",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Eid Al Adha Mubarak",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 22
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/eid-open-house-2017",
+   "outcome": "entry",
+   "target": "/events/eid-open-house-2017",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Eid Open House 2017",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 22
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/emergency-rally-in-columbus%2C-oh",
+   "outcome": "entry",
+   "target": "/events/emergency-rally-in-columbus-oh",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Emergency Rally in Columbus, OH",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 34
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/engaging-in-a-healthy-parent%2Fteacher-relationship",
+   "outcome": "entry",
+   "target": "/events/engaging-in-a-healthy-parent-teacher-relationship",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Engaging in a Healthy Parent/Teacher Relationship",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 55
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/feed-the-needy-on-the-day-of-arafat",
+   "outcome": "entry",
+   "target": "/events/feed-the-needy-on-the-day-of-arafat",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Feed the Needy on the Day of Arafat",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 38
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/feed-the-needy-on-the-day-of-arafat-2016",
+   "outcome": "entry",
+   "target": "/events/feed-the-needy-on-the-day-of-arafat-2016",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Feed the Needy on the Day of Arafat 2016",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 43
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/feeding-the-needy-on-the-day-of-arafat-2016",
+   "outcome": "entry",
+   "target": "/events/feeding-the-needy-on-the-day-of-arafat-2016",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Feeding the Needy on the Day of Arafat 2016",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 46
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/free-esl-classes-in-dayton",
+   "outcome": "entry",
+   "target": "/events/free-esl-classes-in-dayton",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Free ESL Classes in Dayton",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/from-dr.-king-to-our-three-winners-to--our-future",
+   "outcome": "entry",
+   "target": "/events/from-dr-king-to-our-three-winners-to-our-future",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "From Dr. King To Our Three Winners To Our Future",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 51
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/healthy-and-moving%2C-2020",
+   "outcome": "entry",
+   "target": "/events/healthy-and-moving-2020",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Healthy and Moving, 2020",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 30
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/hilltop-spruce-up-%26-celebrations",
+   "outcome": "entry",
+   "target": "/events/hilltop-spruce-up-and-celebrations",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Hilltop Spruce Up & Celebrations",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 35
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/hilltop-youth-soccer-summer-league-awards-nights!",
+   "outcome": "entry",
+   "target": "/events/hilltop-youth-soccer-summer-league-awards-nights",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Hilltop Youth Soccer Summer League Awards Nights!",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 52
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/homosexuality-and-muslim-americans",
+   "outcome": "entry",
+   "target": "/events/homosexuality-and-muslim-americans",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Homosexuality and Muslim Americans",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 37
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/honoring-%26-celebrating-mayor-nan-whaley---annual-dinner-2019",
+   "outcome": "entry",
+   "target": "/events/honoring-and-celebrating-mayor-nan-whaley-annual-dinner-2019",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Honoring & Celebrating Mayor Nan Whaley - Annual Dinner 2019",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 63
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/iftaar-dinner-17-to-support-orphans%2C-refugees-%26-needy-in-columbus",
+   "outcome": "entry",
+   "target": "/events/iftaar-dinner-17-to-support-orphans-refugees-and-needy-in-columbus",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Iftaar Dinner 17 to Support Orphans, Refugees & Needy in Columbus",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 68
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/iftaar-dinner-to-support-orphans%2C-refugees-%26-needy-in-columbus",
+   "outcome": "entry",
+   "target": "/events/iftaar-dinner-to-support-orphans-refugees-and-needy-in-columbus",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Iftaar Dinner to Support Orphans, Refugees & Needy in Columbus",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 65
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/iftaar-fundraiser%3A-%22furthering-their-legacies%22-with-farris-barakat",
+   "outcome": "entry",
+   "target": "/events/iftaar-fundraiser-furthering-their-legacies-with-farris-barakat",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Iftaar Fundraiser: \"Furthering Their Legacies\" with Farris Barakat",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 69
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/iftaar-kitchen-2017-week-2",
+   "outcome": "entry",
+   "target": "/events/iftaar-kitchen-2017-week-2",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Iftaar Kitchen 2017 Week 2",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/iftaar-kitchen-2017-week-2-day-1",
+   "outcome": "entry",
+   "target": "/events/iftaar-kitchen-2017-week-2-day-1",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Iftaar Kitchen 2017 Week 2 Day 1",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 35
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/iftaar-kitchen-2017-week-3-",
+   "outcome": "entry",
+   "target": "/events/iftaar-kitchen-2017-week-3",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Iftaar Kitchen 2017 Week 3",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/iftaar-kitchen-2017-week-4",
+   "outcome": "entry",
+   "target": "/events/iftaar-kitchen-2017-week-4",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Iftaar Kitchen 2017 Week 4",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/interfaith-celebration-of-mothers",
+   "outcome": "entry",
+   "target": "/events/interfaith-celebration-of-mothers",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Interfaith Celebration of Mothers",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 36
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/interfaith-vigil-for-new-zealand-victims-and-rally-against-hate",
+   "outcome": "entry",
+   "target": "/events/interfaith-vigil-for-new-zealand-victims-and-rally-against-hate",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Interfaith Vigil For New Zealand Victims and Rally Against Hate",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 66
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/interfaith-vigil-for-victims-of-islamophobia",
+   "outcome": "entry",
+   "target": "/events/interfaith-vigil-for-victims-of-islamophobia",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Interfaith Vigil for Victims of Islamophobia",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 47
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/internet-safety-for-the-family",
+   "outcome": "entry",
+   "target": "/events/internet-safety-for-the-family",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Internet Safety for the Family",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 36
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/mandated-reporter-training",
+   "outcome": "entry",
+   "target": "/events/mandated-reporter-training",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Mandated Reporter Training",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/mlk-march",
+   "outcome": "entry",
+   "target": "/events/mlk-march",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MLK March",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 12
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/muslim-leaders-dinner-by-ncrc",
+   "outcome": "entry",
+   "target": "/events/muslim-leaders-dinner-by-ncrc",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Muslim Leaders Dinner by NCRC",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/muslim-youth-townhall",
+   "outcome": "entry",
+   "target": "/events/muslim-youth-townhall",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Muslim Youth Townhall",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 24
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-deah's-goodwill-store---volunteers-needed",
+   "outcome": "entry",
+   "target": "/events/my-deahs-goodwill-store-volunteers-needed",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Deah's Goodwill Store - Volunteers Needed",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 47
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-deah's-goodwill-store-reorganization",
+   "outcome": "entry",
+   "target": "/events/my-deahs-goodwill-store-reorganization",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Deah's Goodwill Store Reorganization",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 42
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-deah's-reorganizing-day",
+   "outcome": "entry",
+   "target": "/events/my-deahs-reorganizing-day",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Deah's Reorganizing Day",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-deah's-warehouse---sorting-week-kick-off",
+   "outcome": "entry",
+   "target": "/events/my-deahs-warehouse-sorting-week-kick-off",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Deah's Warehouse - Sorting Week Kick Off",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 46
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-earth-action-day-3",
+   "outcome": "entry",
+   "target": "/events/my-earth-action-day-3",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Earth Action Day 3",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 24
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-earth-action-day-4",
+   "outcome": "entry",
+   "target": "/events/my-earth-action-day-4",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Earth Action Day 4",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 24
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-earth-action-day-5",
+   "outcome": "entry",
+   "target": "/events/my-earth-action-day-5",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Earth Action Day 5",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 24
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-earth-action-day-6",
+   "outcome": "entry",
+   "target": "/events/my-earth-action-day-6",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Earth Action Day 6",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 24
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-eid-drive-2016",
+   "outcome": "entry",
+   "target": "/events/my-eid-drive-2016",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "My Eid Drive 2016",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 20
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-eid-goodwill-bazaar",
+   "outcome": "entry",
+   "target": "/events/my-eid-goodwill-bazaar",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Eid Goodwill Bazaar",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-eid-toys-drive-2015",
+   "outcome": "entry",
+   "target": "/events/my-eid-toys-drive-2015",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Eid Toys Drive 2015",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-eid-toys-drive-2016",
+   "outcome": "entry",
+   "target": "/events/my-eid-toys-drive-2016",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Eid Toys Drive 2016",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-eid-toys-drive-2017---a-happy-eid-for-every-kid",
+   "outcome": "entry",
+   "target": "/events/my-eid-toys-drive-2017-a-happy-eid-for-every-kid",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Eid Toys Drive 2017 - A Happy Eid for Every Kid",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 53
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-eid-toys-drive-2018",
+   "outcome": "entry",
+   "target": "/events/my-eid-toys-drive-2018",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Eid Toys Drive 2018",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 19
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-%2322",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-22",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day #22",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 27
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-%2323",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-23",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day #23",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 27
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-%2324",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-24",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day #24",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 27
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-19",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-19",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 19",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-20",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-20",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 20",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-29%2C-30%2C-%26-31",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-29-30-and-31",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "My Family Pantry Day 29, 30, & 31",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 36
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-3-at-my-deah's",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-3-at-my-deahs",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 3 At My Deah's",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 38
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-32",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-32",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 32",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-33",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-33",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 33",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-34",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-34",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 34",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-35",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-35",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 35",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-4",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-4",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 4",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-43",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-43",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 43",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-44",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-44",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 44",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-45",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-45",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 45",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-5-",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-5",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 5",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-6-",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-6",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 6",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-7",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-7",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 7",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-day-8-",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-day-8",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Day 8",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-days-25-%26amp%3B-26",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-days-25-and-26",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Days 25 & 26",
+   "coverage": 0.8571428571428571,
+   "missingSample": [
+    "amp"
+   ],
+   "sourceChars": 36
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-days-27-%26-28",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-days-27-and-28",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "My Family Pantry Days 27 & 28",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-days-36-40",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-days-36-40",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Days 36-40",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 30
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry-days-41-%26-42",
+   "outcome": "entry",
+   "target": "/events/my-family-pantry-days-41-and-42",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry Days 41 & 42",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-family-pantry's-first-anniversary-celebration-",
+   "outcome": "entry",
+   "target": "/events/my-family-pantrys-first-anniversary-celebration",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Family Pantry's First Anniversary Celebration",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 51
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-hilltop-project-day-4",
+   "outcome": "entry",
+   "target": "/events/my-hilltop-project-day-4",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Hilltop Project Day 4",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 27
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-hilltop-project-day-5",
+   "outcome": "entry",
+   "target": "/events/my-hilltop-project-day-5",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Hilltop Project Day 5",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 27
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2015",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2015",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2015",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 25
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2016%3A-feeding-homeless-%26-needy-in-ramadan---a-youth-initiative",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2016-feeding-homeless-and-needy-in-ramadan-a-youth-initiative",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2016: Feeding Homeless & Needy in Ramadan - A Youth Initiative",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 83
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2016%3A-feeding-the-homeless-and-the-needy-during-ramadan",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2016-feeding-the-homeless-and-the-needy-during-ramadan",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2016: Feeding the Homeless and the Needy during Ramadan",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 76
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2017-day-1",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2017-day-1",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2017 Day 1",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 31
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2017-day-2",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2017-day-2",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2017 Day 2",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 31
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2017-day-3%2C4%2C5",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2017-day-3-4-5",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2017 Day 3,4,5",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 35
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2017-day-6%2C-7-%26-8",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2017-day-6-7-and-8",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2017 Day 6, 7 & 8",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 38
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-iftaar-kitchen-2017%3A-feeding-homeless-%26-needy-in-ramadan",
+   "outcome": "entry",
+   "target": "/events/my-iftaar-kitchen-2017-feeding-homeless-and-needy-in-ramadan",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Iftaar Kitchen 2017: Feeding Homeless & Needy in Ramadan",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 62
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-leaders-youth-camp-(age-13---17)-",
+   "outcome": "entry",
+   "target": "/events/my-leaders-youth-camp-age-13-17",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Leaders Youth Camp (Age 13 - 17)",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 38
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa-%40-isna-convention-2015-",
+   "outcome": "entry",
+   "target": "/events/my-project-usa-isna-convention-2015",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA @ ISNA Convention 2015",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 40
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa-%40-the-independence-day-festival",
+   "outcome": "entry",
+   "target": "/events/my-project-usa-the-independence-day-festival",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA @ The Independence Day Festival",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 49
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa-annual-banquet-%26-awards-2020",
+   "outcome": "entry",
+   "target": "/events/my-project-usa-annual-banquet-and-awards-2020",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA Annual Banquet & Awards 2020",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 102
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa-annual-dinner-%26amp%3B-awards-2019",
+   "outcome": "entry",
+   "target": "/events/my-project-usa-annual-dinner-and-awards-2019",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA Annual Dinner & Awards 2019",
+   "coverage": 0.875,
+   "missingSample": [
+    "amp"
+   ],
+   "sourceChars": 49
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa-annual-dinner-2017",
+   "outcome": "entry",
+   "target": "/events/my-project-usa-annual-dinner-2017",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA Annual Dinner 2017",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 36
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa-volunteers-open-house---fall-season",
+   "outcome": "entry",
+   "target": "/events/my-project-usa-volunteers-open-house-fall-season",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA Volunteers Open House - Fall Season",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 53
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa%3A-'16--'17-planning-meeting",
+   "outcome": "entry",
+   "target": "/events/my-project-usa-16-17-planning-meeting",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA: '16 -'17 Planning Meeting",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 44
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-project-usa's-booth-at-the-isna-convention-2017",
+   "outcome": "entry",
+   "target": "/events/my-project-usas-booth-at-the-isna-convention-2017",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Project USA'S Booth At The ISNA Convention 2017",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 53
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-social-media-contest",
+   "outcome": "entry",
+   "target": "/events/my-social-media-contest",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Social Media Contest",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-soup-kitchen---bi-weekly",
+   "outcome": "entry",
+   "target": "/events/my-soup-kitchen-bi-weekly",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Soup Kitchen - Bi Weekly",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 30
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-thanksgiving-food-basket-drive",
+   "outcome": "entry",
+   "target": "/events/my-thanksgiving-food-basket-drive",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Thanksgiving Food Basket Drive",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 36
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-wedgewood-project-day-1",
+   "outcome": "entry",
+   "target": "/events/my-wedgewood-project-day-1",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Wedgewood Project Day 1",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-wedgewood-project-day-2",
+   "outcome": "entry",
+   "target": "/events/my-wedgewood-project-day-2",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Wedgewood Project Day 2",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-wedgewood-project-day-3-",
+   "outcome": "entry",
+   "target": "/events/my-wedgewood-project-day-3",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Wedgewood Project Day 3",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/my-winter-clothes-drive",
+   "outcome": "entry",
+   "target": "/events/my-winter-clothes-drive",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "MY Winter Clothes Drive",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 26
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/not-just-a-month",
+   "outcome": "entry",
+   "target": "/events/not-just-a-month",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Not Just a Month",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 22
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/old-north-dayton-multicultural-spring-fling",
+   "outcome": "entry",
+   "target": "/events/old-north-dayton-multicultural-spring-fling",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Old North Dayton Multicultural Spring Fling",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 46
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/parent-empowerment-series-episode-1",
+   "outcome": "entry",
+   "target": "/events/parent-empowerment-series-episode-1",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Parent Empowerment Series Episode 1",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 41
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/protecting-and-empowering-our-youth",
+   "outcome": "entry",
+   "target": "/events/protecting-and-empowering-our-youth",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "PROTECTING AND EMPOWERING OUR YOUTH",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 38
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/ramadan%2Feid-food-basket--drive-",
+   "outcome": "entry",
+   "target": "/events/ramadan-eid-food-basket-drive",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Ramadan/Eid Food Basket Drive",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/roundtable-at-isna%3A-drugs%2C-gangs%2C-and-human-trafficking",
+   "outcome": "entry",
+   "target": "/events/roundtable-at-isna-drugs-gangs-and-human-trafficking",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Roundtable at ISNA: Drugs, Gangs, and Human Trafficking",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 58
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/school-supplies-openhouse-",
+   "outcome": "entry",
+   "target": "/events/school-supplies-openhouse",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "School Supplies Openhouse",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 28
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/service-providers-luncheon-by-ncrc",
+   "outcome": "entry",
+   "target": "/events/service-providers-luncheon-by-ncrc",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Service Providers Luncheon by NCRC",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 37
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/sharing-eid-blessings-at-my-deah's",
+   "outcome": "entry",
+   "target": "/events/sharing-eid-blessings-at-my-deahs",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Sharing Eid Blessings at MY Deah's",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 37
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/soar-like-eagles---my-project-usa-annual-banquet-%26-awards-2021",
+   "outcome": "entry",
+   "target": "/events/soar-like-eagles-my-project-usa-annual-banquet-and-awards-2021",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Soar Like Eagles - MY Project USA Annual Banquet & Awards 2021",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 85
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/thanks-is-giving---my-family-pantry-kickoff",
+   "outcome": "entry",
+   "target": "/events/thanks-is-giving-my-family-pantry-kickoff",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Thanks is Giving - MY Family Pantry Kickoff",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 46
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-art-of-empowering-muslim-teens",
+   "outcome": "entry",
+   "target": "/events/the-art-of-empowering-muslim-teens",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The Art of Empowering Muslim Teens",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 37
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-big-table---hilltop-youth%3A-opportunities-and-challenges--4-pm-session",
+   "outcome": "entry",
+   "target": "/events/the-big-table-hilltop-youth-opportunities-and-challenges-4-pm-session",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The Big Table - Hilltop Youth: Opportunities and Challenges- 4 pm Session",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 79
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-big-table---hilltop-youth%3A-opportunities-and-challenges--noon-session",
+   "outcome": "entry",
+   "target": "/events/the-big-table-hilltop-youth-opportunities-and-challenges-noon-session",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The Big Table - Hilltop Youth: Opportunities and Challenges- Noon Session",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 79
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-columbus-expanded-sanctuary-meeting",
+   "outcome": "entry",
+   "target": "/events/the-columbus-expanded-sanctuary-meeting",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The Columbus Expanded Sanctuary Meeting",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 42
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-columbus-unity-meeting%3A-immigrants-in-trumpland",
+   "outcome": "entry",
+   "target": "/events/the-columbus-unity-meeting-immigrants-in-trumpland",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The Columbus Unity Meeting: Immigrants in Trumpland",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 54
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-concert-%26-spoken-word-%22the-narratives-of-resilience%22",
+   "outcome": "entry",
+   "target": "/events/the-concert-and-spoken-word-the-narratives-of-resilience",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "THE CONCERT & SPOKEN WORD \"THE NARRATIVES OF RESILIENCE\"",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 59
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-first-muslim-american-parents-summit",
+   "outcome": "entry",
+   "target": "/events/the-first-muslim-american-parents-summit",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The First Muslim American Parents Summit",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 43
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-first-muslim-american-youth-summit",
+   "outcome": "entry",
+   "target": "/events/the-first-muslim-american-youth-summit",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The First Muslim American Youth Summit",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 41
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/the-village---ramadan-interfaith-gathering-2021",
+   "outcome": "entry",
+   "target": "/events/the-village-ramadan-interfaith-gathering-2021",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "The Village - Ramadan Interfaith Gathering 2021",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 53
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/volunteer-appreciation-night",
+   "outcome": "entry",
+   "target": "/events/volunteer-appreciation-night",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Volunteer Appreciation Night",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 31
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/wedgewood-middle-school-registration-day",
+   "outcome": "entry",
+   "target": "/events/wedgewood-middle-school-registration-day",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Wedgewood Middle School Registration Day",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 43
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/wedgewood-parents%26%2339%3B-dinner-",
+   "outcome": "entry",
+   "target": "/events/wedgewood-parents-dinner",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Wedgewood Parents' Dinner",
+   "coverage": 0.5,
+   "missingSample": [
+    "parents",
+    "39"
+   ],
+   "sourceChars": 32
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/wedgewood-readers-warriors-",
+   "outcome": "entry",
+   "target": "/events/wedgewood-readers-warriors",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Wedgewood Readers Warriors",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/wedgewood-spring-celebrations",
+   "outcome": "entry",
+   "target": "/events/wedgewood-spring-celebrations",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Wedgewood Spring Celebrations",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 35
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/wedgewood-spruce-up-day-1",
+   "outcome": "entry",
+   "target": "/events/wedgewood-spruce-up-day-1",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Wedgewood Spruce Up Day 1",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 28
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/wedgewood-spruce-up-day-2-",
+   "outcome": "entry",
+   "target": "/events/wedgewood-spruce-up-day-2",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Wedgewood Spruce Up Day 2",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 28
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/wedgewood-youth-programs-",
+   "outcome": "entry",
+   "target": "/events/wedgewood-youth-programs",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Wedgewood Youth Programs",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 27
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/workshop%3A-speak-to-others-about-human-trafficking-",
+   "outcome": "entry",
+   "target": "/events/workshop-speak-to-others-about-human-trafficking",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Workshop: Speak to Others About Human Trafficking",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 52
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/youth-conference-planning-committee-meeting",
+   "outcome": "entry",
+   "target": "/events/youth-conference-planning-committee-meeting",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Youth Conference Planning Committee Meeting",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 46
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-1/youth-for-change-summit",
+   "outcome": "entry",
+   "target": "/events/youth-for-change-summit",
+   "notes": [
+    "Event date, time and description are not published on the Wix event page (only title, price and image); see migration limitations"
+   ],
+   "title": "Youth for Change Summit",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 29
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-2",
+   "outcome": "page",
+   "target": "/events-2",
+   "notes": [],
+   "title": "Events",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 845
+  },
+  {
+   "source": "https://www.myprojectusa.org/events-registration",
+   "outcome": "page",
+   "target": "/events-registration",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Events Registration",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 131
+  },
+  {
+   "source": "https://www.myprojectusa.org/fgm",
+   "outcome": "page",
+   "target": "/fgm",
+   "notes": [],
+   "title": "Muslims Against FGM",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 8223
+  },
+  {
+   "source": "https://www.myprojectusa.org/fr/free-clinic",
+   "outcome": "page",
+   "target": "/fr/free-clinic",
+   "notes": [],
+   "title": "Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow",
+   "coverage": 0.9985007496251874,
+   "missingSample": [
+    "fr"
+   ],
+   "sourceChars": 4736
+  },
+  {
+   "source": "https://www.myprojectusa.org/fr/freeclinicteam",
+   "outcome": "page",
+   "target": "/fr/freeclinicteam",
+   "notes": [],
+   "title": "À propos de notre clinique",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1135
+  },
+  {
+   "source": "https://www.myprojectusa.org/free-clinic",
+   "outcome": "page",
+   "target": "/free-clinic",
+   "notes": [],
+   "title": "Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow",
+   "coverage": 0.9983870967741936,
+   "missingSample": [
+    "en"
+   ],
+   "sourceChars": 4298
+  },
+  {
+   "source": "https://www.myprojectusa.org/freeclinicteam",
+   "outcome": "page",
+   "target": "/freeclinicteam",
+   "notes": [],
+   "title": "Join Hilltop Free Clinic Team",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2685
+  },
+  {
+   "source": "https://www.myprojectusa.org/helpers-1",
+   "outcome": "page",
+   "target": "/helpers-1",
+   "notes": [],
+   "title": "MY Helper's Network",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 99
+  },
+  {
+   "source": "https://www.myprojectusa.org/helpline",
+   "outcome": "page",
+   "target": "/helpline",
+   "notes": [],
+   "title": "MY Helpline Services",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1166
+  },
+  {
+   "source": "https://www.myprojectusa.org/hilltopsustainability",
+   "outcome": "page",
+   "target": "/hilltopsustainability",
+   "notes": [],
+   "title": "Hilltop Sustainability Program",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1966
+  },
+  {
+   "source": "https://www.myprojectusa.org/ht/awards",
+   "outcome": "skipped",
+   "target": "(locale fallback)",
+   "notes": [
+    "Locale copy of an English page (Wix served English content); handled by language fallback"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/ht/free-clinic",
+   "outcome": "page",
+   "target": "/ht/free-clinic",
+   "notes": [],
+   "title": "Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow",
+   "coverage": 0.9984591679506933,
+   "missingSample": [
+    "ht"
+   ],
+   "sourceChars": 4176
+  },
+  {
+   "source": "https://www.myprojectusa.org/ht/freeclinicteam",
+   "outcome": "page",
+   "target": "/ht/freeclinicteam",
+   "notes": [],
+   "title": "Konsènan Klinik Nou an",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1013
+  },
+  {
+   "source": "https://www.myprojectusa.org/iftaar-fundraiser",
+   "outcome": "page",
+   "target": "/iftaar-fundraiser",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)",
+    "Custom-HTML embed (Eventbrite button) converted to a link button",
+    "Custom-HTML embed (Eventbrite button) converted to a link button"
+   ],
+   "title": "Subscribe For Updates",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1752
+  },
+  {
+   "source": "https://www.myprojectusa.org/issues",
+   "outcome": "page",
+   "target": "/issues",
+   "notes": [],
+   "title": "The Issues We Address",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 10891
+  },
+  {
+   "source": "https://www.myprojectusa.org/job-opportunities",
+   "outcome": "page",
+   "target": "/job-opportunities",
+   "notes": [],
+   "title": "Job Opportunities",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 638
+  },
+  {
+   "source": "https://www.myprojectusa.org/join-helpers-network",
+   "outcome": "page",
+   "target": "/join-helpers-network",
+   "notes": [],
+   "title": "JOIN HELPERS NETWORK",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 20
+  },
+  {
+   "source": "https://www.myprojectusa.org/join-us",
+   "outcome": "page",
+   "target": "/join-us",
+   "notes": [],
+   "title": "Join Us",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 772
+  },
+  {
+   "source": "https://www.myprojectusa.org/join-us-myleaders",
+   "outcome": "page",
+   "target": "/join-us-myleaders",
+   "notes": [],
+   "title": "Join Us: MY Leaders (Age 13-25)",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 366
+  },
+  {
+   "source": "https://www.myprojectusa.org/local-chapters-1",
+   "outcome": "page",
+   "target": "/local-chapters-1",
+   "notes": [
+    "Removed Wix template placeholder text: “I'm a paragraph. Click here to add your own text and edit me…”"
+   ],
+   "title": "THE LOCAL CHAPTERS",
+   "coverage": 0.9020332717190388,
+   "missingSample": [
+    "i'm",
+    "paragraph",
+    "click",
+    "here",
+    "add",
+    "your",
+    "text",
+    "edit",
+    "me",
+    "it's",
+    "easy",
+    "just",
+    "double",
+    "you",
+    "adding",
+    "content",
+    "make",
+    "changes",
+    "font",
+    "great",
+    "place",
+    "tell",
+    "story",
+    "let",
+    "users"
+   ],
+   "sourceChars": 3417
+  },
+  {
+   "source": "https://www.myprojectusa.org/muslims-against-human-trafficking",
+   "outcome": "page",
+   "target": "/muslims-against-human-trafficking",
+   "notes": [],
+   "title": "Muslims Against Human Trafficking",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 6502
+  },
+  {
+   "source": "https://www.myprojectusa.org/my-community-cafe",
+   "outcome": "page",
+   "target": "/my-community-cafe",
+   "notes": [
+    "Button “Order Now” had no link on the original site"
+   ],
+   "title": "MY Community Café",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 849
+  },
+  {
+   "source": "https://www.myprojectusa.org/my-deahs-store",
+   "outcome": "redirect",
+   "target": "/cjl-dropoff-locations",
+   "notes": [
+    "Wix already redirected this URL"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/my-earth-action-day-3",
+   "outcome": "page",
+   "target": "/my-earth-action-day-3",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Subscribe For Updates",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2390
+  },
+  {
+   "source": "https://www.myprojectusa.org/my-leaders-camp-registraion",
+   "outcome": "page",
+   "target": "/my-leaders-camp-registraion",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Registration: MY Leaders Camp 2015",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1461
+  },
+  {
+   "source": "https://www.myprojectusa.org/myp-cscc-conference2017",
+   "outcome": "page",
+   "target": "/myp-cscc-conference2017",
+   "notes": [
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)",
+    "Wix form “Join our mailing list” rebuilt as a CMS form (submissions are stored securely and listed under Admin › Form submissions)",
+    "Page had no visible heading; title taken from the browser tab title"
+   ],
+   "title": "MY Project USA - CSCC Youth Leaderhip Conference 2017",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1994
+  },
+  {
+   "source": "https://www.myprojectusa.org/myp-cscc-conference2017-program",
+   "outcome": "page",
+   "target": "/myp-cscc-conference2017-program",
+   "notes": [
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)",
+    "Wix form “Join our mailing list” rebuilt as a CMS form (submissions are stored securely and listed under Admin › Form submissions)",
+    "Page had no visible heading; title taken from the browser tab title"
+   ],
+   "title": "MY Project USA - CSCC - Conference 2017 Program",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 85
+  },
+  {
+   "source": "https://www.myprojectusa.org/myp-cscc-conference2017-speakers",
+   "outcome": "page",
+   "target": "/myp-cscc-conference2017-speakers",
+   "notes": [
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)",
+    "Wix form “Join our mailing list” rebuilt as a CMS form (submissions are stored securely and listed under Admin › Form submissions)"
+   ],
+   "title": "Meet Our Speakers",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 18189
+  },
+  {
+   "source": "https://www.myprojectusa.org/news-coverage",
+   "outcome": "page",
+   "target": "/news-coverage",
+   "notes": [],
+   "title": "MY Project USA in the News",
+   "coverage": 0.9792560801144492,
+   "missingSample": [
+    "full",
+    "here",
+    "story",
+    "click"
+   ],
+   "sourceChars": 8697
+  },
+  {
+   "source": "https://www.myprojectusa.org/newsletter",
+   "outcome": "page",
+   "target": "/newsletter",
+   "notes": [],
+   "title": "Newsletters",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 24014
+  },
+  {
+   "source": "https://www.myprojectusa.org/old-donors-2",
+   "outcome": "page",
+   "target": "/old-donors-2",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)",
+    "Button “Pay Zakat Now” had no link on the original site"
+   ],
+   "title": "DONATE TO SAVE LIVES & FAMILIES",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 3560
+  },
+  {
+   "source": "https://www.myprojectusa.org/old-donors-page",
+   "outcome": "page",
+   "target": "/old-donors-page",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)",
+    "Button “VIEW MORE” had no link on the original site",
+    "Button “VIEW MORE” had no link on the original site"
+   ],
+   "title": "DONATE TO SAVE LIVES & FAMILIES",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 3680
+  },
+  {
+   "source": "https://www.myprojectusa.org/old-youth-page",
+   "outcome": "page",
+   "target": "/old-youth-page",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "THE LEADER YOU BECOME",
+   "coverage": 0.9849462365591398,
+   "missingSample": [
+    "join",
+    "my",
+    "leaders",
+    "camp",
+    "2015",
+    "now",
+    "us"
+   ],
+   "sourceChars": 3004
+  },
+  {
+   "source": "https://www.myprojectusa.org/parent-sign-up",
+   "outcome": "page",
+   "target": "/parent-sign-up",
+   "notes": [
+    "Button “GO TO MY PARENTS NETWORK” had no link on the original site"
+   ],
+   "title": "PARENTS NETWORK SIGN UP",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 468
+  },
+  {
+   "source": "https://www.myprojectusa.org/parents",
+   "outcome": "page",
+   "target": "/parents",
+   "notes": [],
+   "title": "MY Parents Network",
+   "coverage": 0.9722222222222222,
+   "missingSample": [
+    "join",
+    "us",
+    "now",
+    "more",
+    "info"
+   ],
+   "sourceChars": 1650
+  },
+  {
+   "source": "https://www.myprojectusa.org/partners",
+   "outcome": "page",
+   "target": "/partners",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Subscribe For Updates",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 307
+  },
+  {
+   "source": "https://www.myprojectusa.org/ppe",
+   "outcome": "page",
+   "target": "/ppe",
+   "notes": [],
+   "title": "#BetterTogether Resources Coalition",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1633
+  },
+  {
+   "source": "https://www.myprojectusa.org/press-release",
+   "outcome": "page",
+   "target": "/press-release",
+   "notes": [],
+   "title": "PRESS RELEASE",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 4980
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/1",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/10",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/11",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/12",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/2",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/4",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/5",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/5-1",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/6",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/7",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/8",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/product-page/i-m-a-product",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/professional-development",
+   "outcome": "page",
+   "target": "/professional-development",
+   "notes": [],
+   "title": "Professional Development",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1513
+  },
+  {
+   "source": "https://www.myprojectusa.org/register-homosexuality-forum",
+   "outcome": "page",
+   "target": "/register-homosexuality-forum",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Registration: Homosexuality & Muslim Americans Forum",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 426
+  },
+  {
+   "source": "https://www.myprojectusa.org/register-national-earth-day",
+   "outcome": "page",
+   "target": "/register-national-earth-day",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "National Earth Action Day: Register A Group",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 101
+  },
+  {
+   "source": "https://www.myprojectusa.org/register-social-media-campaign",
+   "outcome": "page",
+   "target": "/register-social-media-campaign",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Rgister To Enter Social Media Contest",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 94
+  },
+  {
+   "source": "https://www.myprojectusa.org/reports",
+   "outcome": "page",
+   "target": "/reports",
+   "notes": [
+    "“Auditor's Report 2024” has no document on the original site — imported as an unpublished draft so staff can upload the file",
+    "Report downloads converted to the Reports collection (staff add new reports there; they appear here automatically)"
+   ],
+   "title": "MY Project USA Reports",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 985
+  },
+  {
+   "source": "https://www.myprojectusa.org/research",
+   "outcome": "page",
+   "target": "/research",
+   "notes": [],
+   "title": "Research",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 584
+  },
+  {
+   "source": "https://www.myprojectusa.org/services",
+   "outcome": "page",
+   "target": "/services",
+   "notes": [],
+   "title": "Services",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 4845
+  },
+  {
+   "source": "https://www.myprojectusa.org/shop",
+   "outcome": "redirect",
+   "target": "/",
+   "notes": [
+    "Wix Stores template placeholder (“I'm a product”) — no organisational content"
+   ]
+  },
+  {
+   "source": "https://www.myprojectusa.org/siblings",
+   "outcome": "page",
+   "target": "/siblings",
+   "notes": [
+    "Page had no visible heading; title taken from the browser tab title"
+   ],
+   "title": "Sibling Separation",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 8266
+  },
+  {
+   "source": "https://www.myprojectusa.org/single-post/2015/02/19/mohammad-abdullah-saleem-the-new-face-of-muslim-child-molestation",
+   "outcome": "entry",
+   "target": "/blog/mohammad-abdullah-saleem-the-new-face-of-muslim-child-molestation",
+   "notes": [
+    "Wix blog sidebar (recent posts, archive, tag list, follow buttons) is replaced by the new blog listing"
+   ],
+   "title": "Mohammad Abdullah Saleem: The New Face of Muslim Child Molestation",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 717
+  },
+  {
+   "source": "https://www.myprojectusa.org/single-post/2015/03/20/three-years-after-khalil-and-abdifatah",
+   "outcome": "entry",
+   "target": "/blog/three-years-after-khalil-and-abdifatah",
+   "notes": [
+    "Wix blog sidebar (recent posts, archive, tag list, follow buttons) is replaced by the new blog listing"
+   ],
+   "title": "Three Years after Khalil and Abdifatah",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 5903
+  },
+  {
+   "source": "https://www.myprojectusa.org/single-post/2015/05/11/abusive-muslim-mothers-their-victims-need-our-help",
+   "outcome": "entry",
+   "target": "/blog/abusive-muslim-mothers-their-victims-need-our-help",
+   "notes": [
+    "Wix blog sidebar (recent posts, archive, tag list, follow buttons) is replaced by the new blog listing"
+   ],
+   "title": "Abusive Muslim Mothers & Their Victims Need Our Help",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 894
+  },
+  {
+   "source": "https://www.myprojectusa.org/single-post/2015/07/01/fatima-13-a-sexslave-in-2015-america",
+   "outcome": "entry",
+   "target": "/blog/fatima-13-a-sexslave-in-2015-america",
+   "notes": [
+    "Wix blog sidebar (recent posts, archive, tag list, follow buttons) is replaced by the new blog listing"
+   ],
+   "title": "Fatima, 13, a Sex-Slave in 2015 America",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 938
+  },
+  {
+   "source": "https://www.myprojectusa.org/single-post/2015/09/23/the-day-of-arafat-and-those-little-princesses",
+   "outcome": "entry",
+   "target": "/blog/the-day-of-arafat-and-those-little-princesses",
+   "notes": [
+    "Wix blog sidebar (recent posts, archive, tag list, follow buttons) is replaced by the new blog listing"
+   ],
+   "title": "The Day of Arafat and Those Little Princesses",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 949
+  },
+  {
+   "source": "https://www.myprojectusa.org/single-post/2015/10/09/think-beyond-winter-coats-soup-bowls",
+   "outcome": "entry",
+   "target": "/blog/think-beyond-winter-coats-soup-bowls",
+   "notes": [
+    "Wix blog sidebar (recent posts, archive, tag list, follow buttons) is replaced by the new blog listing"
+   ],
+   "title": "Think Beyond Winter Coats & Soup Bowls",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 562
+  },
+  {
+   "source": "https://www.myprojectusa.org/stopfgm",
+   "outcome": "page",
+   "target": "/stopfgm",
+   "notes": [
+    "Dropped Wix language-menu widget",
+    "Wix form “I am a Muslim Religious Leader/Scholar. Female Genital Mutilation/Cutting is a Harm and Haram.” rebuilt as a CMS form (submissions are stored securely and listed under Admin › Form submissions)",
+    "Wix form “I am a Muslim. I am against Female Genital Mutilation/Cutting.” rebuilt as a CMS form (submissions are stored securely and listed under Admin › Form submissions)"
+   ],
+   "title": "Sign This Letter To End FGM",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 199
+  },
+  {
+   "source": "https://www.myprojectusa.org/summer",
+   "outcome": "page",
+   "target": "/summer",
+   "notes": [
+    "Page had no visible heading; title taken from the browser tab title"
+   ],
+   "title": "Summer",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 95
+  },
+  {
+   "source": "https://www.myprojectusa.org/team",
+   "outcome": "page",
+   "target": "/team",
+   "notes": [],
+   "title": "Our Team",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 459
+  },
+  {
+   "source": "https://www.myprojectusa.org/ventures",
+   "outcome": "page",
+   "target": "/ventures",
+   "notes": [],
+   "title": "MY Project USA Social Venture Partnerships",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 999
+  },
+  {
+   "source": "https://www.myprojectusa.org/vision-mission-goals",
+   "outcome": "page",
+   "target": "/vision-mission-goals",
+   "notes": [],
+   "title": "About Us",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 3302
+  },
+  {
+   "source": "https://www.myprojectusa.org/volunteer",
+   "outcome": "page",
+   "target": "/volunteer",
+   "notes": [],
+   "title": "Volunteer",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 4957
+  },
+  {
+   "source": "https://www.myprojectusa.org/wellness-parents",
+   "outcome": "page",
+   "target": "/wellness-parents",
+   "notes": [],
+   "title": "Wellness Parents",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2574
+  },
+  {
+   "source": "https://www.myprojectusa.org/wellnessresources",
+   "outcome": "page",
+   "target": "/wellnessresources",
+   "notes": [],
+   "title": "Wellness Resources",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2769
+  },
+  {
+   "source": "https://www.myprojectusa.org/wellnesswarriors",
+   "outcome": "page",
+   "target": "/wellnesswarriors",
+   "notes": [],
+   "title": "MY Wellness Warriors",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2437
+  },
+  {
+   "source": "https://www.myprojectusa.org/youth",
+   "outcome": "page",
+   "target": "/youth",
+   "notes": [],
+   "title": "Youth Programs",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1979
+  },
+  {
+   "source": "https://www.myprojectusa.org/youth-board-application",
+   "outcome": "page",
+   "target": "/youth-board-application",
+   "notes": [],
+   "title": "Join Our Youth Board of Directors",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 710
+  },
+  {
+   "source": "https://www.myprojectusa.org/youth-bod",
+   "outcome": "page",
+   "target": "/youth-bod",
+   "notes": [],
+   "title": "Youth Board of Directors",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1726
+  },
+  {
+   "source": "https://www.myprojectusa.org/youth-conference-16",
+   "outcome": "page",
+   "target": "/youth-conference-16",
+   "notes": [
+    "1 hidden Wix element(s) not shown on the live site were skipped",
+    "Dropped Twitter “Tweet” share-button widget (sharing is available in every browser)"
+   ],
+   "title": "Subscribe For Updates",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 1861
+  },
+  {
+   "source": "https://www.myprojectusa.org/zakat-eligibility",
+   "outcome": "page",
+   "target": "/zakat-eligibility",
+   "notes": [],
+   "title": "Zakat Eligibility",
+   "coverage": 1,
+   "missingSample": [],
+   "sourceChars": 2680
+  }
+ ],
+ "brokenLinks": [],
+ "altNeeded": [
+  {
+   "page": "/",
+   "key": "img_e046bca5030a9eff",
+   "alt": "WhatsApp Image 2026-09-21 at 4.42.49 PM.jpeg"
+  },
+  {
+   "page": "/",
+   "key": "img_208a80af7b6ddebb",
+   "alt": "SVP Partnership Cover.webp"
+  },
+  {
+   "page": "/ar/free-clinic",
+   "key": "img_9b7593484acc3623",
+   "alt": "HilltopFreeClinicLogo-HD (1).png"
+  },
+  {
+   "page": "/ar/free-clinic",
+   "key": "img_a8e3d507335f4d15",
+   "alt": ""
+  },
+  {
+   "page": "/awards",
+   "key": "img_f0724728dac44b20",
+   "alt": "2026 Deah Barakat and Chrys Gee Awards (Instagram Post) (12).png"
+  },
+  {
+   "page": "/awards",
+   "key": "img_be3c4ffb7207563a",
+   "alt": "2026 Deah Barakat and Chrys Gee Awards (Instagram Post) (11).png"
+  },
+  {
+   "page": "/awards/2026honorees",
+   "key": "img_69540381c9c208b9",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_955ad1f5be0e605e",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_c18e4b7989b69eb5",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_16aa766e2d7eca1a",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_6ad5330e751fc06b",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_7c8ce951cca039a7",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_38f03c6cbbf95b8d",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_2dbcde72a56a21c9",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_2bfbe516ff2c71fb",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_c628992b20ef7ad3",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_27bab9967e0b348e",
+   "alt": ""
+  },
+  {
+   "page": "/boa",
+   "key": "img_361cd5cf1ba56fcb",
+   "alt": ""
+  },
+  {
+   "page": "/cjl-dropoff-locations",
+   "key": "img_7b403a41eda04c2b",
+   "alt": ""
+  },
+  {
+   "page": "/climatejustice",
+   "key": "img_c0bc6936b039e743",
+   "alt": ""
+  },
+  {
+   "page": "/collaborators",
+   "key": "img_af4ab3c1ea3e4b0b",
+   "alt": "Collaborators Banner 2020.jpg"
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_f2b70db10a700419",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_98b6cf339f9bd9e2",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_a25585a7d07f453d",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_b53871d77012bfb7",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_1f5620970d8fdb08",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_e3ebb8a1e13ae4b0",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_950a1172bc28bdbc",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_f43f1ef9fe8c185b",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_5316c4d060af622e",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_b3d91907744f19ed",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_04a0fbae2ecae0a1",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_f0e643a3194b69c2",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_3d2dde10dba17871",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_bebe6458a7c49bec",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_0b57986db792adb1",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_d83dc42e09dd2b8d",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_2e40909142b0b2a7",
+   "alt": ""
+  },
+  {
+   "page": "/conference-speakers",
+   "key": "img_5df0c72774c47c4c",
+   "alt": ""
+  },
+  {
+   "page": "/copy-of-youth",
+   "key": "img_845e42800c2b4f23",
+   "alt": "MY reading warriors logo.png"
+  },
+  {
+   "page": "/copy-of-youth",
+   "key": "img_7b802d2f2a8f4632",
+   "alt": "logo_MYP_Hilltop_Tigers.jpg"
+  },
+  {
+   "page": "/copy-of-youth",
+   "key": "img_e21c3d031fa3b109",
+   "alt": "MYP logo.jpg"
+  },
+  {
+   "page": "/copy-of-youth",
+   "key": "img_b126c91353aa3858",
+   "alt": "Under MY Wing Logo.jpg"
+  },
+  {
+   "page": "/copy-of-youth",
+   "key": "img_b1c38375b75a7947",
+   "alt": "MY Pathways.jpeg"
+  },
+  {
+   "page": "/copy-of-youth",
+   "key": "img_45b78383dbf5ef92",
+   "alt": "MY Tailored Image.jpeg"
+  },
+  {
+   "page": "/copy-of-youth",
+   "key": "img_5d67e1c0f52f2f6e",
+   "alt": "MY Leaders Logo Mockup (2).png"
+  },
+  {
+   "page": "/covid-19-response-center",
+   "key": "img_965b82268a5238ce",
+   "alt": "Corona Emergency center Entrance.jpg"
+  },
+  {
+   "page": "/donors",
+   "key": "img_8c5b4c5500a0428c",
+   "alt": "Iftar kitchen banner & icon.png"
+  },
+  {
+   "page": "/donors",
+   "key": "img_0b3c176c0bb29727",
+   "alt": ""
+  },
+  {
+   "page": "/donors",
+   "key": "img_51c15af2571c952c",
+   "alt": "11 Yr 2025 Impact card.png"
+  },
+  {
+   "page": "/donors",
+   "key": "img_635d31331f550d76",
+   "alt": "MYP 10 Yr Report Digital.jpg"
+  },
+  {
+   "page": "/event-flyers",
+   "key": "img_f67830b9b4f09639",
+   "alt": ""
+  },
+  {
+   "page": "/event-flyers",
+   "key": "img_4ddcbea6b289d22a",
+   "alt": ""
+  },
+  {
+   "page": "/event-my-leaders-summer-camp-2015",
+   "key": "img_ac516ad62596f016",
+   "alt": ""
+  },
+  {
+   "page": "/event-ramadan-2015-food-toys-drive",
+   "key": "img_54e025970420d7e9",
+   "alt": ""
+  },
+  {
+   "page": "/event-ramadan-2015-food-toys-drive",
+   "key": "img_a3b9fa2c219a03bf",
+   "alt": ""
+  },
+  {
+   "page": "/events-2",
+   "key": "img_687e99d2388797a6",
+   "alt": "WhatsApp Image 2026-09-21 at 4.42_edited.jpg"
+  },
+  {
+   "page": "/events-2",
+   "key": "img_6eabeb293db98e94",
+   "alt": "Website Flyer Pictures (3)_edited.jpg"
+  },
+  {
+   "page": "/helpline",
+   "key": "img_47d4370671db253f",
+   "alt": "Helpline flyer -colored.jpg"
+  },
+  {
+   "page": "/hilltopsustainability",
+   "key": "img_5796d1f3eba8e609",
+   "alt": "Hilltop Sustainability Ambassadors Kickoff (4)_edited.jpg"
+  },
+  {
+   "page": "/iftaar-fundraiser",
+   "key": "img_e0375f5568bacbfc",
+   "alt": ""
+  },
+  {
+   "page": "/local-chapters-1",
+   "key": "img_4c68139198ff965e",
+   "alt": ""
+  },
+  {
+   "page": "/my-community-cafe",
+   "key": "img_f331a165e83fb8b0",
+   "alt": "signage-v1-r01.jpg"
+  },
+  {
+   "page": "/my-earth-action-day-3",
+   "key": "img_29380096b29968b9",
+   "alt": ""
+  },
+  {
+   "page": "/my-earth-action-day-3",
+   "key": "img_6056a678cc07cfa1",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017",
+   "key": "img_e8b8bf2ad3a83050",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-program",
+   "key": "img_414a271175eea6a5",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_aa1179a8d3afdf4f",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_6a0cf4256c92902a",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_a83a480db8a1f696",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_27f002b34a71b81c",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_8d776ed9a0bd52e9",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_a3097abf022d0610",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_97d7ea626f06694f",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_87ec55165ddbca40",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_f0a8526d7d6aa99e",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_816b2ee363692421",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_b3625a893d0ebd02",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_c47053c674398459",
+   "alt": ""
+  },
+  {
+   "page": "/myp-cscc-conference2017-speakers",
+   "key": "img_dd479d1297c5c05d",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_929621f58e5b5489",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_c843c38dc0fa8def",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_ba0b51f3095c633c",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_e876b1c11d41d39b",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_1fa8dca286bbd048",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_d82d4181f02cf832",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_80be3a3790afbfd9",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_6d3c8acf04462009",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_2582b5caeb41e42e",
+   "alt": ""
+  },
+  {
+   "page": "/news-coverage",
+   "key": "img_eaa912593dcb8136",
+   "alt": ""
+  },
+  {
+   "page": "/old-donors-2",
+   "key": "img_180db58189262c3a",
+   "alt": ""
+  },
+  {
+   "page": "/reports",
+   "key": "img_39b9c33621cf551f",
+   "alt": "annual report 2018 Cover.jpg"
+  },
+  {
+   "page": "/reports",
+   "key": "img_40e73f35cf81c715",
+   "alt": "Cover-min.jpg"
+  },
+  {
+   "page": "/reports",
+   "key": "img_a6afcd579d995608",
+   "alt": "Five Year Report Finalcover.jpg"
+  },
+  {
+   "page": "/research",
+   "key": "img_626b5ba9c24a442c",
+   "alt": ""
+  },
+  {
+   "page": "/services",
+   "key": "img_2626688c31c6104a",
+   "alt": "MY Family Pantry final logo-Edited.png"
+  },
+  {
+   "page": "/services",
+   "key": "img_7120a60fdebedb70",
+   "alt": "HilltopFreeClinicLogo-HD_edited.jpg"
+  },
+  {
+   "page": "/services",
+   "key": "img_cfafd4887adc5774",
+   "alt": "MYCommunityCafe_edited.jpg"
+  },
+  {
+   "page": "/services",
+   "key": "img_4c994667a6a784b2",
+   "alt": "CJL Logo (1).png"
+  },
+  {
+   "page": "/services",
+   "key": "img_576b2692db06d139",
+   "alt": "My-Leaders-Lab  Logo.jpg"
+  },
+  {
+   "page": "/services",
+   "key": "img_3069232815d1c633",
+   "alt": "MY Pathways.jpeg"
+  },
+  {
+   "page": "/siblings",
+   "key": "img_d0f2b4f16a2f0d4e",
+   "alt": ""
+  },
+  {
+   "page": "/siblings",
+   "key": "img_b8dd8d9b14c8b165",
+   "alt": ""
+  },
+  {
+   "page": "/ventures",
+   "key": "img_5fa4fb78757d4cad",
+   "alt": "1.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_e9042284ae22dd1b",
+   "alt": "2.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_66e565d170fee1e4",
+   "alt": "3.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_9ac0bce181185a9a",
+   "alt": "6.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_3df83b404920f672",
+   "alt": "10.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_4856a8da71496946",
+   "alt": "9.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_2a1eca6269442886",
+   "alt": "8.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_b2224b05c220c1cf",
+   "alt": "7.jpg"
+  },
+  {
+   "page": "/ventures",
+   "key": "img_2659a985a812d116",
+   "alt": "SV Partnership slide next steps.png"
+  },
+  {
+   "page": "/volunteer",
+   "key": "img_8f2aded63433ea3a",
+   "alt": "MY Wellness Summer Program Flyer FINAL(1).png"
+  },
+  {
+   "page": "/volunteer",
+   "key": "img_5ca4bc7b44f0d675",
+   "alt": "Climate Justice Warriors Flyer.jpg"
+  },
+  {
+   "page": "/volunteer",
+   "key": "img_fa445b30f63e29d2",
+   "alt": "HFC Volunteer recruitmnet flyer revised Jun 11.jpg"
+  },
+  {
+   "page": "/volunteer",
+   "key": "img_5cb09dfa159cf1e3",
+   "alt": "HFC Volunteer recruitmnet flyer - Clinic 2026.jpg"
+  },
+  {
+   "page": "/volunteer",
+   "key": "img_ff2483f57ef59a56",
+   "alt": "community garden icon.png"
+  },
+  {
+   "page": "/volunteer",
+   "key": "img_1f6ab2666c6ee062",
+   "alt": "MY Family Pantry final logo-Edited.png"
+  },
+  {
+   "page": "/wellness-parents",
+   "key": "img_090e9fb5c2a54f6c",
+   "alt": "CJL Poster_edited.jpg"
+  },
+  {
+   "page": "/wellnessresources",
+   "key": "img_e11817ed2b55282b",
+   "alt": "Wellness Parents Logo Final.png"
+  },
+  {
+   "page": "/wellnessresources",
+   "key": "img_e42c2844d6885c98",
+   "alt": ""
+  },
+  {
+   "page": "/wellnesswarriors",
+   "key": "img_a75d9afe3fb31829",
+   "alt": "September Wellness Connect.jpeg"
+  },
+  {
+   "page": "/wellnesswarriors",
+   "key": "img_64944017a5c7b6e4",
+   "alt": "survey poster revised.png"
+  },
+  {
+   "page": "/wellnesswarriors",
+   "key": "img_f92738f5372320dc",
+   "alt": "20260822_172110_edited_edited.jpg"
+  },
+  {
+   "page": "/youth",
+   "key": "img_1d785766001c149d",
+   "alt": ""
+  },
+  {
+   "page": "/youth",
+   "key": "img_31cd13611717ed8d",
+   "alt": "Wellness warriors Final logo.png"
+  },
+  {
+   "page": "/youth",
+   "key": "img_2406eb0edf1f993b",
+   "alt": "CJL Logo (1).png"
+  },
+  {
+   "page": "/youth-bod",
+   "key": "img_dd5c18c254dcd789",
+   "alt": ""
+  },
+  {
+   "page": "/youth-bod",
+   "key": "img_d152392429f610b5",
+   "alt": ""
+  },
+  {
+   "page": "/youth-bod",
+   "key": "img_e551a002396c31a1",
+   "alt": ""
+  },
+  {
+   "page": "/youth-bod",
+   "key": "img_2da1b17a08f22040",
+   "alt": ""
+  }
+ ],
+ "problems": []
+}

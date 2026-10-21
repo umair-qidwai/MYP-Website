@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Sign-up form</title>
+    <!--
+      Hosts MY Project USA's Bloomerang e-mail sign-up widget. This page is always loaded inside a
+      sandboxed iframe WITHOUT allow-same-origin, so the third-party script runs in an opaque origin
+      and cannot access the main site's cookies, storage or admin API.
+    -->
+    <style>
+      body { margin: 0; padding: 20px; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; color: #191613; background: #fff; }
+      input, select, textarea { font: inherit; padding: 10px 12px; border: 1px solid #c9bfb0; border-radius: 10px; width: 100%; box-sizing: border-box; }
+      label { font-weight: 600; font-size: 14px; }
+      .btn-submit, input[type="submit"], button { background: #191613; color: #fff; border: 0; border-radius: 999px; padding: 12px 22px; font-weight: 600; cursor: pointer; width: auto; }
+      .field { margin-bottom: 14px; }
+      .loading { color: #675e54; }
+    </style>
+  </head>
+  <body>
+    <p class="loading" id="loading">Loading sign-up form…</p>
+    <script>
+      (function () {
+        var id = (new URLSearchParams(location.search).get("w") || "").replace(/\D/g, "");
+        if (!id) { document.getElementById("loading").textContent = "Form unavailable."; return; }
+        var s = document.createElement("script");
+        s.src = "https://s3-us-west-2.amazonaws.com/bloomerang-public-cdn/myprojectusa/.widget-js/" + id + ".js";
+        s.onerror = function () { document.getElementById("loading").textContent = "The sign-up form could not be loaded. Please try again later."; };
+        document.body.appendChild(s);
+        var last = 0;
+        function report() {
+          var h = document.documentElement.scrollHeight;
+          if (Math.abs(h - last) > 2) { last = h; parent.postMessage({ mypEmbedHeight: h }, "*"); }
+          if (document.querySelector("form")) { var l = document.getElementById("loading"); if (l) l.remove(); }
+        }
+        new ResizeObserver(report).observe(document.documentElement);
+        setInterval(report, 1000);
+      })();
+    </script>
+  </body>
+</html>

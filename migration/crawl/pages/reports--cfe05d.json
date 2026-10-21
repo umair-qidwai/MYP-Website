@@ -1,0 +1,2477 @@
+{
+  "key": "reports--cfe05d",
+  "url": "https://www.myprojectusa.org/reports",
+  "group": "pages",
+  "status": 200,
+  "error": null,
+  "crawledAt": "2026-10-21T14:41:02.791Z",
+  "finalUrl": "https://www.myprojectusa.org/reports",
+  "title": "Impact, Annual & Financial Reports | MY Project USA",
+  "lang": "en",
+  "meta": {
+    "description": "Review MY Project USA impact reports, audited financial statements, tax returns and annual reports documenting community service, accountability and organizational impact.",
+    "ogTitle": "Impact, Annual & Financial Reports | MY Project USA",
+    "ogDescription": "Review MY Project USA impact reports, audited financial statements, tax returns and annual reports documenting community service, accountability and organizational impact.",
+    "ogImage": null,
+    "canonical": "https://www.myprojectusa.org/reports",
+    "robots": null,
+    "alternates": [
+      {
+        "hreflang": "x-default",
+        "href": "https://www.myprojectusa.org/reports"
+      },
+      {
+        "hreflang": "ar-ae",
+        "href": "https://www.myprojectusa.org/ar/reports"
+      },
+      {
+        "hreflang": "es-es",
+        "href": "https://www.myprojectusa.org/es/reports"
+      },
+      {
+        "hreflang": "fr-fr",
+        "href": "https://www.myprojectusa.org/fr/reports"
+      },
+      {
+        "hreflang": "ht-ht",
+        "href": "https://www.myprojectusa.org/ht/reports"
+      },
+      {
+        "hreflang": "so-so",
+        "href": "https://www.myprojectusa.org/so/reports"
+      },
+      {
+        "hreflang": "en-us",
+        "href": "https://www.myprojectusa.org/reports"
+      }
+    ]
+  },
+  "headings": [
+    {
+      "level": 1,
+      "text": "MY Project USA Reports"
+    },
+    {
+      "level": 4,
+      "text": "MY Project USA Auditor Reports"
+    },
+    {
+      "level": 3,
+      "text": "MY Project USA Tax Returns"
+    },
+    {
+      "level": 3,
+      "text": "Annual Reports Archive"
+    }
+  ],
+  "items": [
+    {
+      "kind": "richtext",
+      "html": "<h1 class=\"font_0 wixui-rich-text__text\" style=\"font-size:30px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:helvetica-w01-bold,sans-serif;\" class=\"wixui-rich-text__text\">MY Project USA Reports</span></span></h1>",
+      "text": "MY Project USA Reports",
+      "visible": true,
+      "rect": {
+        "x": 240,
+        "y": 270,
+        "w": 726,
+        "h": 44
+      },
+      "section": "comp-lmqgyoww@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h4 class=\"font_4 wixui-rich-text__text\" style=\"font-size:17px;\">MY Project USA Auditor Reports</h4>",
+      "text": "MY Project USA Auditor Reports",
+      "visible": true,
+      "rect": {
+        "x": 247,
+        "y": 693,
+        "w": 312,
+        "h": 24
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">MY Project USA is committed to transparency, accountability and measurable community impact. Review our impact reports, audited financial statements, federal tax filings and annual reports to learn how resources are managed and how our programs serve youth, families and communities.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nAudited Financial Statements<br class=\"wixui-rich-text__text\">\nIndependent audits provide an external review of MY Project USA’s financial statements and internal financial practices. Please use the links below to review the available reports.</p>",
+      "text": "MY Project USA is committed to transparency, accountability and measurable community impact. Review our impact reports, audited financial statements, federal tax filings and annual reports to learn how resources are managed and how our programs serve youth, families and communities.\n\nAudited Financial Statements\nIndependent audits provide an external review of MY Project USA’s financial statements and internal financial practices. Please use the links below to review the available reports.",
+      "visible": true,
+      "rect": {
+        "x": 247,
+        "y": 729,
+        "w": 717,
+        "h": 158
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\">MY Project USA Tax Returns&nbsp;</h3>",
+      "text": "MY Project USA Tax Returns",
+      "visible": true,
+      "rect": {
+        "x": 244,
+        "y": 1053,
+        "w": 312,
+        "h": 28
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">We are a radically transparent organization. Here is our full tax returns.&nbsp;</p>",
+      "text": "We are a radically transparent organization. Here is our full tax returns.",
+      "visible": true,
+      "rect": {
+        "x": 247,
+        "y": 1081,
+        "w": 717,
+        "h": 23
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\">Annual Reports Archive</h3>",
+      "text": "Annual Reports Archive",
+      "visible": true,
+      "rect": {
+        "x": 247,
+        "y": 1248,
+        "w": 600,
+        "h": 28
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Call Us: 614-905-0977</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Visit Us: 3275 Sullivant Ave. Columbus, OH 43204</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Mail Us: 3275 Sullivant Ave. Columbus, OH 43204</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Email Us: <a data-auto-recognition=\"true\" href=\"mailto:info@MYProjectUSA.org\" class=\"wixui-rich-text__text\">info@MYProjectUSA.org</a></span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Tax Exempt ID: 47-2398195</span></span></span></p>",
+      "text": "Call Us: 614-905-0977\n\nVisit Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nMail Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nEmail Us: info@MYProjectUSA.org\n\nTax Exempt ID: 47-2398195",
+      "visible": true,
+      "rect": {
+        "x": 242,
+        "y": 2210,
+        "w": 408,
+        "h": 90
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:13px; line-height:normal;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-size:13px;\" class=\"wixui-rich-text__text\">© 2026 by MY Project USA&nbsp;</span></span></span></p>",
+      "text": "© 2026 by MY Project USA",
+      "visible": true,
+      "rect": {
+        "x": 979,
+        "y": 2322,
+        "w": 201,
+        "h": 14
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png/v1/fill/w_980,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png/v1/fill/w_980,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png",
+      "alt": null,
+      "naturalW": 980,
+      "naturalH": 215,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 38,
+        "w": 980,
+        "h": 215
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg/v1/fill/w_77,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg/v1/fill/w_77,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg",
+      "alt": null,
+      "naturalW": 77,
+      "naturalH": 77,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 229,
+        "y": 38,
+        "w": 77,
+        "h": 77
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_539906a000e94eb29de4e76d8ca78330~mv2.jpg/v1/crop/x_7,y_0,w_1532,h_2000/fill/w_203,h_266,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MYP%2010%20Yr%20Report%20Digital.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_539906a000e94eb29de4e76d8ca78330~mv2.jpg/v1/crop/x_7,y_0,w_1532,h_2000/fill/w_203,h_266,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MYP%2010%20Yr%20Report%20Digital.jpg",
+      "alt": "MYP 10 Yr Report Digital.jpg",
+      "naturalW": 203,
+      "naturalH": 266,
+      "inGallery": false,
+      "href": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_3ea97c0384f94f1ab1791d773a2d30da.pdf",
+      "visible": true,
+      "rect": {
+        "x": 385,
+        "y": 338,
+        "w": 203,
+        "h": 266
+      },
+      "section": "comp-lmqgyoww@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_1040eb0e1f154bd8ad261f2448b68302~mv2.png/v1/fill/w_217,h_266,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11%20Yr%202025%20Impact%20card.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_1040eb0e1f154bd8ad261f2448b68302~mv2.png/v1/fill/w_217,h_266,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11%20Yr%202025%20Impact%20card.png",
+      "alt": "11 Yr 2025 Impact card.png",
+      "naturalW": 217,
+      "naturalH": 266,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 635,
+        "y": 338,
+        "w": 217,
+        "h": 266
+      },
+      "section": "comp-lmqgyoww@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_47a2dbf9e560478d81e92220a3c11d80~mv2.jpg/v1/crop/x_0,y_8,w_2550,h_3283/fill/w_212,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Cover-min.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_47a2dbf9e560478d81e92220a3c11d80~mv2.jpg/v1/crop/x_0,y_8,w_2550,h_3283/fill/w_212,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Cover-min.jpg",
+      "alt": "Cover-min.jpg",
+      "naturalW": 212,
+      "naturalH": 278,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_8929970af0ff464fb969e78b45c9c96f.pdf",
+      "visible": true,
+      "rect": {
+        "x": 246,
+        "y": 1281,
+        "w": 212,
+        "h": 278
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_60aee5d0f0704eca924d18b2556650e3~mv2.jpg/v1/fill/w_212,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Five%20Year%20Report%20Finalcover.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_60aee5d0f0704eca924d18b2556650e3~mv2.jpg/v1/fill/w_212,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Five%20Year%20Report%20Finalcover.jpg",
+      "alt": "Five Year Report Finalcover.jpg",
+      "naturalW": 212,
+      "naturalH": 278,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_9d28269102954f9eb55f175ca2f78cfb.pdf",
+      "visible": true,
+      "rect": {
+        "x": 492,
+        "y": 1281,
+        "w": 212,
+        "h": 278
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_1f1feafd7c054534bd20de9f8b703026~mv2_d_1275_1650_s_2.jpg/v1/fill/w_218,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/annual%20report%202018%20Cover.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_1f1feafd7c054534bd20de9f8b703026~mv2_d_1275_1650_s_2.jpg/v1/fill/w_218,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/annual%20report%202018%20Cover.jpg",
+      "alt": "annual report 2018 Cover.jpg",
+      "naturalW": 218,
+      "naturalH": 278,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_2df273e7e44647598d7c4eeede5192dc.pdf",
+      "visible": true,
+      "rect": {
+        "x": 744,
+        "y": 1281,
+        "w": 218,
+        "h": 278
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_9f181e04ffbc44f3a848fd47bc376cdf~mv2_d_1275_1650_s_2.jpg/v1/fill/w_212,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_9f181e04ffbc44f3a848fd47bc376cdf~mv2_d_1275_1650_s_2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_9f181e04ffbc44f3a848fd47bc376cdf~mv2_d_1275_1650_s_2.jpg/v1/fill/w_212,h_278,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_9f181e04ffbc44f3a848fd47bc376cdf~mv2_d_1275_1650_s_2.jpg",
+      "alt": null,
+      "naturalW": 212,
+      "naturalH": 278,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_53abb7f5a1ad4e09b9d87de75220004a.pdf",
+      "visible": true,
+      "rect": {
+        "x": 246,
+        "y": 1641,
+        "w": 212,
+        "h": 278
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png",
+      "alt": "LinkedIn",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "visible": true,
+      "rect": {
+        "x": 1001,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png",
+      "alt": "Youtube",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "visible": true,
+      "rect": {
+        "x": 1042,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png",
+      "alt": "Facebook",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "visible": true,
+      "rect": {
+        "x": 1083,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_923d540bee594407b17f142805a44a15~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_923d540bee594407b17f142805a44a15~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_923d540bee594407b17f142805a44a15~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_923d540bee594407b17f142805a44a15~mv2.png",
+      "alt": "X     ",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://twitter.com/myprojectusa",
+      "visible": true,
+      "rect": {
+        "x": 1124,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png",
+      "alt": "Instagram",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.instagram.com/myprojectusa/",
+      "visible": true,
+      "rect": {
+        "x": 1165,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "alt": "My-Leaders-Lab  Logo.jpg",
+      "naturalW": 217,
+      "naturalH": 217,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/youth",
+      "visible": true,
+      "rect": {
+        "x": 990,
+        "y": 694,
+        "w": 217,
+        "h": 217
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_d27e163b347b4047be5e43bb7c3cf5ff~mv2.png/v1/crop/x_0,y_118,w_2000,h_1765/fill/w_217,h_191,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Climate%20Justice%20Lab%20logo%20CJL.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_d27e163b347b4047be5e43bb7c3cf5ff~mv2.png/v1/crop/x_0,y_118,w_2000,h_1765/fill/w_217,h_191,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Climate%20Justice%20Lab%20logo%20CJL.png",
+      "alt": "Climate Justice Lab logo CJL.png",
+      "naturalW": 217,
+      "naturalH": 191,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "visible": true,
+      "rect": {
+        "x": 987,
+        "y": 1152,
+        "w": 217,
+        "h": 191
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_402e4a3e03464ce79e93682a18313b75~mv2.png/v1/crop/x_0,y_59,w_2000,h_1882/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wellness%20warriors%20Final%20logo.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_402e4a3e03464ce79e93682a18313b75~mv2.png/v1/crop/x_0,y_59,w_2000,h_1882/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wellness%20warriors%20Final%20logo.png",
+      "alt": "Wellness warriors Final logo.png",
+      "naturalW": 217,
+      "naturalH": 204,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 930,
+        "w": 217,
+        "h": 204
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_217,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD%20(1).png",
+      "srcAttr": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_217,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD%20(1).png",
+      "alt": "HilltopFreeClinicLogo-HD (1).png",
+      "naturalW": 217,
+      "naturalH": 208,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/free-clinic",
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 1605,
+        "w": 217,
+        "h": 208
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png/v1/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png/v1/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png",
+      "alt": null,
+      "naturalW": 217,
+      "naturalH": 204,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 1833,
+        "w": 217,
+        "h": 204
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg",
+      "alt": "MY Family Pantry - An Initiative of MY Project USA",
+      "naturalW": 217,
+      "naturalH": 217,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/volunteer",
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 1365,
+        "w": 217,
+        "h": 217
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 0,
+        "w": 91,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 321,
+        "y": 0,
+        "w": 131,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "ABOUT US",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 452,
+        "y": 0,
+        "w": 120,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "VISION",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "TEAM",
+      "href": "https://www.myprojectusa.org/team",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "SERVICES",
+      "href": "https://www.myprojectusa.org/services",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "REPORTS",
+      "href": "https://www.myprojectusa.org/reports",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "AWARDS",
+      "href": "https://www.myprojectusa.org/awards",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "2026 Honorees",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "JOB OPPORTUNITIES",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "COLLABORATORS",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/issues",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 572,
+        "y": 0,
+        "w": 100,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 672,
+        "y": 0,
+        "w": 96,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "MY Wellness Warriors",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Parents",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Resources",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Climate Justice Lab",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/ventures",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "w": 122,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 890,
+        "y": 0,
+        "w": 92,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS COVERAGE",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWSLETTER",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Contact",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/donors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 982,
+        "y": 0,
+        "w": 108,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/contacts",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 1090,
+        "y": 0,
+        "w": 120,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_3ea97c0384f94f1ab1791d773a2d30da.pdf",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 383,
+        "y": 336,
+        "w": 207,
+        "h": 270
+      },
+      "section": "comp-lmqgyoww@page"
+    },
+    {
+      "kind": "button",
+      "text": "Download 10 Year Report",
+      "href": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_3ea97c0384f94f1ab1791d773a2d30da.pdf",
+      "target": "_blank",
+      "ariaLabel": "Download 10 Year Report",
+      "visible": true,
+      "rect": {
+        "x": 445,
+        "y": 631,
+        "w": 358,
+        "h": 40
+      },
+      "section": "comp-lmqgyoww@page"
+    },
+    {
+      "kind": "button",
+      "text": "Auditor's Report 2024",
+      "href": null,
+      "target": null,
+      "ariaLabel": "Auditor's Report 2024",
+      "visible": true,
+      "rect": {
+        "x": 363,
+        "y": 926,
+        "w": 164,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Auditor's Report 2023",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_5514bfec98a8476b8637ad32f10d4d2c.pdf",
+      "target": "_blank",
+      "ariaLabel": "Auditor's Report 2023",
+      "visible": true,
+      "rect": {
+        "x": 551,
+        "y": 926,
+        "w": 164,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Auditor's Report 2022",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_4df4f329eb574909a87d9f6482976a35.pdf",
+      "target": "_blank",
+      "ariaLabel": "Auditor's Report 2022",
+      "visible": true,
+      "rect": {
+        "x": 741,
+        "y": 926,
+        "w": 164,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Auditor's Report 2021",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_d40b8d54b2c64084ae50db7d6e28212e.pdf",
+      "target": "_blank",
+      "ariaLabel": "Auditor's Report 2021",
+      "visible": true,
+      "rect": {
+        "x": 450,
+        "y": 985,
+        "w": 164,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Auditor's Report 2020",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_7cdb90ed2e63458d975261ba91a0041c.pdf",
+      "target": "_blank",
+      "ariaLabel": "Auditor's Report 2020",
+      "visible": true,
+      "rect": {
+        "x": 628,
+        "y": 985,
+        "w": 164,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Tax Return 2024",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_0173a8fff1c74371ae949e4ec24d8b88.pdf",
+      "target": "_blank",
+      "ariaLabel": "Tax Return 2024",
+      "visible": true,
+      "rect": {
+        "x": 386,
+        "y": 1118,
+        "w": 154,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Tax Return 2023",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_7f6c99e75da042e1b0b1429d54f3acf4.pdf",
+      "target": "_blank",
+      "ariaLabel": "Tax Return 2023",
+      "visible": true,
+      "rect": {
+        "x": 566,
+        "y": 1118,
+        "w": 154,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Tax Return 2022",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_d765938d715e49c7837cf7a16515a989.pdf",
+      "target": "_blank",
+      "ariaLabel": "Tax Return 2022",
+      "visible": true,
+      "rect": {
+        "x": 751,
+        "y": 1118,
+        "w": 154,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Tax Return 2021",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_ee78913c25454815b94b0dff0a56d094.pdf",
+      "target": "_blank",
+      "ariaLabel": "Tax Return 2021",
+      "visible": true,
+      "rect": {
+        "x": 450,
+        "y": 1180,
+        "w": 154,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "Tax Return 2020",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_17284dab640c43ef9b1ce0a9922681db.pdf",
+      "target": "_blank",
+      "ariaLabel": "Tax Return 2020",
+      "visible": true,
+      "rect": {
+        "x": 630,
+        "y": 1180,
+        "w": 154,
+        "h": 40
+      },
+      "section": "comp-lmqgyowx@page"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_8929970af0ff464fb969e78b45c9c96f.pdf",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 244,
+        "y": 1279,
+        "w": 216,
+        "h": 282
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "Download 2022 Annual Report",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_8929970af0ff464fb969e78b45c9c96f.pdf",
+      "target": "_blank",
+      "ariaLabel": "Download 2022 Annual Report",
+      "visible": true,
+      "rect": {
+        "x": 244,
+        "y": 1579,
+        "w": 216,
+        "h": 40
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_9d28269102954f9eb55f175ca2f78cfb.pdf",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 490,
+        "y": 1279,
+        "w": 216,
+        "h": 282
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "Download 5 Yrs Report",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_9d28269102954f9eb55f175ca2f78cfb.pdf",
+      "target": "_blank",
+      "ariaLabel": "Download 5 Yrs Report",
+      "visible": true,
+      "rect": {
+        "x": 495,
+        "y": 1579,
+        "w": 216,
+        "h": 40
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_2df273e7e44647598d7c4eeede5192dc.pdf",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 742,
+        "y": 1279,
+        "w": 222,
+        "h": 282
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "Download 2018 Report",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_2df273e7e44647598d7c4eeede5192dc.pdf",
+      "target": "_blank",
+      "ariaLabel": "Download 2018 Report",
+      "visible": true,
+      "rect": {
+        "x": 748,
+        "y": 1577,
+        "w": 216,
+        "h": 40
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_53abb7f5a1ad4e09b9d87de75220004a.pdf",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 244,
+        "y": 1639,
+        "w": 216,
+        "h": 282
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "Download 2017 Report",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_53abb7f5a1ad4e09b9d87de75220004a.pdf",
+      "target": "_blank",
+      "ariaLabel": "Download 2017 Report",
+      "visible": true,
+      "rect": {
+        "x": 244,
+        "y": 1939,
+        "w": 216,
+        "h": 40
+      },
+      "section": "comp-lmqgyowy@page"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "target": "_blank",
+      "ariaLabel": "LinkedIn",
+      "visible": true,
+      "rect": {
+        "x": 1001,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "target": "_blank",
+      "ariaLabel": "Youtube",
+      "visible": true,
+      "rect": {
+        "x": 1042,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "target": "_blank",
+      "ariaLabel": "Facebook",
+      "visible": true,
+      "rect": {
+        "x": 1083,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://twitter.com/myprojectusa",
+      "target": "_blank",
+      "ariaLabel": "X     ",
+      "visible": true,
+      "rect": {
+        "x": 1124,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.instagram.com/myprojectusa/",
+      "target": "_blank",
+      "ariaLabel": "Instagram",
+      "visible": true,
+      "rect": {
+        "x": 1165,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Events",
+      "href": "https://www.myprojectusa.org/events-2",
+      "target": "_self",
+      "ariaLabel": "Events",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 447,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Ventures",
+      "href": "https://www.myprojectusa.org/ventures",
+      "target": "_self",
+      "ariaLabel": "Ventures",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 523,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Donate",
+      "href": "https://www.myprojectusa.org/donors",
+      "target": "_self",
+      "ariaLabel": "Donate",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 308,
+        "w": 221,
+        "h": 66
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Volunteer",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "target": "_self",
+      "ariaLabel": "Volunteer",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 379,
+        "w": 221,
+        "h": 63
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 692,
+        "w": 221,
+        "h": 221
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 1150,
+        "w": 221,
+        "h": 195
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 983,
+        "y": 928,
+        "w": 221,
+        "h": 208
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/free-clinic",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 986,
+        "y": 1603,
+        "w": 221,
+        "h": 212
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 983,
+        "y": 1363,
+        "w": 221,
+        "h": 221
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "target": "_self",
+      "ariaLabel": "Subscribe",
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 599,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 2162,
+        "w": 96,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 326,
+        "y": 2162,
+        "w": 114,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "ABOUT US",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 440,
+        "y": 2162,
+        "w": 119,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "VISION",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "TEAM",
+      "href": "https://www.myprojectusa.org/team",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "SERVICES",
+      "href": "https://www.myprojectusa.org/services",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "REPORTS",
+      "href": "https://www.myprojectusa.org/reports",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "AWARDS",
+      "href": "https://www.myprojectusa.org/awards",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "2026 Honorees",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "JOB OPPORTUNITIES",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "COLLABORATORS",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/issues",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 559,
+        "y": 2162,
+        "w": 102,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 661,
+        "y": 2162,
+        "w": 101,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "MY Wellness Warriors",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Parents",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Resources",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Climate Justice Lab",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/ventures",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 762,
+        "y": 2162,
+        "w": 121,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 883,
+        "y": 2162,
+        "w": 95,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS COVERAGE",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWSLETTER",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Contact",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/donors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 978,
+        "y": 2162,
+        "w": 109,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/contacts",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 1087,
+        "y": 2162,
+        "w": 120,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "iframe",
+      "src": "https://platform.twitter.com/widgets/tweet_button.html?href=https%3A%2F%2Ftwitter.com%2Fshare&lang=en&url=http%3A%2F%2Fwww.myprojectusa.org%2F&text=I%20love%20this%20site!&related=%40MYProjectUSA&compId=i6pmpkn8&origin=https%3A%2F%2Fwww.myprojectusa.org%2Freports&widgetType=TWEET",
+      "title": "Twitter Tweet",
+      "rect": {
+        "x": 1061,
+        "y": 2225,
+        "w": 66,
+        "h": 20
+      },
+      "section": "@footer",
+      "visible": true
+    },
+    {
+      "kind": "orphan",
+      "html": "Auditor's Report 2024",
+      "text": "Auditor's Report 2024",
+      "tag": "span",
+      "rect": {
+        "x": 380,
+        "y": 935,
+        "w": 129,
+        "h": 22
+      },
+      "section": "comp-lmqgyowx@page",
+      "visible": true
+    }
+  ],
+  "forms": [],
+  "links": [
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/",
+      "text": "HOME",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "text": "VISION",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/team",
+      "text": "TEAM",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/services",
+      "text": "SERVICES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/reports",
+      "text": "REPORTS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/awards",
+      "text": "AWARDS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "text": "2026 Honorees",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "text": "JOB OPPORTUNITIES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "text": "COLLABORATORS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/issues",
+      "text": "ISSUES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "YOUTH",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "MY Wellness Warriors",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "text": "Wellness Parents",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "text": "Wellness Resources",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "Climate Justice Lab",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "VENTURES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "text": "NEWS COVERAGE",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "text": "NEWSLETTER",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "text": "Contact",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "DONORS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/contacts",
+      "text": "CONTACTS",
+      "target": "_self"
+    },
+    {
+      "region": "page",
+      "href": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_3ea97c0384f94f1ab1791d773a2d30da.pdf",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://be0c83f6-d42a-4165-80e2-3bee1a395dca.usrfiles.com/ugd/be0c83_3ea97c0384f94f1ab1791d773a2d30da.pdf",
+      "text": "Download 10 Year Report",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_5514bfec98a8476b8637ad32f10d4d2c.pdf",
+      "text": "Auditor's Report 2023",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_4df4f329eb574909a87d9f6482976a35.pdf",
+      "text": "Auditor's Report 2022",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_d40b8d54b2c64084ae50db7d6e28212e.pdf",
+      "text": "Auditor's Report 2021",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_7cdb90ed2e63458d975261ba91a0041c.pdf",
+      "text": "Auditor's Report 2020",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_0173a8fff1c74371ae949e4ec24d8b88.pdf",
+      "text": "Tax Return 2024",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_7f6c99e75da042e1b0b1429d54f3acf4.pdf",
+      "text": "Tax Return 2023",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_d765938d715e49c7837cf7a16515a989.pdf",
+      "text": "Tax Return 2022",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_ee78913c25454815b94b0dff0a56d094.pdf",
+      "text": "Tax Return 2021",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_17284dab640c43ef9b1ce0a9922681db.pdf",
+      "text": "Tax Return 2020",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_8929970af0ff464fb969e78b45c9c96f.pdf",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_8929970af0ff464fb969e78b45c9c96f.pdf",
+      "text": "Download 2022 Annual Report",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_9d28269102954f9eb55f175ca2f78cfb.pdf",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_9d28269102954f9eb55f175ca2f78cfb.pdf",
+      "text": "Download 5 Yrs Report",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_2df273e7e44647598d7c4eeede5192dc.pdf",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_2df273e7e44647598d7c4eeede5192dc.pdf",
+      "text": "Download 2018 Report",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_53abb7f5a1ad4e09b9d87de75220004a.pdf",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/_files/ugd/be0c83_53abb7f5a1ad4e09b9d87de75220004a.pdf",
+      "text": "Download 2017 Report",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://twitter.com/myprojectusa",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.instagram.com/myprojectusa/",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/events-2",
+      "text": "Events",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "Ventures",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "Donate",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "text": "Volunteer",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/free-clinic",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/",
+      "text": "HOME",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "text": "VISION",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/team",
+      "text": "TEAM",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/services",
+      "text": "SERVICES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/reports",
+      "text": "REPORTS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/awards",
+      "text": "AWARDS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "text": "2026 Honorees",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "text": "JOB OPPORTUNITIES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "text": "COLLABORATORS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/issues",
+      "text": "ISSUES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "YOUTH",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "MY Wellness Warriors",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "text": "Wellness Parents",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "text": "Wellness Resources",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "Climate Justice Lab",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "VENTURES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "text": "NEWS COVERAGE",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "text": "NEWSLETTER",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "text": "Contact",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "DONORS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/contacts",
+      "text": "CONTACTS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "mailto:info@MYProjectUSA.org",
+      "text": "info@MYProjectUSA.org",
+      "target": null
+    }
+  ],
+  "nav": [
+    {
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/",
+      "children": []
+    },
+    {
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "children": []
+    },
+    {
+      "text": "ABOUT US",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "children": [
+        {
+          "text": "VISION",
+          "href": "https://www.myprojectusa.org/vision-mission-goals"
+        },
+        {
+          "text": "TEAM",
+          "href": "https://www.myprojectusa.org/team"
+        },
+        {
+          "text": "SERVICES",
+          "href": "https://www.myprojectusa.org/services"
+        },
+        {
+          "text": "REPORTS",
+          "href": "https://www.myprojectusa.org/reports"
+        },
+        {
+          "text": "AWARDS",
+          "href": "https://www.myprojectusa.org/awards"
+        },
+        {
+          "text": "2026 Honorees",
+          "href": "https://www.myprojectusa.org/awards/2026honorees"
+        },
+        {
+          "text": "JOB OPPORTUNITIES",
+          "href": "https://www.myprojectusa.org/job-opportunities"
+        },
+        {
+          "text": "COLLABORATORS",
+          "href": "https://www.myprojectusa.org/collaborators"
+        }
+      ]
+    },
+    {
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/issues",
+      "children": []
+    },
+    {
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/youth",
+      "children": [
+        {
+          "text": "MY Wellness Warriors",
+          "href": "https://www.myprojectusa.org/wellnesswarriors"
+        },
+        {
+          "text": "Wellness Parents",
+          "href": "https://www.myprojectusa.org/wellness-parents"
+        },
+        {
+          "text": "Wellness Resources",
+          "href": "https://www.myprojectusa.org/wellnessresources"
+        },
+        {
+          "text": "Climate Justice Lab",
+          "href": "https://www.myprojectusa.org/climatejustice"
+        }
+      ]
+    },
+    {
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/ventures",
+      "children": []
+    },
+    {
+      "text": "NEWS",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "children": [
+        {
+          "text": "NEWS COVERAGE",
+          "href": "https://www.myprojectusa.org/copy-of-news-coverage"
+        },
+        {
+          "text": "NEWSLETTER",
+          "href": "https://www.myprojectusa.org/newsletter"
+        },
+        {
+          "text": "Contact",
+          "href": "https://www.myprojectusa.org/contact-8"
+        }
+      ]
+    },
+    {
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/donors",
+      "children": []
+    },
+    {
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/contacts",
+      "children": []
+    },
+    {
+      "text": "More",
+      "href": null,
+      "children": []
+    }
+  ],
+  "headerText": "HOME\n\nSubscribe\n\nABOUT US\n\nISSUES\n\nYOUTH\n\nVENTURES\n\nNEWS\n\nDONORS\n\nCONTACTS",
+  "footerText": "HOME\n\nSubscribe\n\nABOUT US\n\nISSUES\n\nYOUTH\n\nVENTURES\n\nNEWS\n\nDONORS\n\nCONTACTS\n\nCall Us: 614-905-0977\n\nVisit Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nMail Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nEmail Us: info@MYProjectUSA.org\n\nTax Exempt ID: 47-2398195\n\nShare\n\n© 2026 by MY Project USA",
+  "footerLinks": [
+    {
+      "href": "https://www.myprojectusa.org/",
+      "text": "HOME"
+    },
+    {
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe"
+    },
+    {
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "text": "VISION"
+    },
+    {
+      "href": "https://www.myprojectusa.org/team",
+      "text": "TEAM"
+    },
+    {
+      "href": "https://www.myprojectusa.org/services",
+      "text": "SERVICES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/reports",
+      "text": "REPORTS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/awards",
+      "text": "AWARDS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "text": "2026 Honorees"
+    },
+    {
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "text": "JOB OPPORTUNITIES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/collaborators",
+      "text": "COLLABORATORS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/issues",
+      "text": "ISSUES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "YOUTH"
+    },
+    {
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "MY Wellness Warriors"
+    },
+    {
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "text": "Wellness Parents"
+    },
+    {
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "text": "Wellness Resources"
+    },
+    {
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "Climate Justice Lab"
+    },
+    {
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "VENTURES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "text": "NEWS COVERAGE"
+    },
+    {
+      "href": "https://www.myprojectusa.org/newsletter",
+      "text": "NEWSLETTER"
+    },
+    {
+      "href": "https://www.myprojectusa.org/contact-8",
+      "text": "Contact"
+    },
+    {
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "DONORS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/contacts",
+      "text": "CONTACTS"
+    },
+    {
+      "href": "mailto:info@MYProjectUSA.org",
+      "text": "info@MYProjectUSA.org"
+    }
+  ],
+  "mainText": "MY Project USA Reports\nDownload 10 Year Report\nMY Project USA Auditor Reports\n\nMY Project USA is committed to transparency, accountability and measurable community impact. Review our impact reports, audited financial statements, federal tax filings and annual reports to learn how resources are managed and how our programs serve youth, families and communities.\n\nAudited Financial Statements\nIndependent audits provide an external review of MY Project USA’s financial statements and internal financial practices. Please use the links below to review the available reports.\n\nAuditor's Report 2024\nAuditor's Report 2023\nAuditor's Report 2022\nAuditor's Report 2021\nAuditor's Report 2020\nMY Project USA Tax Returns \n\nWe are a radically transparent organization. Here is our full tax returns. \n\nTax Return 2024\nTax Return 2023\nTax Return 2022\nTax Return 2021\nTax Return 2020\nAnnual Reports Archive\nDownload 2022 Annual Report\nDownload 5 Yrs Report\nDownload 2018 Report\nDownload 2017 Report",
+  "docHeight": 2357
+}

@@ -1,0 +1,2434 @@
+{
+  "key": "es__free-clinic--f5e888",
+  "url": "https://www.myprojectusa.org/es/free-clinic",
+  "group": "adhoc",
+  "status": 200,
+  "error": null,
+  "crawledAt": "2026-10-21T14:43:05.309Z",
+  "finalUrl": "https://www.myprojectusa.org/es/free-clinic",
+  "title": "Hilltop Free Clinic | Free Healthcare in Columbus",
+  "lang": "es",
+  "meta": {
+    "description": "Hilltop Free Clinic provides eligible Columbus patients with free preventive screenings, primary care, health education and community health support.",
+    "ogTitle": "Hilltop Free Clinic | Free Healthcare in Columbus",
+    "ogDescription": "Hilltop Free Clinic provides eligible Columbus patients with free preventive screenings, primary care, health education and community health support.",
+    "ogImage": null,
+    "canonical": "https://www.myprojectusa.org/es/free-clinic",
+    "robots": null,
+    "alternates": [
+      {
+        "hreflang": "x-default",
+        "href": "https://www.myprojectusa.org/free-clinic"
+      },
+      {
+        "hreflang": "ar-ae",
+        "href": "https://www.myprojectusa.org/ar/free-clinic"
+      },
+      {
+        "hreflang": "es-es",
+        "href": "https://www.myprojectusa.org/es/free-clinic"
+      },
+      {
+        "hreflang": "fr-fr",
+        "href": "https://www.myprojectusa.org/fr/free-clinic"
+      },
+      {
+        "hreflang": "ht-ht",
+        "href": "https://www.myprojectusa.org/ht/free-clinic"
+      },
+      {
+        "hreflang": "so-so",
+        "href": "https://www.myprojectusa.org/so/free-clinic"
+      },
+      {
+        "hreflang": "en-us",
+        "href": "https://www.myprojectusa.org/free-clinic"
+      }
+    ]
+  },
+  "headings": [
+    {
+      "level": 2,
+      "text": "Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow​"
+    },
+    {
+      "level": 4,
+      "text": "​"
+    },
+    {
+      "level": 2,
+      "text": "​Sobre Nuestra Clínica"
+    },
+    {
+      "level": 3,
+      "text": "Our Services"
+    },
+    {
+      "level": 2,
+      "text": "Nuestra Ubicación"
+    },
+    {
+      "level": 3,
+      "text": "Horas"
+    },
+    {
+      "level": 3,
+      "text": "Contacto"
+    },
+    {
+      "level": 3,
+      "text": "Horas"
+    },
+    {
+      "level": 1,
+      "text": "Frequency Asked Questions"
+    },
+    {
+      "level": 3,
+      "text": "¿Cuánto tiempo durará mi cita?"
+    },
+    {
+      "level": 3,
+      "text": "¿Tendré acceso a un intérprete?"
+    },
+    {
+      "level": 3,
+      "text": "¿Hay estacionamiento disponible y se puede acceder a la clínica en transporte público?"
+    },
+    {
+      "level": 3,
+      "text": "¿Ofrecen citas dentales o de la vista?"
+    },
+    {
+      "level": 3,
+      "text": "¿Cuándo recibiré los resultados de laboratorio?"
+    }
+  ],
+  "items": [
+    {
+      "kind": "richtext",
+      "html": "<ul class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">Free Clinic</p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">Clínica Gratuita</p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">Klinik Gratis</p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">Clinique Gratuite&nbsp;</p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">عيادة مجانية</p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">Kalkaalis Bilaash</p>\n</li>\n</ul>",
+      "text": "Free Clinic\n\nClínica Gratuita\n\nKlinik Gratis\n\nClinique Gratuite \n\nعيادة مجانية\n\nKalkaalis Bilaash",
+      "visible": true,
+      "rect": {
+        "x": 273,
+        "y": 616,
+        "w": 261,
+        "h": 135
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h2 class=\"font_2 wixui-rich-text__text\" style=\"font-size:28px;\">Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow​</h2>\n\n<h4 class=\"font_4 wixui-rich-text__text\" style=\"font-size:17px;\">​</h4>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\">Please select your language to begin below</span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">-Por favor, seleccione su idioma para comenzar abajo</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">-Tanpri chwazi lang ou pou kòmanse anba a</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">-Veuillez sélectionner votre langue pour commencer ci-dessous &nbsp;</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">- الرجاء اختيار لغتك للبدء أدناه</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\">- Fadlan dooro luqaddaada si aad u bilowdo hoos</p>",
+      "text": "Welcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow​\n​\n\nPlease select your language to begin below\n\n-Por favor, seleccione su idioma para comenzar abajo\n\n-Tanpri chwazi lang ou pou kòmanse anba a\n\n-Veuillez sélectionner votre langue pour commencer ci-dessous  \n\n- الرجاء اختيار لغتك للبدء أدناه\n\n- Fadlan dooro luqaddaada si aad u bilowdo hoos",
+      "visible": true,
+      "rect": {
+        "x": 550,
+        "y": 299,
+        "w": 412,
+        "h": 260
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:11px;\">EN = English</p>\n\n<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:11px;\">AR = العربية</p>\n\n<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:11px;\">ES = Español</p>\n\n<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:11px;\">FR = Français ​ ​ ​</p>\n\n<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:11px;\">SO = Af-Soomaali</p>\n\n<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:11px;\">HT = Kreyòl Ayisyen​​​</p>",
+      "text": "EN = English\n\nAR = العربية\n\nES = Español\n\nFR = Français ​ ​ ​\n\nSO = Af-Soomaali\n\nHT = Kreyòl Ayisyen​​​",
+      "visible": true,
+      "rect": {
+        "x": 808,
+        "y": 624,
+        "w": 154,
+        "h": 86
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h2 class=\"font_2 wixui-rich-text__text\" style=\"font-size:32px; line-height:normal;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span class=\"color_37 wixui-rich-text__text\"><span style=\"letter-spacing:0.01em;\" class=\"wixui-rich-text__text\"><span style=\"font-size:32px;\" class=\"wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span class=\"wixGuard wixui-rich-text__text\">​</span>Sobre Nuestra Clínica</span></span></span></span></span></h2>",
+      "text": "​Sobre Nuestra Clínica",
+      "visible": true,
+      "rect": {
+        "x": 248,
+        "y": 808,
+        "w": 694,
+        "h": 47
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_2 wixui-rich-text__text\" style=\"font-size:15px; line-height:1.3em; text-align:center;\"><span style=\"color:#141F51;\" class=\"wixui-rich-text__text\"><span style=\"font-size:15px;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:0em;\" class=\"wixui-rich-text__text\"><span style=\"font-family:avenir-lt-w01_35-light1475496,sans-serif;\" class=\"wixui-rich-text__text\"><span class=\"wixGuard wixui-rich-text__text\">​</span>La Clínica Gratuita Hilltop, en asociación con MY Project USA, ofrece exámenes preventivos y atención primaria gratuitos para los pacientes que cumplen los requisitos. Brindamos atención médica de alta calidad, accesible y culturalmente sensible a personas y familias desatendidas en la comunidad de Hilltop. Nuestra misión es promover la equidad en salud fomentando la continuidad de la atención, empoderando a los pacientes con apoyo personalizado y promoviendo el bienestar a través de la educación médica continua.</span></span></span></span></span></p>\n\n<p class=\"font_2 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.3em; text-align:center;\">&nbsp;</p>",
+      "text": "​La Clínica Gratuita Hilltop, en asociación con MY Project USA, ofrece exámenes preventivos y atención primaria gratuitos para los pacientes que cumplen los requisitos. Brindamos atención médica de alta calidad, accesible y culturalmente sensible a personas y familias desatendidas en la comunidad de Hilltop. Nuestra misión es promover la equidad en salud fomentando la continuidad de la atención, empoderando a los pacientes con apoyo personalizado y promoviendo el bienestar a través de la educación médica continua.",
+      "visible": true,
+      "rect": {
+        "x": 600,
+        "y": 875,
+        "w": 346,
+        "h": 246
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\">Our Services</h3>",
+      "text": "Our Services",
+      "visible": true,
+      "rect": {
+        "x": 252,
+        "y": 1145,
+        "w": 694,
+        "h": 46
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:19px; line-height:0.9em;\"><span style=\"font-size:19px;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span class=\"color_36 wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">Preventative Screenings</span></span></span></span></span></p>",
+      "text": "Preventative Screenings",
+      "visible": true,
+      "rect": {
+        "x": 271,
+        "y": 1218,
+        "w": 194,
+        "h": 19
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">We offer personalized care for long-term wellness and support patients managing hypertension, diabetes, high cholesterol, and other chronic conditions!</span></p>",
+      "text": "We offer personalized care for long-term wellness and support patients managing hypertension, diabetes, high cholesterol, and other chronic conditions!",
+      "visible": true,
+      "rect": {
+        "x": 271,
+        "y": 1256,
+        "w": 194,
+        "h": 135
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:19px; line-height:1em;\"><span style=\"font-size:19px;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span class=\"color_36 wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">Chronic Conditions Management</span></span></span></span></span></p>",
+      "text": "Chronic Conditions Management",
+      "visible": true,
+      "rect": {
+        "x": 514,
+        "y": 1218,
+        "w": 208,
+        "h": 21
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">We offer personalized care for long-term wellness and support patients managing hypertension, diabetes, high cholesterol, and other chronic conditions!</span></p>",
+      "text": "We offer personalized care for long-term wellness and support patients managing hypertension, diabetes, high cholesterol, and other chronic conditions!",
+      "visible": true,
+      "rect": {
+        "x": 516,
+        "y": 1257,
+        "w": 194,
+        "h": 135
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:19px;\"><span style=\"font-size:19px;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span class=\"color_36 wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\">Primary Care Visits</span></span></span></span></p>",
+      "text": "Primary Care Visits",
+      "visible": true,
+      "rect": {
+        "x": 764,
+        "y": 1210,
+        "w": 194,
+        "h": 29
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Our board-certified family medicine physicians offer:</span></p>\n\n<ul class=\"font_7 wixui-rich-text__text\" style=\"color:rgb(246, 253, 51); font-size:15px;\">\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Routine exams</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Follow-ups</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Sick visits,</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">and ongoing care tailored to you and your family.</span></p>\n</li>\n</ul>",
+      "text": "Our board-certified family medicine physicians offer:\n\nRoutine exams\n\nFollow-ups\n\nSick visits,\n\nand ongoing care tailored to you and your family.",
+      "visible": true,
+      "rect": {
+        "x": 761,
+        "y": 1248,
+        "w": 194,
+        "h": 180
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:19px;\"><span style=\"font-size:19px;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"color:#FFFFFF;\" class=\"wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\">Women’s Health</span></span></span></span></p>",
+      "text": "Women’s Health",
+      "visible": true,
+      "rect": {
+        "x": 260,
+        "y": 1541,
+        "w": 194,
+        "h": 29
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">We address several gynecological concerns including:</span></p>\n\n<ul class=\"font_7 wixui-rich-text__text\" style=\"color:rgb(246, 253, 51); font-size:15px;\">\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Menstrual issues</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Pelvic health</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Family planning</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Wellness exams</span></p>\n</li>\n</ul>",
+      "text": "We address several gynecological concerns including:\n\nMenstrual issues\n\nPelvic health\n\nFamily planning\n\nWellness exams",
+      "visible": true,
+      "rect": {
+        "x": 263,
+        "y": 1588,
+        "w": 194,
+        "h": 158
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:19px; line-height:normal;\"><span style=\"font-size:19px;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span class=\"color_36 wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">Health Navigation &amp; Scheduling</span></span></span></span></span></p>",
+      "text": "Health Navigation & Scheduling",
+      "visible": true,
+      "rect": {
+        "x": 512,
+        "y": 1539,
+        "w": 208,
+        "h": 23
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">We offer assistance with:</span></p>\n\n<ul class=\"font_7 wixui-rich-text__text\" style=\"color:rgb(246, 253, 51); font-size:15px;\">\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Scheduling visits</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Coordinating referrals</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">And connecting you to resources across the healthcare system.</span></p>\n</li>\n</ul>",
+      "text": "We offer assistance with:\n\nScheduling visits\n\nCoordinating referrals\n\nAnd connecting you to resources across the healthcare system.",
+      "visible": true,
+      "rect": {
+        "x": 514,
+        "y": 1580,
+        "w": 194,
+        "h": 135
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:19px; line-height:normal;\"><span style=\"font-size:19px;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span class=\"color_36 wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">Lab Services</span></span></span></span></span></p>",
+      "text": "Lab Services",
+      "visible": true,
+      "rect": {
+        "x": 770,
+        "y": 1539,
+        "w": 194,
+        "h": 23
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">We offer point-of-care lab services during your clinic visit, including tests for:</span></p>\n\n<ul class=\"font_7 wixui-rich-text__text\" style=\"color:rgb(246, 253, 51); font-size:15px;\">\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Hemoglobin A1c</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Cholesterol</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Urinalysis</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">Pregnancy (hCG)</span></p>\n</li>\n<li class=\"wixui-rich-text__text\">\n<p class=\"font_7 wixui-rich-text__text\" style=\"font-size:15px;\"><span style=\"color:#F6FD33;\" class=\"wixui-rich-text__text\">And many more!</span></p>\n</li>\n</ul>",
+      "text": "We offer point-of-care lab services during your clinic visit, including tests for:\n\nHemoglobin A1c\n\nCholesterol\n\nUrinalysis\n\nPregnancy (hCG)\n\nAnd many more!",
+      "visible": true,
+      "rect": {
+        "x": 769,
+        "y": 1577,
+        "w": 194,
+        "h": 180
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_2 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.3em;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:avenir-lt-w01_35-light1475496,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"color:#FF4040;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:0.01em;\" class=\"wixui-rich-text__text\"><span style=\"font-size:16px;\" class=\"wixui-rich-text__text\">Solo los pacientes mayores de 18 años y sin seguro médico son elegibles para las visitas de atención primaria.</span></span></span></span></span></p>",
+      "text": "Solo los pacientes mayores de 18 años y sin seguro médico son elegibles para las visitas de atención primaria.",
+      "visible": true,
+      "rect": {
+        "x": 248,
+        "y": 1848,
+        "w": 726,
+        "h": 44
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h2 class=\"font_2 wixui-rich-text__text\" style=\"font-size:32px; line-height:normal;\"><span style=\"color:#000000;\" class=\"wixui-rich-text__text\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:0.01em;\" class=\"wixui-rich-text__text\"><span style=\"font-size:32px;\" class=\"wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\">Nuestra Ubicación</span></span></span></span></span></h2>",
+      "text": "Nuestra Ubicación",
+      "visible": true,
+      "rect": {
+        "x": 248,
+        "y": 1915,
+        "w": 712,
+        "h": 47
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_2 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.3em;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:avenir-lt-w01_35-light1475496,sans-serif;\" class=\"wixui-rich-text__text\"><span class=\"color_15 wixui-rich-text__text\"><span style=\"letter-spacing:0em;\" class=\"wixui-rich-text__text\"><span style=\"font-size:16px;\" class=\"wixui-rich-text__text\">Estamos ubicados en 3725 Sullivant Avenue, Columbus, OH, 43204, en el Centro de MY Project USA. Al ingresar por las puertas principales, gire a la derecha hacia nuestra mesa de registro y nuestro equipo le asistirá desde allí.</span></span></span></span></span></p>",
+      "text": "Estamos ubicados en 3725 Sullivant Avenue, Columbus, OH, 43204, en el Centro de MY Project USA. Al ingresar por las puertas principales, gire a la derecha hacia nuestra mesa de registro y nuestro equipo le asistirá desde allí.",
+      "visible": true,
+      "rect": {
+        "x": 248,
+        "y": 1963,
+        "w": 688,
+        "h": 79
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_4 wixui-rich-text__text\" style=\"font-size:26px; line-height:normal;\"><span style=\"font-weight:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"font-size:26px;\" class=\"wixui-rich-text__text\">Horas</span></span></span></h3>",
+      "text": "Horas",
+      "visible": true,
+      "rect": {
+        "x": 734,
+        "y": 2050,
+        "w": 239,
+        "h": 56
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.8em;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-size:16px;\" class=\"wixui-rich-text__text\">Sábados selectos</span></span></p>",
+      "text": "Sábados selectos",
+      "visible": true,
+      "rect": {
+        "x": 734,
+        "y": 2085,
+        "w": 117,
+        "h": 62
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.8em;\"><span style=\"font-size:16px;\" class=\"wixui-rich-text__text\">&nbsp; 9:00 am – 1:00 pm</span></p>",
+      "text": "9:00 am – 1:00 pm",
+      "visible": true,
+      "rect": {
+        "x": 839,
+        "y": 2085,
+        "w": 141,
+        "h": 62
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_4 wixui-rich-text__text\" style=\"font-size:26px; line-height:normal;\"><span style=\"font-weight:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-size:26px;\" class=\"wixui-rich-text__text\">Contacto</span></span></span></span></h3>",
+      "text": "Contacto",
+      "visible": true,
+      "rect": {
+        "x": 734,
+        "y": 2123,
+        "w": 257,
+        "h": 56
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.8em;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-size:16px;\" class=\"wixui-rich-text__text\">614-905-0977</span></span></p>",
+      "text": "614-905-0977",
+      "visible": true,
+      "rect": {
+        "x": 734,
+        "y": 2152,
+        "w": 257,
+        "h": 62
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.8em;\"><span class=\"color_15 wixui-rich-text__text\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-size:16px;\" class=\"wixui-rich-text__text\"><a class=\"wixui-rich-text__text\">freeclinic@myprojectusa.org</a></span></span></span></p>",
+      "text": "freeclinic@myprojectusa.org",
+      "visible": true,
+      "rect": {
+        "x": 734,
+        "y": 2189,
+        "w": 257,
+        "h": 62
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_4 wixui-rich-text__text\" style=\"font-size:26px; line-height:normal;\"><span style=\"font-weight:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-family:dinneuzeitgroteskltw01-_812426,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"font-size:26px;\" class=\"wixui-rich-text__text\">Horas</span></span></span></h3>",
+      "text": "Horas",
+      "visible": true,
+      "rect": {
+        "x": 247,
+        "y": 2341,
+        "w": 280,
+        "h": 39
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"font-size:16px; line-height:1.8em;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-size:16px;\" class=\"wixui-rich-text__text\">Sábados selectos</span></span></p>",
+      "text": "Sábados selectos",
+      "visible": true,
+      "rect": {
+        "x": 247,
+        "y": 2388,
+        "w": 726,
+        "h": 29
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Call Us: 614-905-0977</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Visit Us: 3275 Sullivant Ave. Columbus, OH 43204</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Mail Us: 3275 Sullivant Ave. Columbus, OH 43204</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Email Us: <a data-auto-recognition=\"true\" href=\"mailto:info@MYProjectUSA.org\" class=\"wixui-rich-text__text\">info@MYProjectUSA.org</a></span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Tax Exempt ID: 47-2398195</span></span></span></p>",
+      "text": "Call Us: 614-905-0977\n\nVisit Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nMail Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nEmail Us: info@MYProjectUSA.org\n\nTax Exempt ID: 47-2398195",
+      "visible": true,
+      "rect": {
+        "x": 242,
+        "y": 3558,
+        "w": 408,
+        "h": 90
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:13px; line-height:normal;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-size:13px;\" class=\"wixui-rich-text__text\">© 2026 by MY Project USA&nbsp;</span></span></span></p>",
+      "text": "© 2026 by MY Project USA",
+      "visible": true,
+      "rect": {
+        "x": 979,
+        "y": 3670,
+        "w": 201,
+        "h": 14
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png/v1/fill/w_980,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png/v1/fill/w_980,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png",
+      "alt": null,
+      "naturalW": 980,
+      "naturalH": 215,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 38,
+        "w": 980,
+        "h": 215
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg/v1/fill/w_77,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg/v1/fill/w_77,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg",
+      "alt": null,
+      "naturalW": 77,
+      "naturalH": 77,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 229,
+        "y": 38,
+        "w": 77,
+        "h": 77
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_257,h_255,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_257,h_255,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png",
+      "alt": "HilltopFreeClinicLogo-HD (1).png",
+      "naturalW": 257,
+      "naturalH": 255,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 272,
+        "y": 301,
+        "w": 257,
+        "h": 255
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_75d302493dff4448a441e89a4f9b2a7d~mv2.jpg/v1/fill/w_304,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_75d302493dff4448a441e89a4f9b2a7d~mv2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_75d302493dff4448a441e89a4f9b2a7d~mv2.jpg/v1/fill/w_304,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_75d302493dff4448a441e89a4f9b2a7d~mv2.jpg",
+      "alt": null,
+      "naturalW": 304,
+      "naturalH": 228,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 271,
+        "y": 870,
+        "w": 304,
+        "h": 228
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png",
+      "alt": "LinkedIn",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "visible": true,
+      "rect": {
+        "x": 1001,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png",
+      "alt": "Youtube",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "visible": true,
+      "rect": {
+        "x": 1042,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png",
+      "alt": "Facebook",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "visible": true,
+      "rect": {
+        "x": 1083,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_923d540bee594407b17f142805a44a15~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_923d540bee594407b17f142805a44a15~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_923d540bee594407b17f142805a44a15~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_923d540bee594407b17f142805a44a15~mv2.png",
+      "alt": "X     ",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://twitter.com/myprojectusa",
+      "visible": true,
+      "rect": {
+        "x": 1124,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png",
+      "alt": "Instagram",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.instagram.com/myprojectusa/",
+      "visible": true,
+      "rect": {
+        "x": 1165,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "alt": "My-Leaders-Lab  Logo.jpg",
+      "naturalW": 217,
+      "naturalH": 217,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/es/youth",
+      "visible": true,
+      "rect": {
+        "x": 990,
+        "y": 694,
+        "w": 217,
+        "h": 217
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_d27e163b347b4047be5e43bb7c3cf5ff~mv2.png/v1/crop/x_0,y_118,w_2000,h_1765/fill/w_217,h_191,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Climate%20Justice%20Lab%20logo%20CJL.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_d27e163b347b4047be5e43bb7c3cf5ff~mv2.png/v1/crop/x_0,y_118,w_2000,h_1765/fill/w_217,h_191,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Climate%20Justice%20Lab%20logo%20CJL.png",
+      "alt": "Climate Justice Lab logo CJL.png",
+      "naturalW": 217,
+      "naturalH": 191,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "visible": true,
+      "rect": {
+        "x": 987,
+        "y": 1152,
+        "w": 217,
+        "h": 191
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_402e4a3e03464ce79e93682a18313b75~mv2.png/v1/crop/x_0,y_59,w_2000,h_1882/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wellness%20warriors%20Final%20logo.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_402e4a3e03464ce79e93682a18313b75~mv2.png/v1/crop/x_0,y_59,w_2000,h_1882/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wellness%20warriors%20Final%20logo.png",
+      "alt": "Wellness warriors Final logo.png",
+      "naturalW": 217,
+      "naturalH": 204,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 930,
+        "w": 217,
+        "h": 204
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_217,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD%20(1).png",
+      "srcAttr": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_217,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD%20(1).png",
+      "alt": "HilltopFreeClinicLogo-HD (1).png",
+      "naturalW": 217,
+      "naturalH": 208,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/es/free-clinic",
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 1605,
+        "w": 217,
+        "h": 208
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png/v1/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png/v1/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png",
+      "alt": null,
+      "naturalW": 217,
+      "naturalH": 204,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 1833,
+        "w": 217,
+        "h": 204
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg",
+      "alt": "MY Family Pantry - An Initiative of MY Project USA",
+      "naturalW": 217,
+      "naturalH": 217,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/es/volunteer",
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 1365,
+        "w": 217,
+        "h": 217
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/es",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 0,
+        "w": 91,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 321,
+        "y": 0,
+        "w": 131,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "ABOUT US",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 452,
+        "y": 0,
+        "w": 120,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "VISION",
+      "href": "https://www.myprojectusa.org/es/vision-mission-goals",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "TEAM",
+      "href": "https://www.myprojectusa.org/es/team",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "SERVICES",
+      "href": "https://www.myprojectusa.org/es/services",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "REPORTS",
+      "href": "https://www.myprojectusa.org/es/reports",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "AWARDS",
+      "href": "https://www.myprojectusa.org/es/awards",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "2026 Honorees",
+      "href": "https://www.myprojectusa.org/es/awards/2026honorees",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "JOB OPPORTUNITIES",
+      "href": "https://www.myprojectusa.org/es/job-opportunities",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "COLLABORATORS",
+      "href": "https://www.myprojectusa.org/es/collaborators",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/es/issues",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 572,
+        "y": 0,
+        "w": 100,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/es/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 672,
+        "y": 0,
+        "w": 96,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "MY Wellness Warriors",
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Parents",
+      "href": "https://www.myprojectusa.org/es/wellness-parents",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Resources",
+      "href": "https://www.myprojectusa.org/es/wellnessresources",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Climate Justice Lab",
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "w": 122,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 890,
+        "y": 0,
+        "w": 92,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS COVERAGE",
+      "href": "https://www.myprojectusa.org/es/copy-of-news-coverage",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWSLETTER",
+      "href": "https://www.myprojectusa.org/es/newsletter",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Contact",
+      "href": "https://www.myprojectusa.org/es/contact-8",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/es/donors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 982,
+        "y": 0,
+        "w": 108,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/es/contacts",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 1090,
+        "y": 0,
+        "w": 120,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Join Our Clinic Team",
+      "href": "https://www.myprojectusa.org/es/freeclinicteam",
+      "target": "_self",
+      "ariaLabel": "Join Our Clinic Team",
+      "visible": true,
+      "rect": {
+        "x": 320,
+        "y": 2436,
+        "w": 263,
+        "h": 36
+      },
+      "section": "comp-mbwigb19@page"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "target": "_blank",
+      "ariaLabel": "LinkedIn",
+      "visible": true,
+      "rect": {
+        "x": 1001,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "target": "_blank",
+      "ariaLabel": "Youtube",
+      "visible": true,
+      "rect": {
+        "x": 1042,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "target": "_blank",
+      "ariaLabel": "Facebook",
+      "visible": true,
+      "rect": {
+        "x": 1083,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://twitter.com/myprojectusa",
+      "target": "_blank",
+      "ariaLabel": "X     ",
+      "visible": true,
+      "rect": {
+        "x": 1124,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.instagram.com/myprojectusa/",
+      "target": "_blank",
+      "ariaLabel": "Instagram",
+      "visible": true,
+      "rect": {
+        "x": 1165,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Events",
+      "href": "https://www.myprojectusa.org/es/events-2",
+      "target": "_self",
+      "ariaLabel": "Events",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 447,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Ventures",
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "target": "_self",
+      "ariaLabel": "Ventures",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 523,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Donate",
+      "href": "https://www.myprojectusa.org/es/donors",
+      "target": "_self",
+      "ariaLabel": "Donate",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 308,
+        "w": 221,
+        "h": 66
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Volunteer",
+      "href": "https://www.myprojectusa.org/es/volunteer",
+      "target": "_self",
+      "ariaLabel": "Volunteer",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 379,
+        "w": 221,
+        "h": 63
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/es/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 692,
+        "w": 221,
+        "h": 221
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 1150,
+        "w": 221,
+        "h": 195
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 983,
+        "y": 928,
+        "w": 221,
+        "h": 208
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/es/free-clinic",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 986,
+        "y": 1603,
+        "w": 221,
+        "h": 212
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/es/volunteer",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 983,
+        "y": 1363,
+        "w": 221,
+        "h": 221
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "target": "_self",
+      "ariaLabel": "Subscribe",
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 599,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/es",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 3510,
+        "w": 96,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 326,
+        "y": 3510,
+        "w": 114,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "ABOUT US",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 440,
+        "y": 3510,
+        "w": 119,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "VISION",
+      "href": "https://www.myprojectusa.org/es/vision-mission-goals",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "TEAM",
+      "href": "https://www.myprojectusa.org/es/team",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "SERVICES",
+      "href": "https://www.myprojectusa.org/es/services",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "REPORTS",
+      "href": "https://www.myprojectusa.org/es/reports",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "AWARDS",
+      "href": "https://www.myprojectusa.org/es/awards",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "2026 Honorees",
+      "href": "https://www.myprojectusa.org/es/awards/2026honorees",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "JOB OPPORTUNITIES",
+      "href": "https://www.myprojectusa.org/es/job-opportunities",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "COLLABORATORS",
+      "href": "https://www.myprojectusa.org/es/collaborators",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/es/issues",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 559,
+        "y": 3510,
+        "w": 102,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/es/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 661,
+        "y": 3510,
+        "w": 101,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "MY Wellness Warriors",
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Parents",
+      "href": "https://www.myprojectusa.org/es/wellness-parents",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Resources",
+      "href": "https://www.myprojectusa.org/es/wellnessresources",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Climate Justice Lab",
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 762,
+        "y": 3510,
+        "w": 121,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 883,
+        "y": 3510,
+        "w": 95,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS COVERAGE",
+      "href": "https://www.myprojectusa.org/es/copy-of-news-coverage",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWSLETTER",
+      "href": "https://www.myprojectusa.org/es/newsletter",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Contact",
+      "href": "https://www.myprojectusa.org/es/contact-8",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 2697,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/es/donors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 978,
+        "y": 3510,
+        "w": 109,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/es/contacts",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 1087,
+        "y": 3510,
+        "w": 120,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "iframe",
+      "src": "https://www-myprojectusa-org.filesusr.com/html/957fbe_36c5afaf6150ecb1f38109d4e883e035.html",
+      "title": "Hilltop Free Clinic Location",
+      "rect": {
+        "x": 240,
+        "y": 2038,
+        "w": 482,
+        "h": 262
+      },
+      "section": "comp-mbwigb19@page",
+      "visible": true
+    },
+    {
+      "kind": "iframe",
+      "src": "https://platform.twitter.com/widgets/tweet_button.html?href=https%3A%2F%2Ftwitter.com%2Fshare&lang=en&url=http%3A%2F%2Fwww.myprojectusa.org%2Fes&text=I%20love%20this%20site!&related=%40MYProjectUSA&compId=i6pmpkn8&origin=https%3A%2F%2Fwww.myprojectusa.org%2Fes%2Ffree-clinic&widgetType=TWEET",
+      "title": "Compartir en Twitter",
+      "rect": {
+        "x": 1061,
+        "y": 3573,
+        "w": 66,
+        "h": 20
+      },
+      "section": "@footer",
+      "visible": true
+    },
+    {
+      "kind": "accordion",
+      "question": "¿Cuánto tiempo durará mi cita?",
+      "answerHtml": "<div style=\"height: auto;\" class=\"rah-static rah-static--height-auto\"><div style=\"transition: opacity 300ms cubic-bezier(0.39, 0.11, 0.37, 0.99);\"><div id=\"ed199f9a-1b64-42c1-bf6d-55677d0d8312-item-content-509\" data-hook=\"accordion-item-content\" role=\"region\" aria-labelledby=\"ed199f9a-1b64-42c1-bf6d-55677d0d8312\" aria-hidden=\"false\"><div class=\"sIwn0eJ\"><div style=\"direction:ltr\" class=\"sBuQfDg oytk1I5---layout-8-collapse\"><div class=\"NF5Ub\" dir=\"ltr\" style=\"--ricos-text-color:#000000;--ricos-text-color-tuple:0, 0, 0;--ricos-action-color:#f9bf51;--ricos-action-color-tuple:249, 191, 81;--ricos-background-color:#ffffff;--ricos-background-color-tuple:255, 255, 255;--ricos-fallback-color:#000000;--ricos-fallback-color-tuple:0, 0, 0;--ricos-settings-action-color:#000000;--ricos-settings-action-color-tuple:0, 0, 0;--ricos-action-color-fallback:#000000;--ricos-action-color-fallback-tuple:0, 0, 0;--ricos-theme-color-1:#ffffff;--ricos-theme-color-1-tuple:255, 255, 255;--ricos-theme-color-2:#000000;--ricos-theme-color-2-tuple:0, 0, 0;--ricos-theme-color-3:#f9bf51;--ricos-theme-color-3-tuple:249, 191, 81;--ricos-custom-p-font-weight:normal;--ricos-custom-p-font-style:normal;--ricos-custom-p-line-height:1.5;--ricos-custom-p-font-size:15px;--ricos-custom-p-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h1-font-weight:normal;--ricos-custom-h1-font-style:normal;--ricos-custom-h1-line-height:1.5;--ricos-custom-h1-font-size:15px;--ricos-custom-h1-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h2-font-weight:normal;--ricos-custom-h2-font-style:normal;--ricos-custom-h2-line-height:1.5;--ricos-custom-h2-font-size:15px;--ricos-custom-h2-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h3-font-weight:normal;--ricos-custom-h3-font-style:normal;--ricos-custom-h3-line-height:1.5;--ricos-custom-h3-font-size:15px;--ricos-custom-h3-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h4-font-weight:normal;--ricos-custom-h4-font-style:normal;--ricos-custom-h4-line-height:1.5;--ricos-custom-h4-font-size:15px;--ricos-custom-h4-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h5-font-weight:normal;--ricos-custom-h5-font-style:normal;--ricos-custom-h5-line-height:1.5;--ricos-custom-h5-font-size:15px;--ricos-custom-h5-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h6-font-weight:normal;--ricos-custom-h6-font-style:normal;--ricos-custom-h6-line-height:1.5;--ricos-custom-h6-font-size:15px;--ricos-custom-h6-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-quote-line-height:1.5;--ricos-custom-quote-font-size:15px;--ricos-custom-quote-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-code-block-line-height:1.5;--ricos-custom-span-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-span-font-size:15px;--ricos-custom-span-line-height:1.5;--ricos-custom-link-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-link-font-size:15px;--ricos-custom-link-line-height:1.5;--ricos-custom-hashtag-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-hashtag-font-size:15px;--ricos-custom-hashtag-line-height:1.5;--ricos-custom-audio-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-audio-font-size:15px;--ricos-custom-audio-line-height:1.5;--ricos-breakout-normal-padding-start:0;--ricos-breakout-normal-padding-end:0;--ricos-breakout-full-width-padding-start:0;--ricos-breakout-full-width-padding-end:0\" data-id=\"content-viewer\"><div class=\"unp46\"><div class=\"tzeth\"><p class=\"_9Nlgm Dd46l lqKvG\" dir=\"auto\" data-ricos-paragraph=\"2vqu1\" id=\"viewer-2vqu1\" tabindex=\"-1\"><span class=\"KmEWy\"><span>La hora de la cita puede variar según la hora de llegada y el número de pacientes atendidos. La mayoría de las visitas duran entre 30 minutos y más de una hora.</span></span></p></div></div></div></div></div></div></div></div>",
+      "answerText": "La hora de la cita puede variar según la hora de llegada y el número de pacientes atendidos. La mayoría de las visitas duran entre 30 minutos y más de una hora.",
+      "rect": {
+        "x": 249,
+        "y": 2607,
+        "w": 942,
+        "h": 160
+      },
+      "section": "comp-mbwigb19@page",
+      "visible": true
+    },
+    {
+      "kind": "accordion",
+      "question": "¿Tendré acceso a un intérprete?",
+      "answerHtml": "<div style=\"height: auto;\" class=\"rah-static rah-static--height-auto\"><div style=\"transition: opacity 300ms cubic-bezier(0.39, 0.11, 0.37, 0.99);\"><div id=\"a832ac80-8dcc-4627-848b-281bacc63a84-item-content-510\" data-hook=\"accordion-item-content\" role=\"region\" aria-labelledby=\"a832ac80-8dcc-4627-848b-281bacc63a84\" aria-hidden=\"false\"><div class=\"sIwn0eJ\"><div style=\"direction:ltr\" class=\"sBuQfDg oytk1I5---layout-8-collapse\"><div class=\"NF5Ub\" dir=\"ltr\" style=\"--ricos-text-color:#000000;--ricos-text-color-tuple:0, 0, 0;--ricos-action-color:#f9bf51;--ricos-action-color-tuple:249, 191, 81;--ricos-background-color:#ffffff;--ricos-background-color-tuple:255, 255, 255;--ricos-fallback-color:#000000;--ricos-fallback-color-tuple:0, 0, 0;--ricos-settings-action-color:#000000;--ricos-settings-action-color-tuple:0, 0, 0;--ricos-action-color-fallback:#000000;--ricos-action-color-fallback-tuple:0, 0, 0;--ricos-theme-color-1:#ffffff;--ricos-theme-color-1-tuple:255, 255, 255;--ricos-theme-color-2:#000000;--ricos-theme-color-2-tuple:0, 0, 0;--ricos-theme-color-3:#f9bf51;--ricos-theme-color-3-tuple:249, 191, 81;--ricos-custom-p-font-weight:normal;--ricos-custom-p-font-style:normal;--ricos-custom-p-line-height:1.5;--ricos-custom-p-font-size:15px;--ricos-custom-p-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h1-font-weight:normal;--ricos-custom-h1-font-style:normal;--ricos-custom-h1-line-height:1.5;--ricos-custom-h1-font-size:15px;--ricos-custom-h1-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h2-font-weight:normal;--ricos-custom-h2-font-style:normal;--ricos-custom-h2-line-height:1.5;--ricos-custom-h2-font-size:15px;--ricos-custom-h2-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h3-font-weight:normal;--ricos-custom-h3-font-style:normal;--ricos-custom-h3-line-height:1.5;--ricos-custom-h3-font-size:15px;--ricos-custom-h3-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h4-font-weight:normal;--ricos-custom-h4-font-style:normal;--ricos-custom-h4-line-height:1.5;--ricos-custom-h4-font-size:15px;--ricos-custom-h4-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h5-font-weight:normal;--ricos-custom-h5-font-style:normal;--ricos-custom-h5-line-height:1.5;--ricos-custom-h5-font-size:15px;--ricos-custom-h5-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h6-font-weight:normal;--ricos-custom-h6-font-style:normal;--ricos-custom-h6-line-height:1.5;--ricos-custom-h6-font-size:15px;--ricos-custom-h6-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-quote-line-height:1.5;--ricos-custom-quote-font-size:15px;--ricos-custom-quote-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-code-block-line-height:1.5;--ricos-custom-span-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-span-font-size:15px;--ricos-custom-span-line-height:1.5;--ricos-custom-link-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-link-font-size:15px;--ricos-custom-link-line-height:1.5;--ricos-custom-hashtag-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-hashtag-font-size:15px;--ricos-custom-hashtag-line-height:1.5;--ricos-custom-audio-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-audio-font-size:15px;--ricos-custom-audio-line-height:1.5;--ricos-breakout-normal-padding-start:0;--ricos-breakout-normal-padding-end:0;--ricos-breakout-full-width-padding-start:0;--ricos-breakout-full-width-padding-end:0\" data-id=\"content-viewer\"><div class=\"unp46\"><div class=\"tzeth\"><p class=\"_9Nlgm Dd46l lqKvG\" dir=\"auto\" data-ricos-paragraph=\"atf0a\" id=\"viewer-atf0a\" tabindex=\"-1\"><span class=\"KmEWy\"><span>¡Sí! Ofrecemos servicios de interpretación a través de Martti, que ofrece interpretación de audio a demanda en varios idiomas en todo momento.</span></span></p></div></div></div></div></div></div></div></div>",
+      "answerText": "¡Sí! Ofrecemos servicios de interpretación a través de Martti, que ofrece interpretación de audio a demanda en varios idiomas en todo momento.",
+      "rect": {
+        "x": 249,
+        "y": 2772,
+        "w": 942,
+        "h": 160
+      },
+      "section": "comp-mbwigb19@page",
+      "visible": true
+    },
+    {
+      "kind": "accordion",
+      "question": "¿Hay estacionamiento disponible y se puede acceder a la clínica en transporte público?",
+      "answerHtml": "<div style=\"height: auto;\" class=\"rah-static rah-static--height-auto\"><div style=\"transition: opacity 300ms cubic-bezier(0.39, 0.11, 0.37, 0.99);\"><div id=\"73ae8cb4-e82a-44de-a146-7ea25a72a4a3-item-content-511\" data-hook=\"accordion-item-content\" role=\"region\" aria-labelledby=\"73ae8cb4-e82a-44de-a146-7ea25a72a4a3\" aria-hidden=\"false\"><div class=\"sIwn0eJ\"><div style=\"direction:ltr\" class=\"sBuQfDg oytk1I5---layout-8-collapse\"><div class=\"NF5Ub\" dir=\"ltr\" style=\"--ricos-text-color:#000000;--ricos-text-color-tuple:0, 0, 0;--ricos-action-color:#f9bf51;--ricos-action-color-tuple:249, 191, 81;--ricos-background-color:#ffffff;--ricos-background-color-tuple:255, 255, 255;--ricos-fallback-color:#000000;--ricos-fallback-color-tuple:0, 0, 0;--ricos-settings-action-color:#000000;--ricos-settings-action-color-tuple:0, 0, 0;--ricos-action-color-fallback:#000000;--ricos-action-color-fallback-tuple:0, 0, 0;--ricos-theme-color-1:#ffffff;--ricos-theme-color-1-tuple:255, 255, 255;--ricos-theme-color-2:#000000;--ricos-theme-color-2-tuple:0, 0, 0;--ricos-theme-color-3:#f9bf51;--ricos-theme-color-3-tuple:249, 191, 81;--ricos-custom-p-font-weight:normal;--ricos-custom-p-font-style:normal;--ricos-custom-p-line-height:1.5;--ricos-custom-p-font-size:15px;--ricos-custom-p-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h1-font-weight:normal;--ricos-custom-h1-font-style:normal;--ricos-custom-h1-line-height:1.5;--ricos-custom-h1-font-size:15px;--ricos-custom-h1-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h2-font-weight:normal;--ricos-custom-h2-font-style:normal;--ricos-custom-h2-line-height:1.5;--ricos-custom-h2-font-size:15px;--ricos-custom-h2-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h3-font-weight:normal;--ricos-custom-h3-font-style:normal;--ricos-custom-h3-line-height:1.5;--ricos-custom-h3-font-size:15px;--ricos-custom-h3-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h4-font-weight:normal;--ricos-custom-h4-font-style:normal;--ricos-custom-h4-line-height:1.5;--ricos-custom-h4-font-size:15px;--ricos-custom-h4-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h5-font-weight:normal;--ricos-custom-h5-font-style:normal;--ricos-custom-h5-line-height:1.5;--ricos-custom-h5-font-size:15px;--ricos-custom-h5-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h6-font-weight:normal;--ricos-custom-h6-font-style:normal;--ricos-custom-h6-line-height:1.5;--ricos-custom-h6-font-size:15px;--ricos-custom-h6-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-quote-line-height:1.5;--ricos-custom-quote-font-size:15px;--ricos-custom-quote-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-code-block-line-height:1.5;--ricos-custom-span-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-span-font-size:15px;--ricos-custom-span-line-height:1.5;--ricos-custom-link-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-link-font-size:15px;--ricos-custom-link-line-height:1.5;--ricos-custom-hashtag-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-hashtag-font-size:15px;--ricos-custom-hashtag-line-height:1.5;--ricos-custom-audio-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-audio-font-size:15px;--ricos-custom-audio-line-height:1.5;--ricos-breakout-normal-padding-start:0;--ricos-breakout-normal-padding-end:0;--ricos-breakout-full-width-padding-start:0;--ricos-breakout-full-width-padding-end:0\" data-id=\"content-viewer\"><div class=\"unp46\"><div class=\"tzeth\"><p class=\"_9Nlgm Dd46l lqKvG\" dir=\"auto\" data-ricos-paragraph=\"atf0a\" id=\"viewer-atf0a\" tabindex=\"-1\"><span class=\"KmEWy\"><span>Sí, contamos con estacionamiento disponible en nuestras instalaciones. La clínica también está convenientemente ubicada junto a una ruta de autobús de COTA. Si necesita ayuda con el transporte, por favor, infórmenos; quizás podamos ayudarle.</span></span></p></div></div></div></div></div></div></div></div>",
+      "answerText": "Sí, contamos con estacionamiento disponible en nuestras instalaciones. La clínica también está convenientemente ubicada junto a una ruta de autobús de COTA. Si necesita ayuda con el transporte, por favor, infórmenos; quizás podamos ayudarle.",
+      "rect": {
+        "x": 249,
+        "y": 2938,
+        "w": 942,
+        "h": 160
+      },
+      "section": "comp-mbwigb19@page",
+      "visible": true
+    },
+    {
+      "kind": "accordion",
+      "question": "¿Ofrecen citas dentales o de la vista?",
+      "answerHtml": "<div style=\"height: auto;\" class=\"rah-static rah-static--height-auto\"><div style=\"transition: opacity 300ms cubic-bezier(0.39, 0.11, 0.37, 0.99);\"><div id=\"fabe86ae-0f37-4e5c-a9f2-c9889044e9e3-item-content-512\" data-hook=\"accordion-item-content\" role=\"region\" aria-labelledby=\"fabe86ae-0f37-4e5c-a9f2-c9889044e9e3\" aria-hidden=\"false\"><div class=\"sIwn0eJ\"><div style=\"direction:ltr\" class=\"sBuQfDg oytk1I5---layout-8-collapse\"><div class=\"NF5Ub\" dir=\"ltr\" style=\"--ricos-text-color:#000000;--ricos-text-color-tuple:0, 0, 0;--ricos-action-color:#f9bf51;--ricos-action-color-tuple:249, 191, 81;--ricos-background-color:#ffffff;--ricos-background-color-tuple:255, 255, 255;--ricos-fallback-color:#000000;--ricos-fallback-color-tuple:0, 0, 0;--ricos-settings-action-color:#000000;--ricos-settings-action-color-tuple:0, 0, 0;--ricos-action-color-fallback:#000000;--ricos-action-color-fallback-tuple:0, 0, 0;--ricos-theme-color-1:#ffffff;--ricos-theme-color-1-tuple:255, 255, 255;--ricos-theme-color-2:#000000;--ricos-theme-color-2-tuple:0, 0, 0;--ricos-theme-color-3:#f9bf51;--ricos-theme-color-3-tuple:249, 191, 81;--ricos-custom-p-font-weight:normal;--ricos-custom-p-font-style:normal;--ricos-custom-p-line-height:1.5;--ricos-custom-p-font-size:15px;--ricos-custom-p-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h1-font-weight:normal;--ricos-custom-h1-font-style:normal;--ricos-custom-h1-line-height:1.5;--ricos-custom-h1-font-size:15px;--ricos-custom-h1-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h2-font-weight:normal;--ricos-custom-h2-font-style:normal;--ricos-custom-h2-line-height:1.5;--ricos-custom-h2-font-size:15px;--ricos-custom-h2-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h3-font-weight:normal;--ricos-custom-h3-font-style:normal;--ricos-custom-h3-line-height:1.5;--ricos-custom-h3-font-size:15px;--ricos-custom-h3-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h4-font-weight:normal;--ricos-custom-h4-font-style:normal;--ricos-custom-h4-line-height:1.5;--ricos-custom-h4-font-size:15px;--ricos-custom-h4-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h5-font-weight:normal;--ricos-custom-h5-font-style:normal;--ricos-custom-h5-line-height:1.5;--ricos-custom-h5-font-size:15px;--ricos-custom-h5-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h6-font-weight:normal;--ricos-custom-h6-font-style:normal;--ricos-custom-h6-line-height:1.5;--ricos-custom-h6-font-size:15px;--ricos-custom-h6-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-quote-line-height:1.5;--ricos-custom-quote-font-size:15px;--ricos-custom-quote-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-code-block-line-height:1.5;--ricos-custom-span-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-span-font-size:15px;--ricos-custom-span-line-height:1.5;--ricos-custom-link-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-link-font-size:15px;--ricos-custom-link-line-height:1.5;--ricos-custom-hashtag-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-hashtag-font-size:15px;--ricos-custom-hashtag-line-height:1.5;--ricos-custom-audio-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-audio-font-size:15px;--ricos-custom-audio-line-height:1.5;--ricos-breakout-normal-padding-start:0;--ricos-breakout-normal-padding-end:0;--ricos-breakout-full-width-padding-start:0;--ricos-breakout-full-width-padding-end:0\" data-id=\"content-viewer\"><div class=\"unp46\"><div class=\"tzeth\"><p class=\"_9Nlgm Dd46l lqKvG\" dir=\"auto\" data-ricos-paragraph=\"atf0a\" id=\"viewer-atf0a\" tabindex=\"-1\"><span class=\"KmEWy\"><span>Actualmente, </span><strong style=\"font-weight:700\"><span>no</span></strong><span> ofrecemos servicios dentales. Ocasionalmente, ofrecemos citas para la vista, aunque la disponibilidad es limitada y no se realiza con regularidad. Consulte nuestro sitio web o redes sociales para obtener la información más actualizada.</span></span></p></div></div></div></div></div></div></div></div>",
+      "answerText": "Actualmente, no ofrecemos servicios dentales. Ocasionalmente, ofrecemos citas para la vista, aunque la disponibilidad es limitada y no se realiza con regularidad. Consulte nuestro sitio web o redes sociales para obtener la información más actualizada.",
+      "rect": {
+        "x": 249,
+        "y": 3103,
+        "w": 942,
+        "h": 160
+      },
+      "section": "comp-mbwigb19@page",
+      "visible": true
+    },
+    {
+      "kind": "accordion",
+      "question": "¿Cuándo recibiré los resultados de laboratorio?",
+      "answerHtml": "<div style=\"height: auto;\" class=\"rah-static rah-static--height-auto\"><div style=\"transition: opacity 300ms cubic-bezier(0.39, 0.11, 0.37, 0.99);\"><div id=\"e47bfd4f-e5a1-49d3-a243-771eaa6c4666-item-content-513\" data-hook=\"accordion-item-content\" role=\"region\" aria-labelledby=\"e47bfd4f-e5a1-49d3-a243-771eaa6c4666\" aria-hidden=\"false\"><div class=\"sIwn0eJ\"><div style=\"direction:ltr\" class=\"sBuQfDg oytk1I5---layout-8-collapse\"><div class=\"NF5Ub\" dir=\"ltr\" style=\"--ricos-text-color:#000000;--ricos-text-color-tuple:0, 0, 0;--ricos-action-color:#f9bf51;--ricos-action-color-tuple:249, 191, 81;--ricos-background-color:#ffffff;--ricos-background-color-tuple:255, 255, 255;--ricos-fallback-color:#000000;--ricos-fallback-color-tuple:0, 0, 0;--ricos-settings-action-color:#000000;--ricos-settings-action-color-tuple:0, 0, 0;--ricos-action-color-fallback:#000000;--ricos-action-color-fallback-tuple:0, 0, 0;--ricos-theme-color-1:#ffffff;--ricos-theme-color-1-tuple:255, 255, 255;--ricos-theme-color-2:#000000;--ricos-theme-color-2-tuple:0, 0, 0;--ricos-theme-color-3:#f9bf51;--ricos-theme-color-3-tuple:249, 191, 81;--ricos-custom-p-font-weight:normal;--ricos-custom-p-font-style:normal;--ricos-custom-p-line-height:1.5;--ricos-custom-p-font-size:15px;--ricos-custom-p-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h1-font-weight:normal;--ricos-custom-h1-font-style:normal;--ricos-custom-h1-line-height:1.5;--ricos-custom-h1-font-size:15px;--ricos-custom-h1-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h2-font-weight:normal;--ricos-custom-h2-font-style:normal;--ricos-custom-h2-line-height:1.5;--ricos-custom-h2-font-size:15px;--ricos-custom-h2-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h3-font-weight:normal;--ricos-custom-h3-font-style:normal;--ricos-custom-h3-line-height:1.5;--ricos-custom-h3-font-size:15px;--ricos-custom-h3-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h4-font-weight:normal;--ricos-custom-h4-font-style:normal;--ricos-custom-h4-line-height:1.5;--ricos-custom-h4-font-size:15px;--ricos-custom-h4-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h5-font-weight:normal;--ricos-custom-h5-font-style:normal;--ricos-custom-h5-line-height:1.5;--ricos-custom-h5-font-size:15px;--ricos-custom-h5-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-h6-font-weight:normal;--ricos-custom-h6-font-style:normal;--ricos-custom-h6-line-height:1.5;--ricos-custom-h6-font-size:15px;--ricos-custom-h6-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-quote-line-height:1.5;--ricos-custom-quote-font-size:15px;--ricos-custom-quote-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-code-block-line-height:1.5;--ricos-custom-span-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-span-font-size:15px;--ricos-custom-span-line-height:1.5;--ricos-custom-link-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-link-font-size:15px;--ricos-custom-link-line-height:1.5;--ricos-custom-hashtag-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-hashtag-font-size:15px;--ricos-custom-hashtag-line-height:1.5;--ricos-custom-audio-font-family:avenir-lt-w01_35-light1475496;--ricos-custom-audio-font-size:15px;--ricos-custom-audio-line-height:1.5;--ricos-breakout-normal-padding-start:0;--ricos-breakout-normal-padding-end:0;--ricos-breakout-full-width-padding-start:0;--ricos-breakout-full-width-padding-end:0\" data-id=\"content-viewer\"><div class=\"unp46\"><div class=\"tzeth\"><p class=\"_9Nlgm Dd46l lqKvG\" dir=\"auto\" data-ricos-paragraph=\"atf0a\" id=\"viewer-atf0a\" tabindex=\"-1\"><span class=\"KmEWy\"><span>Los tiempos de entrega de los resultados de laboratorio pueden variar. Para algunas pruebas en el punto de atención, entregamos los resultados durante su visita. Otras pruebas de laboratorio se envían y pueden tardar algunos días, dependiendo del tiempo de procesamiento del laboratorio. Nuestro equipo se pondrá en contacto con usted en cuanto sus resultados estén disponibles.</span></span></p></div></div></div></div></div></div></div></div>",
+      "answerText": "Los tiempos de entrega de los resultados de laboratorio pueden variar. Para algunas pruebas en el punto de atención, entregamos los resultados durante su visita. Otras pruebas de laboratorio se envían y pueden tardar algunos días, dependiendo del tiempo de procesamiento del laboratorio. Nuestro equipo se pondrá en contacto con usted en cuanto sus resultados estén disponibles.",
+      "rect": {
+        "x": 249,
+        "y": 3269,
+        "w": 942,
+        "h": 182
+      },
+      "section": "comp-mbwigb19@page",
+      "visible": true
+    },
+    {
+      "kind": "orphan",
+      "html": "Frequency Asked Questions",
+      "text": "Frequency Asked Questions",
+      "tag": "h1",
+      "rect": {
+        "x": 249,
+        "y": 2548,
+        "w": 300,
+        "h": 29
+      },
+      "section": "comp-mbwigb19@page",
+      "visible": true
+    }
+  ],
+  "forms": [],
+  "links": [
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es",
+      "text": "HOME",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/vision-mission-goals",
+      "text": "VISION",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/team",
+      "text": "TEAM",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/services",
+      "text": "SERVICES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/reports",
+      "text": "REPORTS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/awards",
+      "text": "AWARDS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/awards/2026honorees",
+      "text": "2026 Honorees",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/job-opportunities",
+      "text": "JOB OPPORTUNITIES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/collaborators",
+      "text": "COLLABORATORS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/issues",
+      "text": "ISSUES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/youth",
+      "text": "YOUTH",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "text": "MY Wellness Warriors",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/wellness-parents",
+      "text": "Wellness Parents",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/wellnessresources",
+      "text": "Wellness Resources",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "text": "Climate Justice Lab",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "text": "VENTURES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/copy-of-news-coverage",
+      "text": "NEWS COVERAGE",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/newsletter",
+      "text": "NEWSLETTER",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/contact-8",
+      "text": "Contact",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/donors",
+      "text": "DONORS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/es/contacts",
+      "text": "CONTACTS",
+      "target": "_self"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/es/freeclinicteam",
+      "text": "Join Our Clinic Team",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://twitter.com/myprojectusa",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.instagram.com/myprojectusa/",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/events-2",
+      "text": "Events",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "text": "Ventures",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/donors",
+      "text": "Donate",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/volunteer",
+      "text": "Volunteer",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/youth",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/free-clinic",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/volunteer",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es",
+      "text": "HOME",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/vision-mission-goals",
+      "text": "VISION",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/team",
+      "text": "TEAM",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/services",
+      "text": "SERVICES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/reports",
+      "text": "REPORTS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/awards",
+      "text": "AWARDS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/awards/2026honorees",
+      "text": "2026 Honorees",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/job-opportunities",
+      "text": "JOB OPPORTUNITIES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/collaborators",
+      "text": "COLLABORATORS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/issues",
+      "text": "ISSUES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/youth",
+      "text": "YOUTH",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "text": "MY Wellness Warriors",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/wellness-parents",
+      "text": "Wellness Parents",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/wellnessresources",
+      "text": "Wellness Resources",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "text": "Climate Justice Lab",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "text": "VENTURES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/copy-of-news-coverage",
+      "text": "NEWS COVERAGE",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/newsletter",
+      "text": "NEWSLETTER",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/contact-8",
+      "text": "Contact",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/donors",
+      "text": "DONORS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/es/contacts",
+      "text": "CONTACTS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "mailto:info@MYProjectUSA.org",
+      "text": "info@MYProjectUSA.org",
+      "target": null
+    }
+  ],
+  "nav": [
+    {
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/es",
+      "children": []
+    },
+    {
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "children": []
+    },
+    {
+      "text": "ABOUT US",
+      "href": "https://www.myprojectusa.org/es/vision-mission-goals",
+      "children": [
+        {
+          "text": "VISION",
+          "href": "https://www.myprojectusa.org/es/vision-mission-goals"
+        },
+        {
+          "text": "TEAM",
+          "href": "https://www.myprojectusa.org/es/team"
+        },
+        {
+          "text": "SERVICES",
+          "href": "https://www.myprojectusa.org/es/services"
+        },
+        {
+          "text": "REPORTS",
+          "href": "https://www.myprojectusa.org/es/reports"
+        },
+        {
+          "text": "AWARDS",
+          "href": "https://www.myprojectusa.org/es/awards"
+        },
+        {
+          "text": "2026 Honorees",
+          "href": "https://www.myprojectusa.org/es/awards/2026honorees"
+        },
+        {
+          "text": "JOB OPPORTUNITIES",
+          "href": "https://www.myprojectusa.org/es/job-opportunities"
+        },
+        {
+          "text": "COLLABORATORS",
+          "href": "https://www.myprojectusa.org/es/collaborators"
+        }
+      ]
+    },
+    {
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/es/issues",
+      "children": []
+    },
+    {
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/es/youth",
+      "children": [
+        {
+          "text": "MY Wellness Warriors",
+          "href": "https://www.myprojectusa.org/es/wellnesswarriors"
+        },
+        {
+          "text": "Wellness Parents",
+          "href": "https://www.myprojectusa.org/es/wellness-parents"
+        },
+        {
+          "text": "Wellness Resources",
+          "href": "https://www.myprojectusa.org/es/wellnessresources"
+        },
+        {
+          "text": "Climate Justice Lab",
+          "href": "https://www.myprojectusa.org/es/climatejustice"
+        }
+      ]
+    },
+    {
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "children": []
+    },
+    {
+      "text": "NEWS",
+      "href": "https://www.myprojectusa.org/es/copy-of-news-coverage",
+      "children": [
+        {
+          "text": "NEWS COVERAGE",
+          "href": "https://www.myprojectusa.org/es/copy-of-news-coverage"
+        },
+        {
+          "text": "NEWSLETTER",
+          "href": "https://www.myprojectusa.org/es/newsletter"
+        },
+        {
+          "text": "Contact",
+          "href": "https://www.myprojectusa.org/es/contact-8"
+        }
+      ]
+    },
+    {
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/es/donors",
+      "children": []
+    },
+    {
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/es/contacts",
+      "children": []
+    },
+    {
+      "text": "More",
+      "href": null,
+      "children": []
+    }
+  ],
+  "headerText": "HOME\n\nSubscribe\n\nABOUT US\n\nISSUES\n\nYOUTH\n\nVENTURES\n\nNEWS\n\nDONORS\n\nCONTACTS",
+  "footerText": "HOME\n\nSubscribe\n\nABOUT US\n\nISSUES\n\nYOUTH\n\nVENTURES\n\nNEWS\n\nDONORS\n\nCONTACTS\n\nCall Us: 614-905-0977\n\nVisit Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nMail Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nEmail Us: info@MYProjectUSA.org\n\nTax Exempt ID: 47-2398195\n\nShare\n\n© 2026 by MY Project USA",
+  "footerLinks": [
+    {
+      "href": "https://www.myprojectusa.org/es",
+      "text": "HOME"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/contact-8-1",
+      "text": "Subscribe"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/vision-mission-goals",
+      "text": "VISION"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/team",
+      "text": "TEAM"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/services",
+      "text": "SERVICES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/reports",
+      "text": "REPORTS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/awards",
+      "text": "AWARDS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/awards/2026honorees",
+      "text": "2026 Honorees"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/job-opportunities",
+      "text": "JOB OPPORTUNITIES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/collaborators",
+      "text": "COLLABORATORS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/issues",
+      "text": "ISSUES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/youth",
+      "text": "YOUTH"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/wellnesswarriors",
+      "text": "MY Wellness Warriors"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/wellness-parents",
+      "text": "Wellness Parents"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/wellnessresources",
+      "text": "Wellness Resources"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/climatejustice",
+      "text": "Climate Justice Lab"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/ventures",
+      "text": "VENTURES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/copy-of-news-coverage",
+      "text": "NEWS COVERAGE"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/newsletter",
+      "text": "NEWSLETTER"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/contact-8",
+      "text": "Contact"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/donors",
+      "text": "DONORS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/es/contacts",
+      "text": "CONTACTS"
+    },
+    {
+      "href": "mailto:info@MYProjectUSA.org",
+      "text": "info@MYProjectUSA.org"
+    }
+  ],
+  "mainText": "Free Clinic\n\nClínica Gratuita\n\nKlinik Gratis\n\nClinique Gratuite \n\nعيادة مجانية\n\nKalkaalis Bilaash\n\nWelcome • Bienvenido • Byenveni • Bienvenue • مرحبًا • Soo dhawoow​\n​\n\nPlease select your language to begin below\n\n-Por favor, seleccione su idioma para comenzar abajo\n\n-Tanpri chwazi lang ou pou kòmanse anba a\n\n-Veuillez sélectionner votre langue pour commencer ci-dessous  \n\n- الرجاء اختيار لغتك للبدء أدناه\n\n- Fadlan dooro luqaddaada si aad u bilowdo hoos\n\nES\n\nEN = English\n\nAR = العربية\n\nES = Español\n\nFR = Français ​ ​ ​\n\nSO = Af-Soomaali\n\nHT = Kreyòl Ayisyen​​​\n\n​Sobre Nuestra Clínica\n\n​La Clínica Gratuita Hilltop, en asociación con MY Project USA, ofrece exámenes preventivos y atención primaria gratuitos para los pacientes que cumplen los requisitos. Brindamos atención médica de alta calidad, accesible y culturalmente sensible a personas y familias desatendidas en la comunidad de Hilltop. Nuestra misión es promover la equidad en salud fomentando la continuidad de la atención, empoderando a los pacientes con apoyo personalizado y promoviendo el bienestar a través de la educación médica continua.\n\n \n\nOur Services\n\nPreventative Screenings\n\nWe offer personalized care for long-term wellness and support patients managing hypertension, diabetes, high cholesterol, and other chronic conditions!\n\nChronic Conditions Management\n\nWe offer personalized care for long-term wellness and support patients managing hypertension, diabetes, high cholesterol, and other chronic conditions!\n\nPrimary Care Visits\n\nOur board-certified family medicine physicians offer:\n\nRoutine exams\n\nFollow-ups\n\nSick visits,\n\nand ongoing care tailored to you and your family.\n\nWomen’s Health\n\nWe address several gynecological concerns including:\n\nMenstrual issues\n\nPelvic health\n\nFamily planning\n\nWellness exams\n\nHealth Navigation & Scheduling\n\nWe offer assistance with:\n\nScheduling visits\n\nCoordinating referrals\n\nAnd connecting you to resources across the healthcare system.\n\nLab Services\n\nWe offer point-of-care lab services during your clinic visit, including tests for:\n\nHemoglobin A1c\n\nCholesterol\n\nUrinalysis\n\nPregnancy (hCG)\n\nAnd many more!\n\nSolo los pacientes mayores de 18 años y sin seguro médico son elegibles para las visitas de atención primaria.\n\nNuestra Ubicación\n\nEstamos ubicados en 3725 Sullivant Avenue, Columbus, OH, 43204, en el Centro de MY Project USA. Al ingresar por las puertas principales, gire a la derecha hacia nuestra mesa de registro y nuestro equipo le asistirá desde allí.\n\nHoras\n\nSábados selectos\n\n  9:00 am – 1:00 pm\n\nContacto\n\n614-905-0977\n\nfreeclinic@myprojectusa.org\n\nHoras\n\nSábados selectos\n\nJoin Our Clinic Team\nFrequency Asked Questions\n¿Cuánto tiempo durará mi cita?\n\nLa hora de la cita puede variar según la hora de llegada y el número de pacientes atendidos. La mayoría de las visitas duran entre 30 minutos y más de una hora.\n\n¿Tendré acceso a un intérprete?\n\n¡Sí! Ofrecemos servicios de interpretación a través de Martti, que ofrece interpretación de audio a demanda en varios idiomas en todo momento.\n\n¿Hay estacionamiento disponible y se puede acceder a la clínica en transporte público?\n\nSí, contamos con estacionamiento disponible en nuestras instalaciones. La clínica también está convenientemente ubicada junto a una ruta de autobús de COTA. Si necesita ayuda con el transporte, por favor, infórmenos; quizás podamos ayudarle.\n\n¿Ofrecen citas dentales o de la vista?\n\nActualmente, no ofrecemos servicios dentales. Ocasionalmente, ofrecemos citas para la vista, aunque la disponibilidad es limitada y no se realiza con regularidad. Consulte nuestro sitio web o redes sociales para obtener la información más actualizada.\n\n¿Cuándo recibiré los resultados de laboratorio?\n\nLos tiempos de entrega de los resultados de laboratorio pueden variar. Para algunas pruebas en el punto de atención, entregamos los resultados durante su visita. Otras pruebas de laboratorio se envían y pueden tardar algunos días, dependiendo del tiempo de procesamiento del laboratorio. Nuestro equipo se pondrá en contacto con usted en cuanto sus resultados estén disponibles.",
+  "docHeight": 3705
+}

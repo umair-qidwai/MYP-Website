@@ -1,0 +1,2207 @@
+{
+  "key": "services--d109d7",
+  "url": "https://www.myprojectusa.org/services",
+  "group": "pages",
+  "status": 200,
+  "error": null,
+  "crawledAt": "2026-10-21T14:42:40.684Z",
+  "finalUrl": "https://www.myprojectusa.org/services",
+  "title": "Community Services & Programs in Columbus | MY Project USA",
+  "lang": "en",
+  "meta": {
+    "description": "Explore MY Project USA programs for youth leadership, food access, free healthcare, family support, economic mobility, environmental action and community engagement in Columbus.",
+    "ogTitle": "Community Services & Programs in Columbus | MY Project USA",
+    "ogDescription": "Explore MY Project USA programs for youth leadership, food access, free healthcare, family support, economic mobility, environmental action and community engagement in Columbus.",
+    "ogImage": null,
+    "canonical": "https://www.myprojectusa.org/services",
+    "robots": null,
+    "alternates": [
+      {
+        "hreflang": "x-default",
+        "href": "https://www.myprojectusa.org/services"
+      },
+      {
+        "hreflang": "ar-ae",
+        "href": "https://www.myprojectusa.org/ar/services"
+      },
+      {
+        "hreflang": "es-es",
+        "href": "https://www.myprojectusa.org/es/services"
+      },
+      {
+        "hreflang": "fr-fr",
+        "href": "https://www.myprojectusa.org/fr/services"
+      },
+      {
+        "hreflang": "ht-ht",
+        "href": "https://www.myprojectusa.org/ht/services"
+      },
+      {
+        "hreflang": "so-so",
+        "href": "https://www.myprojectusa.org/so/services"
+      },
+      {
+        "hreflang": "en-us",
+        "href": "https://www.myprojectusa.org/services"
+      }
+    ]
+  },
+  "headings": [
+    {
+      "level": 1,
+      "text": "Services"
+    },
+    {
+      "level": 3,
+      "text": "Mid Ohio Food Market"
+    },
+    {
+      "level": 3,
+      "text": "Hilltop Free Clinic"
+    },
+    {
+      "level": 3,
+      "text": "MY Community Cafe"
+    },
+    {
+      "level": 3,
+      "text": "Climate Justice Lab"
+    },
+    {
+      "level": 3,
+      "text": "MY Leaders Lab"
+    },
+    {
+      "level": 3,
+      "text": "MY Pathways\n'REACHING FOR SKIES'"
+    }
+  ],
+  "items": [
+    {
+      "kind": "richtext",
+      "html": "<h1 class=\"font_0 wixui-rich-text__text\" style=\"line-height:normal; font-size:30px;\"><span style=\"font-weight:normal;\" class=\"wixui-rich-text__text\"><span style=\"font-family:anton,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">Services</span></span></span></h1>",
+      "text": "Services",
+      "visible": true,
+      "rect": {
+        "x": 238,
+        "y": 268,
+        "w": 717,
+        "h": 44
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:normal; font-size:15px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">MY Project USA provides inclusive programs that protect and empower youth while strengthening families and neighborhoods. </span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:normal; font-size:15px;\">&nbsp;</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:normal; font-size:15px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">Our services include youth leadership and prevention, food access, free healthcare, family and community support, economic mobility, environmental action and opportunities for civic and community engagement.</span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:normal; font-size:15px;\">&nbsp;</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:normal; font-size:15px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\">Programs are open based on program eligibility, not faith, except where a program is specifically designed for the Muslim community.</span></p>",
+      "text": "MY Project USA provides inclusive programs that protect and empower youth while strengthening families and neighborhoods.\n\n \n\nOur services include youth leadership and prevention, food access, free healthcare, family and community support, economic mobility, environmental action and opportunities for civic and community engagement.\n\n \n\nPrograms are open based on program eligibility, not faith, except where a program is specifically designed for the Muslim community.",
+      "visible": true,
+      "rect": {
+        "x": 234,
+        "y": 319,
+        "w": 724,
+        "h": 136
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:24px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:helvetica-w01-roman,sans-serif;\" class=\"wixui-rich-text__text\"><span style=\"font-size:24px;\" class=\"wixui-rich-text__text\">Mid Ohio Food Market</span></span></span></h3>",
+      "text": "Mid Ohio Food Market",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 505,
+        "w": 548,
+        "h": 35
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Our Mid-Ohio Market provides free groceries and fresh food to families and neighbors facing food insecurity. Located at the Hilltop Youth Empowerment Center, the Market operates in collaboration with Mid-Ohio Food Collective and is powered by MY Family Pantry volunteers, the community food-service initiative MY Project USA launched ten years ago.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nMY Family Pantry volunteers, including undergraduate student volunteers, help receive, sort, organize and distribute food while supporting one of MY Project USA’s largest direct-service programs. The Market serves hundreds of families each week and is open to eligible community members regardless of faith or background.<br class=\"wixui-rich-text__text\">\n&nbsp;</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\">Hours:</span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Tuesday, Thursday &amp; Saturday: 10AM - 2PM</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Wednesday: 3PM - 7PM</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">​Contact us:</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><a data-auto-recognition=\"true\" href=\"mailto:Pantry@MYProjectUSA.org\" class=\"wixui-rich-text__text\">Pantry@MYProjectUSA.org</a></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">614-886-7849</p>",
+      "text": "Our Mid-Ohio Market provides free groceries and fresh food to families and neighbors facing food insecurity. Located at the Hilltop Youth Empowerment Center, the Market operates in collaboration with Mid-Ohio Food Collective and is powered by MY Family Pantry volunteers, the community food-service initiative MY Project USA launched ten years ago.\n\nMY Family Pantry volunteers, including undergraduate student volunteers, help receive, sort, organize and distribute food while supporting one of MY Project USA’s largest direct-service programs. The Market serves hundreds of families each week and is open to eligible community members regardless of faith or background.\n \n\nHours:\n\nTuesday, Thursday & Saturday: 10AM - 2PM\n\nWednesday: 3PM - 7PM\n\n​Contact us:\n\nPantry@MYProjectUSA.org\n\n614-886-7849",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 540,
+        "w": 548,
+        "h": 405
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:helvetica-w01-roman,sans-serif;\" class=\"wixui-rich-text__text\">Hilltop Free Clinic</span></span></h3>",
+      "text": "Hilltop Free Clinic",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 1024,
+        "w": 548,
+        "h": 29
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Hilltop Free Clinic is a student-driven initiative of MY Project USA providing free preventive care, primary care, screenings, health education and navigation support for eligible uninsured community members.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nThe clinic operates under the oversight of MY Project USA’s Board of Directors, with guidance from the Hilltop Free Clinic Advisory Board made up of healthcare professionals. A MY Project USA-appointed clinic administrator supervises the medical student and undergraduate volunteer teams and coordinates clinic operations. Licensed volunteer physicians provide medical supervision and patient care.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nTogether, this structure allows students to gain meaningful community-health experience while ensuring appropriate professional, administrative and organizational oversight. ​</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><span class=\"wixui-rich-text__text\">​</span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\">Contact us:</span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><a data-auto-recognition=\"true\" href=\"mailto:FreeClinic@MYProjectUSA.org\" class=\"wixui-rich-text__text\">FreeClinic@MYProjectUSA.org</a></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">(614) 300-0190</p>",
+      "text": "Hilltop Free Clinic is a student-driven initiative of MY Project USA providing free preventive care, primary care, screenings, health education and navigation support for eligible uninsured community members.\n\nThe clinic operates under the oversight of MY Project USA’s Board of Directors, with guidance from the Hilltop Free Clinic Advisory Board made up of healthcare professionals. A MY Project USA-appointed clinic administrator supervises the medical student and undergraduate volunteer teams and coordinates clinic operations. Licensed volunteer physicians provide medical supervision and patient care.\n\nTogether, this structure allows students to gain meaningful community-health experience while ensuring appropriate professional, administrative and organizational oversight. ​\n\n​\n\nContact us:\n\nFreeClinic@MYProjectUSA.org\n\n(614) 300-0190",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 1053,
+        "w": 548,
+        "h": 405
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:helvetica-w01-roman,sans-serif;\" class=\"wixui-rich-text__text\">MY Community Cafe</span></span></h3>",
+      "text": "MY Community Cafe",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 1537,
+        "w": 548,
+        "h": 29
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">MY Community Cafe is a community-centered social enterprise located at the Hilltop Youth Empowerment Center. The Cafe supports MY Project USA’s food-access work while MY Soup Kitchen provides free hot meals to neighbors in need, including people experiencing housing instability and other urgent hardships.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nTogether with the Mid-Ohio Market, these programs help address both immediate hunger and longer-term food access in the community.</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><span class=\"wixGuard wixui-rich-text__text\">​</span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\">Hours:</span></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Tuesday - Saturday: 11AM - 7:30PM</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\"><a href=\"https://food.google.com/chooseprovider?restaurantId=/g/11k529j2_n&amp;g2lbs=AOHF13lJ01CqCQiRuHtKWUMGsmP2WdeS8X5xFf8O8nlfoNFL9qiMf2amEqE-sgc_zjFzNSJcdEc7Wze4HeLhbghfbG5aFZuOB4W3HU4DlEmR1JR7Aj-oyYM%3D&amp;hl=en-US&amp;gl=us&amp;cs=1&amp;ssta=1&amp;fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&amp;gei=nBS3ZuOlL5GHwbkPktG3iAY&amp;ei=nBS3ZuOlL5GHwbkPktG3iAY&amp;fo_s=OA&amp;opi=89978449&amp;foub=mcpp&amp;sa=X&amp;ved=2ahUKEwjj45Sy8emHAxWRQzABHZLoDWEQjYwDKAF6BAgrEAM&amp;sei=CcwPjIK6fTKEEfeQFoHfTrtG&amp;utm_campaign&amp;utm_source=search\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"wixui-rich-text__text\">Order Online or Call (614) 905-0977</a></p>",
+      "text": "MY Community Cafe is a community-centered social enterprise located at the Hilltop Youth Empowerment Center. The Cafe supports MY Project USA’s food-access work while MY Soup Kitchen provides free hot meals to neighbors in need, including people experiencing housing instability and other urgent hardships.\n\nTogether with the Mid-Ohio Market, these programs help address both immediate hunger and longer-term food access in the community.\n\n​\n\nHours:\n\nTuesday - Saturday: 11AM - 7:30PM\n\nOrder Online or Call (614) 905-0977",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 1566,
+        "w": 548,
+        "h": 248
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:helvetica-w01-roman,sans-serif;\" class=\"wixui-rich-text__text\">Climate Justice Lab</span></span></h3>",
+      "text": "Climate Justice Lab",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 1892,
+        "w": 548,
+        "h": 29
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">The Climate Justice Lab is MY Project USA’s youth-led sustainability and community-resource initiative at 4004 Fondorf Dr., Columbus, OH 43228. The Lab brings together reuse, recycling, refurbishing, donated-goods distribution, environmental education and hands-on youth leadership in one integrated program.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nLed by Climate Justice Warriors with support from MY Project USA staff and community partners, the Lab organizes donated clothing, household goods, furniture and other reusable materials for community distribution, reuse, repurposing, recycling and responsible resale when appropriate.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nThe Climate Justice Lab now encompasses the work previously associated with MY Deah’s Warehouse and the former thrift-store model. All donation collection, drop-off information, reuse activities and related store functions should now be presented under the Climate Justice Lab name.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nLocation: 4004 Fondorf Dr., Columbus, OH 43228</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">​</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Hours: By Appointment only.&nbsp;</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">​​Donation&nbsp;<a href=\"https://www.myprojectusa.org/my-deahs-store\" target=\"_blank\" rel=\"noreferrer noopener\" class=\"wixui-rich-text__text\">Drop-off Locations</a></p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">​</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Contact us: <a data-auto-recognition=\"true\" href=\"mailto:admin4@MYProjectUSA.org\" class=\"wixui-rich-text__text\">admin4@MYProjectUSA.org</a></p>",
+      "text": "The Climate Justice Lab is MY Project USA’s youth-led sustainability and community-resource initiative at 4004 Fondorf Dr., Columbus, OH 43228. The Lab brings together reuse, recycling, refurbishing, donated-goods distribution, environmental education and hands-on youth leadership in one integrated program.\n\nLed by Climate Justice Warriors with support from MY Project USA staff and community partners, the Lab organizes donated clothing, household goods, furniture and other reusable materials for community distribution, reuse, repurposing, recycling and responsible resale when appropriate.\n\nThe Climate Justice Lab now encompasses the work previously associated with MY Deah’s Warehouse and the former thrift-store model. All donation collection, drop-off information, reuse activities and related store functions should now be presented under the Climate Justice Lab name.\n\nLocation: 4004 Fondorf Dr., Columbus, OH 43228\n\n​\n\nHours: By Appointment only. \n\n​​Donation Drop-off Locations\n\n​\n\nContact us: admin4@MYProjectUSA.org",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 1921,
+        "w": 548,
+        "h": 495
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:helvetica-w01-roman,sans-serif;\" class=\"wixui-rich-text__text\">MY Leaders Lab</span></span></h3>",
+      "text": "MY Leaders Lab",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 2495,
+        "w": 548,
+        "h": 29
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">MY Leaders Lab develops compassionate, community-minded young leaders through hands-on service, leadership development, advocacy and real-world projects. Young people learn to identify community needs, work in teams, lead initiatives and turn ideas into action.<br class=\"wixui-rich-text__text\">\n<br class=\"wixui-rich-text__text\">\nThe Lab serves as an umbrella for youth-led initiatives including MY Wellness Warriors and Climate Justice Warriors. Individual initiatives may have specific eligibility requirements.</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">​</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Contact us: <a data-auto-recognition=\"true\" href=\"mailto:Youth@MYProjectUSA.org\" class=\"wixui-rich-text__text\">Youth@MYProjectUSA.org</a></p>",
+      "text": "MY Leaders Lab develops compassionate, community-minded young leaders through hands-on service, leadership development, advocacy and real-world projects. Young people learn to identify community needs, work in teams, lead initiatives and turn ideas into action.\n\nThe Lab serves as an umbrella for youth-led initiatives including MY Wellness Warriors and Climate Justice Warriors. Individual initiatives may have specific eligibility requirements.\n\n​\n\nContact us: Youth@MYProjectUSA.org",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 2524,
+        "w": 548,
+        "h": 225
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<h3 class=\"font_3 wixui-rich-text__text\" style=\"font-size:20px;\"><span style=\"font-weight:bold;\" class=\"wixui-rich-text__text\"><span style=\"font-family:helvetica-w01-roman,sans-serif;\" class=\"wixui-rich-text__text\">MY Pathways<br class=\"wixui-rich-text__text\">\n'REACHING FOR SKIES'</span></span></h3>",
+      "text": "MY Pathways\n'REACHING FOR SKIES'",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 2828,
+        "w": 548,
+        "h": 58
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">We provide Vocational Help to underprivileged refugee and immigrant adults and youth in getting equal job opportunities through a variety of resources i.e. Resume Building, Cover Letter Writing, Career Guidance, Interview Preparation, Online Work Profiles, Professional Styling &amp; ESL Classes. We focus on expanding their employability skill sets, English language proficiency, job market awareness, and personal grooming. We also offer Conversational English Language Classes for youth and adults.</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">​</p>\n\n<p class=\"font_7 wixui-rich-text__text\" style=\"line-height:1.5em; font-size:15px;\">Contact us: <a data-auto-recognition=\"true\" href=\"mailto:Pathways@MYProjectUSA.org\" class=\"wixui-rich-text__text\">Pathways@MYProjectUSA.org</a></p>",
+      "text": "We provide Vocational Help to underprivileged refugee and immigrant adults and youth in getting equal job opportunities through a variety of resources i.e. Resume Building, Cover Letter Writing, Career Guidance, Interview Preparation, Online Work Profiles, Professional Styling & ESL Classes. We focus on expanding their employability skill sets, English language proficiency, job market awareness, and personal grooming. We also offer Conversational English Language Classes for youth and adults.\n\n​\n\nContact us: Pathways@MYProjectUSA.org",
+      "visible": true,
+      "rect": {
+        "x": 390,
+        "y": 2886,
+        "w": 548,
+        "h": 203
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Call Us: 614-905-0977</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Visit Us: 3275 Sullivant Ave. Columbus, OH 43204</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Mail Us: 3275 Sullivant Ave. Columbus, OH 43204</span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Email Us: <a data-auto-recognition=\"true\" href=\"mailto:info@MYProjectUSA.org\" class=\"wixui-rich-text__text\">info@MYProjectUSA.org</a></span></span></span></p>\n\n<p class=\"font_8 wixui-rich-text__text\" style=\"line-height:normal; font-size:16px;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-family:nimbus-sans-tw01con,sans-serif;\" class=\"wixui-rich-text__text\">Tax Exempt ID: 47-2398195</span></span></span></p>",
+      "text": "Call Us: 614-905-0977\n\nVisit Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nMail Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nEmail Us: info@MYProjectUSA.org\n\nTax Exempt ID: 47-2398195",
+      "visible": true,
+      "rect": {
+        "x": 242,
+        "y": 3222,
+        "w": 408,
+        "h": 90
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "richtext",
+      "html": "<p class=\"font_9 wixui-rich-text__text\" style=\"font-size:13px; line-height:normal;\"><span style=\"letter-spacing:normal;\" class=\"wixui-rich-text__text\"><span class=\"color_11 wixui-rich-text__text\"><span style=\"font-size:13px;\" class=\"wixui-rich-text__text\">© 2026 by MY Project USA&nbsp;</span></span></span></p>",
+      "text": "© 2026 by MY Project USA",
+      "visible": true,
+      "rect": {
+        "x": 979,
+        "y": 3334,
+        "w": 201,
+        "h": 14
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png/v1/fill/w_980,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png/v1/fill/w_980,h_215,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_ddb5649cf0424b6d850b575c5b9e1a69~mv2.png",
+      "alt": null,
+      "naturalW": 980,
+      "naturalH": 215,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 38,
+        "w": 980,
+        "h": 215
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg/v1/fill/w_77,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg/v1/fill/w_77,h_77,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_82cb18773e89482bb006c193205a556a~mv2.jpg",
+      "alt": null,
+      "naturalW": 77,
+      "naturalH": 77,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 229,
+        "y": 38,
+        "w": 77,
+        "h": 77
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_ba5f3648caff42da83430e15cad9a80f~mv2.png/v1/crop/x_0,y_30,w_5096,h_4845/fill/w_120,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MY%20Family%20Pantry%20final%20logo-Edited.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_ba5f3648caff42da83430e15cad9a80f~mv2.png/v1/crop/x_0,y_30,w_5096,h_4845/fill/w_120,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MY%20Family%20Pantry%20final%20logo-Edited.png",
+      "alt": "MY Family Pantry final logo-Edited.png",
+      "naturalW": 120,
+      "naturalH": 114,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 254,
+        "y": 507,
+        "w": 120,
+        "h": 114
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_13621f1107c6471aa8d42228720f6cc5~mv2.jpg/v1/crop/x_0,y_73,w_3000,h_2855/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD_edited.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_13621f1107c6471aa8d42228720f6cc5~mv2.jpg/v1/crop/x_0,y_73,w_3000,h_2855/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD_edited.jpg",
+      "alt": "HilltopFreeClinicLogo-HD_edited.jpg",
+      "naturalW": 120,
+      "naturalH": 114,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 254,
+        "y": 1026,
+        "w": 120,
+        "h": 114
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_daad55146c194b6b8f40c8e7f3f52fc5~mv2.jpg/v1/crop/x_0,y_73,w_3000,h_2855/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MYCommunityCafe_edited.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_daad55146c194b6b8f40c8e7f3f52fc5~mv2.jpg/v1/crop/x_0,y_73,w_3000,h_2855/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MYCommunityCafe_edited.jpg",
+      "alt": "MYCommunityCafe_edited.jpg",
+      "naturalW": 120,
+      "naturalH": 114,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 254,
+        "y": 1539,
+        "w": 120,
+        "h": 114
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_b18b2ffea26b4a828ede47542c397877~mv2.png/v1/crop/x_0,y_48,w_2000,h_1903/fill/w_120,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CJL%20Logo%20(1).png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_b18b2ffea26b4a828ede47542c397877~mv2.png/v1/crop/x_0,y_48,w_2000,h_1903/fill/w_120,h_114,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CJL%20Logo%20(1).png",
+      "alt": "CJL Logo (1).png",
+      "naturalW": 120,
+      "naturalH": 114,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 254,
+        "y": 1894,
+        "w": 120,
+        "h": 114
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/crop/x_0,y_39,w_1600,h_1523/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/crop/x_0,y_39,w_1600,h_1523/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "alt": "My-Leaders-Lab  Logo.jpg",
+      "naturalW": 120,
+      "naturalH": 114,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 254,
+        "y": 2497,
+        "w": 120,
+        "h": 114
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_a7bcd2bea0a2417d95bc32c344ebaf3b~mv2.jpeg/v1/crop/x_0,y_30,w_1200,h_1141/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MY%20Pathways.jpeg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_a7bcd2bea0a2417d95bc32c344ebaf3b~mv2.jpeg/v1/crop/x_0,y_30,w_1200,h_1141/fill/w_120,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MY%20Pathways.jpeg",
+      "alt": "MY Pathways.jpeg",
+      "naturalW": 120,
+      "naturalH": 114,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 254,
+        "y": 2830,
+        "w": 120,
+        "h": 114
+      },
+      "section": "comp-lmqgyoxx@page"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_60c5fc4a3ecd49f2a697206b09eeace1~mv2.png",
+      "alt": "LinkedIn",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "visible": true,
+      "rect": {
+        "x": 1001,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f67ec9c36d8a431eabf904a991d9647f~mv2.png",
+      "alt": "Youtube",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "visible": true,
+      "rect": {
+        "x": 1042,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_366f7fdbcafc4effaeddb0dba92014c1~mv2.png",
+      "alt": "Facebook",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "visible": true,
+      "rect": {
+        "x": 1083,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_923d540bee594407b17f142805a44a15~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_923d540bee594407b17f142805a44a15~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_923d540bee594407b17f142805a44a15~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_923d540bee594407b17f142805a44a15~mv2.png",
+      "alt": "X     ",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://twitter.com/myprojectusa",
+      "visible": true,
+      "rect": {
+        "x": 1124,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_33,h_33,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png",
+      "alt": "Instagram",
+      "naturalW": 33,
+      "naturalH": 33,
+      "inGallery": false,
+      "href": "https://www.instagram.com/myprojectusa/",
+      "visible": true,
+      "rect": {
+        "x": 1165,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_888a59c4316044779955a47104c126f2~mv2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/My-Leaders-Lab%20%20Logo.jpg",
+      "alt": "My-Leaders-Lab  Logo.jpg",
+      "naturalW": 217,
+      "naturalH": 217,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/youth",
+      "visible": true,
+      "rect": {
+        "x": 990,
+        "y": 694,
+        "w": 217,
+        "h": 217
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_d27e163b347b4047be5e43bb7c3cf5ff~mv2.png/v1/crop/x_0,y_118,w_2000,h_1765/fill/w_217,h_191,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Climate%20Justice%20Lab%20logo%20CJL.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_d27e163b347b4047be5e43bb7c3cf5ff~mv2.png/v1/crop/x_0,y_118,w_2000,h_1765/fill/w_217,h_191,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Climate%20Justice%20Lab%20logo%20CJL.png",
+      "alt": "Climate Justice Lab logo CJL.png",
+      "naturalW": 217,
+      "naturalH": 191,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "visible": true,
+      "rect": {
+        "x": 987,
+        "y": 1152,
+        "w": 217,
+        "h": 191
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_402e4a3e03464ce79e93682a18313b75~mv2.png/v1/crop/x_0,y_59,w_2000,h_1882/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wellness%20warriors%20Final%20logo.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_402e4a3e03464ce79e93682a18313b75~mv2.png/v1/crop/x_0,y_59,w_2000,h_1882/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wellness%20warriors%20Final%20logo.png",
+      "alt": "Wellness warriors Final logo.png",
+      "naturalW": 217,
+      "naturalH": 204,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 930,
+        "w": 217,
+        "h": 204
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_217,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD%20(1).png",
+      "srcAttr": "https://static.wixstatic.com/media/957fbe_830756bddd274699a5e5ce456b092d32~mv2.png/v1/fill/w_217,h_208,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/HilltopFreeClinicLogo-HD%20(1).png",
+      "alt": "HilltopFreeClinicLogo-HD (1).png",
+      "naturalW": 217,
+      "naturalH": 208,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/free-clinic",
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 1605,
+        "w": 217,
+        "h": 208
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png/v1/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png/v1/fill/w_217,h_204,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_4032eaa99b3f47af8dedf708c30554b5~mv2.png",
+      "alt": null,
+      "naturalW": 217,
+      "naturalH": 204,
+      "inGallery": false,
+      "href": null,
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 1833,
+        "w": 217,
+        "h": 204
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "image",
+      "src": "https://static.wixstatic.com/media/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg",
+      "srcAttr": "https://static.wixstatic.com/media/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg/v1/fill/w_217,h_217,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/be0c83_45c2791190114182bfb87b602c6ef48e~mv2_d_1200_1200_s_2.jpg",
+      "alt": "MY Family Pantry - An Initiative of MY Project USA",
+      "naturalW": 217,
+      "naturalH": 217,
+      "inGallery": false,
+      "href": "https://www.myprojectusa.org/volunteer",
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 1365,
+        "w": 217,
+        "h": 217
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 0,
+        "w": 91,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 321,
+        "y": 0,
+        "w": 131,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "ABOUT US",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 452,
+        "y": 0,
+        "w": 120,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "VISION",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "TEAM",
+      "href": "https://www.myprojectusa.org/team",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "SERVICES",
+      "href": "https://www.myprojectusa.org/services",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "REPORTS",
+      "href": "https://www.myprojectusa.org/reports",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "AWARDS",
+      "href": "https://www.myprojectusa.org/awards",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "2026 Honorees",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "JOB OPPORTUNITIES",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "COLLABORATORS",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/issues",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 572,
+        "y": 0,
+        "w": 100,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 672,
+        "y": 0,
+        "w": 96,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "MY Wellness Warriors",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Parents",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Resources",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Climate Justice Lab",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/ventures",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 768,
+        "y": 0,
+        "w": 122,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 890,
+        "y": 0,
+        "w": 92,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS COVERAGE",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "NEWSLETTER",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "Contact",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/donors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 982,
+        "y": 0,
+        "w": 108,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/contacts",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 1090,
+        "y": 0,
+        "w": 120,
+        "h": 32
+      },
+      "section": "@header"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "target": "_blank",
+      "ariaLabel": "LinkedIn",
+      "visible": true,
+      "rect": {
+        "x": 1001,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "target": "_blank",
+      "ariaLabel": "Youtube",
+      "visible": true,
+      "rect": {
+        "x": 1042,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "target": "_blank",
+      "ariaLabel": "Facebook",
+      "visible": true,
+      "rect": {
+        "x": 1083,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://twitter.com/myprojectusa",
+      "target": "_blank",
+      "ariaLabel": "X     ",
+      "visible": true,
+      "rect": {
+        "x": 1124,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.instagram.com/myprojectusa/",
+      "target": "_blank",
+      "ariaLabel": "Instagram",
+      "visible": true,
+      "rect": {
+        "x": 1165,
+        "y": 262,
+        "w": 33,
+        "h": 33
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Events",
+      "href": "https://www.myprojectusa.org/events-2",
+      "target": "_self",
+      "ariaLabel": "Events",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 447,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Ventures",
+      "href": "https://www.myprojectusa.org/ventures",
+      "target": "_self",
+      "ariaLabel": "Ventures",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 523,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Donate",
+      "href": "https://www.myprojectusa.org/donors",
+      "target": "_self",
+      "ariaLabel": "Donate",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 308,
+        "w": 221,
+        "h": 66
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Volunteer",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "target": "_self",
+      "ariaLabel": "Volunteer",
+      "visible": true,
+      "rect": {
+        "x": 989,
+        "y": 379,
+        "w": 221,
+        "h": 63
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 692,
+        "w": 221,
+        "h": 221
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 985,
+        "y": 1150,
+        "w": 221,
+        "h": 195
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 983,
+        "y": 928,
+        "w": 221,
+        "h": 208
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/free-clinic",
+      "target": "_blank",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 986,
+        "y": 1603,
+        "w": 221,
+        "h": 212
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 983,
+        "y": 1363,
+        "w": 221,
+        "h": 221
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "target": "_self",
+      "ariaLabel": "Subscribe",
+      "visible": true,
+      "rect": {
+        "x": 988,
+        "y": 599,
+        "w": 221,
+        "h": 70
+      },
+      "section": "@site"
+    },
+    {
+      "kind": "button",
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 230,
+        "y": 3174,
+        "w": 96,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 326,
+        "y": 3174,
+        "w": 114,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "ABOUT US",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 440,
+        "y": 3174,
+        "w": 119,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "VISION",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "TEAM",
+      "href": "https://www.myprojectusa.org/team",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "SERVICES",
+      "href": "https://www.myprojectusa.org/services",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "REPORTS",
+      "href": "https://www.myprojectusa.org/reports",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "AWARDS",
+      "href": "https://www.myprojectusa.org/awards",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "2026 Honorees",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "JOB OPPORTUNITIES",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "COLLABORATORS",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/issues",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 559,
+        "y": 3174,
+        "w": 102,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/youth",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 661,
+        "y": 3174,
+        "w": 101,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "MY Wellness Warriors",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Parents",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Wellness Resources",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Climate Justice Lab",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/ventures",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 762,
+        "y": 3174,
+        "w": 121,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS",
+      "href": null,
+      "target": null,
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 883,
+        "y": 3174,
+        "w": 95,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWS COVERAGE",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "NEWSLETTER",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "Contact",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": false,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/donors",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 978,
+        "y": 3174,
+        "w": 109,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "button",
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/contacts",
+      "target": "_self",
+      "ariaLabel": null,
+      "visible": true,
+      "rect": {
+        "x": 1087,
+        "y": 3174,
+        "w": 120,
+        "h": 39
+      },
+      "section": "@footer"
+    },
+    {
+      "kind": "iframe",
+      "src": "https://platform.twitter.com/widgets/tweet_button.html?href=https%3A%2F%2Ftwitter.com%2Fshare&lang=en&url=http%3A%2F%2Fwww.myprojectusa.org%2F&text=I%20love%20this%20site!&related=%40MYProjectUSA&compId=i6pmpkn8&origin=https%3A%2F%2Fwww.myprojectusa.org%2Fservices&widgetType=TWEET",
+      "title": "Twitter Tweet",
+      "rect": {
+        "x": 1061,
+        "y": 3237,
+        "w": 66,
+        "h": 20
+      },
+      "section": "@footer",
+      "visible": true
+    }
+  ],
+  "forms": [],
+  "links": [
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/",
+      "text": "HOME",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "text": "VISION",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/team",
+      "text": "TEAM",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/services",
+      "text": "SERVICES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/reports",
+      "text": "REPORTS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/awards",
+      "text": "AWARDS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "text": "2026 Honorees",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "text": "JOB OPPORTUNITIES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "text": "COLLABORATORS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/issues",
+      "text": "ISSUES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "YOUTH",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "MY Wellness Warriors",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "text": "Wellness Parents",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "text": "Wellness Resources",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "Climate Justice Lab",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "VENTURES",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "text": "NEWS COVERAGE",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "text": "NEWSLETTER",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "text": "Contact",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "DONORS",
+      "target": "_self"
+    },
+    {
+      "region": "header",
+      "href": "https://www.myprojectusa.org/contacts",
+      "text": "CONTACTS",
+      "target": "_self"
+    },
+    {
+      "region": "page",
+      "href": "mailto:Pantry@MYProjectUSA.org",
+      "text": "Pantry@MYProjectUSA.org",
+      "target": null
+    },
+    {
+      "region": "page",
+      "href": "mailto:FreeClinic@MYProjectUSA.org",
+      "text": "FreeClinic@MYProjectUSA.org",
+      "target": null
+    },
+    {
+      "region": "page",
+      "href": "https://food.google.com/chooseprovider?restaurantId=/g/11k529j2_n&g2lbs=AOHF13lJ01CqCQiRuHtKWUMGsmP2WdeS8X5xFf8O8nlfoNFL9qiMf2amEqE-sgc_zjFzNSJcdEc7Wze4HeLhbghfbG5aFZuOB4W3HU4DlEmR1JR7Aj-oyYM%3D&hl=en-US&gl=us&cs=1&ssta=1&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&gei=nBS3ZuOlL5GHwbkPktG3iAY&ei=nBS3ZuOlL5GHwbkPktG3iAY&fo_s=OA&opi=89978449&foub=mcpp&sa=X&ved=2ahUKEwjj45Sy8emHAxWRQzABHZLoDWEQjYwDKAF6BAgrEAM&sei=CcwPjIK6fTKEEfeQFoHfTrtG&utm_campaign&utm_source=search",
+      "text": "Order Online or Call (614) 905-0977",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "https://www.myprojectusa.org/my-deahs-store",
+      "text": "Drop-off Locations",
+      "target": "_blank"
+    },
+    {
+      "region": "page",
+      "href": "mailto:admin4@MYProjectUSA.org",
+      "text": "admin4@MYProjectUSA.org",
+      "target": null
+    },
+    {
+      "region": "page",
+      "href": "mailto:Youth@MYProjectUSA.org",
+      "text": "Youth@MYProjectUSA.org",
+      "target": null
+    },
+    {
+      "region": "page",
+      "href": "mailto:Pathways@MYProjectUSA.org",
+      "text": "Pathways@MYProjectUSA.org",
+      "target": null
+    },
+    {
+      "region": "site",
+      "href": "https://www.linkedin.com/company/my-project-usa",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.youtube.com/channel/UC2ffCO1WuGi9v8EgCyei0XA",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.facebook.com/MYProjectUSA/",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://twitter.com/myprojectusa",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.instagram.com/myprojectusa/",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/events-2",
+      "text": "Events",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "Ventures",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "Donate",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "text": "Volunteer",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/free-clinic",
+      "text": "",
+      "target": "_blank"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/volunteer",
+      "text": "",
+      "target": "_self"
+    },
+    {
+      "region": "site",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/",
+      "text": "HOME",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "text": "VISION",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/team",
+      "text": "TEAM",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/services",
+      "text": "SERVICES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/reports",
+      "text": "REPORTS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/awards",
+      "text": "AWARDS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "text": "2026 Honorees",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "text": "JOB OPPORTUNITIES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/collaborators",
+      "text": "COLLABORATORS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/issues",
+      "text": "ISSUES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "YOUTH",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "MY Wellness Warriors",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "text": "Wellness Parents",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "text": "Wellness Resources",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "Climate Justice Lab",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "VENTURES",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "text": "NEWS COVERAGE",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/newsletter",
+      "text": "NEWSLETTER",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/contact-8",
+      "text": "Contact",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "DONORS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "https://www.myprojectusa.org/contacts",
+      "text": "CONTACTS",
+      "target": "_self"
+    },
+    {
+      "region": "footer",
+      "href": "mailto:info@MYProjectUSA.org",
+      "text": "info@MYProjectUSA.org",
+      "target": null
+    }
+  ],
+  "nav": [
+    {
+      "text": "HOME",
+      "href": "https://www.myprojectusa.org/",
+      "children": []
+    },
+    {
+      "text": "Subscribe",
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "children": []
+    },
+    {
+      "text": "ABOUT US",
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "children": [
+        {
+          "text": "VISION",
+          "href": "https://www.myprojectusa.org/vision-mission-goals"
+        },
+        {
+          "text": "TEAM",
+          "href": "https://www.myprojectusa.org/team"
+        },
+        {
+          "text": "SERVICES",
+          "href": "https://www.myprojectusa.org/services"
+        },
+        {
+          "text": "REPORTS",
+          "href": "https://www.myprojectusa.org/reports"
+        },
+        {
+          "text": "AWARDS",
+          "href": "https://www.myprojectusa.org/awards"
+        },
+        {
+          "text": "2026 Honorees",
+          "href": "https://www.myprojectusa.org/awards/2026honorees"
+        },
+        {
+          "text": "JOB OPPORTUNITIES",
+          "href": "https://www.myprojectusa.org/job-opportunities"
+        },
+        {
+          "text": "COLLABORATORS",
+          "href": "https://www.myprojectusa.org/collaborators"
+        }
+      ]
+    },
+    {
+      "text": "ISSUES",
+      "href": "https://www.myprojectusa.org/issues",
+      "children": []
+    },
+    {
+      "text": "YOUTH",
+      "href": "https://www.myprojectusa.org/youth",
+      "children": [
+        {
+          "text": "MY Wellness Warriors",
+          "href": "https://www.myprojectusa.org/wellnesswarriors"
+        },
+        {
+          "text": "Wellness Parents",
+          "href": "https://www.myprojectusa.org/wellness-parents"
+        },
+        {
+          "text": "Wellness Resources",
+          "href": "https://www.myprojectusa.org/wellnessresources"
+        },
+        {
+          "text": "Climate Justice Lab",
+          "href": "https://www.myprojectusa.org/climatejustice"
+        }
+      ]
+    },
+    {
+      "text": "VENTURES",
+      "href": "https://www.myprojectusa.org/ventures",
+      "children": []
+    },
+    {
+      "text": "NEWS",
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "children": [
+        {
+          "text": "NEWS COVERAGE",
+          "href": "https://www.myprojectusa.org/copy-of-news-coverage"
+        },
+        {
+          "text": "NEWSLETTER",
+          "href": "https://www.myprojectusa.org/newsletter"
+        },
+        {
+          "text": "Contact",
+          "href": "https://www.myprojectusa.org/contact-8"
+        }
+      ]
+    },
+    {
+      "text": "DONORS",
+      "href": "https://www.myprojectusa.org/donors",
+      "children": []
+    },
+    {
+      "text": "CONTACTS",
+      "href": "https://www.myprojectusa.org/contacts",
+      "children": []
+    },
+    {
+      "text": "More",
+      "href": null,
+      "children": []
+    }
+  ],
+  "headerText": "HOME\n\nSubscribe\n\nABOUT US\n\nISSUES\n\nYOUTH\n\nVENTURES\n\nNEWS\n\nDONORS\n\nCONTACTS",
+  "footerText": "HOME\n\nSubscribe\n\nABOUT US\n\nISSUES\n\nYOUTH\n\nVENTURES\n\nNEWS\n\nDONORS\n\nCONTACTS\n\nCall Us: 614-905-0977\n\nVisit Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nMail Us: 3275 Sullivant Ave. Columbus, OH 43204\n\nEmail Us: info@MYProjectUSA.org\n\nTax Exempt ID: 47-2398195\n\nShare\n\n© 2026 by MY Project USA",
+  "footerLinks": [
+    {
+      "href": "https://www.myprojectusa.org/",
+      "text": "HOME"
+    },
+    {
+      "href": "https://www.myprojectusa.org/contact-8-1",
+      "text": "Subscribe"
+    },
+    {
+      "href": "https://www.myprojectusa.org/vision-mission-goals",
+      "text": "VISION"
+    },
+    {
+      "href": "https://www.myprojectusa.org/team",
+      "text": "TEAM"
+    },
+    {
+      "href": "https://www.myprojectusa.org/services",
+      "text": "SERVICES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/reports",
+      "text": "REPORTS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/awards",
+      "text": "AWARDS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/awards/2026honorees",
+      "text": "2026 Honorees"
+    },
+    {
+      "href": "https://www.myprojectusa.org/job-opportunities",
+      "text": "JOB OPPORTUNITIES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/collaborators",
+      "text": "COLLABORATORS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/issues",
+      "text": "ISSUES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/youth",
+      "text": "YOUTH"
+    },
+    {
+      "href": "https://www.myprojectusa.org/wellnesswarriors",
+      "text": "MY Wellness Warriors"
+    },
+    {
+      "href": "https://www.myprojectusa.org/wellness-parents",
+      "text": "Wellness Parents"
+    },
+    {
+      "href": "https://www.myprojectusa.org/wellnessresources",
+      "text": "Wellness Resources"
+    },
+    {
+      "href": "https://www.myprojectusa.org/climatejustice",
+      "text": "Climate Justice Lab"
+    },
+    {
+      "href": "https://www.myprojectusa.org/ventures",
+      "text": "VENTURES"
+    },
+    {
+      "href": "https://www.myprojectusa.org/copy-of-news-coverage",
+      "text": "NEWS COVERAGE"
+    },
+    {
+      "href": "https://www.myprojectusa.org/newsletter",
+      "text": "NEWSLETTER"
+    },
+    {
+      "href": "https://www.myprojectusa.org/contact-8",
+      "text": "Contact"
+    },
+    {
+      "href": "https://www.myprojectusa.org/donors",
+      "text": "DONORS"
+    },
+    {
+      "href": "https://www.myprojectusa.org/contacts",
+      "text": "CONTACTS"
+    },
+    {
+      "href": "mailto:info@MYProjectUSA.org",
+      "text": "info@MYProjectUSA.org"
+    }
+  ],
+  "mainText": "Services\n\nMY Project USA provides inclusive programs that protect and empower youth while strengthening families and neighborhoods.\n\n \n\nOur services include youth leadership and prevention, food access, free healthcare, family and community support, economic mobility, environmental action and opportunities for civic and community engagement.\n\n \n\nPrograms are open based on program eligibility, not faith, except where a program is specifically designed for the Muslim community.\n\nMid Ohio Food Market\n\nOur Mid-Ohio Market provides free groceries and fresh food to families and neighbors facing food insecurity. Located at the Hilltop Youth Empowerment Center, the Market operates in collaboration with Mid-Ohio Food Collective and is powered by MY Family Pantry volunteers, the community food-service initiative MY Project USA launched ten years ago.\n\nMY Family Pantry volunteers, including undergraduate student volunteers, help receive, sort, organize and distribute food while supporting one of MY Project USA’s largest direct-service programs. The Market serves hundreds of families each week and is open to eligible community members regardless of faith or background.\n \n\nHours:\n\nTuesday, Thursday & Saturday: 10AM - 2PM\n\nWednesday: 3PM - 7PM\n\n​Contact us:\n\nPantry@MYProjectUSA.org\n\n614-886-7849\n\nHilltop Free Clinic\n\nHilltop Free Clinic is a student-driven initiative of MY Project USA providing free preventive care, primary care, screenings, health education and navigation support for eligible uninsured community members.\n\nThe clinic operates under the oversight of MY Project USA’s Board of Directors, with guidance from the Hilltop Free Clinic Advisory Board made up of healthcare professionals. A MY Project USA-appointed clinic administrator supervises the medical student and undergraduate volunteer teams and coordinates clinic operations. Licensed volunteer physicians provide medical supervision and patient care.\n\nTogether, this structure allows students to gain meaningful community-health experience while ensuring appropriate professional, administrative and organizational oversight. ​\n\n​\n\nContact us:\n\nFreeClinic@MYProjectUSA.org\n\n(614) 300-0190\n\nMY Community Cafe\n\nMY Community Cafe is a community-centered social enterprise located at the Hilltop Youth Empowerment Center. The Cafe supports MY Project USA’s food-access work while MY Soup Kitchen provides free hot meals to neighbors in need, including people experiencing housing instability and other urgent hardships.\n\nTogether with the Mid-Ohio Market, these programs help address both immediate hunger and longer-term food access in the community.\n\n​\n\nHours:\n\nTuesday - Saturday: 11AM - 7:30PM\n\nOrder Online or Call (614) 905-0977\n\nClimate Justice Lab\n\nThe Climate Justice Lab is MY Project USA’s youth-led sustainability and community-resource initiative at 4004 Fondorf Dr., Columbus, OH 43228. The Lab brings together reuse, recycling, refurbishing, donated-goods distribution, environmental education and hands-on youth leadership in one integrated program.\n\nLed by Climate Justice Warriors with support from MY Project USA staff and community partners, the Lab organizes donated clothing, household goods, furniture and other reusable materials for community distribution, reuse, repurposing, recycling and responsible resale when appropriate.\n\nThe Climate Justice Lab now encompasses the work previously associated with MY Deah’s Warehouse and the former thrift-store model. All donation collection, drop-off information, reuse activities and related store functions should now be presented under the Climate Justice Lab name.\n\nLocation: 4004 Fondorf Dr., Columbus, OH 43228\n\n​\n\nHours: By Appointment only. \n\n​​Donation Drop-off Locations\n\n​\n\nContact us: admin4@MYProjectUSA.org\n\nMY Leaders Lab\n\nMY Leaders Lab develops compassionate, community-minded young leaders through hands-on service, leadership development, advocacy and real-world projects. Young people learn to identify community needs, work in teams, lead initiatives and turn ideas into action.\n\nThe Lab serves as an umbrella for youth-led initiatives including MY Wellness Warriors and Climate Justice Warriors. Individual initiatives may have specific eligibility requirements.\n\n​\n\nContact us: Youth@MYProjectUSA.org\n\nMY Pathways\n'REACHING FOR SKIES'\n\nWe provide Vocational Help to underprivileged refugee and immigrant adults and youth in getting equal job opportunities through a variety of resources i.e. Resume Building, Cover Letter Writing, Career Guidance, Interview Preparation, Online Work Profiles, Professional Styling & ESL Classes. We focus on expanding their employability skill sets, English language proficiency, job market awareness, and personal grooming. We also offer Conversational English Language Classes for youth and adults.\n\n​\n\nContact us: Pathways@MYProjectUSA.org",
+  "docHeight": 3369
+}
