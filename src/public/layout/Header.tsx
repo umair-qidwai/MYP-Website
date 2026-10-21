@@ -1,33 +1,14 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
 import { AnimatePresence, m, useReducedMotion } from "motion/react";
-import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import type { NavItem } from "@shared/settings";
 import { useSite } from "../SiteContext";
 import { SmartLink } from "../components/SmartLink";
 import { SocialIcon, SOCIAL_LABEL } from "../components/SocialIcon";
-import { MosaicBars } from "../components/Reveal";
 
-/** Wordmark: the organisation's own logo artwork + name. */
-export function Brand({ onDark = false }: { onDark?: boolean }) {
-  const { settings } = useSite();
-  return (
-    <Link to="/" className="group flex items-center gap-3" aria-label={`${settings.site.name} — home`}>
-      {settings.site.logo ? (
-        <span className="relative block size-11 shrink-0 overflow-hidden rounded-[10px] bg-white ring-1 ring-ink/10 transition-transform duration-500 group-hover:-rotate-3">
-          <img src={settings.site.logo.src} alt="" width={44} height={44} className="h-full w-full object-cover" />
-        </span>
-      ) : null}
-      <span className={`display text-[1.32rem] leading-none tracking-[-0.03em] ${onDark ? "text-paper" : "text-ink"}`} style={{ fontStretch: "86%" }}>
-        MY Project <span className="serif-accent text-[1.1em] font-normal">USA</span>
-      </span>
-    </Link>
-  );
-}
-
-function titleCase(label: string) {
-  // Original Wix menu labels are typed in capitals; present them in a calmer case for reading.
-  // "MY" (Muslim Youth) and "USA" stay capitalised.
+/** Menu labels were typed in capitals on Wix; show them in a calmer case ("MY" and "USA" stay). */
+export function navLabel(label: string) {
   if (label !== label.toUpperCase()) return label;
   return label
     .split(" ")
@@ -35,16 +16,25 @@ function titleCase(label: string) {
     .join(" ");
 }
 
+export function Brand() {
+  const { settings } = useSite();
+  return (
+    <Link to="/" className="flex items-center gap-2.5" aria-label={`${settings.site.name} — home`}>
+      {settings.site.logo && <img src={settings.site.logo.src} alt="" width={32} height={32} className="size-8 rounded-lg object-cover" />}
+      <span className="text-[0.9375rem] font-semibold tracking-[-0.015em] text-ink">{settings.site.name}</span>
+    </Link>
+  );
+}
+
 function DesktopItem({ item, open, onOpen, onClose }: { item: NavItem; open: boolean; onOpen: () => void; onClose: () => void }) {
   const id = useId();
   const location = useLocation();
-  const active = item.href && item.href !== "/" && location.pathname.startsWith(item.href);
-  const childActive = item.children.some((c) => c.href && location.pathname === c.href);
-  const cls = `relative inline-flex items-center gap-1 rounded-full px-3 py-2 text-[0.93rem] font-medium transition-colors hover:bg-ink/[0.06] ${active || childActive ? "text-plum" : "text-ink"}`;
+  const active = (item.href && location.pathname === item.href) || item.children.some((c) => c.href === location.pathname);
+  const cls = `inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[0.875rem] transition-colors ${active ? "text-ink font-medium" : "text-ink-2 hover:text-ink"}`;
   if (!item.children.length) {
     return item.href ? (
       <SmartLink href={item.href} className={cls} aria-current={location.pathname === item.href ? "page" : undefined}>
-        {titleCase(item.label)}
+        {navLabel(item.label)}
       </SmartLink>
     ) : null;
   }
@@ -58,49 +48,41 @@ function DesktopItem({ item, open, onOpen, onClose }: { item: NavItem; open: boo
         onClick={() => (open ? onClose() : onOpen())}
         onKeyDown={(e) => e.key === "Escape" && onClose()}
       >
-        {titleCase(item.label)}
-        <ChevronDown aria-hidden className={`size-4 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+        {navLabel(item.label)}
+        <ChevronDown aria-hidden className={`size-3.5 opacity-60 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
         {open && (
           <m.div
             id={id}
-            initial={{ opacity: 0, y: 8, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 6, scale: 0.98 }}
-            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-3"
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 4 }}
+            transition={{ duration: 0.18, ease: [0.25, 0.1, 0.25, 1] }}
+            className="absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-4"
             onKeyDown={(e) => e.key === "Escape" && onClose()}
           >
-            <div className="overflow-hidden rounded-2xl bg-paper shadow-[0_30px_60px_-20px_rgb(25_22_19/0.35)] ring-1 ring-ink/10">
-              <MosaicBars className="!h-1" />
-              <ul className="p-2">
-                {item.href && (
-                  <li>
-                    <SmartLink
-                      href={item.href}
-                      className="flex items-center justify-between rounded-xl px-4 py-3 text-[0.95rem] font-semibold hover:bg-ink/[0.05]"
-                      onClick={onClose}
-                    >
-                      {titleCase(item.label)} overview
-                    </SmartLink>
-                  </li>
-                )}
-                {item.children.map((c) => (
-                  <li key={c.label}>
-                    <SmartLink
-                      href={c.href || "/"}
-                      className={`group flex items-center justify-between rounded-xl px-4 py-2.5 text-[0.95rem] hover:bg-ink/[0.05] ${location.pathname === c.href ? "text-plum" : ""}`}
-                      onClick={onClose}
-                      aria-current={location.pathname === c.href ? "page" : undefined}
-                    >
-                      {titleCase(c.label)}
-                      <ArrowUpRight aria-hidden className="size-4 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
-                    </SmartLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="rounded-2xl bg-white/95 p-1.5 shadow-[0_12px_40px_-12px_rgb(0_0_0/0.25)] ring-1 ring-black/5 backdrop-blur-xl">
+              {item.href && (
+                <li>
+                  <SmartLink href={item.href} onClick={onClose} className="block rounded-xl px-3.5 py-2.5 text-[0.875rem] font-medium text-ink hover:bg-mist">
+                    {navLabel(item.label)}
+                  </SmartLink>
+                </li>
+              )}
+              {item.children.map((c) => (
+                <li key={c.label}>
+                  <SmartLink
+                    href={c.href || "/"}
+                    onClick={onClose}
+                    aria-current={location.pathname === c.href ? "page" : undefined}
+                    className="block rounded-xl px-3.5 py-2.5 text-[0.875rem] text-ink-2 hover:bg-mist hover:text-ink"
+                  >
+                    {navLabel(c.label)}
+                  </SmartLink>
+                </li>
+              ))}
+            </ul>
           </m.div>
         )}
       </AnimatePresence>
@@ -117,7 +99,7 @@ export function Header() {
   const closeTimer = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    const on = () => setScrolled(window.scrollY > 8);
+    const on = () => setScrolled(window.scrollY > 12);
     on();
     window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
@@ -128,19 +110,19 @@ export function Header() {
   }, [location.pathname]);
 
   const donate = settings.quickLinks.buttons.find((b) => /donate/i.test(b.label));
-  // "Subscribe" appears both in the menu and as a quick action on the original site; keep it in the menu.
   const nav = settings.navigation.main.filter((n) => n.label.toUpperCase() !== "HOME");
 
   return (
     <>
-      <header
-        className={`sticky top-0 z-40 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${scrolled ? "bg-paper/92 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md" : "bg-paper"}`}
-        style={{ height: "var(--header-h)" }}
-      >
-        <div className="wrap flex h-full items-center justify-between gap-6">
+      <header className="fixed inset-x-0 top-3 z-40 px-3 sm:top-4 sm:px-4">
+        <div
+          className={`mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 rounded-full pl-4 pr-2 ring-1 backdrop-blur-xl backdrop-saturate-150 transition-[background-color,box-shadow] duration-300 sm:pl-5 ${
+            scrolled ? "bg-white/80 shadow-[0_8px_30px_-12px_rgb(0_0_0/0.18)] ring-black/[0.06]" : "bg-white/70 ring-black/[0.04]"
+          }`}
+        >
           <Brand />
-          <nav aria-label="Main" className="hidden xl:block">
-            <ul className="flex items-center gap-0.5">
+          <nav aria-label="Main" className="hidden lg:block">
+            <ul className="flex items-center">
               {nav.map((item, i) => (
                 <li key={item.label}>
                   <DesktopItem
@@ -158,19 +140,18 @@ export function Header() {
               ))}
             </ul>
           </nav>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             {donate && (
               <SmartLink
                 href={donate.href}
-                className="hidden min-h-11 items-center gap-2 rounded-full bg-plum px-5 text-[0.93rem] font-semibold text-white transition-colors hover:bg-plum-deep sm:inline-flex"
+                className="hidden h-10 items-center rounded-full bg-brand px-4.5 text-[0.875rem] font-medium text-white transition-colors hover:bg-brand-deep sm:inline-flex"
               >
                 {donate.label}
-                <span aria-hidden className="inline-block size-1.5 rounded-full bg-saffron" />
               </SmartLink>
             )}
             <button
               type="button"
-              className="inline-flex size-11 items-center justify-center rounded-full ring-1 ring-ink/15 transition-colors hover:bg-ink/5 xl:hidden"
+              className="inline-flex size-11 items-center justify-center rounded-full text-ink transition-colors hover:bg-black/5 lg:hidden"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label="Open menu"
@@ -197,11 +178,11 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
     if (!open) return;
     lastFocus.current = document.activeElement as HTMLElement;
     document.documentElement.style.overflow = "hidden";
-    const t = window.setTimeout(() => panel.current?.querySelector<HTMLElement>("button, a")?.focus(), 60);
+    const t = window.setTimeout(() => panel.current?.querySelector<HTMLElement>("button, a")?.focus(), 50);
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "Tab" && panel.current) {
-        const f = [...panel.current.querySelectorAll<HTMLElement>("a, button")].filter((x) => !x.hasAttribute("disabled"));
+        const f = [...panel.current.querySelectorAll<HTMLElement>("a, button")];
         if (!f.length) return;
         if (e.shiftKey && document.activeElement === f[0]) {
           e.preventDefault();
@@ -230,57 +211,57 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"
-          className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-ink text-paper"
-          initial={reduce ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }}
-          animate={reduce ? { opacity: 1 } : { clipPath: "inset(0 0 0% 0)" }}
-          exit={reduce ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" }}
-          transition={{ duration: 0.6, ease: [0.83, 0, 0.17, 1] }}
+          className="fixed inset-0 z-50 overflow-y-auto bg-white/96 backdrop-blur-xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: reduce ? 0 : 0.25 }}
         >
-          <MosaicBars />
-          <div className="wrap flex items-center justify-between" style={{ height: "var(--header-h)" }}>
-            <Brand onDark />
+          <div className="flex h-[4.75rem] items-center justify-between px-7 pt-3">
+            <Brand />
             <button
               type="button"
               onClick={onClose}
-              className="inline-flex size-11 items-center justify-center rounded-full ring-1 ring-paper/25 hover:bg-white/10"
+              className="inline-flex size-11 items-center justify-center rounded-full hover:bg-black/5"
               aria-label="Close menu"
             >
               <X className="size-5" aria-hidden />
             </button>
           </div>
-          <nav aria-label="Mobile" className="wrap flex-1 pb-8 pt-4">
-            <ul className="divide-y divide-paper/10 border-y border-paper/10">
+          <nav aria-label="Mobile" className="px-7 pb-12 pt-4">
+            <ul>
               {[{ label: "Home", href: "/", children: [] } as NavItem, ...nav].map((item, i) => (
                 <m.li
                   key={item.label}
-                  initial={reduce ? false : { opacity: 0, y: 18 }}
+                  className="border-b border-line"
+                  initial={reduce ? false : { opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.25 + i * 0.04, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ delay: 0.04 + i * 0.03, duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
                 >
                   {item.children.length ? (
                     <>
                       <button
                         type="button"
-                        className="flex w-full items-center justify-between py-4 text-left"
+                        className="flex w-full items-center justify-between py-4 text-left text-[1.375rem] font-semibold tracking-[-0.02em]"
                         aria-expanded={expanded === item.label}
                         onClick={() => setExpanded((v) => (v === item.label ? null : item.label))}
                       >
-                        <span className="display text-[2rem] font-semibold">{titleCase(item.label)}</span>
-                        <ChevronDown aria-hidden className={`size-6 transition-transform ${expanded === item.label ? "rotate-180" : ""}`} />
+                        {navLabel(item.label)}
+                        <ChevronDown aria-hidden className={`size-5 text-muted transition-transform ${expanded === item.label ? "rotate-180" : ""}`} />
                       </button>
                       {expanded === item.label && (
-                        <ul className="grid gap-1 pb-5 pl-1">
+                        <ul className="pb-4">
                           {item.href && (
                             <li>
-                              <SmartLink href={item.href} onClick={onClose} className="block py-1.5 text-lg text-paper/80 hover:text-white">
+                              <SmartLink href={item.href} onClick={onClose} className="block py-2 text-[1.0625rem] text-ink-2">
                                 Overview
                               </SmartLink>
                             </li>
                           )}
                           {item.children.map((c) => (
                             <li key={c.label}>
-                              <SmartLink href={c.href || "/"} onClick={onClose} className="block py-1.5 text-lg text-paper/80 hover:text-white">
-                                {titleCase(c.label)}
+                              <SmartLink href={c.href || "/"} onClick={onClose} className="block py-2 text-[1.0625rem] text-ink-2">
+                                {navLabel(c.label)}
                               </SmartLink>
                             </li>
                           ))}
@@ -288,8 +269,8 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
                       )}
                     </>
                   ) : (
-                    <SmartLink href={item.href || "/"} onClick={onClose} className="block py-4">
-                      <span className="display text-[2rem] font-semibold">{titleCase(item.label)}</span>
+                    <SmartLink href={item.href || "/"} onClick={onClose} className="block py-4 text-[1.375rem] font-semibold tracking-[-0.02em]">
+                      {navLabel(item.label)}
                     </SmartLink>
                   )}
                 </m.li>
@@ -301,23 +282,23 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
                   key={b.label}
                   href={b.href}
                   onClick={onClose}
-                  className="rounded-full px-5 py-3 text-sm font-semibold ring-1 ring-paper/25 hover:bg-paper hover:text-ink"
+                  className={`rounded-full px-5 py-2.5 text-[0.9375rem] font-medium ${/donate/i.test(b.label) ? "bg-brand text-white" : "bg-mist text-ink"}`}
                 >
                   {b.label}
                 </SmartLink>
               ))}
             </div>
-            <div className="mt-8 flex gap-3">
+            <div className="mt-8 flex gap-2">
               {settings.social.links.map((s) => (
                 <a
                   key={s.url}
                   href={s.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="grid size-11 place-items-center rounded-full ring-1 ring-paper/20 hover:bg-paper hover:text-ink"
+                  className="grid size-11 place-items-center rounded-full bg-mist text-ink-2 hover:text-ink"
                   aria-label={SOCIAL_LABEL[s.platform]}
                 >
-                  <SocialIcon platform={s.platform} className="size-[1.1rem]" />
+                  <SocialIcon platform={s.platform} className="size-[1.05rem]" />
                 </a>
               ))}
             </div>

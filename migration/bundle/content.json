@@ -15,8 +15,12 @@
      {
       "id": "b_00001",
       "type": "hero",
-      "variant": "sculpture",
+      "variant": "image",
       "heading": "Protect. Educate. Empower Our Youth.",
+      "image": {
+       "src": "wix-media:img_a8e3d507335f4d15",
+       "alt": "Young people gathered in front of a colorful mural that reads “Empower”"
+      },
       "body": {
        "type": "doc",
        "content": [
@@ -179,8 +183,7 @@
         "href": "https://www.zeffy.com/en-US/ticketing/2026-my-project-usa-annual-award-ceremony",
         "style": "primary"
        }
-      ],
-      "tone": "ink"
+      ]
      },
      {
       "id": "b_00006",

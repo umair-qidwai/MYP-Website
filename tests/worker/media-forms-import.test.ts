@@ -53,7 +53,9 @@ describe("media uploads", () => {
 
   it("refuses to delete files that are used on the website", async () => {
     const admin = await login((await createUser("admin")).email);
-    const { item } = await json<{ item: { id: string; url: string } }>(await call("/api/admin/media", { method: "POST", session: admin, body: upload(PNG, "used.png", "image/png") }));
+    const { item } = await json<{ item: { id: string; url: string } }>(
+      await call("/api/admin/media", { method: "POST", session: admin, body: upload(PNG, "used.png", "image/png") }),
+    );
     const c = await json<{ id: string }>(await call("/api/admin/pages", { method: "POST", session: admin, body: { title: "Uses", path: "uses-image" } }));
     await call(`/api/admin/pages/${c.id}`, {
       method: "PUT",
@@ -99,7 +101,10 @@ describe("CMS forms", () => {
 
   it("stores valid submissions and only reports success after saving", async () => {
     const admin = await pageWithForm();
-    const r = await call("/api/public/forms/submit", { method: "POST", body: { path: "contact-test", formId: "f1", values: { name: "Amina", email: "amina@example.org" }, turnstileToken: "pass" } });
+    const r = await call("/api/public/forms/submit", {
+      method: "POST",
+      body: { path: "contact-test", formId: "f1", values: { name: "Amina", email: "amina@example.org" }, turnstileToken: "pass" },
+    });
     expect(r.status).toBe(200);
     expect((await json(r)).message).toBe("Thanks!");
     const subs = await json<{ submissions: { data: { label: string; value: string }[] }[] }>(await call("/api/admin/submissions", { session: admin }));
@@ -108,16 +113,44 @@ describe("CMS forms", () => {
 
   it("validates fields, requires Turnstile and ignores unknown forms", async () => {
     await pageWithForm();
-    expect((await call("/api/public/forms/submit", { method: "POST", body: { path: "contact-test", formId: "f1", values: { name: "A", email: "not-an-email" }, turnstileToken: "pass" } })).status).toBe(422);
-    expect((await call("/api/public/forms/submit", { method: "POST", body: { path: "contact-test", formId: "f1", values: { name: "A", email: "a@example.org" }, turnstileToken: "fail" } })).status).toBe(400);
-    expect((await call("/api/public/forms/submit", { method: "POST", body: { path: "contact-test", formId: "nope", values: {}, turnstileToken: "pass" } })).status).toBe(404);
+    expect(
+      (
+        await call("/api/public/forms/submit", {
+          method: "POST",
+          body: { path: "contact-test", formId: "f1", values: { name: "A", email: "not-an-email" }, turnstileToken: "pass" },
+        })
+      ).status,
+    ).toBe(422);
+    expect(
+      (
+        await call("/api/public/forms/submit", {
+          method: "POST",
+          body: { path: "contact-test", formId: "f1", values: { name: "A", email: "a@example.org" }, turnstileToken: "fail" },
+        })
+      ).status,
+    ).toBe(400);
+    expect(
+      (await call("/api/public/forms/submit", { method: "POST", body: { path: "contact-test", formId: "nope", values: {}, turnstileToken: "pass" } })).status,
+    ).toBe(404);
   });
 });
 
 describe("content import API", () => {
   const auth = { authorization: `Bearer ${env.IMPORT_TOKEN}` };
-  const page = { path: "imported-page", sourceUrl: "https://www.myprojectusa.org/imported-page", publish: true, doc: { title: "Imported", seo: {}, blocks: [] } };
-  const entry = { collection: "events", slug: "imported-event", sourceUrl: "https://www.myprojectusa.org/events-1/x", sortOrder: 0, publish: true, doc: { title: "Imported event", data: { price: "Free" }, seo: {} } };
+  const page = {
+    path: "imported-page",
+    sourceUrl: "https://www.myprojectusa.org/imported-page",
+    publish: true,
+    doc: { title: "Imported", seo: {}, blocks: [] },
+  };
+  const entry = {
+    collection: "events",
+    slug: "imported-event",
+    sourceUrl: "https://www.myprojectusa.org/events-1/x",
+    sortOrder: 0,
+    publish: true,
+    doc: { title: "Imported event", data: { price: "Free" }, seo: {} },
+  };
 
   it("is disabled without the import token", async () => {
     expect((await call("/api/import/content", { method: "POST", body: { pages: [page] } })).status).toBe(401);
@@ -125,9 +158,17 @@ describe("content import API", () => {
   });
 
   it("is idempotent and never overwrites staff edits", async () => {
-    const first = await json<{ created: number; updated: number }>(await call("/api/import/content", { method: "POST", headers: auth, body: { pages: [page], entries: [entry], redirects: [{ from: "/events-1/x", to: "/events/imported-event" }] } }));
+    const first = await json<{ created: number; updated: number }>(
+      await call("/api/import/content", {
+        method: "POST",
+        headers: auth,
+        body: { pages: [page], entries: [entry], redirects: [{ from: "/events-1/x", to: "/events/imported-event" }] },
+      }),
+    );
     expect(first.created).toBe(2);
-    const second = await json<{ created: number; updated: number }>(await call("/api/import/content", { method: "POST", headers: auth, body: { pages: [page], entries: [entry] } }));
+    const second = await json<{ created: number; updated: number }>(
+      await call("/api/import/content", { method: "POST", headers: auth, body: { pages: [page], entries: [entry] } }),
+    );
     expect(second.created).toBe(0);
     expect(second.updated).toBe(2);
     const count = await env.DB.prepare("SELECT COUNT(*) AS n FROM entries WHERE slug = 'imported-event'").first<{ n: number }>();

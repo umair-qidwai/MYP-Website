@@ -4,8 +4,14 @@ import { call, createUser, json, login, publishedPage, textDoc } from "./helpers
 describe("pages: draft → preview → publish → revisions", () => {
   it("keeps drafts private until published", async () => {
     const admin = await login((await createUser("admin")).email);
-    const c = await json<{ id: string }>(await call("/api/admin/pages", { method: "POST", session: admin, body: { title: "Summer", path: "summer-programs" } }));
-    await call(`/api/admin/pages/${c.id}`, { method: "PUT", session: admin, body: { doc: { title: "Summer", seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc("Draft words") }] } } });
+    const c = await json<{ id: string }>(
+      await call("/api/admin/pages", { method: "POST", session: admin, body: { title: "Summer", path: "summer-programs" } }),
+    );
+    await call(`/api/admin/pages/${c.id}`, {
+      method: "PUT",
+      session: admin,
+      body: { doc: { title: "Summer", seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc("Draft words") }] } },
+    });
 
     // Not public yet
     expect((await call("/api/public/page?path=summer-programs")).status).toBe(404);
@@ -34,7 +40,11 @@ describe("pages: draft → preview → publish → revisions", () => {
   it("editing a live page doesn't change what visitors see until publishing again", async () => {
     const admin = await login((await createUser("admin")).email);
     const id = await publishedPage(admin, "live-page", "Live", "Version one");
-    await call(`/api/admin/pages/${id}`, { method: "PUT", session: admin, body: { doc: { title: "Live", seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc("Version two") }] } } });
+    await call(`/api/admin/pages/${id}`, {
+      method: "PUT",
+      session: admin,
+      body: { doc: { title: "Live", seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc("Version two") }] } },
+    });
     expect(JSON.stringify(await json(await call("/api/public/page?path=live-page")))).toContain("Version one");
     await call(`/api/admin/pages/${id}/publish`, { method: "POST", session: admin });
     expect(JSON.stringify(await json(await call("/api/public/page?path=live-page")))).toContain("Version two");
@@ -43,7 +53,11 @@ describe("pages: draft → preview → publish → revisions", () => {
   it("restores an earlier version into the draft", async () => {
     const admin = await login((await createUser("admin")).email);
     const id = await publishedPage(admin, "history-page", "History", "First");
-    await call(`/api/admin/pages/${id}`, { method: "PUT", session: admin, body: { doc: { title: "History", seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc("Second") }] } } });
+    await call(`/api/admin/pages/${id}`, {
+      method: "PUT",
+      session: admin,
+      body: { doc: { title: "History", seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc("Second") }] } },
+    });
     const { revisions } = await json<{ revisions: { id: number; action: string }[] }>(await call(`/api/admin/pages/${id}/revisions`, { session: admin }));
     const firstPublish = revisions.find((r) => r.action === "publish")!;
     expect((await call(`/api/admin/pages/${id}/revisions/${firstPublish.id}/restore`, { method: "POST", session: admin })).status).toBe(200);
@@ -78,8 +92,14 @@ describe("pages: draft → preview → publish → revisions", () => {
 describe("collections", () => {
   it("creates, publishes, lists and archives an event", async () => {
     const admin = await login((await createUser("admin")).email);
-    const c = await json<{ id: string }>(await call("/api/admin/entries", { method: "POST", session: admin, body: { collection: "events", title: "Community Iftar" } }));
-    const save = await call(`/api/admin/entries/${c.id}`, { method: "PUT", session: admin, body: { doc: { title: "Community Iftar", data: { date: "2027-03-01", price: "Free", body: textDoc("Join us") }, seo: {} } } });
+    const c = await json<{ id: string }>(
+      await call("/api/admin/entries", { method: "POST", session: admin, body: { collection: "events", title: "Community Iftar" } }),
+    );
+    const save = await call(`/api/admin/entries/${c.id}`, {
+      method: "PUT",
+      session: admin,
+      body: { doc: { title: "Community Iftar", data: { date: "2027-03-01", price: "Free", body: textDoc("Join us") }, seo: {} } },
+    });
     expect(save.status).toBe(200);
     expect((await json<{ slug: string }>(save)).slug).toBe("community-iftar");
     expect((await call("/api/public/page?path=events/community-iftar")).status).toBe(404);
@@ -93,8 +113,14 @@ describe("collections", () => {
 
   it("validates entry fields", async () => {
     const admin = await login((await createUser("admin")).email);
-    const c = await json<{ id: string }>(await call("/api/admin/entries", { method: "POST", session: admin, body: { collection: "reports", title: "Report" } }));
-    const bad = await call(`/api/admin/entries/${c.id}`, { method: "PUT", session: admin, body: { doc: { title: "Report", data: { category: "Not a category" }, seo: {} } } });
+    const c = await json<{ id: string }>(
+      await call("/api/admin/entries", { method: "POST", session: admin, body: { collection: "reports", title: "Report" } }),
+    );
+    const bad = await call(`/api/admin/entries/${c.id}`, {
+      method: "PUT",
+      session: admin,
+      body: { doc: { title: "Report", data: { category: "Not a category" }, seo: {} } },
+    });
     expect(bad.status).toBe(422);
   });
 });

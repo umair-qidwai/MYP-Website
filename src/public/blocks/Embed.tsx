@@ -31,7 +31,7 @@ function LiteYouTube({ url, title }: { url: string; title: string }) {
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
       />
       <span className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/10 to-transparent" />
-      <span className="absolute left-1/2 top-1/2 grid size-20 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-paper text-ink shadow-xl transition-transform duration-500 group-hover:scale-110">
+      <span className="absolute left-1/2 top-1/2 grid size-20 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink shadow-xl backdrop-blur transition-transform duration-500 group-hover:scale-105">
         <Play className="ml-1 size-7 fill-current" aria-hidden />
       </span>
       <span className="absolute bottom-5 left-5 right-5 text-left font-semibold text-paper">{title}</span>
@@ -82,13 +82,13 @@ export function EmbedBlock({ block }: { block: BlockOf<"embed"> }) {
   })();
   return (
     <Section>
-      <div className="wrap grid md:grid-cols-12">
-        <div className={block.aspect === "form" ? "md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3" : "md:col-span-10 md:col-start-2"}>
+      <div className="wrap">
+        <div className={`mx-auto ${block.aspect === "form" ? "max-w-3xl" : "max-w-5xl"}`}>
           {block.provider === "bloomerang" ? (
             <Bloomerang url={block.url} title={block.title} />
           ) : (
             <>
-              <div className={`relative overflow-hidden rounded-[22px] bg-paper-2 ring-1 ring-ink/5 ${aspect}`}>
+              <div className={`relative overflow-hidden rounded-[24px] bg-mist ${aspect}`}>
                 {block.provider === "youtube" ? (
                   <LiteYouTube url={block.url} title={block.title} />
                 ) : (

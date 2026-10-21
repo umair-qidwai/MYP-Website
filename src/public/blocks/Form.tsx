@@ -52,10 +52,10 @@ export function FormBlock({ block, path }: { block: BlockOf<"form">; path: strin
 
   return (
     <Section>
-      <div className="wrap grid md:grid-cols-12">
-        <div className="md:col-span-10 md:col-start-2 lg:col-span-7 lg:col-start-3">
-          <div className="rounded-[28px] bg-white p-6 ring-1 ring-ink/5 sm:p-10">
-            <h2 className="display text-[clamp(1.8rem,3.4vw,2.6rem)]">{block.title}</h2>
+      <div className="wrap-text">
+        <div>
+          <div className="rounded-[28px] bg-mist p-6 sm:p-10">
+            <h2 className="headline text-[clamp(1.6rem,3vw,2.25rem)]">{block.title}</h2>
             {block.intro && <p className="mt-3 text-ink-2">{block.intro}</p>}
             {state === "done" ? (
               <div role="status" className="mt-8 flex items-start gap-3 rounded-2xl bg-leaf/10 p-5 text-ink">
@@ -74,7 +74,7 @@ export function FormBlock({ block, path }: { block: BlockOf<"form">; path: strin
                     "aria-invalid": err ? true : undefined,
                     "aria-describedby": err ? `${id}-err` : undefined,
                     className:
-                      "w-full rounded-xl border border-ink/20 bg-paper/40 px-4 py-3 text-base outline-none transition focus:border-plum focus:bg-white focus:ring-4 focus:ring-plum/15",
+                      "w-full rounded-xl border border-hairline bg-white px-4 py-3 text-base outline-none transition focus:border-brand focus:ring-4 focus:ring-brand/15",
                   };
                   if (f.type === "checkbox") {
                     return (
@@ -156,7 +156,7 @@ export function FormBlock({ block, path }: { block: BlockOf<"form">; path: strin
                   <button
                     type="submit"
                     disabled={state === "sending"}
-                    className="inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-7 font-semibold text-paper transition-colors hover:bg-plum disabled:opacity-60"
+                    className="inline-flex h-11 items-center gap-2 rounded-full bg-brand px-6 font-medium text-white transition-colors hover:bg-brand-deep disabled:opacity-60"
                   >
                     {state === "sending" && <Loader2 className="size-4 animate-spin" aria-hidden />}
                     {state === "sending" ? "Sending…" : block.submitLabel}

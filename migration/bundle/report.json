@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T16:05:50.944Z",
+ "generatedAt": "2026-10-21T16:33:36.509Z",
  "rows": [
   {
    "source": "https://www.myprojectusa.org",
@@ -3404,6 +3404,11 @@
  "altNeeded": [
   {
    "page": "/",
+   "key": "img_a8e3d507335f4d15",
+   "alt": ""
+  },
+  {
+   "page": "/",
    "key": "img_e046bca5030a9eff",
    "alt": "WhatsApp Image 2026-09-21 at 4.42.49 PM.jpeg"
   },
@@ -3416,11 +3421,6 @@
    "page": "/ar/free-clinic",
    "key": "img_9b7593484acc3623",
    "alt": "HilltopFreeClinicLogo-HD (1).png"
-  },
-  {
-   "page": "/ar/free-clinic",
-   "key": "img_a8e3d507335f4d15",
-   "alt": ""
   },
   {
    "page": "/awards",

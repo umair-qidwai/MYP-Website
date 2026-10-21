@@ -10,7 +10,9 @@ export async function createUser(role: "admin" | "editor", canPublish = false, p
   const email = `${id}@example.org`;
   const now = new Date().toISOString();
   const hash = await hashPassword(password, env.PASSWORD_PEPPER, 10000);
-  await env.DB.prepare("INSERT INTO users (id, email, name, role, can_publish, password_hash, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, 'active', ?, ?)")
+  await env.DB.prepare(
+    "INSERT INTO users (id, email, name, role, can_publish, password_hash, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, 'active', ?, ?)",
+  )
     .bind(id, email, `Test ${role}`, role, canPublish ? 1 : 0, hash, now, now)
     .run();
   return { id, email };
@@ -30,7 +32,10 @@ export async function login(email: string, password = PASSWORD): Promise<Session
   return { cookie, csrf: csrfToken };
 }
 
-export async function call(path: string, opts: { method?: string; body?: unknown; session?: Session; csrf?: string | false; origin?: string | false; headers?: Record<string, string> } = {}) {
+export async function call(
+  path: string,
+  opts: { method?: string; body?: unknown; session?: Session; csrf?: string | false; origin?: string | false; headers?: Record<string, string> } = {},
+) {
   const headers: Record<string, string> = { ...opts.headers };
   if (opts.origin !== false) headers.origin = opts.origin ?? ORIGIN;
   if (opts.session) headers.cookie = opts.session.cookie;
@@ -51,7 +56,11 @@ export const textDoc = (t: string) => ({ type: "doc", content: [{ type: "paragra
 /** Create + publish a page through the API (as an admin). */
 export async function publishedPage(admin: Session, path: string, title: string, text = "Hello world") {
   const c = await json<{ id: string }>(await call("/api/admin/pages", { method: "POST", session: admin, body: { title, path } }));
-  await call(`/api/admin/pages/${c.id}`, { method: "PUT", session: admin, body: { doc: { title, seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc(text) }] } } });
+  await call(`/api/admin/pages/${c.id}`, {
+    method: "PUT",
+    session: admin,
+    body: { doc: { title, seo: {}, blocks: [{ id: "b1", type: "richText", layout: "default", doc: textDoc(text) }] } },
+  });
   await call(`/api/admin/pages/${c.id}/publish`, { method: "POST", session: admin });
   return c.id;
 }

@@ -1,58 +1,57 @@
 @import "tailwindcss";
-@import "@fontsource-variable/bricolage-grotesque/standard.css";
-@import "@fontsource-variable/figtree/wght.css";
-@import "@fontsource-variable/figtree/wght-italic.css";
-@import "@fontsource/instrument-serif/latin-400.css";
-@import "@fontsource/instrument-serif/latin-400-italic.css";
+@import "@fontsource-variable/inter/opsz.css";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    MY Project USA — design tokens
-   Warm paper + ink, the organisation's purple, and the mosaic colours of the logo.
+   Calm neutrals, one brand colour, generous space. Content and photography lead.
    ───────────────────────────────────────────────────────────────────────────── */
 @theme {
-  --color-paper: #f4efe6;
-  --color-paper-2: #ece5d8;
-  --color-sand: #e4d8c4;
-  --color-ink: #191613;
-  --color-ink-2: #3b352f;
-  --color-muted: #675e54;
-  --color-line: rgb(25 22 19 / 0.12);
+  --color-canvas: #ffffff;
+  --color-mist: #f5f5f7;
+  --color-ink: #1d1d1f;
+  --color-ink-2: #424245;
+  --color-muted: #6e6e73;
+  --color-hairline: #d2d2d7;
+  --color-line: rgb(0 0 0 / 0.08);
 
-  --color-plum: #4f2d82;
-  --color-plum-deep: #2f1a52;
-  --color-plum-soft: #e9e1f3;
+  --color-brand: #5b2d8e;
+  --color-brand-deep: #45206d;
+  --color-brand-soft: #f3eefa;
 
-  --color-saffron: #eaa53a;
-  --color-terracotta: #cf5532;
+  /* Kept for the admin, which shares this stylesheet */
+  --color-paper: #ffffff;
+  --color-paper-2: #f5f5f7;
+  --color-plum: #5b2d8e;
+  --color-plum-deep: #45206d;
+  --color-plum-soft: #f3eefa;
+  --color-saffron: #e8a33a;
+  --color-terracotta: #c4472c;
   --color-teal: #1c7672;
-  --color-leaf: #5a8a35;
+  --color-leaf: #4f8a2e;
   --color-sky: #2e6cb2;
   --color-rose: #c23e66;
+  --color-sand: #f5f5f7;
 
-  --font-display: "Bricolage Grotesque Variable", "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Figtree Variable", "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Inter Variable", "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
-
-  --breakpoint-xs: 26rem;
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 :root {
-  --gutter: clamp(1.125rem, 4.2vw, 4.5rem);
-  --header-h: 4.5rem;
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --header-h: 5rem;
   color-scheme: light;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
 html {
-  background: var(--color-paper);
+  background: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: 100%;
-  scroll-padding-top: calc(var(--header-h) + 1rem);
+  scroll-padding-top: 6rem;
 }
 html:focus-within {
   scroll-behavior: smooth;
@@ -67,40 +66,33 @@ body {
   margin: 0;
   min-height: 100svh;
   font-size: 1.0625rem;
-  line-height: 1.65;
-  font-feature-settings: "ss01", "cv11";
+  line-height: 1.6;
+  letter-spacing: -0.011em;
+  font-feature-settings: "cv11", "ss01";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  background: var(--color-paper);
+  background: var(--color-canvas);
   overflow-x: clip;
 }
-@media (min-width: 768px) {
-  body {
-    font-size: 1.125rem;
-  }
-}
 
-[lang="ar"] body,
-[lang="ar"] {
+[lang="ar"],
+[lang="ar"] body {
   --font-sans: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
   --font-display: "Noto Kufi Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
 }
 
 ::selection {
-  background: var(--color-saffron);
+  background: var(--color-brand-soft);
   color: var(--color-ink);
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-plum);
+  outline: 2px solid var(--color-brand);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
-.on-dark :focus-visible,
-.tone-ink :focus-visible,
-.tone-brand :focus-visible {
-  outline-color: var(--color-saffron);
+.on-dark :focus-visible {
+  outline-color: #fff;
 }
 
 @layer base {
@@ -111,104 +103,84 @@ body {
   }
 }
 
-/* ── Layout helpers ─────────────────────────────────────────────────────── */
+/* ── Layout ─────────────────────────────────────────────────────────────── */
 @utility wrap {
   width: 100%;
-  max-width: 92rem;
+  max-width: 80rem;
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
-@utility wrap-narrow {
+@utility wrap-text {
   width: 100%;
-  max-width: 52rem;
+  max-width: 46rem;
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
 
-/* Display typography */
+/* ── Typography ─────────────────────────────────────────────────────────── */
 @utility display {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-stretch: 82%;
+  font-weight: 650;
+  font-variation-settings: "opsz" 32;
   letter-spacing: -0.035em;
-  line-height: 0.92;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+@utility headline {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-variation-settings: "opsz" 32;
+  letter-spacing: -0.028em;
+  line-height: 1.08;
   text-wrap: balance;
 }
 @utility eyebrow {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 650;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
-@utility serif-accent {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-}
-
-/* Section tones (editors choose these per block) */
-.tone-paper {
-  background: var(--color-paper);
-  color: var(--color-ink);
-}
-.tone-sand {
-  background: var(--color-paper-2);
-  color: var(--color-ink);
-}
-.tone-ink {
-  background: var(--color-ink);
-  color: var(--color-paper);
-  --tone-muted: rgb(244 239 230 / 0.72);
-}
-.tone-brand {
-  background: var(--color-plum);
-  color: #fff;
-  --tone-muted: rgb(255 255 255 / 0.78);
+@utility lede {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  line-height: 1.5;
+  color: var(--color-muted);
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
 }
 
 /* ── Rich text (CMS content) ────────────────────────────────────────────── */
 .prose-myp {
-  max-width: 68ch;
   color: var(--color-ink-2);
+  font-size: 1.0625rem;
+  line-height: 1.7;
   overflow-wrap: anywhere;
 }
-.tone-ink .prose-myp,
-.tone-brand .prose-myp {
-  color: var(--tone-muted);
+@media (min-width: 768px) {
+  .prose-myp {
+    font-size: 1.125rem;
+  }
 }
 .prose-myp > * + * {
-  margin-top: 1.1em;
+  margin-top: 1em;
 }
-.prose-myp h2,
-.prose-myp h3,
-.prose-myp h4 {
+.prose-myp :is(h2, h3, h4) {
   font-family: var(--font-display);
   color: var(--color-ink);
-  font-stretch: 88%;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
+  font-weight: 650;
+  letter-spacing: -0.022em;
+  line-height: 1.2;
   text-wrap: balance;
 }
-.tone-ink .prose-myp :is(h2, h3, h4),
-.tone-brand .prose-myp :is(h2, h3, h4) {
-  color: inherit;
-}
 .prose-myp h2 {
-  font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.6rem);
-  font-weight: 700;
-  margin-top: 1.9em;
+  font-size: clamp(1.625rem, 1.3rem + 1vw, 2.125rem);
+  margin-top: 2.2em;
 }
 .prose-myp h3 {
-  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem);
-  font-weight: 650;
-  margin-top: 1.7em;
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  margin-top: 1.9em;
 }
 .prose-myp h4 {
-  font-size: 1.2rem;
-  font-weight: 650;
-  margin-top: 1.5em;
+  font-size: 1.125rem;
+  margin-top: 1.6em;
 }
 .prose-myp :is(h2, h3, h4):first-child {
   margin-top: 0;
@@ -218,111 +190,86 @@ body {
 }
 .prose-myp strong {
   color: var(--color-ink);
-  font-weight: 650;
-}
-.tone-ink .prose-myp strong,
-.tone-brand .prose-myp strong {
-  color: #fff;
+  font-weight: 600;
 }
 .prose-myp a {
-  color: var(--color-plum);
+  color: var(--color-brand);
   text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 0.2em;
-  text-decoration-color: color-mix(in srgb, var(--color-plum) 40%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--color-brand) 35%, transparent);
   transition: text-decoration-color 0.2s;
 }
 .prose-myp a:hover {
   text-decoration-color: currentColor;
 }
-.tone-ink .prose-myp a,
-.tone-brand .prose-myp a {
-  color: #fff;
-  text-decoration-color: var(--color-saffron);
-}
 .prose-myp ul,
 .prose-myp ol {
-  padding-inline-start: 1.4em;
+  padding-inline-start: 1.25em;
 }
-.prose-myp ul > li {
-  position: relative;
-  list-style: none;
-}
-.prose-myp ul > li::before {
-  content: "";
-  position: absolute;
-  inset-inline-start: -1.15em;
-  top: 0.68em;
-  width: 0.42em;
-  height: 0.42em;
-  border-radius: 1px;
-  background: var(--marker, var(--color-terracotta));
-  transform: rotate(45deg);
-}
-.prose-myp ul > li:nth-child(5n + 2)::before {
-  --marker: var(--color-teal);
-}
-.prose-myp ul > li:nth-child(5n + 3)::before {
-  --marker: var(--color-saffron);
-}
-.prose-myp ul > li:nth-child(5n + 4)::before {
-  --marker: var(--color-plum);
-}
-.prose-myp ul > li:nth-child(5n + 5)::before {
-  --marker: var(--color-leaf);
+.prose-myp ul {
+  list-style: disc;
 }
 .prose-myp ol {
   list-style: decimal;
 }
-.prose-myp ol > li::marker {
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--color-plum);
+.prose-myp li::marker {
+  color: var(--color-muted);
 }
 .prose-myp li + li {
-  margin-top: 0.35em;
+  margin-top: 0.4em;
 }
 .prose-myp li > p + p {
-  margin-top: 0.5em;
+  margin-top: 0.4em;
 }
 .prose-myp blockquote {
-  border-inline-start: 3px solid var(--color-saffron);
+  border-inline-start: 2px solid var(--color-hairline);
   padding-inline-start: 1.1em;
-  font-family: var(--font-serif);
-  font-size: 1.35em;
-  line-height: 1.35;
   color: var(--color-ink);
+  font-size: 1.15em;
 }
 .prose-myp hr {
   border: 0;
   height: 1px;
-  background: var(--color-line);
-  margin-block: 2.2em;
+  background: var(--color-hairline);
+  margin-block: 2.5em;
 }
-.prose-lead {
-  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
-  line-height: 1.45;
-  color: var(--color-ink);
-  letter-spacing: -0.01em;
+.on-dark .prose-myp,
+.tone-ink .prose-myp,
+.tone-brand .prose-myp {
+  color: rgb(255 255 255 / 0.78);
 }
-.prose-lead p + p {
-  margin-top: 0.9em;
+.on-dark .prose-myp :is(h2, h3, h4, strong),
+.tone-ink .prose-myp :is(h2, h3, h4, strong),
+.tone-brand .prose-myp :is(h2, h3, h4, strong) {
+  color: #fff;
 }
-
-/* Mosaic bar signature */
-.mosaic-bars {
-  display: flex;
-  height: 6px;
-}
-.mosaic-bars > i {
-  flex: 1;
+.tone-ink .prose-myp a,
+.tone-brand .prose-myp a {
+  color: #fff;
 }
 
-/* ── Server-rendered snapshot (shown briefly before the app starts, and to no-JS clients) ── */
+/* Section tones chosen by editors (kept intentionally restrained) */
+.tone-paper {
+  background: var(--color-canvas);
+}
+.tone-sand {
+  background: var(--color-mist);
+}
+.tone-ink {
+  background: #000;
+  color: #f5f5f7;
+}
+.tone-brand {
+  background: var(--color-brand);
+  color: #fff;
+}
+
+/* ── Server-rendered snapshot (crawlers / before the app starts) ─────────── */
 .ssr {
-  max-width: 60rem;
+  max-width: 46rem;
   margin: 0 auto;
-  padding: 1.5rem var(--gutter) 4rem;
+  padding: 2rem var(--gutter) 4rem;
 }
 .ssr nav ul {
   display: flex;
@@ -330,37 +277,35 @@ body {
   gap: 0.25rem 1rem;
   list-style: none;
   padding: 0;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.875rem;
 }
 .ssr nav ul ul {
   display: none;
 }
 .ssr h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  font-stretch: 82%;
-  margin: 2rem 0 1rem;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 650;
+  margin: 2.5rem 0 1rem;
 }
 .ssr h2 {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 650;
   margin: 2rem 0 0.5rem;
 }
 .ssr img {
   max-width: 100%;
   height: auto;
-  max-height: 30rem;
+  max-height: 28rem;
+  border-radius: 1rem;
 }
 .ssr a {
-  color: var(--color-plum);
+  color: var(--color-brand);
 }
 .ssr footer {
   margin-top: 4rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--color-muted);
 }
 
@@ -372,63 +317,25 @@ body {
   z-index: 100;
   transform: translateY(-200%);
   background: var(--color-ink);
-  color: var(--color-paper);
-  padding: 0.75rem 1.1rem;
+  color: #fff;
+  padding: 0.7rem 1.1rem;
   border-radius: 999px;
   font-weight: 600;
+  font-size: 0.9rem;
   transition: transform 0.2s var(--ease-out-expo);
 }
 .skip-link:focus {
   transform: translateY(0);
 }
 
-.no-scrollbar {
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.grain {
-  position: relative;
-  isolation: isolate;
-}
-.grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.35;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-
-@keyframes rise {
-  from {
-    transform: translateY(105%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: none;
-  }
-}
-@keyframes scroll-cue {
-  0% {
-    transform: translateY(-100%);
-  }
-  60%,
-  100% {
-    transform: translateY(200%);
   }
 }
 @keyframes progress {

@@ -22,9 +22,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (/node_modules\/(three|@react-three)/.test(id)) return "three";
           if (/node_modules\/(@tiptap|prosemirror)/.test(id)) return "editor";
-          if (/node_modules\/gsap/.test(id)) return "gsap";
         },
       },
     },

@@ -11,7 +11,6 @@ import { Footer } from "./layout/Footer";
 import { PageView } from "./pages/PageView";
 import { EntryView } from "./pages/EntryView";
 import { SmartLink } from "./components/SmartLink";
-import { MosaicBars } from "./components/Reveal";
 
 const loadMotionFeatures = () => import("../lib/motionFeatures").then((r) => r.default);
 
@@ -102,10 +101,10 @@ export function PublicApp() {
             </div>
           )}
           {announcement.enabled && announcement.text && (
-            <div className="bg-ink px-4 py-2.5 text-center text-sm text-paper">
+            <div className="relative z-30 bg-brand px-4 pb-2.5 pt-2.5 text-center text-[0.875rem] text-white">
               {announcement.text}{" "}
               {announcement.href && (
-                <SmartLink href={announcement.href} className="font-semibold text-saffron underline underline-offset-4">
+                <SmartLink href={announcement.href} className="font-medium underline underline-offset-4">
                   {announcement.linkLabel || "Learn more"}
                 </SmartLink>
               )}
@@ -129,21 +128,16 @@ export function PublicApp() {
 
 function NotFound() {
   return (
-    <section className="grain overflow-hidden py-24 md:py-36">
+    <section className="pb-28 pt-40 text-center sm:pt-48" style={{ animation: "fade-up .9s var(--ease-out-expo) both" }}>
       <div className="wrap">
-        <MosaicBars className="mb-10 w-28 overflow-hidden rounded-full" />
-        <p className="eyebrow text-plum">Error 404</p>
-        <h1 className="display mt-5 text-[clamp(3rem,10vw,9rem)]">
-          This page has <span className="serif-accent text-plum">moved on.</span>
-        </h1>
-        <p className="mt-8 max-w-xl text-lg text-ink-2">
-          We couldn&rsquo;t find the page you were looking for. It may have been renamed when our website was rebuilt.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <Link to="/" className="rounded-full bg-ink px-6 py-3.5 font-semibold text-paper hover:bg-plum">
+        <p className="eyebrow text-muted">404</p>
+        <h1 className="display mx-auto mt-4 max-w-3xl text-[clamp(2.5rem,6vw,4.5rem)]">We can&rsquo;t find that page.</h1>
+        <p className="lede mx-auto mt-6 max-w-xl">It may have moved when our website was rebuilt.</p>
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
+          <Link to="/" className="inline-flex h-11 items-center rounded-full bg-brand px-6 font-medium text-white hover:bg-brand-deep">
             Go to the homepage
           </Link>
-          <Link to="/contacts" className="rounded-full px-6 py-3.5 font-semibold ring-1 ring-ink/20 hover:bg-ink/5">
+          <Link to="/contacts" className="inline-flex h-11 items-center rounded-full bg-mist px-6 font-medium text-ink hover:bg-[#e8e8ed]">
             Contact us
           </Link>
         </div>
@@ -154,11 +148,11 @@ function NotFound() {
 
 function ErrorState({ message }: { message: string }) {
   return (
-    <section className="wrap py-28">
-      <h1 className="display text-5xl">Something went wrong</h1>
+    <section className="wrap pb-28 pt-40 text-center">
+      <h1 className="display text-[clamp(2.25rem,5vw,3.5rem)]">Something went wrong</h1>
       <p className="mt-4 text-ink-2">We couldn&rsquo;t load this page. Please check your connection and try again.</p>
       <p className="mt-2 text-sm text-muted">{message}</p>
-      <button type="button" onClick={() => location.reload()} className="mt-8 rounded-full bg-ink px-6 py-3 font-semibold text-paper">
+      <button type="button" onClick={() => location.reload()} className="mt-8 h-11 rounded-full bg-brand px-6 font-medium text-white">
         Try again
       </button>
     </section>

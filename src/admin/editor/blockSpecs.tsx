@@ -179,8 +179,7 @@ export const BLOCK_SPECS: BlockSpec[] = [
         kind: "select",
         options: [
           { value: "plain", label: "Headline only" },
-          { value: "image", label: "Headline with image" },
-          { value: "sculpture", label: "Homepage (3D sculpture)" },
+          { value: "image", label: "Headline with a large photo" },
         ],
       },
       { key: "image", label: "Image", kind: "image", optional: true },

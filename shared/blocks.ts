@@ -93,7 +93,8 @@ export const blockSchema = z.discriminatedUnion("type", [
     .object({
       ...base,
       type: z.literal("hero"),
-      variant: z.enum(["sculpture", "image", "plain"]).default("plain"),
+      // "sculpture" is a legacy value from an earlier design; it now renders like "image"
+      variant: z.enum(["image", "plain", "sculpture"]).default("plain"),
       eyebrow: text(120).optional(),
       heading: text(300).min(1, "Add a heading"),
       body: richDocSchema.optional(),

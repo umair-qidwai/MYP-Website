@@ -1,18 +1,16 @@
-import { ArrowUpRight, ArrowRight, Download } from "lucide-react";
+import { ArrowUpRight, ChevronRight, Download } from "lucide-react";
 import type { ButtonRef } from "@shared/blocks";
 import { SmartLink, isExternal } from "./SmartLink";
 
-type Variant = ButtonRef["style"] | "light" | "saffron";
+type Variant = ButtonRef["style"];
 
 const base =
-  "group/btn relative inline-flex min-h-12 items-center gap-3 rounded-full px-6 py-3 text-[0.95rem] font-semibold leading-tight tracking-[-0.005em] transition-[background-color,color,box-shadow,transform] duration-300 ease-[var(--ease-out-expo)] active:scale-[0.98]";
+  "group/btn inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full px-5 text-[0.9375rem] font-medium tracking-[-0.01em] transition-colors duration-200";
 
-const variants: Record<Variant, string> = {
-  primary: "bg-ink text-paper hover:bg-plum shadow-[0_1px_0_rgb(255_255_255/0.15)_inset]",
-  secondary: "bg-transparent text-ink ring-1 ring-ink/25 ring-inset hover:ring-ink hover:bg-ink/[0.04]",
-  link: "min-h-0 px-0 py-1 rounded-none text-ink underline decoration-ink/30 underline-offset-[0.35em] hover:decoration-ink",
-  light: "bg-paper text-ink hover:bg-white",
-  saffron: "bg-saffron text-ink hover:bg-[#f2b85c]",
+const styles: Record<Variant, { light: string; dark: string }> = {
+  primary: { light: "bg-brand text-white hover:bg-brand-deep", dark: "bg-white text-ink hover:bg-white/90" },
+  secondary: { light: "bg-mist text-ink hover:bg-[#e8e8ed]", dark: "bg-white/12 text-white hover:bg-white/20" },
+  link: { light: "min-h-0 px-0 text-brand hover:underline underline-offset-4", dark: "min-h-0 px-0 text-white hover:underline underline-offset-4" },
 };
 
 export function Button({
@@ -29,23 +27,11 @@ export function Button({
   tone?: "dark";
 }) {
   const isFile = href.startsWith("/media/") && /\.pdf$/i.test(href);
-  const Icon = isFile ? Download : isExternal(href) ? ArrowUpRight : ArrowRight;
-  let v = variants[style];
-  if (tone === "dark" && style === "primary") v = variants.saffron;
-  if (tone === "dark" && style === "secondary") v = "bg-transparent text-current ring-1 ring-current/40 ring-inset hover:ring-current hover:bg-white/5";
-  if (tone === "dark" && style === "link")
-    v = variants.link.replace(/text-ink|decoration-ink\/30|hover:decoration-ink/g, "") + " text-current decoration-current/40";
+  const Icon = isFile ? Download : isExternal(href) ? ArrowUpRight : ChevronRight;
   return (
-    <SmartLink href={href} className={`${base} ${v} ${className}`}>
-      <span>{label}</span>
-      {style !== "link" && (
-        <span aria-hidden className="relative grid size-5 place-items-center overflow-hidden">
-          <Icon
-            className="size-[1.05rem] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-px"
-            strokeWidth={2.2}
-          />
-        </span>
-      )}
+    <SmartLink href={href} className={`${base} ${styles[style][tone === "dark" ? "dark" : "light"]} ${className}`}>
+      {label}
+      <Icon aria-hidden className="size-4 opacity-80 transition-transform duration-200 group-hover/btn:translate-x-0.5" strokeWidth={2} />
     </SmartLink>
   );
 }
@@ -63,7 +49,7 @@ export function ButtonRow({
 }) {
   if (!buttons.length) return null;
   return (
-    <div className={`flex flex-wrap gap-3 ${align === "center" ? "justify-center" : ""} ${className}`}>
+    <div className={`flex flex-wrap items-center gap-3 ${align === "center" ? "justify-center" : ""} ${className}`}>
       {buttons.map((b, i) => (
         <Button key={`${b.href}-${i}`} href={b.href} label={b.label} style={b.style} tone={tone} />
       ))}

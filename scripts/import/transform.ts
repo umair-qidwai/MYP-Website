@@ -1033,8 +1033,13 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
     {
       id: bid(),
       type: "hero",
-      variant: "sculpture",
+      variant: "image",
       heading,
+      // Photo from the original site (Hilltop Free Clinic page): young people at the "Empower" mural
+      image: (() => {
+        const ref = imageRef("https://static.wixstatic.com/media/be0c83_75d302493dff4448a441e89a4f9b2a7d~mv2.jpg", null, page);
+        return ref ? { ...ref, alt: "Young people gathered in front of a colorful mural that reads “Empower”" } : undefined;
+      })(),
       body: { type: "doc", content: [para(p1)] },
       buttons: [
         { label: "Donate", href: "/donors", style: "primary" },
@@ -1079,7 +1084,6 @@ async function buildHome(c: Crawl): Promise<{ doc: PageDoc; notes: string[] }> {
       imageLink: awards.href ? (mapLink(awards.href) ?? undefined) : undefined,
       imageSide: "left",
       buttons: [btn("Book Your Seat Now")],
-      tone: "ink",
     },
     ...(ytId
       ? [

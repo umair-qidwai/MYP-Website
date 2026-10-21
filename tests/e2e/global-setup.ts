@@ -7,7 +7,9 @@ import { makePdf, makePng } from "../fixtures/assets";
 import { E2E_PASSWORD, FIXTURE } from "./fixture";
 
 const BASE = "http://localhost:5190";
-const TOKEN = readFileSync(".dev.vars", "utf8").match(/^IMPORT_TOKEN=(.+)$/m)![1].trim();
+const TOKEN = readFileSync(".dev.vars", "utf8")
+  .match(/^IMPORT_TOKEN=(.+)$/m)![1]
+  .trim();
 
 type Item = { id: string; url: string; width: number | null; height: number | null; variants: { w: number; url: string }[]; filename: string; size: number };
 
@@ -31,7 +33,11 @@ export default async function globalSetup() {
     ["e2e-admin-token-0123456789abcdefghij", "admin"],
     ["e2e-editor-token-0123456789abcdefghi", "editor"],
   ]) {
-    const r = await fetch(`${BASE}/api/auth/set-password`, { method: "POST", headers: { "content-type": "application/json", origin: BASE }, body: JSON.stringify({ token, password: E2E_PASSWORD }) });
+    const r = await fetch(`${BASE}/api/auth/set-password`, {
+      method: "POST",
+      headers: { "content-type": "application/json", origin: BASE },
+      body: JSON.stringify({ token, password: E2E_PASSWORD }),
+    });
     if (!r.ok) throw new Error(`set-password (${label}) failed: ${r.status} ${await r.text()}`);
   }
 
@@ -40,8 +46,16 @@ export default async function globalSetup() {
   const pdf = await uploadMedia("fixture-report.pdf", makePdf(), "application/pdf");
   const img = (m: Item, alt: string) => ({ mediaId: m.id, src: m.url, alt, width: m.width ?? undefined, height: m.height ?? undefined });
 
-  const body = FIXTURE({ photo: img(photo, "Fixture photo of a community event"), logo: img(logo, "Fixture initiative logo"), pdf: { mediaId: pdf.id, url: pdf.url, filename: pdf.filename, size: pdf.size } });
-  const r = await fetch(`${BASE}/api/import/content`, { method: "POST", headers: { authorization: `Bearer ${TOKEN}`, "content-type": "application/json" }, body: JSON.stringify(body) });
+  const body = FIXTURE({
+    photo: img(photo, "Fixture photo of a community event"),
+    logo: img(logo, "Fixture initiative logo"),
+    pdf: { mediaId: pdf.id, url: pdf.url, filename: pdf.filename, size: pdf.size },
+  });
+  const r = await fetch(`${BASE}/api/import/content`, {
+    method: "POST",
+    headers: { authorization: `Bearer ${TOKEN}`, "content-type": "application/json" },
+    body: JSON.stringify(body),
+  });
   const report = (await r.json()) as { errors?: string[] };
   if (!r.ok || report.errors?.length) throw new Error(`fixture import failed: ${JSON.stringify(report)}`);
 }

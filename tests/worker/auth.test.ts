@@ -40,21 +40,37 @@ describe("authentication", () => {
 
   it("rejects cross-site login attempts", async () => {
     const u = await createUser("admin");
-    const res = await call("/api/auth/login", { method: "POST", origin: "https://evil.example", body: { email: u.email, password: PASSWORD, turnstileToken: "pass" } });
+    const res = await call("/api/auth/login", {
+      method: "POST",
+      origin: "https://evil.example",
+      body: { email: u.email, password: PASSWORD, turnstileToken: "pass" },
+    });
     expect(res.status).toBe(403);
   });
 
   it("rate-limits sign-in attempts per IP address", async () => {
     const headers = { "cf-connecting-ip": "203.0.113.77" };
     let last = 0;
-    for (let i = 0; i < 11; i++) last = (await call("/api/auth/login", { method: "POST", headers, body: { email: `x${i}@example.org`, password: "nope-nope-nope", turnstileToken: "pass" } })).status;
+    for (let i = 0; i < 11; i++)
+      last = (
+        await call("/api/auth/login", { method: "POST", headers, body: { email: `x${i}@example.org`, password: "nope-nope-nope", turnstileToken: "pass" } })
+      ).status;
     expect(last).toBe(429);
   });
 
   it("locks the account after repeated failures", async () => {
     const u = await createUser("editor");
-    for (let i = 0; i < 5; i++) await call("/api/auth/login", { method: "POST", headers: { "cf-connecting-ip": freshIp() }, body: { email: u.email, password: "bad-password-xyz", turnstileToken: "pass" } });
-    const res = await call("/api/auth/login", { method: "POST", headers: { "cf-connecting-ip": freshIp() }, body: { email: u.email, password: PASSWORD, turnstileToken: "pass" } });
+    for (let i = 0; i < 5; i++)
+      await call("/api/auth/login", {
+        method: "POST",
+        headers: { "cf-connecting-ip": freshIp() },
+        body: { email: u.email, password: "bad-password-xyz", turnstileToken: "pass" },
+      });
+    const res = await call("/api/auth/login", {
+      method: "POST",
+      headers: { "cf-connecting-ip": freshIp() },
+      body: { email: u.email, password: PASSWORD, turnstileToken: "pass" },
+    });
     expect(res.status).toBe(429);
   });
 
@@ -76,7 +92,13 @@ describe("authentication", () => {
 
   it("invite links set a password once and then expire", async () => {
     const admin = await login((await createUser("admin")).email);
-    const r = await json<{ link: string }>(await call("/api/admin/users", { method: "POST", session: admin, body: { email: "new.person@example.org", name: "New Person", role: "editor", canPublish: false } }));
+    const r = await json<{ link: string }>(
+      await call("/api/admin/users", {
+        method: "POST",
+        session: admin,
+        body: { email: "new.person@example.org", name: "New Person", role: "editor", canPublish: false },
+      }),
+    );
     const token = r.link.split("#token=")[1];
     expect((await json(await call(`/api/auth/token?token=${token}`))).valid).toBe(true);
     const weak = await call("/api/auth/set-password", { method: "POST", body: { token, password: "short" } });

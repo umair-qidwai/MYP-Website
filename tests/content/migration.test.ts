@@ -23,7 +23,9 @@ const report = JSON.parse(readFileSync(path.join(B, "report.json"), "utf8")) as 
   problems: string[];
   brokenLinks: unknown[];
 };
-const crawl = readdirSync("migration/crawl/pages").map((f) => JSON.parse(readFileSync(path.join("migration/crawl/pages", f), "utf8")) as { url: string; status: number; group: string });
+const crawl = readdirSync("migration/crawl/pages").map(
+  (f) => JSON.parse(readFileSync(path.join("migration/crawl/pages", f), "utf8")) as { url: string; status: number; group: string },
+);
 
 const pagePaths = new Set(content.pages.map((p) => "/" + p.path));
 pagePaths.add("/");
@@ -61,7 +63,8 @@ describe("content parity with the original site", () => {
   it("every page and entry validates against the CMS schemas", () => {
     const fake = (v: unknown) => JSON.parse(JSON.stringify(v).replace(/"wix-media:([^"]+)"/g, '"/media/placeholder/$1"'));
     for (const p of content.pages) expect(pageDocSchema.safeParse(fake(p.doc)).success, `/${p.path}`).toBe(true);
-    for (const e of content.entries) expect(entryDocSchema(getCollection(e.collection)!).safeParse(fake(e.doc)).success, `${e.collection}/${e.slug}`).toBe(true);
+    for (const e of content.entries)
+      expect(entryDocSchema(getCollection(e.collection)!).safeParse(fake(e.doc)).success, `${e.collection}/${e.slug}`).toBe(true);
   });
 });
 
@@ -129,7 +132,24 @@ describe("media", () => {
 });
 
 describe("required pages exist", () => {
-  it.each(["", "vision-mission-goals", "team", "services", "reports", "awards", "issues", "youth", "volunteer", "donors", "contacts", "free-clinic", "events", "blog", "copy-of-news-coverage", "newsletter"])("/%s", (p) => {
+  it.each([
+    "",
+    "vision-mission-goals",
+    "team",
+    "services",
+    "reports",
+    "awards",
+    "issues",
+    "youth",
+    "volunteer",
+    "donors",
+    "contacts",
+    "free-clinic",
+    "events",
+    "blog",
+    "copy-of-news-coverage",
+    "newsletter",
+  ])("/%s", (p) => {
     expect(pagePaths.has("/" + p) || (p === "" && pagePaths.has("/"))).toBe(true);
   });
 });

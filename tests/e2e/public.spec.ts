@@ -110,7 +110,7 @@ test.describe("public website", () => {
   test("unknown pages show a helpful 404", async ({ page }) => {
     const res = await page.goto("/definitely-not-a-page");
     expect(res?.status()).toBe(404);
-    await expect(page.getByRole("heading", { name: /moved on/ })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /can’t find that page/ })).toBeVisible();
     await expect(page.getByRole("link", { name: "Go to the homepage" })).toBeVisible();
   });
 
@@ -133,8 +133,7 @@ test.describe("public website", () => {
     await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
     const h1 = page.getByRole("heading", { level: 1 });
     await expect(h1).toBeVisible();
-    const transform = await page.locator("#hero-title span span span").first().evaluate((el) => getComputedStyle(el).transform);
-    expect(transform === "none" || transform === "matrix(1, 0, 0, 1, 0, 0)").toBe(true);
+    await expect(page.getByText("Fixture homepage introduction.")).toBeVisible();
     await ctx.close();
   });
 });

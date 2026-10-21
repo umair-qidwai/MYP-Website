@@ -1,37 +1,55 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { m, useInView, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { ArrowUpRight, ChevronLeft, ChevronRight, FileText, HeartHandshake, HeartPulse, Landmark, Plus, ShoppingBasket, Users, X } from "lucide-react";
+import { useInView, useReducedMotion } from "motion/react";
+import { ChevronDown, ChevronLeft, ChevronRight, FileText, X } from "lucide-react";
 import type { BlockOf, ImageRef, Tone } from "@shared/blocks";
 import { RichText, headingsOf } from "../components/RichText";
 import { Button, ButtonRow } from "../components/Button";
 import { Img } from "../components/Img";
-import { MaskLines, MosaicBars, Reveal } from "../components/Reveal";
+import { Reveal } from "../components/Reveal";
 import { SmartLink } from "../components/SmartLink";
 import { SocialIcon, SOCIAL_LABEL } from "../components/SocialIcon";
 import { useSite } from "../SiteContext";
 
-const toneClass = (t?: Tone) => `tone-${t ?? "paper"}`;
 const dark = (t?: Tone) => t === "ink" || t === "brand";
 
-/** Vertical rhythm: blocks on the same tone sit closer; tone changes get full-bleed bands. */
+/** Section wrapper: tinted sections get full bands; plain ones flow with modest spacing. */
 export function Section({
   tone,
   children,
   className = "",
   id,
   labelledBy,
+  size = "md",
 }: {
   tone?: Tone;
   children: ReactNode;
   className?: string;
   id?: string;
   labelledBy?: string;
+  size?: "sm" | "md" | "lg";
 }) {
   const banded = tone && tone !== "paper";
+  const pad = banded ? "py-20 md:py-28" : size === "lg" ? "py-20 md:py-28" : size === "sm" ? "py-6 md:py-8" : "py-12 md:py-16";
   return (
-    <section id={id} aria-labelledby={labelledBy} className={`${toneClass(tone)} ${banded ? "py-20 md:py-28" : "py-10 md:py-14"} ${className}`}>
+    <section id={id} aria-labelledby={labelledBy} className={`tone-${tone ?? "paper"} ${pad} ${className}`}>
       {children}
     </section>
+  );
+}
+
+/** Centred section heading used across blocks. */
+function SectionTitle({ id, eyebrow, title, intro, onDark }: { id?: string; eyebrow?: string; title?: string; intro?: string; onDark?: boolean }) {
+  if (!title && !eyebrow) return null;
+  return (
+    <Reveal className="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+      {eyebrow && <p className={`eyebrow mb-3 ${onDark ? "text-white/60" : "text-muted"}`}>{eyebrow}</p>}
+      {title && (
+        <h2 id={id} className="headline text-[clamp(2rem,4.5vw,3.5rem)]">
+          {title}
+        </h2>
+      )}
+      {intro && <p className={`lede mt-5 ${onDark ? "!text-white/70" : ""}`}>{intro}</p>}
+    </Reveal>
   );
 }
 
@@ -39,31 +57,28 @@ export function Section({
 export function RichTextBlock({ block }: { block: BlockOf<"richText"> }) {
   if (block.layout === "lead") {
     return (
-      <Section tone={block.tone}>
-        <div className="wrap grid md:grid-cols-12">
-          <Reveal className="md:col-span-10 md:col-start-2 lg:col-span-9 lg:col-start-3">
-            <RichText doc={block.doc} className="prose-myp prose-lead !max-w-[46ch] text-pretty" />
-          </Reveal>
-        </div>
+      <Section tone={block.tone} size="lg">
+        <Reveal className="mx-auto w-full max-w-3xl px-[var(--gutter)]">
+          <RichText
+            doc={block.doc}
+            className={`text-[clamp(1.25rem,1rem+0.9vw,1.625rem)] font-medium leading-[1.5] tracking-[-0.02em] text-pretty [&_p+p]:mt-6 ${dark(block.tone) ? "text-white" : "text-ink"}`}
+          />
+        </Reveal>
       </Section>
     );
   }
   const toc = block.layout === "default" ? headingsOf(block.doc).filter((h) => h.level <= 3) : [];
-  if (toc.length >= 4) {
-    // Long documents get a sticky "On this page" rail on wide screens
+  if (toc.length >= 5) {
     return (
       <Section tone={block.tone}>
-        <div className="wrap grid gap-10 lg:grid-cols-12">
-          <aside className="hidden lg:col-span-3 lg:block" aria-label="On this page">
-            <nav className="sticky top-[calc(var(--header-h)+2rem)]">
-              <p className="eyebrow mb-4 text-muted">On this page</p>
-              <ol className="space-y-1 border-s border-line">
+        <div className="wrap grid gap-12 lg:grid-cols-[14rem_minmax(0,46rem)] lg:justify-center lg:gap-16">
+          <aside className="hidden lg:block" aria-label="On this page">
+            <nav className="sticky top-28">
+              <p className="mb-3 text-[0.8125rem] font-semibold text-ink">On this page</p>
+              <ol className="space-y-2 text-[0.875rem]">
                 {toc.map((h, i) => (
-                  <li key={`${h.id}-${i}`}>
-                    <a
-                      href={`#${h.id}`}
-                      className={`-ms-px block border-s-2 border-transparent py-1.5 ps-4 text-[0.92rem] leading-snug text-ink-2 transition-colors hover:border-plum hover:text-ink ${h.level === 3 ? "ps-6 text-[0.86rem]" : ""}`}
-                    >
+                  <li key={`${h.id}-${i}`} className={h.level === 3 ? "pl-3" : ""}>
+                    <a href={`#${h.id}`} className="text-muted transition-colors hover:text-ink">
                       {h.text}
                     </a>
                   </li>
@@ -71,22 +86,15 @@ export function RichTextBlock({ block }: { block: BlockOf<"richText"> }) {
               </ol>
             </nav>
           </aside>
-          <div className="lg:col-span-8 lg:col-start-5">
-            <RichText doc={block.doc} />
-          </div>
+          <RichText doc={block.doc} />
         </div>
       </Section>
     );
   }
   return (
     <Section tone={block.tone}>
-      <div className="wrap grid md:grid-cols-12">
-        <div className={block.layout === "wide" ? "md:col-span-12" : "md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3"}>
-          <RichText
-            doc={block.doc}
-            className={`prose-myp ${block.layout === "wide" ? "!max-w-none" : ""} ${block.layout === "columns" ? "!max-w-none md:columns-2 md:gap-12 [&>*]:break-inside-avoid" : ""}`}
-          />
-        </div>
+      <div className={block.layout === "wide" ? "wrap" : "wrap-text"}>
+        <RichText doc={block.doc} className={`prose-myp ${block.layout === "columns" ? "md:columns-2 md:gap-12 [&>*]:break-inside-avoid" : ""}`} />
       </div>
     </Section>
   );
@@ -94,16 +102,11 @@ export function RichTextBlock({ block }: { block: BlockOf<"richText"> }) {
 
 // ── Statement ───────────────────────────────────────────────────────────────
 export function StatementBlock({ block }: { block: BlockOf<"statement"> }) {
-  const sentences = block.text.split(/(?<=[.!?])\s+/);
-  const last = sentences.length > 1 ? sentences.pop()! : null;
   return (
-    <Section tone={block.tone} className="grain overflow-hidden">
-      <div className="wrap">
-        <MosaicBars className="mb-10 w-24 overflow-hidden rounded-full" />
-        <p className="display max-w-[16ch] text-[clamp(2.6rem,7.5vw,7rem)]">
-          <MaskLines lines={[sentences.join(" "), ...(last ? [<span className="serif-accent text-plum">{last}</span>] : [])]} />
-        </p>
-      </div>
+    <Section tone={block.tone === "paper" ? "sand" : (block.tone ?? "sand")}>
+      <Reveal className="wrap">
+        <p className={`headline mx-auto max-w-4xl text-center text-[clamp(2rem,5vw,4rem)] ${dark(block.tone) ? "text-white" : "text-ink"}`}>{block.text}</p>
+      </Reveal>
     </Section>
   );
 }
@@ -111,65 +114,36 @@ export function StatementBlock({ block }: { block: BlockOf<"statement"> }) {
 // ── Quote ───────────────────────────────────────────────────────────────────
 export function QuoteBlock({ block }: { block: BlockOf<"quote"> }) {
   return (
-    <Section>
-      <figure className="wrap-narrow">
-        <Reveal>
-          <blockquote className="font-serif text-[clamp(1.8rem,3.5vw,3rem)] leading-[1.15] tracking-[-0.01em]">
-            <span aria-hidden className="mr-1 text-plum">
-              “
-            </span>
-            {block.text}
-            <span aria-hidden className="text-plum">
-              ”
-            </span>
-          </blockquote>
-          {block.attribution && <figcaption className="eyebrow mt-6 text-muted">— {block.attribution}</figcaption>}
-        </Reveal>
-      </figure>
+    <Section size="lg">
+      <Reveal as="div" className="wrap-text text-center">
+        <figure>
+          <blockquote className="headline text-[clamp(1.5rem,3vw,2.25rem)] text-ink">“{block.text}”</blockquote>
+          {block.attribution && <figcaption className="mt-5 text-[0.9375rem] text-muted">{block.attribution}</figcaption>}
+        </figure>
+      </Reveal>
     </Section>
   );
 }
 
 // ── Image ───────────────────────────────────────────────────────────────────
-function ClipReveal({ children, className = "" }: { children: ReactNode; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
-  const inView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
-  return (
-    <div
-      ref={ref}
-      className={className}
-      style={
-        reduce
-          ? undefined
-          : { clipPath: inView ? "inset(0 0 0 0 round 24px)" : "inset(12% 8% 12% 8% round 24px)", transition: "clip-path 1.3s cubic-bezier(.16,1,.3,1)" }
-      }
-    >
-      {children}
-    </div>
-  );
-}
-
 export function ImageBlock({ block }: { block: BlockOf<"image"> }) {
   const portrait = (block.image.height ?? 1) > (block.image.width ?? 1) * 1.1;
-  const span = block.size === "full" ? "md:col-span-12" : block.size === "wide" && !portrait ? "md:col-span-10 md:col-start-2" : "md:col-span-6 md:col-start-4";
-  const img = <Img image={block.image} sizes={block.size === "full" ? "100vw" : "(min-width: 768px) 70vw, 100vw"} className="w-full rounded-[22px]" />;
+  const width = block.size === "full" ? "max-w-[90rem] px-3 sm:px-4" : block.size === "wide" && !portrait ? "wrap" : "wrap-text";
+  const img = <Img image={block.image} sizes={block.size === "full" ? "100vw" : "(min-width: 1024px) 80vw, 100vw"} className="w-full rounded-[28px]" />;
   return (
     <Section>
-      <figure className="wrap grid md:grid-cols-12">
-        <div className={span}>
-          <ClipReveal>
-            {block.link ? (
-              <SmartLink href={block.link} className="block transition-transform duration-700 hover:scale-[1.01]">
-                {img}
-              </SmartLink>
-            ) : (
-              img
-            )}
-          </ClipReveal>
-          {block.caption && <figcaption className="mt-3 text-sm text-muted">{block.caption}</figcaption>}
-        </div>
-      </figure>
+      <Reveal as="div" className={`mx-auto ${width}`}>
+        <figure>
+          {block.link ? (
+            <SmartLink href={block.link} className="block transition-opacity hover:opacity-90">
+              {img}
+            </SmartLink>
+          ) : (
+            img
+          )}
+          {block.caption && <figcaption className="mt-3 text-center text-[0.875rem] text-muted">{block.caption}</figcaption>}
+        </figure>
+      </Reveal>
     </Section>
   );
 }
@@ -181,12 +155,12 @@ export function GalleryBlock({ block }: { block: BlockOf<"gallery"> }) {
     return (
       <Section>
         <div className="wrap">
-          {block.heading && <h2 className="display mb-8 text-[clamp(1.8rem,3vw,2.6rem)]">{block.heading}</h2>}
+          <SectionTitle title={block.heading} />
           <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {block.images.map((im, i) => {
               const tile = (
-                <span className="grid aspect-[4/3] place-items-center rounded-2xl bg-white p-5 ring-1 ring-ink/5 transition-transform duration-500 hover:-translate-y-1">
-                  <Img image={im.image} sizes="240px" className="max-h-full w-auto object-contain" />
+                <span className="grid aspect-[4/3] place-items-center rounded-2xl bg-mist p-6 transition-colors hover:bg-[#ececf0]">
+                  <Img image={im.image} sizes="240px" className="max-h-full w-auto object-contain mix-blend-multiply" />
                 </span>
               );
               return <li key={i}>{im.link ? <SmartLink href={im.link}>{tile}</SmartLink> : tile}</li>;
@@ -196,40 +170,40 @@ export function GalleryBlock({ block }: { block: BlockOf<"gallery"> }) {
       </Section>
     );
   }
+  const cols =
+    block.images.length === 1 ? "" : block.images.length === 2 ? "sm:grid-cols-2" : block.images.length === 3 ? "sm:grid-cols-3" : "grid-cols-2 lg:grid-cols-3";
   return (
     <Section>
       <div className="wrap">
-        {block.heading && <h2 className="display mb-8 text-[clamp(1.8rem,3vw,2.6rem)]">{block.heading}</h2>}
-        <ul
-          className={`grid gap-3 md:gap-4 ${block.images.length === 2 ? "sm:grid-cols-2" : block.images.length === 3 ? "sm:grid-cols-3" : "grid-cols-2 lg:grid-cols-4"}`}
-        >
+        <SectionTitle title={block.heading} />
+        <ul className={`grid gap-3 sm:gap-4 ${cols}`}>
           {block.images.map((im, i) => (
-            <Reveal as="li" key={i} delay={(i % 4) * 0.05}>
+            <Reveal as="li" key={i} delay={(i % 3) * 0.06}>
               {im.link ? (
-                <SmartLink href={im.link} className="group block overflow-hidden rounded-2xl bg-paper-2">
+                <SmartLink href={im.link} className="group block overflow-hidden rounded-[20px] bg-mist">
                   <Img
                     image={im.image}
-                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    sizes="(min-width: 1024px) 33vw, 50vw"
                     fit="cover"
-                    className="aspect-[4/3] transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="aspect-[4/3] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
                   />
                 </SmartLink>
               ) : (
                 <button
                   type="button"
                   onClick={() => setOpen(i)}
-                  className="group block w-full overflow-hidden rounded-2xl bg-paper-2"
+                  className="group block w-full overflow-hidden rounded-[20px] bg-mist"
                   aria-label={`Open image ${i + 1} of ${block.images.length}${im.image.alt ? `: ${im.image.alt}` : ""}`}
                 >
                   <Img
                     image={im.image}
-                    sizes="(min-width: 1024px) 25vw, 50vw"
+                    sizes="(min-width: 1024px) 33vw, 50vw"
                     fit="cover"
-                    className="aspect-[4/3] transition-transform duration-700 group-hover:scale-[1.03]"
+                    className="aspect-[4/3] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
                   />
                 </button>
               )}
-              {im.caption && <p className="mt-2 text-sm leading-snug text-muted">{im.caption}</p>}
+              {im.caption && <p className="mt-2.5 text-[0.875rem] leading-snug text-muted">{im.caption}</p>}
             </Reveal>
           ))}
         </ul>
@@ -258,6 +232,7 @@ function Lightbox({ images, index, onClose, onIndex }: { images: ImageRef[]; ind
     };
   }, [index, images.length, onClose, onIndex]);
   const img = images[index];
+  const btn = "grid size-11 place-items-center rounded-full bg-white/10 text-white backdrop-blur hover:bg-white/20";
   return (
     <div
       ref={ref}
@@ -265,23 +240,18 @@ function Lightbox({ images, index, onClose, onIndex }: { images: ImageRef[]; ind
       role="dialog"
       aria-modal="true"
       aria-label="Image viewer"
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/95 p-4 outline-none"
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4 outline-none"
       onClick={onClose}
     >
-      <img src={img.src} alt={img.alt} className="max-h-[86vh] max-w-full rounded-lg object-contain" onClick={(e) => e.stopPropagation()} />
-      <button
-        type="button"
-        className="absolute right-4 top-4 grid size-12 place-items-center rounded-full bg-paper text-ink"
-        onClick={onClose}
-        aria-label="Close"
-      >
+      <img src={img.src} alt={img.alt} className="max-h-[86vh] max-w-full rounded-xl object-contain" onClick={(e) => e.stopPropagation()} />
+      <button type="button" className={`absolute right-4 top-4 ${btn}`} onClick={onClose} aria-label="Close">
         <X className="size-5" />
       </button>
       {images.length > 1 && (
         <>
           <button
             type="button"
-            className="absolute left-4 top-1/2 grid size-12 -translate-y-1/2 place-items-center rounded-full bg-paper/90 text-ink"
+            className={`absolute left-4 top-1/2 -translate-y-1/2 ${btn}`}
             onClick={(e) => (e.stopPropagation(), onIndex((index - 1 + images.length) % images.length))}
             aria-label="Previous image"
           >
@@ -289,13 +259,13 @@ function Lightbox({ images, index, onClose, onIndex }: { images: ImageRef[]; ind
           </button>
           <button
             type="button"
-            className="absolute right-4 top-1/2 grid size-12 -translate-y-1/2 place-items-center rounded-full bg-paper/90 text-ink"
+            className={`absolute right-4 top-1/2 -translate-y-1/2 ${btn}`}
             onClick={(e) => (e.stopPropagation(), onIndex((index + 1) % images.length))}
             aria-label="Next image"
           >
             <ChevronRight className="size-5" />
           </button>
-          <p className="absolute bottom-5 left-1/2 -translate-x-1/2 text-sm text-paper/70" aria-live="polite">
+          <p className="absolute bottom-5 left-1/2 -translate-x-1/2 text-[0.875rem] text-white/70" aria-live="polite">
             {index + 1} / {images.length}
           </p>
         </>
@@ -305,51 +275,44 @@ function Lightbox({ images, index, onClose, onIndex }: { images: ImageRef[]; ind
 }
 
 // ── Split (image + text) ────────────────────────────────────────────────────
-export function SplitBlock({ block, index }: { block: BlockOf<"split">; index: number }) {
+export function SplitBlock({ block }: { block: BlockOf<"split">; index: number }) {
   const small = !!block.image && (block.image.width ?? 1000) < 520; // portraits / logos: compact column
   const imageLeft = block.imageSide === "left";
-  const tone = block.tone;
-  const ref = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], reduce || small ? ["0%", "0%"] : ["-5%", "5%"]);
+  const onDark = dark(block.tone);
   const hasText = block.doc.content.length > 0 || !!block.heading;
   const img = block.image && (
-    <div ref={ref} className={`overflow-hidden ${small ? "rounded-2xl" : "rounded-[26px]"} ${small ? "bg-white" : "bg-paper-2"}`}>
-      <m.div style={{ y }} className={small ? "" : "scale-[1.08]"}>
-        <Img image={block.image} sizes={small ? "320px" : "(min-width: 768px) 50vw, 100vw"} className="w-full" />
-      </m.div>
-    </div>
+    <Img image={block.image} sizes={small ? "320px" : "(min-width: 768px) 50vw, 100vw"} className={`w-full ${small ? "rounded-2xl" : "rounded-[28px]"}`} />
   );
   const imageEl =
     block.image &&
     (block.imageLink ? (
-      <SmartLink href={block.imageLink} className="block transition-transform duration-700 hover:-translate-y-1">
+      <SmartLink href={block.imageLink} className="block transition-opacity hover:opacity-90">
         {img}
       </SmartLink>
     ) : (
       img
     ));
+
+  if (!hasText) {
+    // Image + buttons only: centred showcase
+    return (
+      <Section tone={block.tone}>
+        <Reveal className="wrap max-w-5xl text-center">
+          {imageEl}
+          <ButtonRow buttons={block.buttons} tone={onDark ? "dark" : undefined} align="center" className="mt-8" />
+        </Reveal>
+      </Section>
+    );
+  }
   return (
-    <Section tone={tone}>
-      <div className={`wrap grid items-center gap-8 md:grid-cols-12 md:gap-12 ${index === 0 ? "" : ""}`}>
-        {imageEl && (
-          <Reveal
-            className={`${small ? "md:col-span-4 lg:col-span-3" : hasText ? "md:col-span-6" : "md:col-span-8 md:col-start-3"} ${imageLeft || !hasText ? "" : "md:order-2"} ${small && !imageLeft ? "md:col-start-9" : ""}`}
-          >
-            {imageEl}
-          </Reveal>
-        )}
-        {(hasText || block.buttons.length > 0) && (
-          <Reveal
-            delay={0.08}
-            className={`${!hasText ? "md:col-span-8 md:col-start-3" : imageEl ? (small ? "md:col-span-8 lg:col-span-8" : "md:col-span-6") : "md:col-span-8 md:col-start-3"} ${imageLeft || !hasText ? "" : "md:order-1"}`}
-          >
-            {block.heading && <h2 className="display mb-6 text-[clamp(2rem,4.2vw,3.6rem)]">{block.heading}</h2>}
-            <RichText doc={block.doc} />
-            <ButtonRow buttons={block.buttons} className="mt-8" tone={dark(tone) ? "dark" : undefined} />
-          </Reveal>
-        )}
+    <Section tone={block.tone}>
+      <div className={`wrap grid items-center gap-10 md:gap-16 ${small ? "md:grid-cols-[14rem_1fr] lg:grid-cols-[16rem_1fr]" : "md:grid-cols-2"}`}>
+        {imageEl && <Reveal className={imageLeft ? "" : "md:order-2"}>{imageEl}</Reveal>}
+        <Reveal delay={0.08} className={imageLeft ? "" : "md:order-1"}>
+          {block.heading && <h2 className={`headline mb-5 text-[clamp(1.75rem,3.5vw,2.75rem)] ${onDark ? "text-white" : "text-ink"}`}>{block.heading}</h2>}
+          <RichText doc={block.doc} />
+          <ButtonRow buttons={block.buttons} className="mt-8" tone={onDark ? "dark" : undefined} />
+        </Reveal>
       </div>
     </Section>
   );
@@ -361,35 +324,27 @@ export function CardsBlock({ block }: { block: BlockOf<"cards"> }) {
   return (
     <Section tone={block.tone}>
       <div className="wrap">
-        {(block.heading || block.intro) && (
-          <div className="mb-12 max-w-3xl">
-            {block.heading && <h2 className="display text-[clamp(2rem,4vw,3.4rem)]">{block.heading}</h2>}
-            {block.intro && <p className="mt-4 text-lg text-muted">{block.intro}</p>}
-          </div>
-        )}
-        <ul className={`grid gap-4 md:gap-6 ${cols}`}>
+        <SectionTitle title={block.heading} intro={block.intro} onDark={dark(block.tone)} />
+        <ul className={`grid gap-4 ${cols}`}>
           {block.items.map((it, i) => {
             const inner = (
-              <article
-                className={`group flex h-full flex-col overflow-hidden rounded-[22px] ${block.style === "text" ? "bg-paper-2 p-7" : "bg-white ring-1 ring-ink/5"} transition-transform duration-500 hover:-translate-y-1`}
-              >
+              <article className="group flex h-full flex-col overflow-hidden rounded-[24px] bg-mist">
                 {it.image && block.style !== "text" && (
-                  <div className={block.style === "logo" ? "grid aspect-square place-items-center p-8" : "aspect-[4/3] overflow-hidden"}>
+                  <div className={block.style === "logo" ? "grid aspect-[4/3] place-items-center p-10" : "aspect-[4/3] overflow-hidden"}>
                     <Img
                       image={it.image}
                       sizes="(min-width: 1024px) 30vw, 50vw"
                       fit={block.style === "logo" ? "contain" : "cover"}
-                      className="transition-transform duration-700 group-hover:scale-[1.03]"
+                      className={`transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[1.03] ${block.style === "logo" ? "mix-blend-multiply" : ""}`}
                     />
                   </div>
                 )}
-                <div className={block.style === "text" ? "" : "flex flex-1 flex-col p-6"}>
-                  {it.title && <h3 className="display text-[1.5rem] font-semibold leading-tight">{it.title}</h3>}
-                  {it.text && <p className="mt-3 text-[0.98rem] leading-relaxed text-ink-2">{it.text}</p>}
+                <div className="flex flex-1 flex-col p-6">
+                  {it.title && <h3 className="text-[1.1875rem] font-semibold leading-snug tracking-[-0.02em] text-ink">{it.title}</h3>}
+                  {it.text && <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-2">{it.text}</p>}
                   {it.link && (
-                    <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-plum">
-                      {it.linkLabel || "Learn more"}{" "}
-                      <ArrowUpRight aria-hidden className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    <span className="mt-auto inline-flex items-center gap-1 pt-4 text-[0.9375rem] font-medium text-brand">
+                      {it.linkLabel || "Learn more"} <ChevronRight aria-hidden className="size-4 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   )}
                 </div>
@@ -420,43 +375,29 @@ export function ProgramsBlock({ block }: { block: BlockOf<"programs"> }) {
   if (!items.length) return null;
   const heading = block.heading || settings.programs.heading;
   return (
-    <Section tone={block.tone} className="overflow-hidden" labelledBy="programs-h">
-      <div className="wrap grid gap-12 lg:grid-cols-12">
-        <div className="lg:col-span-4">
-          <div className="lg:sticky lg:top-[calc(var(--header-h)+2rem)]">
-            <MosaicBars className="mb-8 w-24 overflow-hidden rounded-full" />
-            {heading && (
-              <h2 id="programs-h" className="display text-[clamp(2.4rem,4.6vw,4.2rem)]">
-                <MaskLines lines={[heading]} />
-              </h2>
-            )}
-          </div>
-        </div>
-        <ul className="grid grid-cols-2 gap-3 sm:gap-5 lg:col-span-8 lg:grid-cols-3">
+    <Section tone={block.tone} size="lg" labelledBy="programs-h">
+      <div className="wrap">
+        <SectionTitle id="programs-h" title={heading} />
+        <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
           {items.map((p, i) => (
-            <Reveal as="li" key={p.name} delay={(i % 3) * 0.07} className={i % 3 === 1 ? "lg:translate-y-12" : ""}>
+            <Reveal as="li" key={p.name} delay={(i % 3) * 0.06}>
               <SmartLink
                 href={p.href || "/"}
-                className="group relative flex h-full flex-col overflow-hidden rounded-[24px] bg-white p-3 ring-1 ring-ink/5 transition-[transform,box-shadow] duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-30px_rgb(79_45_130/0.45)]"
+                className="group flex h-full flex-col items-center rounded-[28px] bg-mist px-4 pb-6 pt-8 text-center transition-colors duration-300 hover:bg-[#ececf0] sm:pt-10"
               >
-                <div className="grid aspect-square place-items-center overflow-hidden rounded-[18px] bg-white">
+                <span className="grid aspect-square w-[62%] place-items-center">
                   {p.image ? (
                     <Img
                       image={p.image}
-                      sizes="(min-width: 1024px) 22vw, 45vw"
-                      className="h-[88%] w-[88%] object-contain transition-transform duration-700 group-hover:scale-[1.05]"
+                      sizes="(min-width: 1024px) 18vw, 40vw"
+                      className="h-full w-full object-contain mix-blend-multiply transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.04]"
                     />
                   ) : null}
-                </div>
-                <div className="flex items-center justify-between gap-2 px-2 pb-1 pt-3">
-                  <span className="text-[0.95rem] font-semibold leading-tight sm:text-base">{p.name}</span>
-                  <span
-                    aria-hidden
-                    className="grid size-8 shrink-0 place-items-center rounded-full bg-paper transition-colors group-hover:bg-plum group-hover:text-white"
-                  >
-                    <ArrowUpRight className="size-4" />
-                  </span>
-                </div>
+                </span>
+                <span className="mt-5 text-[0.9375rem] font-semibold tracking-[-0.015em] text-ink sm:text-[1.0625rem]">{p.name}</span>
+                <span className="mt-1 inline-flex items-center gap-0.5 text-[0.875rem] text-brand opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                  Learn more <ChevronRight aria-hidden className="size-3.5" />
+                </span>
               </SmartLink>
             </Reveal>
           ))}
@@ -470,53 +411,50 @@ export function ProgramsBlock({ block }: { block: BlockOf<"programs"> }) {
 export function SocialBlock({ block }: { block: BlockOf<"social"> }) {
   const { settings } = useSite();
   return (
-    <Section>
-      <div className="wrap flex flex-col gap-8 border-t border-line pt-12 md:flex-row md:items-end md:justify-between">
-        {block.heading && <h2 className="display text-[clamp(2.2rem,5vw,4.5rem)]">{block.heading}</h2>}
-        <ul className="flex flex-wrap gap-3">
+    <Section size="lg">
+      <Reveal className="wrap text-center">
+        {block.heading && <h2 className="headline text-[clamp(1.75rem,3.5vw,2.5rem)]">{block.heading}</h2>}
+        <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
           {settings.social.links.map((s) => (
             <li key={s.url}>
               <a
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-full py-2 pl-2 pr-5 ring-1 ring-ink/15 transition-colors hover:bg-ink hover:text-paper"
+                className="inline-flex h-11 items-center gap-2.5 rounded-full bg-mist px-5 text-[0.9375rem] font-medium text-ink transition-colors hover:bg-[#e8e8ed]"
               >
-                <span className="grid size-10 place-items-center rounded-full bg-ink text-paper transition-colors group-hover:bg-saffron group-hover:text-ink">
-                  <SocialIcon platform={s.platform} className="size-[1.1rem]" />
-                </span>
-                <span className="text-sm font-semibold">{SOCIAL_LABEL[s.platform]}</span>
+                <SocialIcon platform={s.platform} className="size-4" />
+                {SOCIAL_LABEL[s.platform]}
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
             </li>
           ))}
         </ul>
-      </div>
+      </Reveal>
     </Section>
   );
 }
 
-// ── Stats (only figures that exist in the content; animated count-up) ───────
+// ── Stats (only figures that exist in the content; count up once) ───────────
 function CountUp({ value }: { value: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const reduce = useReducedMotion();
-  const m = value.match(/^([^\d]*)([\d,]+(?:\.\d+)?)(.*)$/);
-  const [shown, setShown] = useState(m && !reduce ? m[1] + "0" + m[3] : value);
+  const match = value.match(/^([^\d]*)([\d,]+(?:\.\d+)?)(.*)$/);
+  const [shown, setShown] = useState(match && !reduce ? match[1] + "0" + match[3] : value);
   useEffect(() => {
-    if (!m || !inView || reduce) {
+    if (!match || !inView || reduce) {
       setShown(value);
       return;
     }
-    const target = Number(m[2].replace(/,/g, ""));
-    const decimals = m[2].includes(".") ? m[2].split(".")[1].length : 0;
+    const target = Number(match[2].replace(/,/g, ""));
+    const decimals = match[2].includes(".") ? match[2].split(".")[1].length : 0;
     const start = performance.now();
     let raf = 0;
     const tick = (now: number) => {
-      const p = Math.min(1, (now - start) / 1600);
-      const eased = 1 - Math.pow(1 - p, 4);
-      const n = (target * eased).toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
-      setShown(m[1] + n + m[3]);
+      const p = Math.min(1, (now - start) / 1400);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setShown(match[1] + (target * eased).toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + match[3]);
       if (p < 1) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
@@ -530,68 +468,45 @@ function CountUp({ value }: { value: string }) {
   );
 }
 
-const GROUP_STYLE = [
-  { bar: "bg-terracotta", icon: HeartHandshake },
-  { bar: "bg-plum", icon: ShoppingBasket },
-  { bar: "bg-leaf", icon: Users },
-  { bar: "bg-saffron", icon: HeartPulse },
-  { bar: "bg-sky", icon: Landmark },
-];
-
 export function StatsBlock({ block }: { block: BlockOf<"stats"> }) {
-  const isDark = dark(block.tone);
-  const groups: { key: string; items: BlockOf<"stats">["items"] }[] = [];
-  for (const it of block.items) {
-    const key = it.group ?? "";
-    const g = groups.find((x) => x.key === key);
-    if (g) g.items.push(it);
-    else groups.push({ key, items: [it] });
-  }
+  const onDark = dark(block.tone);
+  const firstGroup = block.items[0]?.group;
+  const headline = firstGroup ? block.items.filter((i) => i.group === firstGroup) : [];
+  const rest = firstGroup ? block.items.filter((i) => i.group !== firstGroup) : block.items;
+  const label = onDark ? "text-white/60" : "text-muted";
   return (
-    <Section tone={block.tone} className="overflow-hidden" labelledBy={block.heading ? `stats-${block.id}` : undefined}>
+    <Section tone={block.tone} labelledBy={block.heading ? `stats-${block.id}` : undefined}>
       <div className="wrap">
-        <div className="mb-14 grid gap-6 md:mb-20 md:grid-cols-12 md:items-end">
-          <div className="md:col-span-8">
-            {block.eyebrow && <p className={`eyebrow mb-5 ${isDark ? "text-saffron" : "text-plum"}`}>{block.eyebrow}</p>}
-            {block.heading && (
-              <h2 id={`stats-${block.id}`} className="display text-[clamp(2.4rem,5.5vw,5.2rem)]">
-                <MaskLines lines={[block.heading]} />
-              </h2>
-            )}
-          </div>
-          <MosaicBars className="w-32 overflow-hidden rounded-full md:col-span-4 md:justify-self-end" />
-        </div>
-        <div className={`divide-y ${isDark ? "divide-white/10 border-white/10" : "divide-line border-line"} border-y`}>
-          {groups.map((g, gi) => {
-            const style = GROUP_STYLE[gi % GROUP_STYLE.length];
-            const Icon = style.icon;
-            return (
-              <Reveal key={gi} className="relative grid gap-y-8 py-10 md:grid-cols-12 md:py-12">
-                <div className="flex items-center gap-4 md:col-span-2 md:flex-col md:items-start">
-                  <span aria-hidden className={`block h-1.5 w-12 rounded-full ${style.bar}`} />
-                  <Icon aria-hidden className={`size-7 ${isDark ? "text-paper/60" : "text-muted"}`} strokeWidth={1.5} />
-                </div>
-                <dl
-                  className={`grid grid-cols-2 gap-x-6 gap-y-8 md:col-span-10 ${g.items.length >= 4 ? "lg:grid-cols-4" : g.items.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2"}`}
-                >
-                  {g.items.map((s, i) => (
-                    <div key={i} className="flex flex-col">
-                      <dd
-                        className={`display order-1 ${g.items.length <= 2 ? "text-[clamp(3rem,8vw,7rem)]" : "text-[clamp(2.4rem,5vw,4.4rem)]"} leading-[0.9]`}
-                      >
-                        <CountUp value={s.value} />
-                      </dd>
-                      <dt className={`order-2 mt-3 max-w-[22ch] text-[0.98rem] leading-snug ${isDark ? "text-paper/75" : "text-ink-2"}`}>{s.label}</dt>
-                      {s.note && <dd className={`order-3 mt-2 max-w-[28ch] text-sm leading-snug ${isDark ? "text-paper/55" : "text-muted"}`}>{s.note}</dd>}
-                    </div>
-                  ))}
-                </dl>
+        <SectionTitle id={`stats-${block.id}`} eyebrow={block.eyebrow} title={block.heading} onDark={onDark} />
+        {headline.length > 0 && (
+          <dl className="mx-auto grid max-w-4xl gap-10 text-center sm:grid-cols-2">
+            {headline.map((s, i) => (
+              <Reveal key={i} delay={i * 0.08} className="flex flex-col">
+                <dd className="order-1 text-[clamp(3.5rem,9vw,6.5rem)] font-semibold leading-none tracking-[-0.05em]">
+                  <CountUp value={s.value} />
+                </dd>
+                <dt className={`order-2 mt-3 text-[1.0625rem] ${label}`}>{s.label}</dt>
               </Reveal>
-            );
-          })}
-        </div>
+            ))}
+          </dl>
+        )}
+        {rest.length > 0 && (
+          <dl
+            className={`mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 border-t pt-12 md:grid-cols-3 lg:grid-cols-4 ${onDark ? "border-white/15" : "border-hairline"}`}
+          >
+            {rest.map((s, i) => (
+              <Reveal key={i} delay={(i % 4) * 0.05} className="flex flex-col">
+                <dd className="order-1 text-[clamp(2rem,4vw,2.75rem)] font-semibold leading-none tracking-[-0.04em]">
+                  <CountUp value={s.value} />
+                </dd>
+                <dt className={`order-2 mt-2 text-[0.9375rem] leading-snug ${label}`}>{s.label}</dt>
+                {s.note && <dd className={`order-3 mt-1 text-[0.8125rem] leading-snug ${onDark ? "text-white/45" : "text-muted"}`}>{s.note}</dd>}
+              </Reveal>
+            ))}
+          </dl>
+        )}
         {block.source && (
-          <p className={`mt-8 text-sm ${isDark ? "text-paper/55" : "text-muted"}`}>
+          <p className={`mt-14 text-center text-[0.8125rem] ${onDark ? "text-white/45" : "text-muted"}`}>
             {block.source}{" "}
             {block.sourceLink && (
               <SmartLink href={block.sourceLink} className="underline underline-offset-4 hover:text-current">
@@ -609,27 +524,20 @@ export function StatsBlock({ block }: { block: BlockOf<"stats"> }) {
 export function AccordionBlock({ block }: { block: BlockOf<"accordion"> }) {
   return (
     <Section>
-      <div className="wrap grid md:grid-cols-12">
-        <div className="md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3">
-          {block.heading && <h2 className="display mb-8 text-[clamp(2rem,4vw,3rem)]">{block.heading}</h2>}
-          <div className="divide-y divide-line border-y border-line">
-            {block.items.map((it, i) => (
-              <details key={i} className="group py-1 [&_summary::-webkit-details-marker]:hidden">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-left text-[1.12rem] font-semibold leading-snug hover:text-plum">
-                  {it.title}
-                  <span
-                    aria-hidden
-                    className="grid size-9 shrink-0 place-items-center rounded-full ring-1 ring-ink/15 transition-transform duration-300 group-open:rotate-45 group-open:bg-ink group-open:text-paper"
-                  >
-                    <Plus className="size-4" />
-                  </span>
-                </summary>
-                <div className="pb-6 pr-12">
-                  <RichText doc={it.doc} />
-                </div>
-              </details>
-            ))}
-          </div>
+      <div className="wrap-text">
+        {block.heading && <h2 className="headline mb-8 text-[clamp(1.75rem,3.5vw,2.5rem)]">{block.heading}</h2>}
+        <div className="border-t border-hairline">
+          {block.items.map((it, i) => (
+            <details key={i} className="group border-b border-hairline [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-left text-[1.0625rem] font-medium text-ink">
+                {it.title}
+                <ChevronDown aria-hidden className="size-5 shrink-0 text-muted transition-transform duration-300 group-open:rotate-180" />
+              </summary>
+              <div className="pb-6">
+                <RichText doc={it.doc} />
+              </div>
+            </details>
+          ))}
         </div>
       </div>
     </Section>
@@ -639,33 +547,19 @@ export function AccordionBlock({ block }: { block: BlockOf<"accordion"> }) {
 // ── Call to action ──────────────────────────────────────────────────────────
 export function CtaBlock({ block }: { block: BlockOf<"cta"> }) {
   const tone = block.tone ?? "brand";
+  const onDark = dark(tone);
   return (
-    <section className="px-[calc(var(--gutter)*0.5)] py-6">
-      <div className={`${toneClass(tone)} grain relative overflow-hidden rounded-[32px] px-[var(--gutter)] py-16 md:py-24`}>
-        <div aria-hidden className="pointer-events-none absolute -right-10 bottom-0 flex h-[80%] items-end gap-3 opacity-90 max-md:hidden">
-          {["bg-terracotta", "bg-saffron", "bg-leaf", "bg-teal", "bg-sky", "bg-rose"].map((c, i) => (
-            <m.span
-              key={c}
-              className={`${c} block w-10 rounded-t-xl`}
-              initial={{ height: "8%" }}
-              whileInView={{ height: `${[38, 62, 84, 70, 52, 30][i]}%` }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.4, delay: 0.1 + i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-            />
-          ))}
-        </div>
-        <div className="relative max-w-3xl">
-          <h2 className="display text-[clamp(2.4rem,6vw,5.6rem)]">
-            <MaskLines lines={[block.heading]} />
-          </h2>
-          {block.text && <p className="mt-6 max-w-xl text-lg opacity-85">{block.text}</p>}
-          <ButtonRow
-            buttons={block.buttons.map((b, i) => (i === 0 ? { ...b, style: "primary" } : b))}
-            tone={dark(tone) ? "dark" : undefined}
-            className="mt-10"
-          />
-        </div>
-      </div>
+    <section className="px-3 py-6 sm:px-4">
+      <Reveal className={`tone-${tone === "paper" ? "sand" : tone} mx-auto max-w-[90rem] rounded-[32px] px-6 py-20 text-center md:py-28`}>
+        <h2 className={`headline mx-auto max-w-3xl text-[clamp(2rem,5vw,3.75rem)] ${onDark ? "text-white" : "text-ink"}`}>{block.heading}</h2>
+        {block.text && <p className={`lede mx-auto mt-5 max-w-xl ${onDark ? "!text-white/75" : ""}`}>{block.text}</p>}
+        <ButtonRow
+          buttons={block.buttons.map((b, i) => (i === 0 ? { ...b, style: "primary" } : b))}
+          tone={onDark ? "dark" : undefined}
+          align="center"
+          className="mt-9"
+        />
+      </Reveal>
     </section>
   );
 }
@@ -674,24 +568,18 @@ export function CtaBlock({ block }: { block: BlockOf<"cta"> }) {
 export function TimelineBlock({ block }: { block: BlockOf<"timeline"> }) {
   return (
     <Section>
-      <div className="wrap grid md:grid-cols-12">
-        <div className="md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3">
-          {block.heading && <h2 className="display mb-10 text-[clamp(2rem,4vw,3rem)]">{block.heading}</h2>}
-          <ol className="relative border-s-2 border-line">
-            {block.items.map((it, i) => (
-              <Reveal as="li" key={i} className="relative pb-10 ps-8 last:pb-0">
-                <span
-                  aria-hidden
-                  className="absolute -start-[9px] top-1.5 size-4 rounded-sm bg-plum ring-4 ring-paper"
-                  style={{ transform: "rotate(45deg)" }}
-                />
-                <p className="eyebrow text-plum">{it.date}</p>
-                <h3 className="mt-2 text-xl font-semibold">{it.title}</h3>
-                {it.text && <p className="mt-2 text-ink-2">{it.text}</p>}
-              </Reveal>
-            ))}
-          </ol>
-        </div>
+      <div className="wrap-text">
+        {block.heading && <h2 className="headline mb-10 text-[clamp(1.75rem,3.5vw,2.5rem)]">{block.heading}</h2>}
+        <ol className="space-y-8 border-s border-hairline ps-8">
+          {block.items.map((it, i) => (
+            <Reveal as="li" key={i} className="relative">
+              <span aria-hidden className="absolute -start-[2.33rem] top-2 size-2.5 rounded-full bg-brand" />
+              <p className="text-[0.875rem] font-medium text-brand">{it.date}</p>
+              <h3 className="mt-1 text-[1.1875rem] font-semibold tracking-[-0.02em]">{it.title}</h3>
+              {it.text && <p className="mt-1.5 text-ink-2">{it.text}</p>}
+            </Reveal>
+          ))}
+        </ol>
       </div>
     </Section>
   );
@@ -703,27 +591,25 @@ export const fmtSize = (n?: number) => (!n ? "" : n > 1024 * 1024 ? `${(n / 1024
 export function DownloadsBlock({ block }: { block: BlockOf<"downloads"> }) {
   return (
     <Section>
-      <div className="wrap grid md:grid-cols-12">
-        <div className="md:col-span-10 md:col-start-2">
-          {block.heading && <h2 className="display mb-8 text-[clamp(2rem,4vw,3rem)]">{block.heading}</h2>}
-          <ul className="divide-y divide-line border-y border-line">
-            {block.items.map((it, i) => {
-              const href = it.file?.url ?? it.url;
-              return (
-                <li key={i} className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="flex items-start gap-4">
-                    <FileText aria-hidden className="mt-1 size-5 shrink-0 text-plum" />
-                    <div>
-                      <p className="font-semibold">{it.title}</p>
-                      {it.description && <p className="text-sm text-muted">{it.description}</p>}
-                    </div>
+      <div className="wrap-text">
+        {block.heading && <h2 className="headline mb-8 text-[clamp(1.75rem,3.5vw,2.5rem)]">{block.heading}</h2>}
+        <ul className="divide-y divide-hairline border-y border-hairline">
+          {block.items.map((it, i) => {
+            const href = it.file?.url ?? it.url;
+            return (
+              <li key={i} className="flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-start gap-3">
+                  <FileText aria-hidden className="mt-0.5 size-5 shrink-0 text-muted" />
+                  <div>
+                    <p className="font-medium text-ink">{it.title}</p>
+                    {it.description && <p className="text-[0.9375rem] text-muted">{it.description}</p>}
                   </div>
-                  {href && <Button href={href} label={`Download${it.file?.size ? ` (${fmtSize(it.file.size)})` : ""}`} style="secondary" />}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+                </div>
+                {href && <Button href={href} label={`Download${it.file?.size ? ` · ${fmtSize(it.file.size)}` : ""}`} style="secondary" />}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </Section>
   );
@@ -732,13 +618,11 @@ export function DownloadsBlock({ block }: { block: BlockOf<"downloads"> }) {
 // ── Buttons ─────────────────────────────────────────────────────────────────
 export function ButtonsBlock({ block }: { block: BlockOf<"buttons"> }) {
   return (
-    <section className="py-4">
-      <div className="wrap grid md:grid-cols-12">
-        <div className={block.align === "center" ? "md:col-span-12" : "md:col-span-10 md:col-start-2 lg:col-span-8 lg:col-start-3"}>
-          <ButtonRow buttons={block.buttons} align={block.align} />
-        </div>
+    <Section size="sm">
+      <div className={block.align === "center" ? "wrap" : "wrap-text"}>
+        <ButtonRow buttons={block.buttons} align={block.align} />
       </div>
-    </section>
+    </Section>
   );
 }
 
@@ -747,12 +631,12 @@ export function VideoBlock({ block }: { block: BlockOf<"video"> }) {
   return (
     <Section>
       <div className="wrap">
-        {block.heading && <h2 className="display mb-8 text-[clamp(2rem,4vw,3rem)]">{block.heading}</h2>}
-        <div className={`grid gap-4 ${block.videos.length > 1 ? "sm:grid-cols-2" : "md:grid-cols-12"}`}>
+        <SectionTitle title={block.heading} />
+        <div className={`mx-auto grid max-w-5xl gap-4 ${block.videos.length > 1 ? "sm:grid-cols-2" : ""}`}>
           {block.videos.map((v, i) => (
-            <figure key={i} className={block.videos.length > 1 ? "" : "md:col-span-10 md:col-start-2"}>
-              <video controls preload="metadata" playsInline src={v.file.url} className="w-full rounded-[20px] bg-ink" />
-              {v.caption && <figcaption className="mt-2 text-sm text-muted">{v.caption}</figcaption>}
+            <figure key={i}>
+              <video controls preload="metadata" playsInline src={v.file.url} className="w-full rounded-[24px] bg-black" />
+              {v.caption && <figcaption className="mt-2 text-[0.875rem] text-muted">{v.caption}</figcaption>}
             </figure>
           ))}
         </div>

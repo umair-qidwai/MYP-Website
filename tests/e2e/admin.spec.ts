@@ -91,15 +91,21 @@ test.describe("admin dashboard", () => {
   test("uploads an image and a PDF to the media library", async ({ page }) => {
     await signIn(page, ADMIN);
     await page.goto("/admin/media");
-    await page.locator('input[type="file"]').first().setInputFiles([
-      { name: "e2e-upload.png", mimeType: "image/png", buffer: makePng(1200, 800, [28, 118, 114]) },
-      { name: "e2e-upload.pdf", mimeType: "application/pdf", buffer: makePdf("E2E upload") },
-    ]);
+    await page
+      .locator('input[type="file"]')
+      .first()
+      .setInputFiles([
+        { name: "e2e-upload.png", mimeType: "image/png", buffer: makePng(1200, 800, [28, 118, 114]) },
+        { name: "e2e-upload.pdf", mimeType: "application/pdf", buffer: makePdf("E2E upload") },
+      ]);
     await expect(page.getByText(/2 files uploaded/)).toBeVisible({ timeout: 20_000 });
     await expect(page.getByRole("button", { name: /e2e-upload\.png/ }).first()).toBeVisible();
     await expect(page.getByRole("button", { name: /e2e-upload\.pdf/ }).first()).toBeVisible();
     // Add a description (alt text)
-    await page.getByRole("button", { name: /e2e-upload\.png/ }).first().click();
+    await page
+      .getByRole("button", { name: /e2e-upload\.png/ })
+      .first()
+      .click();
     await page.getByLabel("Description (alt text)").fill("Teal test pattern");
     await page.getByRole("button", { name: "Save", exact: true }).click();
     await expect(page.getByText("Saved.")).toBeVisible();
