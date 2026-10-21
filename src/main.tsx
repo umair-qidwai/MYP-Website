@@ -15,7 +15,9 @@ function CrashScreen() {
     <div className="grid min-h-svh place-items-center bg-paper p-6 text-center">
       <div className="max-w-md">
         <h1 className="display text-4xl">Something went wrong</h1>
-        <p className="mt-3 text-ink-2">Sorry — this page hit an unexpected problem. Reloading usually fixes it. If you were editing, your last saved draft is safe.</p>
+        <p className="mt-3 text-ink-2">
+          Sorry — this page hit an unexpected problem. Reloading usually fixes it. If you were editing, your last saved draft is safe.
+        </p>
         <button type="button" onClick={() => location.reload()} className="mt-6 rounded-full bg-ink px-6 py-3 font-semibold text-paper">
           Reload
         </button>

@@ -108,7 +108,10 @@ export async function findMediaUsage(db: D1Database, id: string, key: string) {
     )
     .bind(needleId, needleKey)
     .all<{ id: string; title: string; collection: string }>();
-  const settings = await db.prepare("SELECT key FROM settings WHERE instr(value_json, ?1) > 0 OR instr(value_json, ?2) > 0").bind(needleId, needleKey).all<{ key: string }>();
+  const settings = await db
+    .prepare("SELECT key FROM settings WHERE instr(value_json, ?1) > 0 OR instr(value_json, ?2) > 0")
+    .bind(needleId, needleKey)
+    .all<{ key: string }>();
   return {
     pages: pages.results,
     entries: entries.results,
