@@ -92,6 +92,8 @@ npm run admin:create -- --email=you@myprojectusa.org --name="Your Name" --remote
 Open the printed link (valid 72 hours, single use) and choose a password. Invite everyone else from **Admin › People & access**.
 Lost access? Run the same command again for a new link.
 
+> **Free plan and sign-in:** checking a password deliberately takes a lot of computing (about 7 ms on a recent Mac), close to the free plan's 10 ms per-request limit. If signing in shows **Error 1102 "Worker exceeded resource limits"**, either upgrade to Workers Paid ($5/month), or set `PBKDF2_ITERATIONS` to `"50000"` in `wrangler.jsonc`, run `npm run deploy`, and run step 9 again to set a new password. The secret pepper keeps passwords well protected at that setting. Only sign-in and password changes are affected; the public site is not.
+
 ## 10. Test the live preview
 
 - Visit the homepage, menus, a few migrated pages, `/events`, `/reports` (download a PDF), `/contacts` (send a test message, then read it in Admin › Form submissions).
