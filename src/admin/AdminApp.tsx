@@ -141,13 +141,7 @@ function Shell({ children }: { children: ReactNode }) {
   const sidebar = (
     <nav aria-label="Admin" className="flex h-full flex-col">
       <div className="flex items-center gap-3 px-5 pb-5 pt-6">
-        <span aria-hidden className="grid size-9 place-items-center rounded-lg bg-[#2d1b4e]">
-          <span className="flex h-4 items-end gap-[2px]">
-            {["#cf5532", "#eaa53a", "#5a8a35", "#1c7672", "#2e6cb2"].map((c, i) => (
-              <i key={c} className="block w-[3px] rounded-sm" style={{ background: c, height: `${[50, 75, 100, 80, 60][i]}%` }} />
-            ))}
-          </span>
-        </span>
+        <img src="/static/brand/logo.png" alt="" width={36} height={36} className="size-9 object-contain" />
         <div className="leading-tight">
           <p className="text-[0.93rem] font-bold">MY Project USA</p>
           <p className="text-[0.75rem] text-muted">Website editor</p>

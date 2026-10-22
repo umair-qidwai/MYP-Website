@@ -11,11 +11,7 @@ function AuthCard({ title, subtitle, children }: { title: string; subtitle?: str
     <div className="grid min-h-svh place-items-center px-4 py-10">
       <div className="w-full max-w-[25rem]">
         <div className="mb-8 flex items-center gap-3">
-          <span aria-hidden className="flex h-7 items-end gap-[3px]">
-            {["#cf5532", "#eaa53a", "#5a8a35", "#1c7672", "#2e6cb2", "#4f2d82"].map((c, i) => (
-              <i key={c} className="block w-[5px] rounded-sm" style={{ background: c, height: `${[45, 70, 95, 100, 75, 55][i]}%` }} />
-            ))}
-          </span>
+          <img src="/static/brand/logo.png" alt="" width={40} height={40} className="size-10 object-contain" />
           <span className="text-[1.05rem] font-bold">MY Project USA</span>
         </div>
         <div className="rounded-2xl bg-white p-7 shadow-[0_20px_50px_-25px_rgb(0_0_0/0.25)] ring-1 ring-black/[0.07]">
