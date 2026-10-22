@@ -37,8 +37,11 @@ npx wrangler r2 bucket create myprojectusa-media
 
 ## 4. Turnstile
 
-Dashboard › Turnstile › Add widget. Hostnames: your `*.workers.dev` preview address and `www.myprojectusa.org` / `myprojectusa.org`. Mode: Managed.
-Put the **site key** in `wrangler.jsonc` → `vars.TURNSTILE_SITE_KEY` (replacing the test key). Keep the secret key for step 5.
+Turnstile is the invisible bot check on staff sign-in and the contact form. The site refuses both without it.
+
+**While testing on the `workers.dev` address:** keep Cloudflare's test keys, which work on any address and always pass (no real protection, fine for a private preview). Leave `vars.TURNSTILE_SITE_KEY` as `1x00000000000000000000AA` and use `1x0000000000000000000000000000000AA` as the secret in step 5.
+
+**Before the real domain goes live (step 12):** Dashboard › Turnstile › Add widget, hostnames `myprojectusa.org` and `www.myprojectusa.org`, mode Managed. Put its **site key** in `wrangler.jsonc` → `vars.TURNSTILE_SITE_KEY`, set its **secret key** with `npx wrangler secret put TURNSTILE_SECRET_KEY`, and run `npm run deploy`.
 
 ## 5. Secrets (never committed to Git)
 
@@ -112,7 +115,7 @@ Build command `npm run build`, deploy command `npx wrangler deploy`. Pushing to 
 2. Add `myprojectusa.org` to Cloudflare (Websites › Add a site, Free plan). Cloudflare copies the existing DNS records — check them carefully, especially **email (MX, SPF, DKIM)**, so mail keeps working.
 3. At the domain registrar, switch the nameservers to Cloudflare's. Wix keeps serving the site until DNS changes propagate.
 4. In the Worker: Settings › Domains & Routes › add `www.myprojectusa.org` and `myprojectusa.org` as custom domains. Add a redirect rule from `myprojectusa.org` to `www.myprojectusa.org` (or the reverse) to keep one canonical address.
-5. Set `PUBLIC_SITE_URL` back to `https://www.myprojectusa.org` and redeploy. Update the Turnstile hostnames if needed.
+5. Set `PUBLIC_SITE_URL` back to `https://www.myprojectusa.org`, switch Turnstile from the test keys to the real ones (step 4), and redeploy.
 6. Optional, recommended: attach `media.myprojectusa.org` to the R2 bucket (R2 › bucket › Settings › Custom domains), set `MEDIA_PUBLIC_BASE` to `https://media.myprojectusa.org`, redeploy. Images are then served directly by Cloudflare.
 7. Submit `https://www.myprojectusa.org/sitemap.xml` in Google Search Console.
 
