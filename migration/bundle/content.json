@@ -38444,6 +38444,7 @@
    "publish": true,
    "doc": {
     "title": "MY Project USA Reports",
+    "intro": "MY Project USA is committed to transparency, accountability and measurable community impact. Review our impact reports, audited financial statements, federal tax filings and annual reports to learn how resources are managed and how our programs serve youth, families and communities.",
     "seo": {
      "title": "Impact, Annual & Financial Reports | MY Project USA",
      "description": "Review MY Project USA impact reports, audited financial statements, tax returns and annual reports documenting community service, accountability and organizational impact."
@@ -38482,15 +38483,6 @@
           {
            "type": "text",
            "text": "MY Project USA Auditor Reports"
-          }
-         ]
-        },
-        {
-         "type": "paragraph",
-         "content": [
-          {
-           "type": "text",
-           "text": "MY Project USA is committed to transparency, accountability and measurable community impact. Review our impact reports, audited financial statements, federal tax filings and annual reports to learn how resources are managed and how our programs serve youth, families and communities."
           }
          ]
         },

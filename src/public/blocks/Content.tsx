@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { useInView, useReducedMotion } from "motion/react";
 import { ChevronDown, ChevronLeft, ChevronRight, FileText, X } from "lucide-react";
 import type { BlockOf, ImageRef, Tone } from "@shared/blocks";
@@ -149,15 +149,21 @@ export function GalleryBlock({ block }: { block: BlockOf<"gallery"> }) {
       </Section>
     );
   }
-  const cols = block.images.length === 1 ? "columns-1 max-w-3xl mx-auto" : block.images.length === 2 ? "columns-1 sm:columns-2" : "columns-2 lg:columns-3";
+  const ratio = (im: ImageRef) => (im.width && im.height ? im.width / im.height : 4 / 3);
   return (
     <Section>
       <div className="wrap">
         <SectionTitle title={block.heading} />
-        {/* Masonry columns keep every photo's real proportions — nothing is cropped */}
-        <ul className={`gap-3 sm:gap-4 ${cols}`}>
+        {/* Rows read left to right; each photo keeps its real proportions, so nothing is cropped */}
+        <ul className={`flex flex-wrap gap-3 sm:gap-4 ${block.images.length === 1 ? "mx-auto max-w-3xl" : ""}`}>
           {block.images.map((im, i) => (
-            <Reveal as="li" key={i} delay={(i % 3) * 0.05} className="mb-3 break-inside-avoid sm:mb-4">
+            <Reveal
+              as="li"
+              key={i}
+              delay={(i % 3) * 0.05}
+              style={{ "--r": ratio(im.image) } as CSSProperties}
+              className="min-w-0 grow-[var(--r)] basis-[calc(var(--r)*9rem)] sm:basis-[calc(var(--r)*14rem)]"
+            >
               {im.link ? (
                 <SmartLink href={im.link} className="group block overflow-hidden rounded-[18px] bg-mist">
                   <Img
@@ -183,6 +189,7 @@ export function GalleryBlock({ block }: { block: BlockOf<"gallery"> }) {
               {im.caption && <p className="mt-2 text-[0.8125rem] leading-snug text-muted">{im.caption}</p>}
             </Reveal>
           ))}
+          {block.images.length > 1 && <li aria-hidden className="grow-[10] basis-0" />}
         </ul>
       </div>
       {open !== null && <Lightbox images={block.images.map((x) => x.image)} index={open} onClose={() => setOpen(null)} onIndex={setOpen} />}

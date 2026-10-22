@@ -171,11 +171,25 @@ function NewsList({ items }: { items: PublicEntry[] }) {
   );
 }
 
-function Reports({ items, display }: { items: PublicEntry[]; display: "grid" | "list" }) {
+/** Newest year first; reports without a year keep their order, after the dated ones. */
+const yearOf = (e: PublicEntry) =>
+  Number(
+    String(e.data.year ?? "")
+      .match(/\d{4}/g)
+      ?.pop() ?? 0,
+  );
+const byYear = (list: PublicEntry[]) =>
+  list
+    .map((e, i) => ({ e, i }))
+    .sort((a, b) => yearOf(b.e) - yearOf(a.e) || a.i - b.i)
+    .map((x) => x.e);
+
+function Reports({ items: unsorted, display }: { items: PublicEntry[]; display: "grid" | "list" }) {
+  const items = byYear(unsorted);
   const hrefOf = (e: PublicEntry) => (e.data.file as FileRef | undefined)?.url ?? String(e.data.url ?? "");
   if (display === "list") {
     return (
-      <ul className="mx-auto grid max-w-4xl gap-2 sm:grid-cols-2">
+      <ul className="mx-auto grid max-w-2xl gap-2">
         {items.map((e) => {
           const href = hrefOf(e);
           const size = (e.data.file as FileRef | undefined)?.size;

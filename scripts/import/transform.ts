@@ -1142,14 +1142,24 @@ async function buildReports(p: string, c: Crawl): Promise<{ doc: PageDoc; entrie
     normaliseHeadingLevels([d]);
     return d;
   };
-  blocks.push({ id: bid(), type: "richText", layout: "default", doc: textBetween(yAud, yTax) });
+  // The page's opening sentence sits inside the auditor section on Wix; it introduces the whole page, so it leads
+  const auditors = textBetween(yAud, yTax);
+  const introAt = auditors.content.findIndex(
+    (n) =>
+      n.type === "paragraph" &&
+      docText({ type: "doc", content: [n] })
+        .trim()
+        .startsWith("MY Project USA is committed"),
+  );
+  const intro = introAt >= 0 ? docText({ type: "doc", content: auditors.content.splice(introAt, 1) }).trim() : undefined;
+  blocks.push({ id: bid(), type: "richText", layout: "default", doc: auditors });
   blocks.push({ id: bid(), type: "collection", collection: "reports", filter: "Financial Statement", limit: 50, display: "list" });
   blocks.push({ id: bid(), type: "richText", layout: "default", doc: textBetween(yTax, yAnnual) });
   blocks.push({ id: bid(), type: "collection", collection: "reports", filter: "Tax Return", limit: 50, display: "list" });
   blocks.push({ id: bid(), type: "richText", layout: "default", doc: textBetween(yAnnual, Infinity) });
   blocks.push({ id: bid(), type: "collection", collection: "reports", filter: "Annual Report", limit: 50, display: "grid" });
   notes.push("Report downloads converted to the Reports collection (staff add new reports there; they appear here automatically)");
-  return { doc: { title: pageTitle, seo: seoFor(c), blocks }, entries, notes };
+  return { doc: { title: pageTitle, intro, seo: seoFor(c), blocks }, entries, notes };
 }
 
 async function buildNews(p: string, c: Crawl): Promise<{ doc: PageDoc; entries: EntryOut[]; notes: string[] }> {
@@ -1456,7 +1466,8 @@ async function main() {
       row.notes.push(...r.notes);
       row.title = r.doc.title;
       migratedText =
-        [r.doc.title, ...r.doc.blocks.map(blockText), ...r.entries.map((e) => `${(e.doc as { title: string }).title}`)].join("\n") + "\nDownload".repeat(10);
+        [r.doc.title, r.doc.intro ?? "", ...r.doc.blocks.map(blockText), ...r.entries.map((e) => `${(e.doc as { title: string }).title}`)].join("\n") +
+        "\nDownload".repeat(10);
     } else if (kind === "newsPage") {
       const r = await buildNews(p, c);
       pages.push({ path: "copy-of-news-coverage", sourceUrl: c.url, publish: true, doc: r.doc });
