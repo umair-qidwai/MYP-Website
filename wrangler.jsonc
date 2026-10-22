@@ -5,6 +5,9 @@
   "compatibility_date": "2026-10-19",
   "compatibility_flags": ["nodejs_compat"],
   "upload_source_maps": true,
+  // Temporary address while testing; per-version preview links are off
+  "workers_dev": true,
+  "preview_urls": false,
   "observability": { "enabled": true, "head_sampling_rate": 1 },
 
   "assets": {
@@ -36,8 +39,6 @@
       "binding": "DB",
       "database_name": "myprojectusa",
       "database_id": "25b0ca5f-5cfd-4596-a76b-0a8485a07b28",
-      // Local development keeps its own database (in .wrangler/), separate from the live one
-      "preview_database_id": "00000000-0000-4000-8000-000000000000",
       "migrations_dir": "migrations",
     },
   ],
@@ -46,12 +47,12 @@
 
   "vars": {
     "ENVIRONMENT": "production",
-    "PUBLIC_SITE_URL": "https://www.myprojectusa.org",
+    "PUBLIC_SITE_URL": "https://myprojectusa.my-project-usa.workers.dev",
     // Optional: public custom domain attached to the R2 bucket (e.g. https://media.myprojectusa.org).
     // When empty, media is streamed by this Worker from /media/*.
     "MEDIA_PUBLIC_BASE": "",
     // Cloudflare Turnstile site key (public). The secret goes in TURNSTILE_SECRET_KEY via `wrangler secret put`.
-    "TURNSTILE_SITE_KEY": "1x00000000000000000000AA",
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFgwop3uEse357LD",
     "PBKDF2_ITERATIONS": "100000",
   },
 }

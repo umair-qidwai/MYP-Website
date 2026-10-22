@@ -25,7 +25,7 @@ Expected cost for typical nonprofit traffic: **$0/month**. Cloudflare may ask fo
 npx wrangler d1 create myprojectusa
 ```
 
-If Wrangler offers to add the database to your configuration, answer **no** (it would add a second entry under the wrong name). Copy the `database_id` it prints into `wrangler.jsonc` → `d1_databases` → `database_id`. Leave `preview_database_id` as it is: that's the separate local development database.
+If Wrangler offers to add the database to your configuration, answer **no** (it would add a second entry under the wrong name). Copy the `database_id` it prints into `wrangler.jsonc` → `d1_databases` → `database_id`. (Your local development copy is unaffected; it lives in `.wrangler/`.)
 
 ## 3. Create the media bucket
 
