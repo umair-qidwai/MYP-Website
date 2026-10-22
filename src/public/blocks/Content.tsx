@@ -475,7 +475,8 @@ export function StatsBlock({ block }: { block: BlockOf<"stats"> }) {
                 delay={(gi % 3) * 0.06}
                 className={`rounded-[24px] p-6 text-white sm:p-7 ${STAT_TILES[gi % STAT_TILES.length]} ${lead ? "md:col-span-2" : ""}`}
               >
-                <dl className={`grid gap-x-6 gap-y-5 ${lead ? "grid-cols-1 sm:grid-cols-2 sm:py-4" : "grid-cols-2"}`}>
+                {g.name && <p className="text-[0.8125rem] font-semibold tracking-[0.02em] text-white/75">{g.name}</p>}
+                <dl className={`mt-4 grid gap-x-6 gap-y-5 ${lead ? "grid-cols-1 sm:grid-cols-2 sm:pt-6" : "grid-cols-2"}`}>
                   {g.items.map((s, i) => (
                     <div key={i} className="flex flex-col">
                       <dd
