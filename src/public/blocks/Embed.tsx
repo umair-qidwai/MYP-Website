@@ -4,8 +4,13 @@ import type { BlockOf } from "@shared/blocks";
 import { Section } from "./Content";
 
 /** YouTube facade: a poster image until the visitor presses play (faster pages, no tracking until then). */
+// Sharpest first (1280×720); not every video has it, so fall back to 640×480, then 480×360
+const POSTERS = ["maxresdefault", "sddefault", "hqdefault"];
+
 function LiteYouTube({ url, title }: { url: string; title: string }) {
   const [on, setOn] = useState(false);
+  const [poster, setPoster] = useState(0);
+  const next = () => setPoster((p) => Math.min(p + 1, POSTERS.length - 1));
   const u = new URL(url);
   const id = u.pathname.match(/\/embed\/([^/?]+)/)?.[1] ?? "";
   const isList = id === "videoseries";
@@ -25,7 +30,10 @@ function LiteYouTube({ url, title }: { url: string; title: string }) {
   return (
     <button type="button" onClick={() => setOn(true)} className="group absolute inset-0 h-full w-full" aria-label={`Play video: ${title}`}>
       <img
-        src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+        src={`https://i.ytimg.com/vi/${id}/${POSTERS[poster]}.jpg`}
+        onError={next}
+        // A missing size comes back as a 120×90 grey placeholder rather than an error
+        onLoad={(e) => e.currentTarget.naturalWidth <= 120 && next()}
         alt=""
         loading="lazy"
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
