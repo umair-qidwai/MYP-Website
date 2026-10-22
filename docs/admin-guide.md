@@ -6,7 +6,7 @@ For MY Project USA staff and volunteers. No technical knowledge needed.
 
 1. Go to **myprojectusa.org/admin** (there's also a small “Staff sign in” link at the bottom of every page).
 2. Enter your email and password. A quick automatic check confirms you're a person; you may occasionally be asked to tick a box.
-3. New here? An administrator sends you a one-time link. Open it, choose a password (at least 12 characters — a short sentence works well), then sign in.
+3. New here? An administrator sends you a one-time link. Open it, choose a password (at least 10 characters — a short sentence works well), then sign in.
 4. Forgot your password? Ask an administrator for a reset link. After 5 wrong attempts the account pauses for 15 minutes.
 
 Always use **Sign out** (bottom of the left menu) on shared computers.

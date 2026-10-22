@@ -42,11 +42,13 @@ export async function verifyPassword(password: string, stored: string, pepper: s
 
 /** Basic strength rules shown to users when they choose a password. */
 export function passwordProblem(pw: string, email?: string): string | null {
-  if (pw.length < 12) return "Use at least 12 characters.";
+  if (pw.length < 10) return "Use at least 10 characters.";
   if (pw.length > 200) return "That password is too long.";
   if (new Set(pw).size < 5) return "Use a less repetitive password.";
   if (email && pw.toLowerCase().includes(email.split("@")[0].toLowerCase())) return "Don't include your email name in the password.";
+  // Reject passwords that are mostly a word attackers try first (e.g. "admin12345", "Password123!")
   const common = ["password", "123456", "qwerty", "letmein", "welcome", "myprojectusa", "admin"];
-  if (common.some((c) => pw.toLowerCase().includes(c))) return "That password is too easy to guess.";
+  const lower = pw.toLowerCase();
+  if (common.some((c) => lower.includes(c) && c.length * 2 >= pw.length)) return "That password is too easy to guess.";
   return null;
 }

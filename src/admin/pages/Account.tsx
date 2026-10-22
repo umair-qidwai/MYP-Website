@@ -49,7 +49,7 @@ export default function Account() {
             autoComplete="new-password"
             value={next}
             onChange={(e) => setNext(e.target.value)}
-            help="At least 12 characters."
+            help="At least 10 characters."
             required
           />
           <TextInput

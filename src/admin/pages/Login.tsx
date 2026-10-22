@@ -164,10 +164,10 @@ export function SetPasswordPage() {
           type="password"
           autoComplete="new-password"
           required
-          minLength={12}
+          minLength={10}
           value={pw}
           onChange={(e) => setPw(e.target.value)}
-          help="At least 12 characters. A short sentence you'll remember works well."
+          help="At least 10 characters. A short sentence you'll remember works well."
         />
         <TextInput label="Repeat password" type="password" autoComplete="new-password" required value={pw2} onChange={(e) => setPw2(e.target.value)} />
         {error && (
