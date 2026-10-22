@@ -1,7 +1,8 @@
 # Copy to .dev.vars for local development. Never commit .dev.vars.
 ENVIRONMENT=development
 PUBLIC_SITE_URL=http://localhost:5180
-# Cloudflare's documented Turnstile test secret: always passes. Use a real secret in production.
+# Cloudflare's documented Turnstile test keys: always pass, work on localhost. The live site uses real keys.
+TURNSTILE_SITE_KEY=1x00000000000000000000AA
 TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
 # Random string (32+ chars) mixed into password hashes. Generate with: openssl rand -base64 32
 PASSWORD_PEPPER=dev-only-pepper-change-me-0123456789abcdef
