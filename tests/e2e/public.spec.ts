@@ -35,6 +35,14 @@ test.describe("public website", () => {
     expect(html).toContain('hreflang="es"');
   });
 
+  test("the plain-HTML copy stays hidden while the app loads, but shows without JavaScript", async ({ browser }) => {
+    const noJs = await browser.newContext({ javaScriptEnabled: false });
+    const page = await noJs.newPage();
+    await page.goto("/about");
+    await expect(page.getByText("Fixture vision text.")).toBeVisible();
+    await noJs.close();
+  });
+
   test("skip link moves focus to the main content", async ({ page }) => {
     await page.goto("/about");
     await page.keyboard.press("Tab");

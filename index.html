@@ -8,6 +8,27 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>MY Project USA</title>
+    <!-- The plain-HTML copy of the page inside #root is for search engines and visitors without JavaScript.
+         Keep it out of sight while the app starts (no flash), but show it if the app hasn't started after 3s. -->
+    <style>
+      #root > .ssr {
+        visibility: hidden;
+        animation: ssr-show 0s 3s forwards;
+      }
+      @keyframes ssr-show {
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style>
+        #root > .ssr {
+          visibility: visible;
+          animation: none;
+        }
+      </style></noscript
+    >
   </head>
   <body>
     <div id="root"></div>
