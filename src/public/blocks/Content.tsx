@@ -364,12 +364,12 @@ export function ProgramsBlock({ block }: { block: BlockOf<"programs"> }) {
                 href={p.href || "/"}
                 className="group flex h-full flex-col overflow-hidden rounded-[24px] bg-white ring-1 ring-black/[0.06] transition-[box-shadow,transform] duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgb(40_20_70/0.3)]"
               >
-                <span className={`block aspect-[4/3] p-6 sm:p-9 ${TINTS[i % TINTS.length]}`}>
+                <span className={`relative block aspect-[4/3] ${TINTS[i % TINTS.length]}`}>
                   {p.image && (
                     <Img
                       image={p.image}
                       sizes="(min-width: 1024px) 22rem, 45vw"
-                      className="h-full w-full object-contain mix-blend-multiply transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.05]"
+                      className="absolute inset-6 h-[calc(100%-3rem)] w-[calc(100%-3rem)] object-contain mix-blend-multiply sm:inset-9 sm:h-[calc(100%-4.5rem)] sm:w-[calc(100%-4.5rem)] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.05]"
                     />
                   )}
                 </span>
@@ -475,8 +475,7 @@ export function StatsBlock({ block }: { block: BlockOf<"stats"> }) {
                 delay={(gi % 3) * 0.06}
                 className={`rounded-[24px] p-6 text-white sm:p-7 ${STAT_TILES[gi % STAT_TILES.length]} ${lead ? "md:col-span-2" : ""}`}
               >
-                {g.name && <p className="text-[0.8125rem] font-semibold tracking-[0.02em] text-white/75">{g.name}</p>}
-                <dl className={`mt-4 grid gap-x-6 gap-y-5 ${lead ? "grid-cols-1 sm:grid-cols-2 sm:pt-6" : "grid-cols-2"}`}>
+                <dl className={`grid gap-x-6 gap-y-5 ${lead ? "grid-cols-1 sm:grid-cols-2 sm:py-4" : "grid-cols-2"}`}>
                   {g.items.map((s, i) => (
                     <div key={i} className="flex flex-col">
                       <dd

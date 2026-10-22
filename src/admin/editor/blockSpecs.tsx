@@ -294,7 +294,7 @@ export const BLOCK_SPECS: BlockSpec[] = [
           { key: "value", label: "Number", kind: "text", placeholder: "e.g. 310K or $7M" },
           { key: "label", label: "What it measures", kind: "text" },
           { key: "note", label: "Extra detail", kind: "text", optional: true },
-          { key: "group", label: "Group (numbers with the same group appear together)", kind: "text", optional: true },
+          { key: "group", label: "Group (numbers with the same group share a coloured tile; not shown to visitors)", kind: "text", optional: true },
         ],
       },
       { key: "source", label: "Source of the figures", kind: "text", optional: true },
