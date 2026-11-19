@@ -1,5 +1,7 @@
 /** Fixture content for end-to-end tests (deliberately fictional; never mixed with migrated content). */
 import { buildDonationPage } from "../../shared/donation";
+import { pageDocSchema } from "../../shared/blocks";
+import { reorganizeHome, VISITOR_NAVIGATION, VISITOR_QUICK_LINKS } from "../../shared/visitor-content";
 
 export const E2E_PASSWORD = "Fixture-Lantern-River-2026";
 export const ADMIN = "admin@e2e.test";
@@ -13,7 +15,7 @@ const h = (level: 2 | 3, text: string) => ({ type: "heading", attrs: { level }, 
 const doc = (...content: unknown[]) => ({ type: "doc", content });
 
 export function FIXTURE({ photo, logo, pdf }: { photo: Img; logo: Img; pdf: Pdf }) {
-  return {
+  const fixture = {
     settings: {
       site: { name: "MY Project USA", tagline: "Fixture tagline.", description: "Fixture site description.", logo },
       contact: {
@@ -25,26 +27,8 @@ export function FIXTURE({ photo, logo, pdf }: { photo: Img; logo: Img; pdf: Pdf 
         copyright: "© Fixture",
       },
       social: { links: [{ platform: "facebook", url: "https://www.facebook.com/example" }] },
-      navigation: {
-        main: [
-          {
-            label: "ABOUT US",
-            href: "/about",
-            children: [
-              { label: "Contact", href: "/contacts" },
-              { label: "Reports", href: "/reports" },
-            ],
-          },
-          { label: "Events", href: "/events", children: [] },
-          { label: "Contacts", href: "/contacts", children: [] },
-        ],
-      },
-      quickLinks: {
-        buttons: [
-          { label: "Donate", href: "/donate", style: "primary" },
-          { label: "Volunteer", href: "/about", style: "primary" },
-        ],
-      },
+      navigation: VISITOR_NAVIGATION,
+      quickLinks: VISITOR_QUICK_LINKS,
       programs: {
         heading: "Fixture initiatives",
         items: [
@@ -219,4 +203,5 @@ export function FIXTURE({ photo, logo, pdf }: { photo: Img; logo: Img; pdf: Pdf 
     ],
     redirects: [{ from: "/events-1/old-fixture-event", to: "/events/fixture-event-1" }],
   };
+  return { ...fixture, pages: fixture.pages.map((p) => (p.path === "" ? { ...p, doc: reorganizeHome(pageDocSchema.parse(p.doc)) } : p)) };
 }

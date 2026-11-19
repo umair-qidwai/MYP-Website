@@ -244,6 +244,8 @@ export const BLOCK_SPECS: BlockSpec[] = [
     fields: [
       { key: "heading", label: "Heading", kind: "text", optional: true },
       { key: "intro", label: "Introduction", kind: "textarea", optional: true, rows: 2 },
+      { key: "searchable", label: "Let visitors search and filter these options", kind: "toggle" },
+      { key: "showFullText", label: "Always show the full description (recommended for service instructions)", kind: "toggle" },
       {
         key: "columns",
         label: "Cards per row",

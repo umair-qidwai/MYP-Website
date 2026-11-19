@@ -9,8 +9,8 @@ test.describe("mobile navigation", () => {
     const dialog = page.getByRole("dialog", { name: "Site menu" });
     await expect(dialog).toBeVisible();
     await dialog.getByRole("button", { name: "About Us" }).click();
-    await dialog.getByRole("link", { name: "Reports" }).click();
-    await expect(page).toHaveURL(/\/reports$/);
+    await dialog.getByRole("link", { name: "Our Impact & Reports" }).click();
+    await expect(page).toHaveURL(/\/impact$/);
     await expect(dialog).toBeHidden();
   });
 
@@ -40,7 +40,7 @@ test.describe("desktop navigation", () => {
     await about.focus();
     await page.keyboard.press("Enter");
     await expect(about).toHaveAttribute("aria-expanded", "true");
-    await expect(page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Reports" })).toBeVisible();
+    await expect(page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: "Our Impact & Reports" })).toBeVisible();
     await page.keyboard.press("Escape");
     await expect(about).toHaveAttribute("aria-expanded", "false");
   });

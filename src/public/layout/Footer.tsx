@@ -20,6 +20,29 @@ export function Footer() {
       <h2 id="footer-title" className="sr-only">
         Site footer
       </h2>
+      <div className="wrap flex flex-col gap-5 border-b border-line py-9 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xl font-semibold tracking-tight text-ink">Find your next step.</p>
+        <div className="flex flex-wrap gap-3">
+          <SmartLink
+            href="/services"
+            className="inline-flex min-h-11 items-center rounded-full bg-brand px-5 py-2.5 text-base font-medium text-white hover:bg-brand-deep"
+          >
+            Get Help
+          </SmartLink>
+          <SmartLink
+            href="/volunteer"
+            className="inline-flex min-h-11 items-center rounded-full bg-white px-5 py-2.5 text-base font-medium text-ink hover:bg-brand-soft"
+          >
+            Volunteer
+          </SmartLink>
+          <SmartLink
+            href="/donate"
+            className="inline-flex min-h-11 items-center rounded-full bg-white px-5 py-2.5 text-base font-medium text-ink hover:bg-brand-soft"
+          >
+            Donate
+          </SmartLink>
+        </div>
+      </div>
       <div className="wrap py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
@@ -89,6 +112,21 @@ export function Footer() {
         <div className="mt-12 flex flex-col gap-3 border-t border-hairline pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p>{contact.copyright}</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <SmartLink href="/impact" className="hover:text-ink hover:underline">
+              Impact & Reports
+            </SmartLink>
+            <SmartLink href="/contact-8-1" className="hover:text-ink hover:underline">
+              Newsletter Signup
+            </SmartLink>
+            <SmartLink href="/privacy" className="hover:text-ink hover:underline">
+              Privacy
+            </SmartLink>
+            <SmartLink href="/terms" className="hover:text-ink hover:underline">
+              Terms
+            </SmartLink>
+            <SmartLink href="/accessibility" className="hover:text-ink hover:underline">
+              Accessibility
+            </SmartLink>
             {settings.quickLinks.buttons.map((b) => (
               <SmartLink key={b.label} href={b.href} className="hover:text-ink hover:underline">
                 {b.label}

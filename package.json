@@ -12,6 +12,7 @@
     "cf-typegen": "wrangler types --strict-vars=false",
     "db:migrate:local": "wrangler d1 migrations apply myprojectusa --local",
     "db:migrate:remote": "wrangler d1 migrations apply myprojectusa --remote",
+    "content:build-migration": "node --import tsx scripts/content/build-visitor-migration.ts",
     "admin:create": "tsx scripts/create-admin.ts",
     "audit:crawl": "tsx scripts/audit/crawl.ts",
     "import:transform": "tsx scripts/import/transform.ts",

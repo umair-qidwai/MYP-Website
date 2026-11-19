@@ -21,7 +21,9 @@ export function Brand() {
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label={`${settings.site.name} — home`}>
       {settings.site.logo && <img src={settings.site.logo.src} alt="" width={32} height={32} className="size-8 object-contain mix-blend-multiply" />}
-      <span className="text-[0.9375rem] font-semibold tracking-[-0.015em] text-ink">{settings.site.name}</span>
+      <span className="max-w-[4.5rem] text-sm font-semibold leading-tight tracking-[-0.015em] text-ink max-[360px]:hidden sm:max-w-none sm:text-[0.9375rem]">
+        {settings.site.name}
+      </span>
     </Link>
   );
 }
@@ -39,7 +41,14 @@ function DesktopItem({ item, open, onOpen, onClose }: { item: NavItem; open: boo
     ) : null;
   }
   return (
-    <div className="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
+    <div
+      className="relative"
+      onMouseEnter={onOpen}
+      onMouseLeave={onClose}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) onClose();
+      }}
+    >
       <button
         type="button"
         className={cls}
@@ -107,7 +116,7 @@ export function Header() {
   useEffect(() => {
     setOpenIdx(null);
     setMenuOpen(false);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   const donate = settings.quickLinks.buttons.find((b) => /donate/i.test(b.label));
   const nav = settings.navigation.main.filter((n) => n.label.toUpperCase() !== "HOME");
@@ -116,12 +125,12 @@ export function Header() {
     <>
       <header className="fixed inset-x-0 top-3 z-40 px-3 sm:top-4 sm:px-4">
         <div
-          className={`mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 rounded-full pl-4 pr-2 ring-1 backdrop-blur-xl backdrop-saturate-150 transition-[background-color,box-shadow] duration-300 sm:pl-5 ${
+          className={`mx-auto flex h-14 max-w-[90rem] items-center justify-between gap-1 rounded-full pl-4 pr-2 ring-1 backdrop-blur-xl backdrop-saturate-150 transition-[background-color,box-shadow] duration-300 sm:gap-2 sm:pl-5 ${
             scrolled ? "bg-white/80 shadow-[0_8px_30px_-12px_rgb(0_0_0/0.18)] ring-black/[0.06]" : "bg-white/70 ring-black/[0.04]"
           }`}
         >
           <Brand />
-          <nav aria-label="Main" className="hidden lg:block">
+          <nav aria-label="Main" className="hidden xl:block">
             <ul className="flex items-center">
               {nav.map((item, i) => (
                 <li key={item.label}>
@@ -141,17 +150,23 @@ export function Header() {
             </ul>
           </nav>
           <div className="flex items-center gap-1.5">
+            <SmartLink
+              href="/services"
+              className="inline-flex h-11 shrink-0 items-center rounded-full bg-brand-soft px-3 text-sm font-medium text-brand transition-colors hover:bg-brand/15 sm:px-4"
+            >
+              Get Help
+            </SmartLink>
             {donate && (
               <SmartLink
                 href={donate.href}
-                className="hidden h-10 items-center rounded-full bg-brand px-4.5 text-[0.875rem] font-medium text-white transition-colors hover:bg-brand-deep sm:inline-flex"
+                className="inline-flex h-11 shrink-0 items-center rounded-full bg-brand px-3 text-[0.875rem] font-medium text-white transition-colors hover:bg-brand-deep sm:px-4"
               >
                 {donate.label}
               </SmartLink>
             )}
             <button
               type="button"
-              className="inline-flex size-11 items-center justify-center rounded-full text-ink transition-colors hover:bg-black/5 lg:hidden"
+              className="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-ink transition-colors hover:bg-black/5 xl:hidden"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
               aria-label="Open menu"
@@ -229,6 +244,29 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
             </button>
           </div>
           <nav aria-label="Mobile" className="px-7 pb-12 pt-4">
+            <div className="mb-6 flex flex-wrap gap-2" aria-label="Quick actions">
+              <SmartLink
+                href="/services"
+                onClick={onClose}
+                className="inline-flex min-h-11 items-center rounded-full bg-brand px-5 py-2.5 text-base font-medium text-white"
+              >
+                Get Help
+              </SmartLink>
+              <SmartLink
+                href="/volunteer"
+                onClick={onClose}
+                className="inline-flex min-h-11 items-center rounded-full bg-mist px-5 py-2.5 text-base font-medium text-ink"
+              >
+                Volunteer
+              </SmartLink>
+              <SmartLink
+                href={settings.quickLinks.buttons.find((b) => /donate/i.test(b.label))?.href || "/donate"}
+                onClick={onClose}
+                className="inline-flex min-h-11 items-center rounded-full bg-brand-soft px-5 py-2.5 text-base font-medium text-brand"
+              >
+                Donate
+              </SmartLink>
+            </div>
             <ul>
               {[{ label: "Home", href: "/", children: [] } as NavItem, ...nav].map((item, i) => (
                 <m.li
@@ -276,18 +314,6 @@ function MobileMenu({ open, onClose, nav }: { open: boolean; onClose: () => void
                 </m.li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {settings.quickLinks.buttons.map((b) => (
-                <SmartLink
-                  key={b.label}
-                  href={b.href}
-                  onClick={onClose}
-                  className={`rounded-full px-5 py-2.5 text-[0.9375rem] font-medium ${/donate/i.test(b.label) ? "bg-brand text-white" : "bg-mist text-ink"}`}
-                >
-                  {b.label}
-                </SmartLink>
-              ))}
-            </div>
             <div className="mt-8 flex gap-2">
               {settings.social.links.map((s) => (
                 <a

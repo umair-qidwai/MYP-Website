@@ -10,6 +10,7 @@ import { SmartLink } from "../components/SmartLink";
 import { SocialIcon, SOCIAL_LABEL } from "../components/SocialIcon";
 import { useSite } from "../SiteContext";
 import { optionAnchor } from "../components/OnThisPage";
+import { richToText } from "@shared/richtext";
 
 const dark = (t?: Tone) => t === "ink" || t === "brand";
 
@@ -667,12 +668,71 @@ function ClampedText({ doc, onDark }: { doc: BlockOf<"options">["items"][number]
 
 export function OptionsBlock({ block }: { block: BlockOf<"options"> }) {
   const onDark = dark(block.tone);
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
+  const categories = [...new Set(block.items.map((it) => it.eyebrow).filter((value): value is string => !!value))];
+  const matching = block.items
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => {
+      if (!block.searchable) return true;
+      const text = `${item.title ?? ""} ${item.eyebrow ?? ""} ${richToText(item.doc)} ${item.buttons.map((b) => b.label).join(" ")}`.toLowerCase();
+      return (
+        (!category || item.eyebrow === category) &&
+        query
+          .toLowerCase()
+          .trim()
+          .split(/\s+/)
+          .every((word) => text.includes(word))
+      );
+    });
   return (
     <Section tone={block.tone}>
       <div className="wrap">
         <SectionTitle title={block.heading} intro={block.intro} onDark={onDark} />
+        {block.searchable && (
+          <div className="mb-8 rounded-[24px] bg-mist p-5 sm:p-6">
+            <label htmlFor={`search-${block.id}`} className="mb-2 block text-base font-medium text-ink">
+              Search by program or need
+            </label>
+            <input
+              id={`search-${block.id}`}
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Try food, healthcare, youth, jobs or volunteering"
+              className="min-h-12 w-full rounded-xl border border-hairline bg-white px-4 text-base text-ink placeholder:text-muted"
+            />
+            {categories.length > 1 && (
+              <div role="group" aria-label="Filter by department" className="mt-4 flex flex-wrap gap-2">
+                {["", ...categories].map((value) => (
+                  <button
+                    key={value}
+                    type="button"
+                    aria-pressed={category === value}
+                    onClick={() => setCategory(value)}
+                    className={`min-h-11 rounded-full px-4 py-2 text-sm font-medium transition-colors ${category === value ? "bg-brand text-white" : "bg-white text-ink hover:bg-brand-soft"}`}
+                  >
+                    {value || "All departments"}
+                  </button>
+                ))}
+              </div>
+            )}
+            <p role="status" className="mt-4 text-sm text-ink-2">
+              {matching.length} {matching.length === 1 ? "program" : "programs"} found
+            </p>
+            {!matching.length && (
+              <p className="mt-2 text-base text-ink-2">
+                Try another search or{" "}
+                <SmartLink href="/contacts" className="font-medium text-brand underline">
+                  contact our team
+                </SmartLink>{" "}
+                for help finding a program.
+              </p>
+            )}
+          </div>
+        )}
         <ul className="flex flex-wrap justify-center gap-4">
-          {block.items.map((it, i) => (
+          {matching.map(({ item: it, index: i }) => (
             <Reveal
               as="li"
               key={i}
@@ -703,7 +763,11 @@ export function OptionsBlock({ block }: { block: BlockOf<"options"> }) {
                   {it.title && (
                     <h3 className={`text-[1.25rem] font-semibold leading-snug tracking-[-0.02em] ${onDark ? "text-white" : "text-ink"}`}>{it.title}</h3>
                   )}
-                  <ClampedText doc={it.doc} onDark={onDark} />
+                  {block.showFullText ? (
+                    <RichText doc={it.doc} className={`prose-myp mt-4 ${onDark ? "!text-white/80" : ""}`} />
+                  ) : (
+                    <ClampedText doc={it.doc} onDark={onDark} />
+                  )}
                   {it.buttons.length > 0 && (
                     <div className={it.doc?.content.length || it.image ? "mt-auto pt-6" : "mt-3"}>
                       <ButtonRow

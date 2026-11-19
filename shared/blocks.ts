@@ -191,6 +191,8 @@ export const blockSchema = z.discriminatedUnion("type", [
       type: z.literal("options"), // a grid of choices with actions: ways to give, volunteer roles, departments…
       heading: text(200).optional(),
       intro: text(1000).optional(),
+      searchable: z.boolean().optional(),
+      showFullText: z.boolean().optional(),
       columns: z.union([z.literal(2), z.literal(3)]).default(2),
       items: z
         .array(

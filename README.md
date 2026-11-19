@@ -12,6 +12,7 @@ The new www.myprojectusa.org: a public website, a simple editor for staff at `/a
 | [docs/deployment.md](docs/deployment.md) | Putting the site on Cloudflare and (later) moving the domain |
 | [docs/content-parity-report.md](docs/content-parity-report.md) · [docs/content-inventory.md](docs/content-inventory.md) · [docs/url-migration-map.md](docs/url-migration-map.md) | What was migrated and where it lives now |
 | [docs/feature-inventory.md](docs/feature-inventory.md) · [docs/migration-limitations.md](docs/migration-limitations.md) | Forms and integrations; known gaps and manual follow-ups |
+| [docs/visitor-layout-and-content-checklist.md](docs/visitor-layout-and-content-checklist.md) | Sitemap-aligned visitor layout, service access, staff form workflow and exact missing content |
 
 ## Run it locally
 

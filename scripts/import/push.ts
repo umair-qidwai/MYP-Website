@@ -13,6 +13,8 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { imageSize } from "image-size";
+import { pageDocSchema } from "../../shared/blocks";
+import { buildVisitorPages, reorganizePage, VISITOR_NAVIGATION, VISITOR_QUICK_LINKS } from "../../shared/visitor-content";
 
 const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/, "").split("=") as [string, string]));
 const TARGET = (args.target ?? "http://localhost:5180").replace(/\/$/, "");
@@ -253,10 +255,17 @@ async function main() {
     r.doc.blocks = r.doc.blocks.filter(
       (b) => !(b.type === "image" && !b.image) && !(b.type === "gallery" && !b.images?.length) && !(b.type === "video" && !b.videos?.length),
     );
-    return r;
+    return { ...r, doc: reorganizePage(r.path, pageDocSchema.parse(r.doc)) };
   });
+  for (const [pagePath, pageDoc] of Object.entries(buildVisitorPages(Object.fromEntries(pages.map((p) => [p.path, p.doc]))))) {
+    if (!pages.some((p) => p.path === pagePath)) pages.push({ path: pagePath, publish: true, doc: pageDoc } as (typeof pages)[number]);
+  }
   const entries = resolve(content.entries, map, missing) as unknown[];
   const settings = resolve(content.settings, map, missing) as Record<string, unknown>;
+  settings.navigation = VISITOR_NAVIGATION;
+  settings.quickLinks = VISITOR_QUICK_LINKS;
+  const programs = settings.programs as { items: { name: string; href: string }[] } | undefined;
+  if (programs) for (const item of programs.items) if (item.name === "MY Family Pantry") item.href = "/services#option-get-help-0";
 
   const results = [];
   results.push(await postContent({ settings, redirects: content.redirects }));
