@@ -1,4 +1,6 @@
 /** Fixture content for end-to-end tests (deliberately fictional; never mixed with migrated content). */
+import { buildDonationPage } from "../../shared/donation";
+
 export const E2E_PASSWORD = "Fixture-Lantern-River-2026";
 export const ADMIN = "admin@e2e.test";
 export const EDITOR = "editor@e2e.test";
@@ -39,7 +41,7 @@ export function FIXTURE({ photo, logo, pdf }: { photo: Img; logo: Img; pdf: Pdf 
       },
       quickLinks: {
         buttons: [
-          { label: "Donate", href: "/contacts", style: "primary" },
+          { label: "Donate", href: "/donate", style: "primary" },
           { label: "Volunteer", href: "/about", style: "primary" },
         ],
       },
@@ -54,6 +56,33 @@ export function FIXTURE({ photo, logo, pdf }: { photo: Img; logo: Img; pdf: Pdf 
     },
     pages: [
       {
+        path: "donate",
+        publish: true,
+        doc: buildDonationPage({
+          title: "Donate",
+          seo: {},
+          blocks: [
+            {
+              id: "fixture-give-hero",
+              type: "hero",
+              variant: "plain",
+              heading: "Donate",
+              buttons: [{ label: "General Donations", href: "/donate", style: "primary" }],
+            },
+            {
+              id: "fixture-give-options",
+              type: "options",
+              columns: 2,
+              heading: "Fixture other ways to give",
+              items: [
+                { title: "Fixture Zakat", buttons: [{ label: "Give Zakat", href: "/contacts", style: "primary" }] },
+                { title: "Fixture Iftar Kitchen", buttons: [{ label: "Give to Iftar", href: "/contacts", style: "primary" }] },
+              ],
+            },
+          ],
+        }),
+      },
+      {
         path: "",
         publish: true,
         doc: {
@@ -67,7 +96,7 @@ export function FIXTURE({ photo, logo, pdf }: { photo: Img; logo: Img; pdf: Pdf 
               variant: "sculpture",
               heading: "Protect. Educate. Empower Our Youth.",
               body: doc(p("Fixture homepage introduction.")),
-              buttons: [{ label: "Donate", href: "/contacts", style: "primary" }],
+              buttons: [{ label: "Donate", href: "/donate", style: "primary" }],
             },
             { id: "h2", type: "programs", heading: "Fixture initiatives" },
             { id: "h3", type: "stats", heading: "Fixture numbers", items: [{ value: "123", label: "Fixture count" }], source: "Fixture source." },

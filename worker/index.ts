@@ -76,7 +76,7 @@ app.use("*", async (c, next) => {
   const h = c.res.headers;
   h.set("X-Content-Type-Options", "nosniff");
   h.set("Referrer-Policy", "strict-origin-when-cross-origin");
-  h.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=()");
+  h.set("Permissions-Policy", 'camera=(), microphone=(), geolocation=(), payment=(self "https://www.zeffy.com"), usb=()');
   if (!isDev(c.env)) {
     h.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
     if (!h.has("Content-Security-Policy")) h.set("Content-Security-Policy", csp(c.env));

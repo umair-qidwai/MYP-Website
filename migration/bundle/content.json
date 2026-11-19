@@ -38,7 +38,7 @@
       "buttons": [
        {
         "label": "Donate",
-        "href": "https://www.zeffy.com/en-US/organizations/my-project-usa",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -218,7 +218,7 @@
       "buttons": [
        {
         "label": "Donate",
-        "href": "https://www.zeffy.com/en-US/donation-form/build-lasting-sustainability-with-my-project-usa",
+        "href": "/donate",
         "style": "primary"
        }
       ],
@@ -5041,7 +5041,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -5432,7 +5432,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -8177,7 +8177,7 @@
       "buttons": [
        {
         "label": "Donate",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -9468,7 +9468,7 @@
        },
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "secondary"
        },
        {
@@ -9499,7 +9499,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -9591,7 +9591,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "imageLink": "/donors",
+      "imageLink": "/donate",
       "imageSide": "right",
       "buttons": [
        {
@@ -9671,13 +9671,13 @@
    }
   },
   {
-   "path": "donors",
+   "path": "donate",
    "sourceUrl": "https://www.myprojectusa.org/donors",
    "publish": true,
    "doc": {
-    "title": "Build Lasting Sustainability with MY Project USA",
+    "title": "Donate",
     "seo": {
-     "title": "Donate to MY Project USA | Support Youth & Families",
+     "title": "Donate | MY Project USA",
      "description": "Support MY Project USA programs that protect and empower youth, strengthen families and expand access to food, healthcare, leadership and economic opportunity."
     },
     "blocks": [
@@ -9720,12 +9720,32 @@
       "buttons": [
        {
         "label": "General Donations",
-        "href": "https://www.zeffy.com/en-US/donation-form/build-lasting-sustainability-with-my-project-usa",
+        "href": "#section-donation-form",
         "style": "primary"
        },
        {
         "label": "Zakat for Muslim Children & Families",
         "href": "https://www.zeffy.com/fundraising/give-zakat-for-local-muslim-youth-and-families",
+        "style": "secondary"
+       }
+      ]
+     },
+     {
+      "id": "donation-form",
+      "type": "embed",
+      "provider": "zeffy",
+      "url": "https://www.zeffy.com/embed/donation-form/build-lasting-sustainability-with-my-project-usa",
+      "title": "Donate to MY Project USA",
+      "aspect": "form"
+     },
+     {
+      "id": "donation-all-campaigns",
+      "type": "buttons",
+      "align": "center",
+      "buttons": [
+       {
+        "label": "View all campaigns on Zeffy",
+        "href": "https://www.zeffy.com/en-US/organizations/my-project-usa",
         "style": "secondary"
        }
       ]
@@ -9930,7 +9950,7 @@
         "buttons": [
          {
           "label": "Donate",
-          "href": "https://www.zeffy.com/en-US/donation-form/build-lasting-sustainability-with-my-project-usa",
+          "href": "#section-donation-form",
           "style": "primary"
          }
         ]
@@ -11386,7 +11406,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "secondary"
        },
        {
@@ -11433,7 +11453,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -11537,7 +11557,7 @@
        },
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "secondary"
        },
        {
@@ -11557,7 +11577,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -11949,7 +11969,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -11971,14 +11991,14 @@
          "src": "wix-media:img_a3b9fa2c219a03bf",
          "alt": ""
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
          "src": "wix-media:img_4332eb3b5963e438",
          "alt": "MY Project USA Ramadan Food Basket"
         },
-        "link": "/donors"
+        "link": "/donate"
        }
       ]
      },
@@ -12107,7 +12127,7 @@
       "buttons": [
        {
         "label": "DONATE NOW",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -12274,7 +12294,7 @@
        },
        {
         "label": "DONATE NOW",
-        "href": "/donors",
+        "href": "/donate",
         "style": "secondary"
        },
        {
@@ -12316,7 +12336,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -12411,7 +12431,7 @@
        "src": "wix-media:img_318b06b64f09310c",
        "alt": "MY Project USA - MY Iftaar Kitchen"
       },
-      "link": "/donors",
+      "link": "/donate",
       "size": "medium"
      },
      {
@@ -12516,7 +12536,7 @@
        },
        {
         "label": "DONATE NOW",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -12841,7 +12861,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -12937,7 +12957,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "link": "/donors",
+      "link": "/donate",
       "size": "medium"
      },
      {
@@ -18398,7 +18418,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -18692,7 +18712,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "imageLink": "/donors",
+      "imageLink": "/donate",
       "imageSide": "right",
       "buttons": [
        {
@@ -21533,7 +21553,7 @@
                 {
                  "type": "link",
                  "attrs": {
-                  "href": "/donors",
+                  "href": "/donate",
                   "target": null
                  }
                 }
@@ -21888,7 +21908,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -22283,7 +22303,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -22362,7 +22382,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -22627,7 +22647,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "link": "/donors",
+      "link": "/donate",
       "size": "medium"
      },
      {
@@ -22802,7 +22822,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -23087,7 +23107,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -23301,7 +23321,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -23374,7 +23394,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -23453,7 +23473,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -23836,7 +23856,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "imageLink": "/donors",
+      "imageLink": "/donate",
       "imageSide": "right",
       "buttons": []
      },
@@ -34335,7 +34355,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -34645,7 +34665,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -35086,7 +35106,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -35288,7 +35308,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -36112,7 +36132,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -36299,7 +36319,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "imageLink": "/donors",
+      "imageLink": "/donate",
       "imageSide": "right",
       "buttons": []
      },
@@ -36908,7 +36928,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -37038,7 +37058,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "imageLink": "/donors",
+      "imageLink": "/donate",
       "imageSide": "right",
       "buttons": []
      },
@@ -37995,7 +38015,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -38117,7 +38137,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -38190,7 +38210,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "secondary"
        },
        {
@@ -38237,7 +38257,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -38321,7 +38341,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        },
        {
@@ -38383,7 +38403,7 @@
          "src": "wix-media:img_0f2ae0661929814f",
          "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
         },
-        "link": "/donors"
+        "link": "/donate"
        },
        {
         "image": {
@@ -43374,7 +43394,7 @@
       "buttons": [
        {
         "label": "DONATE",
-        "href": "/donors",
+        "href": "/donate",
         "style": "primary"
        }
       ]
@@ -43875,7 +43895,7 @@
        "src": "wix-media:img_0f2ae0661929814f",
        "alt": "Donate to Empower YouthDonate Monthly to Sustain MY Project USA"
       },
-      "imageLink": "/donors",
+      "imageLink": "/donate",
       "imageSide": "right",
       "buttons": [
        {
@@ -47767,11 +47787,6 @@
      ]
     },
     {
-     "label": "DONORS",
-     "href": "/donors",
-     "children": []
-    },
-    {
      "label": "CONTACTS",
      "href": "/contacts",
      "children": []
@@ -47782,7 +47797,7 @@
    "buttons": [
     {
      "label": "Donate",
-     "href": "https://www.zeffy.com/en-US/organizations/my-project-usa",
+     "href": "/donate",
      "style": "primary"
     },
     {
@@ -49355,6 +49370,10 @@
   {
    "from": "/events-3",
    "to": "/events"
+  },
+  {
+   "from": "/donors",
+   "to": "/donate"
   }
  ]
 }

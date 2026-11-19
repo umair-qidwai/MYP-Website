@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T01:31:11.590Z",
+ "generatedAt": "2026-11-19T17:32:02.745Z",
  "rows": [
   {
    "source": "https://www.myprojectusa.org",
@@ -567,8 +567,10 @@
   {
    "source": "https://www.myprojectusa.org/donors",
    "outcome": "page",
-   "target": "/donors",
-   "notes": [],
+   "target": "/donate",
+   "notes": [
+    "Moved to /donate; original giving content kept with the sustainability form embedded and a link to all Zeffy campaigns"
+   ],
    "title": "Build Lasting Sustainability with MY Project USA",
    "coverage": 1,
    "missingSample": [],

@@ -132,6 +132,10 @@ Only after the new site has been live and checked for a while:
 
 ## Everyday commands
 
+`npm run deploy` builds and uploads the local working copy directly to Cloudflare. It does not commit or push changes to GitHub; Git-based deployment is a separate option described in step 11.
+
+For the donation page update, apply `npm run db:migrate:remote` and then run `npm run deploy`. Migration `0002_donation_page.sql` adds the standalone form. Migration `0003_full_donation_page.sql` moves the full Donors page to `/donate`, inserts the sustainability form and all-campaigns link, updates navigation, and redirects `/donors`. It preserves the original page ID, revisions, media, and unpublished edits; the earlier standalone form is retained in the bin. Migration `0004_single_donate_navigation.sql` removes the duplicate menu entry, keeping the primary Donate action. No full content re-import is needed. Use `npm run db:migrate:local` for an existing local database.
+
 | Task | Command |
 |---|---|
 | Deploy code changes | `npm run deploy` |

@@ -126,11 +126,26 @@ describe("collections", () => {
 });
 
 describe("public site plumbing", () => {
+  it("redirects the former Donors address to the consolidated donation page", async () => {
+    const response = await call("/donors");
+    expect(response.status).toBe(301);
+    expect(response.headers.get("location")).toBe("/donate");
+  });
+
+  it("serves the seeded donation page with a hosted-form link before JavaScript loads", async () => {
+    const response = await call("/donate");
+    expect(response.status).toBe(200);
+    const html = await response.text();
+    expect(html).toContain("Donate | MY Project USA");
+    expect(html).toContain('href="https://www.zeffy.com/donation-form/build-lasting-sustainability-with-my-project-usa"');
+  });
+
   it("sets security headers and never caches admin responses", async () => {
     const admin = await login((await createUser("admin")).email);
     const r = await call("/api/admin/pages", { session: admin });
     expect(r.headers.get("cache-control")).toBe("no-store");
     expect(r.headers.get("x-content-type-options")).toBe("nosniff");
+    expect(r.headers.get("permissions-policy")).toBe('camera=(), microphone=(), geolocation=(), payment=(self "https://www.zeffy.com"), usb=()');
     const shell = await call("/admin/");
     expect(shell.headers.get("cache-control")).toBe("no-store");
     expect(await shell.text()).toContain("noindex");

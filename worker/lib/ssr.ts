@@ -8,6 +8,7 @@ import { getCollection } from "@shared/collections";
 import { escapeHtml as e, richToHtml, richToText, type RichDoc } from "@shared/richtext";
 import type { Settings } from "@shared/settings";
 import type { PublicEntry, PublicPagePayload } from "@shared/types";
+import { embedFallbackUrl } from "@shared/embeds";
 
 export type Head = { title: string; description: string; canonical: string; image?: string; type: string; noindex: boolean; jsonLd: object[] };
 
@@ -55,7 +56,7 @@ function blockHtml(b: Block, collections: Record<string, PublicEntry[]>, setting
     case "downloads":
       return `<section>${b.heading ? `<h2>${e(b.heading)}</h2>` : ""}<ul>${b.items.map((i) => `<li>${link(i.file?.url ?? i.url, e(i.title))}${i.description ? ` — ${e(i.description)}` : ""}</li>`).join("")}</ul></section>`;
     case "embed":
-      return `<p><a href="${attr(b.url)}" rel="noopener">${e(b.title)}</a></p>`;
+      return `<p><a href="${attr(embedFallbackUrl(b.url, b.provider))}" rel="noopener">${e(b.title)}</a></p>`;
     case "buttons":
       return buttons(b.buttons);
     case "programs":

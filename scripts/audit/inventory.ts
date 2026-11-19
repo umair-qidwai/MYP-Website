@@ -109,7 +109,7 @@ writeFileSync(
   "docs/url-migration-map.md",
   `# URL migration map
 
-Every original address keeps working. Pages keep their **exact original path** (e.g. \`/vision-mission-goals\`, \`/copy-of-news-coverage\`) so existing links, bookmarks and search results don't break.
+Every original address keeps working. Most pages keep their **exact original path** (e.g. \`/vision-mission-goals\`, \`/copy-of-news-coverage\`) so existing links, bookmarks and search results don't break.
 Addresses that changed are permanently redirected (HTTP 301) by the Worker. Redirects are stored in the database and listed in the admin under **Redirects**.
 
 ## Rules applied by the Worker (in addition to the table below)
@@ -122,7 +122,7 @@ Addresses that changed are permanently redirected (HTTP 301) by the Worker. Redi
 | \`/product-page/*\`, \`/shop\`, \`/cart\` | \`/\` | Wix Stores template placeholders (no real products) |
 | Any path with a trailing slash | same path without it | one canonical URL per page |
 
-## Pages kept at the same address (${content.pages.length})
+## Current page addresses (${content.pages.length})
 
 | Address |
 |---|

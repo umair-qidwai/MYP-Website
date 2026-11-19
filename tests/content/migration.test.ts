@@ -142,7 +142,7 @@ describe("required pages exist", () => {
     "issues",
     "youth",
     "volunteer",
-    "donors",
+    "donate",
     "contacts",
     "free-clinic",
     "events",

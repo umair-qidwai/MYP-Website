@@ -29,7 +29,7 @@ Always use **Sign out** (bottom of the left menu) on shared computers.
 
 Useful section controls: ↑ ↓ move, 👁 hide/show, ⧉ duplicate, 🗑 delete. **+ Add a section** adds new content anywhere.
 
-**Options with buttons** shows choices side by side as cards: ways to give on Donors, roles on Volunteer, departments on Contacts. Each card has a title, an optional picture, a short description (long text folds behind "Read more") and its own buttons. Use it whenever a page offers several things to pick from.
+**Options with buttons** shows choices side by side as cards: ways to give on Donate, roles on Volunteer, departments on Contacts. Each card has a title, an optional picture, a short description (long text folds behind "Read more") and its own buttons. Use it whenever a page offers several things to pick from.
 
 ## Update an image
 
@@ -61,6 +61,8 @@ It appears in the matching group on the Reports page. Large PDFs (even hundreds 
 ## Site-wide information
 
 **Site settings**: contact details and footer, Donate/Volunteer buttons, social media links, initiative logos, and an **announcement bar** for urgent news (switch on, write a message, add a link, save).
+
+**Donations**: `/donate` is the full giving page, combining the former Donors content with the embedded “Build Lasting Sustainability with MY Project USA” form. The primary **Donate** button opens this page; the former Donors menu entry has been removed. General Donations buttons scroll to the form. Other giving options, payment instructions, photos, and reports remain below, together with a secondary **View all campaigns on Zeffy** link. The former `/donors` address redirects permanently to `/donate`. To change the form, edit the **Donate** page, open its **Embed** section, keep the provider set to **Zeffy** and shape set to **Long form**, then paste the iframe `src` address from Zeffy → Campaigns → Share → Embed. Save and publish. Donations and payment details are handled by Zeffy.
 
 ## Forms and messages
 

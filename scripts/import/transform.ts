@@ -19,6 +19,7 @@ import { getCollection } from "../../shared/collections";
 import { entryDocSchema } from "../../shared/collections-schema";
 import type { RichDoc, RichNode } from "../../shared/richtext";
 import { SETTINGS_SCHEMAS } from "../../shared/settings";
+import { buildDonationPage, DONATION_FORM_URL, DONATION_ORGANIZATION_URL, DONATION_PATH } from "../../shared/donation";
 import { normalizePath, slugify } from "../../shared/slug";
 import { docText, normaliseHeadingLevels, wixHtmlToDoc } from "./wix-html";
 
@@ -212,6 +213,7 @@ const articleSlug = (p: string) => slugify(p.split("/").pop() ?? "post");
 const pagePaths = new Set(
   classified.filter((x) => ["home", "page", "translation", "reports", "newsPage", "eventsPage", "blogPage"].includes(x.kind)).map((x) => x.p),
 );
+pagePaths.add(DONATION_PATH);
 
 // Redirect map: legacy URL → new URL
 for (const { p, kind, to } of classified) {
@@ -224,6 +226,7 @@ for (const { p, kind, to } of classified) {
   if (kind === "article") redirects.set(p, `/blog/${articleSlug(p)}`);
 }
 redirects.set("/events-3", "/events");
+redirects.set("/donors", DONATION_PATH);
 
 // ── Helpers: links & media ──────────────────────────────────────────────────
 function mapInternal(pathname: string, hash = "", from = ""): string {
@@ -263,6 +266,7 @@ function makeLinkMapper(from: string) {
   return (href: string, label?: string): string | null => {
     if (!href) return null;
     const h = href.trim();
+    if (h === DONATION_FORM_URL || h === DONATION_ORGANIZATION_URL) return DONATION_PATH;
     if (/^(mailto|tel):/i.test(h)) return h.replace(/\s/g, "");
     if (/^javascript:/i.test(h)) return null;
     let u: URL;
@@ -833,7 +837,7 @@ const sourceText = (c: Crawl) =>
     .filter((l) => !CHROME.test(l.trim()))
     .join("\n");
 
-const DONATE_URL = "https://www.zeffy.com/en-US/organizations/my-project-usa";
+const DONATE_URL = DONATION_PATH;
 
 // ── Builders ────────────────────────────────────────────────────────────────
 function cleanTitle(t?: string) {
@@ -1345,12 +1349,14 @@ function buildSettings(home: Crawl) {
       label: n.text.trim(),
       href: n.href ? (mapLink(n.href) ?? "") : "",
       children: n.children.map((ch) => ({ label: ch.text.trim(), href: ch.href ? (mapLink(ch.href) ?? "") : "" })),
-    }));
+    }))
+    // Giving is already available through the primary Donate button.
+    .filter((n) => n.href !== DONATION_PATH || n.children.length > 0);
   const quick = ["Donate", "Volunteer", "Events", "Ventures", "Subscribe"]
     .map((label) => site.find((i) => i.kind === "button" && (i.text ?? "").trim() === label))
     .filter((b): b is Item => !!b && !!b.href)
     .map((b) => ({ label: (b.text ?? "").trim(), href: mapLink(b.href!)!, style: "primary" as const }))
-    // Requested by MY Project USA: "Donate" goes straight to their Zeffy giving page; the Donors menu item keeps the full page
+    // The main Donate action opens the full giving page with its embedded Zeffy form.
     .map((b) => (b.label === "Donate" ? { ...b, href: DONATE_URL } : b));
   const programNames: Record<string, string> = {
     youth: "MY Leaders Lab",
@@ -1515,7 +1521,14 @@ async function main() {
     } else {
       const lang = kind === "translation" ? (p.split("/")[1] as "ar") : undefined;
       const { doc, notes } = await buildPage(p, c, lang);
-      pages.push({ path: p.slice(1), sourceUrl: c.url, publish: true, doc });
+      if (p === "/donors") {
+        const donation = buildDonationPage(doc);
+        pages.push({ path: DONATION_PATH.slice(1), sourceUrl: c.url, publish: true, doc: donation });
+        row.target = DONATION_PATH;
+        row.notes.push("Moved to /donate; original giving content kept with the sustainability form embedded and a link to all Zeffy campaigns");
+      } else {
+        pages.push({ path: p.slice(1), sourceUrl: c.url, publish: true, doc });
+      }
       row.notes.push(...notes);
       row.title = doc.title;
       migratedText = [doc.title, doc.intro ?? "", ...doc.blocks.map(blockText)].join("\n");

@@ -489,7 +489,7 @@ export const BLOCK_SPECS: BlockSpec[] = [
         key: "url",
         label: "Embed address",
         kind: "text",
-        help: "For YouTube use https://www.youtube-nocookie.com/embed/VIDEO-ID. For Google Forms use the form's “embed” link.",
+        help: "For YouTube use https://www.youtube-nocookie.com/embed/VIDEO-ID. For Google Forms use the form's “embed” link. For Zeffy, paste the iframe src address from Campaigns → Share → Embed and choose Long form below.",
       },
       { key: "title", label: "Short description", kind: "text", help: "Read aloud to screen-reader users, e.g. “Volunteer sign-up form”." },
       {

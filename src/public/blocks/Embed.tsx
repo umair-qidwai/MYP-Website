@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Play } from "lucide-react";
 import type { BlockOf } from "@shared/blocks";
+import { embedFallbackUrl } from "@shared/embeds";
 import { Section } from "./Content";
 
 /** YouTube facade: a poster image until the visitor presses play (faster pages, no tracking until then). */
@@ -95,7 +96,7 @@ export function EmbedBlock({ block }: { block: BlockOf<"embed"> }) {
           {block.provider === "bloomerang" ? (
             <Bloomerang url={block.url} title={block.title} />
           ) : (
-            <>
+            <div className="flex flex-col">
               <div className={`relative overflow-hidden rounded-[24px] bg-mist ${aspect}`}>
                 {block.provider === "youtube" ? (
                   <LiteYouTube url={block.url} title={block.title} />
@@ -106,24 +107,29 @@ export function EmbedBlock({ block }: { block: BlockOf<"embed"> }) {
                     loading="lazy"
                     className="absolute inset-0 h-full w-full bg-white"
                     referrerPolicy="strict-origin-when-cross-origin"
-                    allow={block.provider === "google-map" ? "fullscreen" : undefined}
+                    allow={block.provider === "google-map" ? "fullscreen" : block.provider === "zeffy" ? "payment" : undefined}
                   />
                 )}
               </div>
               {block.provider !== "youtube" && (
-                <p className="mt-3 text-sm text-muted">
+                <p className={`${block.provider === "zeffy" ? "order-first mb-3" : "mt-3"} text-sm text-muted`}>
+                  {block.provider === "zeffy" && "If the form doesn’t load, "}
                   <a
-                    href={block.url.replace("embedded=true", "")}
+                    href={embedFallbackUrl(block.url, block.provider)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 underline decoration-ink/25 underline-offset-4 hover:decoration-ink"
                   >
-                    {block.provider === "google-form" ? "Open this form in a new tab" : `Open on ${host}`}
+                    {block.provider === "zeffy"
+                      ? "Open donation form in a new tab"
+                      : block.provider === "google-form"
+                        ? "Open this form in a new tab"
+                        : `Open on ${host}`}
                     <ExternalLink className="size-3.5" aria-hidden />
                   </a>
                 </p>
               )}
-            </>
+            </div>
           )}
         </div>
       </div>

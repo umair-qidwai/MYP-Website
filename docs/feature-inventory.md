@@ -4,7 +4,7 @@ Every interactive feature found on the original Wix site, and what the new site 
 
 | Original feature (where) | How it worked on Wix | New site | Status |
 |---|---|---|---|
-| **Donations** (Donors page, homepage, sidebar “Donate”) | Links to Zeffy donation forms, Zeffy Zakat fundraising, older Network for Good and Salsa pages | Same destinations kept exactly; “Donate” is highlighted in the header on every page | Kept — external payment processors unchanged |
+| **Donations** (Donate page, homepage, header “Donate”) | Links to Zeffy donation forms, Zeffy Zakat fundraising, older Network for Good and Salsa pages | `/donate` combines the full former Donors page with the embedded sustainability form. Other giving options and a secondary link to all Zeffy campaigns remain on the page; `/donors` redirects permanently. | Zeffy continues to process donations; the donation page is editable in the CMS |
 | **Event tickets** (homepage, Events page) | Zeffy ticketing links (Youth Excellence Awards, Social Ventures Partnership) | Same links | Kept |
 | **Newsletter / “Subscribe”** (menu, sidebar, /contact-8-1) | Bloomerang e-mail sign-up widget in a custom HTML embed | Same Bloomerang widget, loaded inside a sandboxed frame so its script can't touch the site or admin | Kept (see limitations: only loads on the real domain, not on `localhost`) |
 | **Contact form** (/contacts) | Native Wix form (Name, Email, Subject, Message) — submissions went to Wix | CMS form; submissions saved in the site's database, listed in Admin › Form submissions, exportable to a spreadsheet; Turnstile bot check, rate limiting, honeypot | Rebuilt |

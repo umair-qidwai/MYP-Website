@@ -11,6 +11,40 @@ const errorsOf = (page: Page) => {
 };
 
 test.describe("public website", () => {
+  test("Donate opens the on-site form with a working separate-tab fallback", async ({ page }) => {
+    // Keep this test independent of Zeffy's availability; never submit a payment.
+    await page.route("https://www.zeffy.com/**", (route) => route.fulfill({ contentType: "text/html", body: "<p>Donation form fixture</p>" }));
+    await page.goto("/");
+    await page.getByRole("link", { name: "Donate", exact: true }).filter({ visible: true }).first().click();
+    await expect(page).toHaveURL(/\/donate$/);
+    await expect(page.getByRole("heading", { level: 1, name: "Donate", exact: true })).toBeVisible();
+    const form = page.locator('iframe[title="Donate to MY Project USA"]');
+    await expect(form).toBeVisible();
+    await expect(form).toHaveAttribute("src", "https://www.zeffy.com/embed/donation-form/build-lasting-sustainability-with-my-project-usa");
+    await expect(form).toHaveAttribute("allow", "payment");
+    await expect(page.getByRole("link", { name: "View all campaigns on Zeffy" })).toHaveAttribute(
+      "href",
+      "https://www.zeffy.com/en-US/organizations/my-project-usa",
+    );
+    await expect(page.getByRole("heading", { name: "Fixture other ways to give" })).toBeAttached();
+    await page.getByRole("link", { name: "General Donations", exact: true }).click();
+    await expect(page).toHaveURL(/\/donate#section-donation-form$/);
+    await expect(form).toBeInViewport();
+    await expect(page.getByRole("link", { name: "Open donation form in a new tab" })).toHaveAttribute(
+      "href",
+      "https://www.zeffy.com/donation-form/build-lasting-sustainability-with-my-project-usa",
+    );
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+    await page.reload();
+    await expect(page.getByRole("heading", { level: 1, name: "Donate", exact: true })).toBeVisible();
+  });
+
+  test("the former Donors address permanently redirects to Donate", async ({ request }) => {
+    const response = await request.get("/donors", { maxRedirects: 0 });
+    expect(response.status()).toBe(301);
+    expect(response.headers().location).toBe("/donate");
+  });
+
   test("homepage renders the hero, initiatives and sections without errors", async ({ page }) => {
     const errors = errorsOf(page);
     await page.goto("/");
